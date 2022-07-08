@@ -24,7 +24,7 @@
 <p align="center">
   <b>
     CODERS FOR EARTH<br>
-    <a href="https://github.com/CodersForEarth/codersforearth.com">
+    <a href="https://codersforearth.com">
       [Official Website]
     </a>
   </b>

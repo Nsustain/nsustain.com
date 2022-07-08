@@ -22,6 +22,7 @@ Create the website.
 
 #### Building the website's database
 `SQLite`
+`IBM Databases for etcd`
 
 ...
 

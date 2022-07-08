@@ -7,7 +7,9 @@
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/github/contributors/CodersForEarth/codersforearth.com">
+  <a href="https://github.com/CodersForEarth/codersforearth.com/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/CodersForEarth/codersforearth.com">
+  </a>
   <a href="https://github.com/CodersForEarth/codersforearth.com/blob/main/LICENSE">
     <img src="https://badgen.net/github/license/CodersForEarth/codersforearth.com">
   </a>

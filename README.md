@@ -8,12 +8,12 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/contributors/CodersForEarth/codersforearth.com">
-  <img src="https://badgen.net/github/license/CodersForEarth/codersforearth.com">
+  <a href="https://github.com/CodersForEarth/codersforearth.com/blob/main/LICENSE">
+    <img src="https://badgen.net/github/license/CodersForEarth/codersforearth.com">
+  </a>
 </p>
 
 ---
-
-
 This page will be updated in a few months :)
 
 <!---

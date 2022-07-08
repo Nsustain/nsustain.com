@@ -24,8 +24,10 @@ This page will be updated in a few months :)
 
 To Do:
 
-- Add descriptions on the organization setting,
-- Add explanation for the main gist,
+- Add descriptions on the organization setting
+- Add explanation for the main gist
 - Add href links to the license bedges
+- Add tags to the `about` section on GitHub
+-
 
 -->

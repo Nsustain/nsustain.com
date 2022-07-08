@@ -19,7 +19,36 @@
 
 ---
 
-This page will be updated in a few months :)
+<br>
+<br>
+<p align="center">
+  <b>
+    CODERS FOR EARTH<br>
+    <a href="https://github.com/CodersForEarth/codersforearth.com">
+      [Official Website]
+    </a>
+  </b>
+</p>
+
+<br>
+<br>
+
+What we needed. How our website
+attempts to meet our need.
+Why we work hard on this website.
+Why we believe in this.
+Why we believe you might 
+find this helpful, too.
+
+**July 8, 2022** Our project
+is still under development.
+We'll ship our website by
+the end of October, 2022.
+So, please come back in a few months :)
+
+
+
+
 
 <!---
 

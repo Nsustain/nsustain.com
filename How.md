@@ -1,5 +1,5 @@
 Here are the exact steps we took to
-make codeforearth.org
+make codersforearth.com
 
 ...
 

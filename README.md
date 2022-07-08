@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://codersforearth.com">
-    <img src="https://user-images.githubusercontent.com/19341857/177929757-08f2487b-4fa8-4cf2-8896-22426184141b.svg" width="350">
+    <img src="https://user-images.githubusercontent.com/19341857/177931363-78818959-f91c-427d-a4bf-8d550dbdae78.svg" width="350">
   </a>
 </p>
 

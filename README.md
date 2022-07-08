@@ -36,6 +36,7 @@ option on the export settings.
 To Do:
 
 - Add descriptions on the organization setting,
-- Add explanation for the main gist
+- Add explanation for the main gist,
+- Add href links to the license bedges
 
 -->

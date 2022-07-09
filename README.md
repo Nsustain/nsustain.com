@@ -65,7 +65,11 @@ To Do:
   so that the whole process can be written in scripts.
   Then, migrating the server in case of failure
   will be faster. Down-time will be minimized.
-- 
+- On the last week of October, register a credit card
+  to IBM to get the $200 free credit. 
+  A Kubernetes cluster with 2vCPU, 4GB RAM, 25GB SSD
+  for primary disk, and 100GB SSD for secondary disk
+  costs $82.08 per month.
 
 
 -->

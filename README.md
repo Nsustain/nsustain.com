@@ -53,11 +53,14 @@ So, please come back in a few months :)
 <!---
 
 To Do:
+- add documentation for the coming soon page
+- make a Docker image of the coming soon page
 
-- Add descriptions on the organization setting
-- Add explanation for the main gist
-- Add tags to the `about` section on GitHub
-- Turn on CloudFlare's developing mode to disable caching
--
+# Long Term
+- add descriptions on the organization setting
+- add explanation for the main gist
+- add tags to the `about` section on GitHub
+- turn on CloudFlare's developing mode to disable caching
+
 
 -->

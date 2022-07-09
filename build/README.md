@@ -33,34 +33,7 @@
 <br>
 <br>
 
-What we needed. How our website
-attempts to meet our need.
-Why we work hard on this website.
-Why we believe in this.
-Why we believe you might 
-find this helpful, too.
+## /build
 
-**July 8, 2022** Our project
-is still under development.
-We'll ship our website by
-the end of October, 2022.
-So, please come back in a few months :)
+This directory ...
 
-
-
-
-
-<!---
-
-To Do:
-- add documentation for the coming soon page
-- make a Docker image of the coming soon page
-
-# Long Term
-- add descriptions on the organization setting
-- add explanation for the main gist
-- add tags to the `about` section on GitHub
-- turn on CloudFlare's developing mode to disable caching
-
-
--->

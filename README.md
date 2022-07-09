@@ -56,7 +56,6 @@ To Do:
 
 - Add descriptions on the organization setting
 - Add explanation for the main gist
-- Add href links to the license bedges
 - Add tags to the `about` section on GitHub
 - Turn on CloudFlare's developing mode to disable caching
 

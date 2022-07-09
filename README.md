@@ -61,6 +61,11 @@ To Do:
 - add explanation for the main gist
 - add tags to the `about` section on GitHub
 - turn on CloudFlare's developing mode to disable caching
+- make the deployment process as automated as possible
+  so that the whole process can be written in scripts.
+  Then, migrating the server in case of failure
+  will be faster. Down-time will be minimized.
+
 
 
 -->

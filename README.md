@@ -78,6 +78,8 @@ To Do:
 - Switch back Cloudflare's SSL setting to `Full`
 - Optimize the codes.
   https://gtmetrix.com/put-javascript-at-bottom.html
+- document about the folder structure. 
+  What files are where, and what & why
 
 
 -->

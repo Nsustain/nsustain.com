@@ -76,6 +76,8 @@ To Do:
 - Servers = production systems
   My laptop = test environment
 - Switch back Cloudflare's SSL setting to `Full`
+- Optimize the codes.
+  https://gtmetrix.com/put-javascript-at-bottom.html
 
 
 -->

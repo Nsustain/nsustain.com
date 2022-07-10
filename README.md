@@ -81,7 +81,7 @@ To Do:
 - document about the folder structure. 
   What files are where, and what & why
 - include why set minimum SSL protocol to
-  TLS 1.3 and drop 1.1 and 1.2
+  TLS 1.2 and drop TLS 1.0 and TLS 1.1
   https://blog.qualys.com/product-tech/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols?_ga=2.51170793.1984962975.1657484991-1435314446.1657484991
 
 

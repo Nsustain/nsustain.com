@@ -53,8 +53,11 @@ So, please come back in a few months :)
 <!---
 
 To Do:
-- add documentation for the coming soon page
 - make a Docker image of the coming soon page
+
+
+
+
 
 # Long Term
 - add descriptions on the organization setting
@@ -70,6 +73,8 @@ To Do:
   A Kubernetes cluster with 2vCPU, 4GB RAM, 25GB SSD
   for primary disk, and 100GB SSD for secondary disk
   costs $82.08 per month.
+- Servers = production systems
+  My laptop = test environment
 
 
 -->

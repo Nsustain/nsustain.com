@@ -22,8 +22,12 @@
     background: #33cc99;
     color: #fff;
     font-family: "Bungee Inline", cursive;
-    max-height: 700px;
-    overflow: hidden;
+    font-size: 23px;
+    font-size: 2.3rem;
+    font-weight: 200;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
   }
 
   .c {
@@ -86,7 +90,7 @@
 	  color: #33cc99;
 	  text-decoration: none;
     letter-spacing: 3px;
-	  margin-right: 10px
+	  margin-right: 10px;
   }
 
   .right {
@@ -137,7 +141,7 @@
     content: '';
 		position: absolute;
 		background: #FFF;
-		z-index: -1
+		z-index: -1;
   }
 
   .cloud:after {
@@ -161,8 +165,8 @@
 	}
 
   .x1 {
-    top: -50px;
-    left: 100px;
+    top: -7vh;
+    left: 80vw;
     -webkit-transform: scale(0.3);
     -moz-transform: scale(0.3);
     transform: scale(0.3);
@@ -173,8 +177,8 @@
   }
 
   .x1_5 {
-    top: -80px;
-		left: 250px;
+    top: -10vh;
+		left: 17vw;
 		-webkit-transform: scale(0.3);
 		-moz-transform: scale(0.3);
 		transform: scale(0.3);
@@ -184,8 +188,8 @@
   }
 
   .x2 {
-    left: 250px;
-    top: 30px;
+    left: 47vw;
+    top: 35vh;
     -webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);
     transform: scale(0.6);
@@ -196,8 +200,8 @@
   }
 
   .x3 {
-    left: 250px;
-    bottom: -70px;
+    left: 46vw;
+    bottom: -9vh;
     -webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);
     transform: scale(0.6);
@@ -208,8 +212,8 @@
   }
 
   .x4 {
-    left: 470px;
-    botttom: 20px;
+    left: 40vw;
+    botttom: 3vh;
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
     transform: scale(0.75);
@@ -220,8 +224,8 @@
   }
 
   .x5 {
-    left: 200px;
-    top: 300px;
+    left: 75vw;
+    top: 58vh;
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     transform: scale(0.5);
@@ -231,19 +235,73 @@
     -o-animation: moveclouds 20s linear infinite;
   }
 
+  /* ----------------
+     Cloud Animation
+     ---------------- */
   @-webkit-keyframes moveclouds {
-    0% { margin-left: 1000px; }
-    100% { margin-left: -1000px; }
+    0% { margin-left: 0vw; }
+    100% { margin-left: -90vw; }
   }
 
   @-moz-keyframes moveclouds {
-    0% { margin-left: 1000px; }
-    100% { margin-left: -1000px; }
+    0% { margin-left: 75vw; }
+    100% { margin-left: 75vw; }
   }
 
   @-o-keyframes moveclouds {
-    0% { margin-left: 1000px; }
-    100% { margin-left: -1000px; }
+    0% { margin-left: 75vw; }
+    100% { margin-left: 75vw; }
+  }
+
+  /* ----------------
+     Fadein Animation
+     ---------------- */
+  .ani {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+    }
+  }
+
+  @-moz-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -moz-transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      -moz-transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-down {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    animation-name: fadeInDown;
   }
 
 </style>
@@ -280,15 +338,15 @@
 
   <div class="_404">
 
-    <footer class="lazyImage">
+    <div class="container ani fade-in-down">
       <a href="https://github.com/soobinrho/html-maintenance-page">
         <img
       	  src="img/logo_combined.png"
 	        width="420px"
-	        loading="lazy"
+          loading="lazy"
 	      >
       </a>
-    </footer>
+    </div>
 
   </div>
 
@@ -305,3 +363,4 @@
   </a>
 
 </div>
+

@@ -1,0 +1,8 @@
+webserver:
+  build: .
+  ports:
+    - "80:80"
+    - "443:443"
+  environment:
+    - NGINX_HOST=codersforearth.com
+    - NGINX_PORT=443

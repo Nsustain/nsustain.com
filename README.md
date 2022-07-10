@@ -75,6 +75,7 @@ To Do:
   costs $82.08 per month.
 - Servers = production systems
   My laptop = test environment
+- Switch back Cloudflare's SSL setting to `Full`
 
 
 -->

@@ -24,12 +24,7 @@
 <br>
 
 <p align="center">
-  <b>
-    CODERS FOR EARTH<br>
-    <a href="https://codersforearth.com">
-      [Official Website]
-    </a>
-  </b>
+  <b>About</b>
 </p>
 
 Who are we?
@@ -43,9 +38,10 @@ Why we believe you might
 find this helpful, too.
 
 <br>
+<br>
 
 <p align="center">
-  <b>HOW OUR WEBSITE WAS MADE</b>
+  <b>How we made our website</b>
 </p>
 
 Here are the exact steps we took to

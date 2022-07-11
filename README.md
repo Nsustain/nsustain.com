@@ -45,11 +45,11 @@ to help make our environment more sustainable :)
 ***How did all this begin?***
 Soobin Rho and Mariam Wisaal started
 this project for 
-*2022 Call for Code Global Challenge**
-[[Official Website](https://callforcode.org)]
+*2022 Call for Code Global Challenge*
 organized by *David Clark Cause*,
 *IBM*, *UN Human Rights Office of the High
 Commisioner*, and *Linux Foundation*.
+[[Official Website](https://callforcode.org)]
 
 
 <br>

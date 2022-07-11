@@ -84,8 +84,8 @@ is the unicode em space: (  )
 -->
 ## Steps
 [1.](#1-designing-the-website) Designing the website<br>
-  [1.1](#back-end) Back-end<br>
-  [1.2](#front-end) Front-end<br>
+  [a.](#back-end) Back-end<br>
+  [b.](#front-end) Front-end<br>
 [2.](#2-containerizing-the-website) Containerizing the website<br>
 [3.](#3-deploying-a-container-orchestration-system) Deploying a container orchestration system<br>
 [4.](#4-getting-a-domain-name) Getting a domain name<br>

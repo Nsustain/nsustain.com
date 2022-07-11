@@ -96,6 +96,9 @@ Techs used:
 `git`
 `GitHub`
 
+Create a `GitHub` repository because
+version control ...
+
 ## Back-end
 
 **Building the website's database**<br>
@@ -106,9 +109,6 @@ Techs used:
 Blabla ...
 
 ## Front-end
-
-Create a `GitHub` repository because
-version control ...
 
 **Building the front-end**<br>
 Techs used:
@@ -191,7 +191,6 @@ forwarding service would solve all of them.
 Techs used:
 `Cloudflare`
 
-https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/
 It also takes care of issuing SSL certificates.
 
 The traffic between the user and Cloudflare
@@ -239,10 +238,6 @@ by forking this repository.
 
 To Do:
 - make a Docker image of the coming soon page
-
-
-
-
 
 # Long Term
 - add descriptions on the organization setting

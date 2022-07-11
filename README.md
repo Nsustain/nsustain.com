@@ -167,6 +167,8 @@ goes offline thanks to Kubernetes.
 <br>
 
 # 4. Getting a domain name
+
+**Getting a domain from a domain registrar**<br>
 Techs used:
 `Google Domains`
 
@@ -204,13 +206,15 @@ on their settings and install it in our server.
 <br>
 
 # 5. Getting a server
+
+**Getting a Virtual Private Server (VPS)**<br>
 Techs used:
 `DigitalOcean`
 `Ubuntu Server`
 
 Get a VPS. Around $6 per month.
 
-**Hosting a Virtual Private Server**<br>
+**Running a VPS**<br>
 [[Original article by Joe Morgan](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)]<br>
 Techs used:
 `nginx`

@@ -230,6 +230,19 @@ Blabla ...
 <br>
 
 <p align="center">
+  <b>Server maintenance workflow</b>
+</p>
+
+We most often ...
+
+```bash
+# ...
+```
+
+<br>
+<br>
+
+<p align="center">
   <b>What next?</b>
 </p>
 

@@ -25,7 +25,7 @@
 
 <p align="center">
   <b>
-    About<br>
+    Coders for Earth<br>
     [<a href="https://codersforearth.com">Official Website</a>]
   </b>
 
@@ -54,7 +54,6 @@ which was an environmental initiative
 inviting "developers and problem solvers
 around the world to build and contribute 
 to sustainable open source technology projects."
-[[Official Website](https://callforcode.org)]
 
 <br>
 <br>

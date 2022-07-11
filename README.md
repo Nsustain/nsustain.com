@@ -112,10 +112,14 @@ from May, 2022 to October, 2022.
 Here are the exact steps we took to
 make *CodersForEarth.com*
 from ground-up,
-so that you can replicate it
-relatively easily if you'd like to
-make another website based on our website
-or become a contributor to our project.
+so that you can make your own
+relatively easily if you'd like to.
+This will be helpful, if you'd like
+to become a contributor and become
+one of us, too. With the following
+steps, you should be able to
+get exactly what you see on
+*CodersForEarth.com*
 
 <br>
 <br>

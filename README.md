@@ -21,6 +21,8 @@
 
 <br>
 <br>
+<br>
+
 <p align="center">
   <b>
     CODERS FOR EARTH<br>
@@ -30,9 +32,9 @@
   </b>
 </p>
 
-<br>
-<br>
-
+Who are we?
+What do we do?
+What will we do?
 What we needed. How our website
 attempts to meet our need.
 Why we work hard on this website.
@@ -223,10 +225,6 @@ you could download various versions of
 [our logo](https://github.com/CodersForEarth/.github/blob/main/README.md),
 whose base illustration was painted by `@realvjy` at
 [illlustrations.co](https://illlustrations.co)
-
-<br>
-<br>
-<br>
 
 
 <br>

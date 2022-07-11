@@ -1,6 +1,7 @@
 # To Do List
 
-**Short Term To Do**<br>
+### Short Term To Do
+
 - make a Docker image of the coming soon page
 - design the backend such that the
   oAuth doesn't take any user information
@@ -11,7 +12,8 @@
   giving users the permission to post
   or edit their posts.
 
-**Long Term To Do**<br>
+### Long Term To Do
+
 - add descriptions on the organization setting
 - add explanation for the main gist
 - add tags to the `about` section on GitHub
@@ -34,7 +36,7 @@
   TLS 1.2 and drop TLS 1.0 and TLS 1.1
   https://blog.qualys.com/product-tech/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols?_ga=2.51170793.1984962975.1657484991-1435314446.1657484991
 
-**Feature Specifications**<br>
+### Feature Specifications
 - storing necessary cookies with
   compliance to U.S. and Europian
   data protection laws; or even

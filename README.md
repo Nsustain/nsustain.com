@@ -220,7 +220,7 @@ Blabla ...
 <br>
 
 <p align="center">
-  <b>WHAT NEXT?</b>
+  <b>What next?</b>
 </p>
 
 You could go to 
@@ -228,9 +228,7 @@ You could go to
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor
-of this website itself.
-[[GitHub](https://github.com/CodersForEarth/codersforearth.com)]
-
+by forking this repository.
 
 <br>
 <br>

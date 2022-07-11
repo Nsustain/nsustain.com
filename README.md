@@ -42,6 +42,16 @@ and we'll never put ads on our website.
 We do this because we genuinly wanted
 to help make our environment more sustainable :)
 
+***How did all this begin?***
+Soobin Rho and Mariam Wisaal started
+this project for 
+*2022 Call for Code Global Challenge**
+[[Official Website](https://callforcode.org)]
+organized by *David Clark Cause*,
+*IBM*, *UN Human Rights Office of the High
+Commisioner*, and *Linux Foundation*.
+
+
 <br>
 <br>
 

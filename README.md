@@ -40,7 +40,7 @@ find this helpful, too.
 We don't have any ad revenue,
 and we'll never put ads on our website.
 We do this because we genuinly wanted
-to help make our environment more sustainable :)
+to help make the environment more sustainable :)
 
 ***How did this all begin?***
 Soobin Rho and Mariam Wisaal started

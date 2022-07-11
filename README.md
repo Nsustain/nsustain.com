@@ -1,3 +1,45 @@
+<!---
+
+To Do:
+- make a Docker image of the coming soon page
+- design the backend such that the
+  oAuth doesn't take any user information
+  other than the authentication itself,
+  so that the database doesn't store any
+  user data because - well - we don't need
+  any user data! We use oAuth just for
+  giving users the permission to post
+  or edit their posts.
+
+# Long Term
+- add descriptions on the organization setting
+- add explanation for the main gist
+- add tags to the `about` section on GitHub
+- turn on CloudFlare's developing mode to disable caching
+- make the deployment process as automated as possible
+  so that the whole process can be written in scripts.
+  Then, migrating the server in case of failure
+  will be faster. Down-time will be minimized.
+- On the last week of October, register a credit card
+  to IBM to get the $200 free credit.
+  A Kubernetes cluster with 2vCPU, 4GB RAM, 25GB SSD
+  for primary disk, and 100GB SSD for secondary disk
+  costs $82.08 per month.
+- Servers = production systems
+  My laptop = test environment
+- Switch back Cloudflare's SSL setting to `Full`
+- Optimize the codes.
+  https://gtmetrix.com/put-javascript-at-bottom.html
+- document about the folder structure.
+  What files are where, and what & why
+- include why set minimum SSL protocol to
+  TLS 1.2 and drop TLS 1.0 and TLS 1.1
+  https://blog.qualys.com/product-tech/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols?_ga=2.51170793.1984962975.1657484991-1435314446.1657484991
+
+
+-->
+
+
 ---
 
 <p align="center">
@@ -38,7 +80,7 @@ What we needed. How our website
 attempts to meet our need.
 Why we work hard on this website.
 Why we believe in this.
-Why we believe you might 
+Why we believe you might
 find this helpful, too.
 
 ***How do we keep maintaining our server?***<br>
@@ -49,11 +91,11 @@ to help make the environment more sustainable :)
 
 ***How did this all begin?***<br>
 Soobin Rho and Mariam Wisaal started
-this project for 
+this project for
 *2022 Call for Code Global Challenge*,
 which was an environmental initiative
 inviting "developers and problem solvers
-around the world to build and contribute 
+around the world to build and contribute
 to sustainable open source technology projects."
 Soobin and Mariam were college sophomores
 at *Augustana University* at that time,
@@ -70,7 +112,7 @@ from May, 2022 to October, 2022.
 Here are the exact steps we took to
 make *CodersForEarth.com*
 from ground-up,
-so that you can replicate it 
+so that you can replicate it
 relatively easily if you'd like to
 make another website based on our website
 or become a contributor to our project.
@@ -150,7 +192,7 @@ Techs used:
 
 Explanation on high availability.
 Why K3s and not else, showing
-the how and why behind 
+the how and why behind
 our design & architecture choices.
 
 Install K3s.
@@ -191,7 +233,7 @@ we didn't need such complexity. We didn't
 need to have multiple email accounts.
 We could just use one email account.
 All our email needs were such that just using an email
-forwarding service would solve all of them. 
+forwarding service would solve all of them.
 
 **Setting up remote caching and DDoS protection**<br>
 [Original article by Prutser Rutger](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)<br>
@@ -256,35 +298,4 @@ by forking this repository.
 <br>
 <br>
 
-<!---
 
-To Do:
-- make a Docker image of the coming soon page
-
-# Long Term
-- add descriptions on the organization setting
-- add explanation for the main gist
-- add tags to the `about` section on GitHub
-- turn on CloudFlare's developing mode to disable caching
-- make the deployment process as automated as possible
-  so that the whole process can be written in scripts.
-  Then, migrating the server in case of failure
-  will be faster. Down-time will be minimized.
-- On the last week of October, register a credit card
-  to IBM to get the $200 free credit. 
-  A Kubernetes cluster with 2vCPU, 4GB RAM, 25GB SSD
-  for primary disk, and 100GB SSD for secondary disk
-  costs $82.08 per month.
-- Servers = production systems
-  My laptop = test environment
-- Switch back Cloudflare's SSL setting to `Full`
-- Optimize the codes.
-  https://gtmetrix.com/put-javascript-at-bottom.html
-- document about the folder structure. 
-  What files are where, and what & why
-- include why set minimum SSL protocol to
-  TLS 1.2 and drop TLS 1.0 and TLS 1.1
-  https://blog.qualys.com/product-tech/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols?_ga=2.51170793.1984962975.1657484991-1435314446.1657484991
-
-
--->

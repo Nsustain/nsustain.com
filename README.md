@@ -155,6 +155,11 @@ Techs used:
 
 Blabla ...
 
+```bash
+# ...
+...
+```
+
 ## Front-end
 
 **Building the front-end**<br>
@@ -165,6 +170,11 @@ Techs used:
 
 Create the website ...
 
+```bash
+# ...
+...
+```
+
 <br>
 <br>
 
@@ -174,6 +184,11 @@ Techs used:
 
 Make our website into a Docker image.
 Why containerize and why not else.
+
+```bash
+# ...
+...
+```
 
 <!--- Installing docker
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
@@ -209,6 +224,11 @@ on our K3s as a worker node.
 Even when we deploy a new node or when
 we update our website, our website never
 goes offline thanks to Kubernetes.
+
+```bash
+# ...
+...
+```
 
 <br>
 <br>
@@ -261,12 +281,22 @@ Techs used:
 
 Get a VPS. Around $6 per month.
 
+```bash
+# ...
+...
+```
+
 **Running a VPS**<br>
 [Original article by Joe Morgan](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)<br>
 Techs used:
 `nginx`
 
 Blabla ...
+
+```bash
+# ...
+...
+```
 
 <br>
 <br>
@@ -279,6 +309,7 @@ We most often ...
 
 ```bash
 # ...
+...
 ```
 
 <br>

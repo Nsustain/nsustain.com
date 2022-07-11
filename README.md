@@ -223,8 +223,8 @@ Blabla ...
   <b>What next?</b>
 </p>
 
-You could go to 
-[our website](https://codersforearth.com)
+You could go to
+[CodersForEarth.com](https://codersforearth.com)
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor

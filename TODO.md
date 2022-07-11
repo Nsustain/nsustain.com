@@ -41,11 +41,17 @@
   compliance to U.S. and Europian
   data protection laws; or even
   not storing cookies at all, if possible.
-- servers = production systems
+- servers = production systems;
   my laptop = test environment
 - able to be deployed just by cloning
   this repository and running a few commands.
   Both for the K8s control plane and worker nodes.
+- send an email to the moderator whenever a new
+  post is made.
+- whenever the moderator removes a post,
+  the post goest to the trash box,
+  and the user gets auto-generated message:
+  "Your post was deleted by ..."
 
 
 <br>

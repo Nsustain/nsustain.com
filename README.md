@@ -25,7 +25,7 @@
 
 <p align="center">
   <b>
-    About
+    About<br>
     [<a href="https://codersforearth.com">Official Website</a>]
   </b>
 

@@ -24,7 +24,11 @@
 <br>
 
 <p align="center">
-  <b>About</b>
+  <b>
+    About
+    [<a href="https://codersforearth.com">Official Website</a>]
+  </b>
+
 </p>
 
 ***Who are we?*** What do we do?

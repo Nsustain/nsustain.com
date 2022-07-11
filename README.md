@@ -27,7 +27,7 @@
   <b>About</b>
 </p>
 
-*Who are we?* What do we do?
+***Who are we?*** What do we do?
 What will we do? Why?
 What we needed. How our website
 attempts to meet our need.
@@ -36,7 +36,7 @@ Why we believe in this.
 Why we believe you might 
 find this helpful, too.
 
-*How do we keep maintaining our server?*
+***How do we keep maintaining our server?***
 We don't have any ad revenue,
 and we'll never put ads into our website.
 We do this because we genuinly believe

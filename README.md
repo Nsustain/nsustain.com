@@ -323,7 +323,7 @@ You could go to *CodersForEarth.com*
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor
-by forking this repository.
+to our website by forking this repository.
 Email soobinrho@codersforearth.com
 if you have any question regarding our website.
 

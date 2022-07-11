@@ -221,12 +221,6 @@ or you could even become a contributor
 of this website itself.
 [[GitHub](https://github.com/CodersForEarth/codersforearth.com)]
 
-Plus, if you like our logo,
-you could download various versions of
-[our logo](https://github.com/CodersForEarth/.github/blob/main/README.md),
-whose base illustration was painted by `@realvjy` at
-[illlustrations.co](https://illlustrations.co)
-
 
 <br>
 <br>

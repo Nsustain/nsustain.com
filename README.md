@@ -181,7 +181,7 @@ Our domain name *CodersForEarth.com*
 costs $12 per year.
 
 **(Optional) Setting up a custom-domain email forwarding service**<br>
-[[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)]<br>
+[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)<br>
 Techs used:
 `ForwardEmail.net`
 
@@ -194,7 +194,7 @@ All our email needs were such that just using an email
 forwarding service would solve all of them. 
 
 **Setting up remote caching and DDoS protection**<br>
-[[Original article by Prutser Rutger](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)]<br>
+[Original article by Prutser Rutger](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)<br>
 Techs used:
 `Cloudflare`
 
@@ -220,7 +220,7 @@ Techs used:
 Get a VPS. Around $6 per month.
 
 **Running a VPS**<br>
-[[Original article by Joe Morgan](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)]<br>
+[Original article by Joe Morgan](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)<br>
 Techs used:
 `nginx`
 

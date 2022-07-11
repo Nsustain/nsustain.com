@@ -42,7 +42,7 @@ and we'll never put ads on our website.
 We do this because we genuinly wanted
 to help make our environment more sustainable :)
 
-***How did all this begin?***
+***How did this all begin?***
 Soobin Rho and Mariam Wisaal started
 this project for 
 *2022 Call for Code Global Challenge*,

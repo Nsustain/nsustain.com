@@ -111,7 +111,7 @@ from May, 2022 to October, 2022.
 
 Here are the exact steps we took to
 make our website from ground-up,
-so that you can make your own
+so that you can make your own website
 relatively easily if you'd like to.
 This will be helpful, if you'd like
 to become a contributor and become

@@ -54,6 +54,10 @@ which was an environmental initiative
 inviting "developers and problem solvers
 around the world to build and contribute 
 to sustainable open source technology projects."
+Soobin and Mariam were college sophomores
+at *Augustana University* at that time,
+and the challenge lasted six months
+from May, 2022 to October, 2022.
 
 <br>
 <br>

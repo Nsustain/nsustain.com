@@ -38,10 +38,10 @@ find this helpful, too.
 
 ***How do we keep maintaining our server?***
 We don't have any ad revenue,
-and we'll never put ads into our website.
-We do this because we genuinly believe
-having a community like this will
-help make our environment more sustainable.
+and we'll never put ads on our website.
+We do this because we genuinly want to
+provide a place for the open-source community
+to be able to help make our environment more sustainable :)
 
 <br>
 <br>

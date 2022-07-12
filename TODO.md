@@ -1,3 +1,11 @@
+<!---
+Vim commands
+/search-term  |   n   |   shift + n   |   Search
+:%s/search-term/replaceterm/gc   |   Search and replace
+visual-mode-selection + :s/^/#   |   Comment block
+
+-->
+
 # To Do List
 
 ### Short Term To Do

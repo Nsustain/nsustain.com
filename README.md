@@ -76,7 +76,7 @@ to become a contributor and become
 one of us, too. With the following
 steps, you should be able to
 get exactly what you see on
-*Nsustain.com*
+*nsustain.com*
 
 <br>
 <br>
@@ -200,7 +200,7 @@ goes offline thanks to Kubernetes.
 Techs used:
 `Google Domains`
 
-Our domain name *Nsustain.com*
+Our domain name *nsustain.com*
 costs $12 per year.
 
 **(Optional) Setting up a custom-domain email forwarding service**<br>
@@ -280,7 +280,7 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You could go to *Nsustain.com*
+You could go to *nsustain.com*
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor

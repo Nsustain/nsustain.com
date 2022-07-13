@@ -11,7 +11,6 @@ ctrl + v + shift + i   |   Visual block mode
 
 ### Short Term To Do
 
-- make a Docker image of the coming soon page
 - design the backend such that the
   oAuth doesn't take any user information
   other than the authentication itself,
@@ -20,20 +19,9 @@ ctrl + v + shift + i   |   Visual block mode
   any user data! We use oAuth just for
   giving users the permission to post
   or edit their posts.
-- change the organization name to
-  nsustain. No capital letter.
-- change the logo to the owl and
-  "nsustain.com"
-- change logo_combined to
-  "nsustain.com"
-  "environment and sustainability"
-- create facebook, twitter,
-  linkedin, instagram, ticktok,
-  snapchat with the name "nsustain"
 
 ### Long Term To Do
 
-- add descriptions on the organization setting
 - add explanation for the main gist
 - add tags to the `about` section on GitHub
 - turn on CloudFlare's developing mode to disable caching

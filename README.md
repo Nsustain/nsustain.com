@@ -1,7 +1,7 @@
 ---
 
 <p align="center">
-  <a href="https://codersforearth.com">
+  <a href="https://nsustain.com">
     <img src="https://user-images.githubusercontent.com/19341857/178690337-874b9df4-6984-4b5d-b377-5579f9a50e09.svg" width="350">
   </a>
 </p>
@@ -9,10 +9,10 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/CodersForEarth/codersforearth.com/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/CodersForEarth/codersforearth.com">
+  <a href="https://github.com/Nsustain/nsustain.com/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Nsustain/nsustain.com">
   </a>
-  <a href="https://github.com/CodersForEarth/codersforearth.com/blob/main/LICENSE">
+  <a href="https://github.com/Nsustain/nsustain.com/blob/main/LICENSE">
     <img src="
 https://badgen.net/github/license/nsustain/nsustain.com">
   </a>
@@ -26,8 +26,8 @@ https://badgen.net/github/license/nsustain/nsustain.com">
 
 <p align="center">
   <b>
-    Coders for Earth<br>
-    [<a href="https://codersforearth.com">Official Website</a>]
+    Nsustain<br>
+    [<a href="https://nsustain.com">Official Website</a>]
   </b>
 
 </p>
@@ -77,7 +77,7 @@ to become a contributor and become
 one of us, too. With the following
 steps, you should be able to
 get exactly what you see on
-*CodersForEarth.com*
+*Nsustain.com*
 
 <br>
 <br>
@@ -201,7 +201,7 @@ goes offline thanks to Kubernetes.
 Techs used:
 `Google Domains`
 
-Our domain name *CodersForEarth.com*
+Our domain name *Nsustain.com*
 costs $12 per year.
 
 **(Optional) Setting up a custom-domain email forwarding service**<br>
@@ -281,12 +281,12 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You could go to *CodersForEarth.com*
+You could go to *Nsustain.com*
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor
 to our website by forking this repository.
-Email soobinrho@codersforearth.com
+Email soobinrho@nsustain.com
 if you have any question regarding our website.
 
 <br>

@@ -26,7 +26,7 @@
 
 <p align="center">
   <b>
-    Nsustain - Environment & Sustainability<br>
+    Nsustain - An open-source community for the environment abd sustainability<br>
     [<a href="https://nsustain.com">Official Website</a>]
   </b>
 

@@ -20,6 +20,16 @@ ctrl + v + shift + i   |   Visual block mode
   any user data! We use oAuth just for
   giving users the permission to post
   or edit their posts.
+- change the organization name to
+  nsustain. No capital letter.
+- change the logo to the owl and
+  "nsustain.com"
+- change logo_combined to
+  "nsustain.com"
+  "environment and sustainability"
+- create facebook, twitter,
+  linkedin, instagram, ticktok,
+  snapchat with the name "nsustain"
 
 ### Long Term To Do
 

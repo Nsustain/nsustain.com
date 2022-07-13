@@ -26,7 +26,7 @@
 
 <p align="center">
   <b>
-    Nsustain<br>
+    Nsustain.com<br>
     [<a href="https://nsustain.com">Official Website</a>]
   </b>
 

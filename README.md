@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://codersforearth.com">
-    <img src="https://user-images.githubusercontent.com/19341857/177931363-78818959-f91c-427d-a4bf-8d550dbdae78.svg" width="350">
+    <img src="https://user-images.githubusercontent.com/19341857/178690337-874b9df4-6984-4b5d-b377-5579f9a50e09.svg" width="350">
   </a>
 </p>
 
@@ -13,7 +13,8 @@
     <img src="https://img.shields.io/github/contributors/CodersForEarth/codersforearth.com">
   </a>
   <a href="https://github.com/CodersForEarth/codersforearth.com/blob/main/LICENSE">
-    <img src="https://badgen.net/github/license/CodersForEarth/codersforearth.com">
+    <img src="
+https://badgen.net/github/license/nsustain/nsustain.com">
   </a>
 </p>
 

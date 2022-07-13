@@ -26,7 +26,7 @@
 
 <p align="center">
   <b>
-    Nsustain - Environment & Sustainability<br>
+    nsustain - environment & sustainability<br>
     [<a href="https://nsustain.com">Official Website</a>]
   </b>
 

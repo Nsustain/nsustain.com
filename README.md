@@ -206,7 +206,7 @@ goes offline thanks to Kubernetes.
 Techs used:
 `Google Domains`
 
-Our domain name *nsustain.com*
+Our domain name nsustain.com
 costs $12 per year.
 
 **(Optional) Setting up a custom-domain email forwarding service**<br>

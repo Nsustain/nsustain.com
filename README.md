@@ -47,12 +47,14 @@ We don't have any ad revenue,
 and we'll never put ads.
 Our website was created to be a
 place for the open-source community.
-As such, *Nsustain*
-itself will always be an open-source
-organization and will never be commercialized.
+As such, Nsustain
+itself will never be commercialized,
+and will always be 
+an open-source project.
 We do this because we genuinly wanted
 to help make the environment sustainable :)
 
+<!--
 ***How did this all begin?***<br>
 Soobin Rho and Mariam Wisaal started
 this project for
@@ -62,9 +64,10 @@ inviting "developers and problem solvers
 around the world to build and contribute
 to sustainable open source technology projects."
 Soobin and Mariam were college sophomores
-at *Augustana University* at that time,
+at Augustana University at that time,
 and the challenge was held for six months
 from May, 2022 to October, 2022.
+-->
 
 <br>
 <br>
@@ -77,12 +80,9 @@ Here are the exact steps we took to
 make our website from ground-up,
 so that you can make your own website
 relatively easily if you'd like to.
-This will be helpful, if you'd like
+This will be helpful if you'd like
 to become a contributor and become
-one of us, too. With the following
-steps, you should be able to
-get exactly what you see on
-*nsustain.com*
+one of us, too.
 
 <br>
 <br>

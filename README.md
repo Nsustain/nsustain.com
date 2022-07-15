@@ -44,9 +44,14 @@ find this helpful, too.
 
 ***How do we keep maintaining our server?***<br>
 We don't have any ad revenue,
-and we'll never put ads on our website.
+and we'll never put ads.
+Our website was created to be a
+place for the open-source community.
+As such, *Nsustain*
+itself will always be an open-source
+organization and will never be commercialized.
 We do this because we genuinly wanted
-to help make the environment more sustainable :)
+to help make the environment sustainable :)
 
 ***How did this all begin?***<br>
 Soobin Rho and Mariam Wisaal started

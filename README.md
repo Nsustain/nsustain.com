@@ -48,9 +48,8 @@ and we'll never put ads.
 Our website was created to be a
 place for the open-source community.
 As such, Nsustain
-itself will never be commercialized,
-and will always be 
-an open-source project.
+will always be an open-source project,
+and we will never commercialize our website.
 We do this because we genuinly wanted
 to help make the environment sustainable :)
 

@@ -282,15 +282,6 @@ We most often ...
 <br>
 
 <p align="center">
-  <b>YouTube Video</b>
-</p>
-
-...
-
-<br>
-<br>
-
-<p align="center">
   <b>What next?</b>
 </p>
 
@@ -302,6 +293,10 @@ or you could even become a contributor
 to our website by forking this repository.
 Email soobinrho@nsustain.com
 if you have any question regarding our website.
+
+<!---
+  Insert YouTube intro video here.
+-->
 
 <br>
 <br>

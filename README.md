@@ -205,7 +205,8 @@ goes offline thanks to Kubernetes.
 Techs used:
 `Google Domains`
 
-Our domain name nsustain.com
+Our domain name
+**[[Nsustain.com](nsustain.com)]**
 costs $12 per year.
 
 **(Optional) Setting up a custom-domain email forwarding service**<br>
@@ -285,7 +286,8 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You could go to *nsustain.com*
+You could go to
+**[[Nsustain.com](nsustain.com)]**
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor

@@ -26,8 +26,7 @@
 
 <p align="center">
   <b>
-    Nsustain<br>
-    [<a href="https://nsustain.com">Official Website</a>]
+    [<a href="https://nsustain.com">Nsustain.com</a>]
   </b>
 
 </p>

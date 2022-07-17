@@ -42,6 +42,15 @@ Why we believe you might
 find this helpful, too.
 
 <!---
+Exaplanation on the need we had:
+
+It's like farmers / environmentalists
+are the frontline soldiers of environmental
+problems, and coders are a regiment of
+long-range support. For artilary, for instance,
+we need spotters that tell them where
+the problem lies.
+
 Our philosophy:
 
 We're not trying to optimize our website

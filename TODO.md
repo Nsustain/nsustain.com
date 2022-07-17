@@ -126,6 +126,12 @@ ctrl + v + shift + i   |   Visual block mode
   No need to reinvent the wheel. Also, Google
   custom search does it better anyways.
 
+- for each post, the OP has the option to
+  upload a slack channel url to the post.
+  Slack or discord or anything.
+  I'd like this to be like Call for Code
+  project page's fields, but with
+  more freedom to choose any platform.
 
 <br>
 <br>

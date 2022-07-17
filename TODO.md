@@ -57,6 +57,12 @@ ctrl + v + shift + i   |   Visual block mode
   just make a post, if you happen
   to know any environmental problem
   that needs eager programmers to solve..."
+  In other words, don't be embarrased
+  of our new website having no user for now.
+  Just own up to it and be honest about it!
+  No need to create dummy posts to make it
+  look populated.
+  Users will appreciate us being honest.
 
 ### Feature Specifications
 - storing necessary cookies with

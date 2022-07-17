@@ -90,7 +90,7 @@ By the way, the white space in front of [1.1] and [1.2]
 is the unicode em space: (  )
 -->
 ## Steps
-[1.](#1-designing-the-website) Designing the website<br>
+[1.](#1-web-programming) Web programming<br>
   [A.](#back-end) Back-end<br>
   [B.](#front-end) Front-end<br>
 [2.](#2-containerizing-the-website) Containerizing the website<br>
@@ -101,7 +101,7 @@ is the unicode em space: (  )
 <br>
 <br>
 
-# 1. Designing the website
+# 1. Web programming
 
 **Writing codes on a version-control system**<br>
 Techs used:

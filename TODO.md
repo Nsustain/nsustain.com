@@ -80,6 +80,29 @@ ctrl + v + shift + i   |   Visual block mode
   the post goest to the trash box,
   and the user gets auto-generated message:
   "Your post was deleted by ..."
+- no username so that we can minimize
+  storage of user data. The best way
+  to prevent hacking is to have nothing
+  to be hacked in the first place.
+  Instead of having a user name,
+  whenever the original poster makes
+  a comment on his/her post,
+  it shows as OP.
+  Plus, other users can select their
+  their identification as either
+  "coder," "reviwer," or "other"
+  The naming will be such that
+  "coder A," "coder B," incrementing...
+  In other words, no permanent identification
+  across the website, but only post-specific ones.
+
+  There will be four possible id's.
+  For every post, there will be only one OP though.
+
+  In other words, the reason why there's an
+  oAuth using Google and GitHub is only because
+  the OP should be able to edit, and also
+  we should prevent bots form making comments.
 
 
 <br>

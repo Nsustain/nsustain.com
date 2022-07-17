@@ -28,11 +28,10 @@
   <b>
     Hall of Frame
   </b>
+  These people made Nsustain more secure
+  by finding security holes on our website
+  and reporting them to us. Thank you!
 </p>
-
-These people made Nsustain more secure
-by finding security holes on our website
-and reporting them to us. Thank you!
 
 <br>
 <br>

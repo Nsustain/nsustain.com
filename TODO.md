@@ -108,6 +108,7 @@ ctrl + v + shift + i   |   Visual block mode
   it's the default page, and about page.
   About page, however, just links to our
   https://github.com/Nsustain/nsustain.com
+  Maybe using 302 redirect.
 
 - Try not to do all things mediocrely, but
   do one thing the best. What does our website to?

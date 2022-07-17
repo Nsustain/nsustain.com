@@ -34,7 +34,7 @@
 <br>
 <br>
 
-*YYYY-MM-DD* [Waiting for the first contributor]
+***YYYY-MM-DD*** [Waiting for the first contributor]
 1. ...
 
 <br>

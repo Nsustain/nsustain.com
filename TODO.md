@@ -117,6 +117,11 @@ ctrl + v + shift + i   |   Visual block mode
   Help programmers who want to find a project
   that touches their heart.
 
+- encourage users to avoid posting a duplicate
+  problem, for which the problem already exists,
+  but no problem at all. Just encourage users to
+  be kind and point the post to that existing project.
+
 
 <br>
 <br>

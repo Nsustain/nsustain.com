@@ -104,6 +104,12 @@ ctrl + v + shift + i   |   Visual block mode
   the OP should be able to edit, and also
   we should prevent bots form making comments.
 
+- Only two pages. Main, which has no label since
+  it's the default page, and about page.
+  About page, however, just links to our
+  https://github.com/Nsustain/nsustain.com
+
+
 
 <br>
 <br>

@@ -10,8 +10,8 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/Nsustain/nsustain.com/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Nsustain/nsustain.com">
+  <a href="https://github.com/Nsustain/nsustain.com">
+    <img alt="nsustain.com" src="https://img.shields.io/badge/GitHub-nsustain.com-brightgreen">
   </a>
   <a href="https://github.com/Nsustain/nsustain.com/blob/main/LICENSE">
     <img src="https://badgen.net/github/license/nsustain/nsustain.com">

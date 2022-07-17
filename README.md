@@ -327,6 +327,8 @@ if you have any question regarding our website.
 Please email security@nsustain.com
 if you find any security hole.
 Thank you for making Nsustain more secure!
+Your findings make a huge positive difference
+for us.
 
 <!---
   Insert YouTube intro video here.

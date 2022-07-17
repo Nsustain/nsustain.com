@@ -38,7 +38,13 @@ attempts to meet our need.
 Why we work hard on this website.
 Why we believe in this.
 Why we believe you might
-find this helpful, too.
+find this helpful, too...
+An open-source community for the frontline
+environmental workers and coders willing to
+code for the
+e<b><em>n</em></b>vironment &
+<b><em>sustain</em></b>ability.
+
 
 <!---
 Exaplanation on the need we had:

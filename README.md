@@ -41,6 +41,25 @@ Why we believe in this.
 Why we believe you might
 find this helpful, too.
 
+<!---
+Our philosophy:
+
+We're not trying to optimize our website
+so that users stay on our website as much
+as possible. No, we don't want you to
+spend all of your time on website.
+Go write codes, for example.
+
+The goal of our website is to help
+you find a project that really touches
+your heart, something that is worth
+your devotion. We'll try to make
+that process as smooth and enjoyable
+as possible, but we will not try to
+modify your behavior artifically in any way.
+
+-->
+
 ***How do we keep maintaining our server?***<br>
 We don't have any ad revenue,
 and we'll never put ads.

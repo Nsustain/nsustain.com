@@ -28,7 +28,6 @@
   <b>
     [<a href="https://nsustain.com">Nsustain.com</a>]
   </b>
-
 </p>
 
 ***Who are we?***<br>

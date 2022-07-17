@@ -315,8 +315,7 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You could go to
-**[[Nsustain.com](nsustain.com)]**
+You could go to Nsustain
 and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor

@@ -109,6 +109,12 @@ ctrl + v + shift + i   |   Visual block mode
   About page, however, just links to our
   https://github.com/Nsustain/nsustain.com
 
+- Try not to do all things mediocrely, but
+  do one thing the best. What does our website to?
+  Help people who know the environment find
+  programmers who can solve the problem.
+  Help programmers who want to find a project
+  that touches their heart.
 
 
 <br>

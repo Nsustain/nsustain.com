@@ -318,9 +318,9 @@ We most often ...
 You could go to Nsustain
 and see if there's any project
 you'd love to invest your time in,
-or you could even become a contributor
+or you can become a contributor
 to our website by forking this repository.
-You can email soobinrho@nsustain.com
+Email soobinrho@nsustain.com
 if you have any question.
 
 Please email security@nsustain.com

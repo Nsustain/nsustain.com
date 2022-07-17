@@ -324,6 +324,11 @@ to our website by forking this repository.
 Email soobinrho@nsustain.com
 if you have any question regarding our website.
 
+If you find any security hole on our
+website, please email security@nsustain.com
+We appreciate your time and effort to
+make Nsustain more secure.
+
 <!---
   Insert YouTube intro video here.
 -->

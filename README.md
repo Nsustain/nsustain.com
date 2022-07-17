@@ -320,8 +320,8 @@ and see if there's any project
 you'd love to invest your time in,
 or you could even become a contributor
 to our website by forking this repository.
-Email soobinrho@nsustain.com
-if you have any question regarding our website.
+You can email soobinrho@nsustain.com
+if you have any question.
 
 Please email security@nsustain.com
 if you find any security hole.

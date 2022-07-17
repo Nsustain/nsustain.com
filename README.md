@@ -64,8 +64,10 @@ you find a project that really touches
 your heart, something that is worth
 your devotion. We'll try to make
 that process as smooth and enjoyable
-as possible, but we will not try to
-modify your behavior artifically in any way.
+as possible, but we don't do anything sneaky.
+We don't store suspicious cookies on your computer.
+In fact, we don't even try to know your
+name, email, or any other personal information.
 
 -->
 

@@ -122,6 +122,10 @@ ctrl + v + shift + i   |   Visual block mode
   but no problem at all. Just encourage users to
   be kind and point the post to that existing project.
 
+- for search function, just use custom google search.
+  No need to reinvent the wheel. Also, Google
+  custom search does it better anyways.
+
 
 <br>
 <br>

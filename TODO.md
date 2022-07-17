@@ -42,6 +42,21 @@ ctrl + v + shift + i   |   Visual block mode
 - include why set minimum SSL protocol to
   TLS 1.2 and drop TLS 1.0 and TLS 1.1
   https://blog.qualys.com/product-tech/2018/11/19/grade-change-for-tls-1-0-and-tls-1-1-protocols?_ga=2.51170793.1984962975.1657484991-1435314446.1657484991
+- after lunch, the first post should say,
+  "hello, is anyone here?"
+  and then the body says
+  Hi! I'm not a regular user.
+  I'm Soobin, the developer
+  of this website :)
+  You might be wondering if
+  anybody uses this website.
+  So far, we have only you
+  and my team, but who knows?
+  More people might start using
+  our website. So, you could
+  just make a post, if you happen
+  to know any environmental problem
+  that needs eager programmers to solve..."
 
 ### Feature Specifications
 - storing necessary cookies with

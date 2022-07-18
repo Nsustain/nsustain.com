@@ -28,7 +28,7 @@
   <b>
     Hall of Frame
   </b><br>
-  These people helped Nsustain become more secure. Thank you!
+  These people made Nsustain more secure. Thank you!
 </p>
 
 <br>

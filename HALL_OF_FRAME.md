@@ -211,8 +211,7 @@
 <br>
 
 Please email security@nsustain.com
-if you find any security issue on Nsustain.
-Thank you again for your help!
+if you find any security hole on Nsustain.
 
 <br>
 <br>

@@ -34,7 +34,7 @@
 <br>
 
 **2022-07-18** We're waiting for the first security contributor!<br>
-1. ...
+- ...
 
 <br>
 <br>

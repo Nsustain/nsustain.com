@@ -336,10 +336,6 @@ for us. If you'd like, your name
 will be displayed at
 [the hall of frame](./HALL_OF_FRAME.md).
 
-<!---
-  Insert YouTube intro video here.
--->
-
 <br>
 <br>
 <br>

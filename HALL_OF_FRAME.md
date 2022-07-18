@@ -33,7 +33,7 @@
 
 <br>
 
-## Waiting for the first contributor
+## Waiting for the first security contributor
 1. ...
 
 <br>

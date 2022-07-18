@@ -133,6 +133,12 @@ ctrl + v + shift + i   |   Visual block mode
   project page's fields, but with
   more freedom to choose any platform.
 
+- email logs@nsustain.com whenever
+  an ssh connection with an outside-whitelist
+  IP address occurs. If possible, email also
+  when port other than SSH, HTTPS are used,
+  even though they are already blocked on the firewall.
+
 <br>
 <br>
 <br>

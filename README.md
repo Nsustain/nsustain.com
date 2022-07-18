@@ -331,8 +331,7 @@ if you have any question.
 Please email security@nsustain.com
 if you find any security hole.
 Thank you for making Nsustain more secure!
-Your findings make a huge positive difference
-for us. If you'd like, your name
+If you'd like, your name
 will be displayed at
 [the hall of frame](./HALL_OF_FRAME.md).
 

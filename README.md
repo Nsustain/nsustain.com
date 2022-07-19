@@ -34,7 +34,7 @@
 We are a bunch of
 open-source developeres who
 were trying to ... but ... so
-we made Nsustain on October 31, 2022.
+we made Nsustain in the summer of 2022.
 What do we do?
 What will we do? Why?
 What we needed. How our website

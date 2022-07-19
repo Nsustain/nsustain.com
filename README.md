@@ -32,7 +32,8 @@
 
 ***Who are we?***<br>
 We are a bunch of
-open-source developeres who ...
+open-source developeres who
+were trying to ... but ... so ...
 What do we do?
 What will we do? Why?
 What we needed. How our website

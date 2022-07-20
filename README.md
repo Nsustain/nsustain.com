@@ -154,8 +154,8 @@ version control ...
 
 **Building the website's database**<br>
 Techs used:
+`Node.js`
 `SQLite`
-`IBM Databases for etcd`
 
 Blabla ...
 

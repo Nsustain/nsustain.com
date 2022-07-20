@@ -168,7 +168,8 @@ Blabla ...
 
 **Building the front-end**<br>
 Techs used:
-`javascript`
+`JavaScript`
+`TypeScript`
 `react.js`
 `next.js`
 

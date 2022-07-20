@@ -81,8 +81,6 @@ name, email, or any other personal information.
 -->
 
 ***How do we keep maintaining our server?***<br>
-We don't have any ad revenue,
-and we'll never put ads.
 Our website was created to be a
 place for the open-source community.
 As such, Nsustain

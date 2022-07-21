@@ -345,7 +345,8 @@ and therefore become one of us.
 Email soobinrho@nsustain.com
 if you have any question or
 a feature request for us.
-We'll reply as promptly as possible.
+We always appreciate your feedback,
+and we'll reply as promptly as possible.
 
 Please email security@nsustain.com
 if you find any vulnerability on Nsustain.

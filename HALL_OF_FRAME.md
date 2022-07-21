@@ -212,7 +212,8 @@
 
 Please email security@nsustain.com
 if you find any security hole on Nsustain.
-We can't offer you any bounty, but you'll
+We can't offer you any bounty since we're
+not a rich organization, but you'll
 have our eternal gratitude. Thank you!
 
 <br>

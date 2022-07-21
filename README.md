@@ -72,7 +72,7 @@ or whatever your heart desires.
 
 The goal of our website is to help
 you find a project that really touches
-your heart, something that you find truly worthwhile.
+your heart, something that you find worthwhile.
 We'll try to make that process as smooth and enjoyable
 as possible, and - for your information -
 we don't do anything sneaky.

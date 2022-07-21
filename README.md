@@ -344,7 +344,7 @@ or you can become a contributor
 and therefore become one of us.
 Email soobinrho@nsustain.com
 if you have any question or
-feature request for us.
+a feature request for us.
 We'll reply as promptly as possible.
 
 Please email security@nsustain.com

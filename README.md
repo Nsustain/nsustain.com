@@ -57,42 +57,29 @@ in the world. Coders looking for
 a meaningful project that's really worth it
 now has one.
 
+We don't try to optimize our website
+such that users stay on our website 
+as long as possible.
+No, we don't want you to
+spend all of your time on Nsustain.
+Go write codes, help the environment,
+or whatever your heart desires.
+
+The goal of our website is to help
+you find a project that really touches
+your heart, something you find worthwhile.
+We'll try to make that process as smooth and enjoyable
+as possible, but we don't do anything sneaky.
+We don't store suspicious cookies on your computer.
+In fact, we don't even store any of your
+name, email, or any other personal information.
+
 ***What does Nsustain mean?***<br>
 An open-source community, where frontline
 environmental workers can post
 requests for open-source projects on the
 e<b><em>n</em></b>vironment &
 <b><em>sustain</em></b>ability.
-
-<!---
-Exaplanation on the need we had:
-
-It's like farmers / environmentalists
-are the frontline soldiers of environmental
-problems, and coders are a regiment of
-long-range support. For artilary, for instance,
-we need spotters that tell them where
-the problem lies.
-
-Our philosophy:
-
-We're not trying to optimize our website
-so that users stay on our website as much
-as possible. No, we don't want you to
-spend all of your time on website.
-Go write codes, for example.
-
-The goal of our website is to help
-you find a project that really touches
-your heart, something that is worth
-your devotion. We'll try to make
-that process as smooth and enjoyable
-as possible, but we don't do anything sneaky.
-We don't store suspicious cookies on your computer.
-In fact, we don't even try to know your
-name, email, or any other personal information.
-
--->
 
 ***How do we keep maintaining our server?***<br>
 Our website was created to be a
@@ -101,7 +88,7 @@ As such, Nsustain
 will always be an open-source project,
 and we will never commercialize our website.
 We do this because we genuinly wanted
-to help make the e***n***vironment ***sustain***able :)
+to help make the e***n***vironment ***sustain***able 👍
 
 <!--
 ***How did this all begin?***<br>

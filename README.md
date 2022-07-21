@@ -36,7 +36,7 @@ open-source developers
 who were trying to find
 an idea we can work on,
 an idea that touches our heart,
-an idea that's worth our time and evotion,
+an idea that's worth our time and devotion,
 but we couldn't. It was such a tragedy
 that - although we wanted to help -
 we couldn't find a specific problem

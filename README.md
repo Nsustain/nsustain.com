@@ -58,7 +58,7 @@ So, we made exactly what we
 wanted and needed. Nsustain
 is an open-source community, where
 front-line environmental workers -
-e.g. farmers or scientists - can
+e.g. farmers and scientists - can
 post specific problems they've noticed
 in the world. Coders looking for
 a meaningful project that's really worth it

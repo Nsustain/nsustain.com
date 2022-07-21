@@ -32,23 +32,35 @@
 
 ***Who are we?***<br>
 We are a bunch of
-open-source developeres who
-were trying to ... but ... so
-we made Nsustain in the summer of 2022.
-What do we do?
-What will we do? Why?
-What we needed. How our website
-attempts to meet our need.
-Why we work hard on this website.
-Why we believe in this.
-Why we believe you might
-find this helpful, too...
+open-source developeres
+who were trying to find
+an idea we can work on,
+an idea that touches our heart,
+an idea that's worth our time and evotion,
+but we couldn't. It was such a tragedy
+that - although we wanted to help -
+we couldn't find a specific problem
+on sustainability. They certainly exist.
+It was jsut that we didn't know
+where to find them.
+
+***What do we do?***<br>
+So, we made exactly what we
+wanted and needed. Nsustain
+is an open-source community where
+front-line environmental workers
+- e.g. farmers or scientists - can
+post specific problems they've noticed
+in the world. Coders looking for
+a meaningful project that's really worth it
+now has one.
+
+***What does Nsustain mean?***
 An open-source community for the frontline
 environmental workers and coders willing to
 code for the
 e<b><em>n</em></b>vironment &
 <b><em>sustain</em></b>ability.
-
 
 <!---
 Exaplanation on the need we had:

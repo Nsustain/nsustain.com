@@ -79,8 +79,8 @@ we don't do anything sneaky.
 We don't store suspicious cookies on your computer.
 In fact, we don't even store any of your
 name, email, or any other personal information.
-We don't need your personal data;
-all we need is your ideas and your love for the
+We don't need your personal data.
+All we need is your ideas and your love for the
 e***n***vironment & ***sustain***ability.
 
 <br>

@@ -55,7 +55,7 @@ where to find them.
 ***What do we do?***<br>
 So, we made exactly what we
 wanted and needed. Nsustain
-is an open-source community where
+is an open-source community, where
 front-line environmental workers -
 e.g. farmers or scientists - can
 post specific problems they've noticed

@@ -57,8 +57,8 @@ now has one.
 
 ***What does Nsustain mean?***<br>
 An open-source community, where frontline
-environmental workers can find coders willing to
-code for the
+environmental workers can post
+requests for open-source projects for the
 e<b><em>n</em></b>vironment &
 <b><em>sustain</em></b>ability.
 

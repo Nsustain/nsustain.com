@@ -349,8 +349,7 @@ We'll reply as promptly as possible.
 
 Please email security@nsustain.com
 if you find any vulnerability on our website.
-If you'd like, your name will be displayed at
-[the hall of frame](./HALL_OF_FRAME.md).
+We have [the hall of frame](./HALL_OF_FRAME.md).
 
 <br>
 <br>

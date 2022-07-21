@@ -69,7 +69,7 @@ The goal of our website is to help
 you find a project that really touches
 your heart, something you find truly worthwhile.
 We'll try to make that process as smooth and enjoyable
-as possible, and for your information,
+as possible, and - for your information -
 we don't do anything sneaky.
 We don't store suspicious cookies on your computer.
 In fact, we don't even store any of your

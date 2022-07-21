@@ -128,8 +128,7 @@ make our website from ground-up,
 so that you can make your own website
 relatively easily if you'd like to.
 This will be helpful if you'd like
-to become a contributor and become
-one of us, too.
+to become a contributor, too.
 
 <br>
 <br>

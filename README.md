@@ -66,7 +66,7 @@ We don't try to optimize our website
 such that users stay on our website
 as long as possible.
 No, we don't want you to
-spend all of your time on Nsustain.
+spend all day on Nsustain.
 Go help the environment, write codes,
 or whatever your heart desires.
 

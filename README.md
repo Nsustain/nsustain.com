@@ -75,7 +75,7 @@ or whatever your heart desires.
 The goal of our website is to help
 you find a project that really touches
 your heart, something that you truly find worthwhile.
-We'll try to make that process as smooth and enjoyable
+We try to make that process as smooth and enjoyable
 as possible for you, and - for your information -
 we don't do anything sneaky.
 We don't store suspicious cookies on your computer.

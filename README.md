@@ -338,10 +338,11 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You can go see if there's any project
-you'd love to invest your time in on Nsustain,
+You can go to Nsustain and see
+if there's any project
+you'd love to invest your time in,
 or you can become a contributor
-by forking this repository.
+and therefore become one of us!
 Email soobinrho@nsustain.com
 if you have any question for us.
 We'll reply as promptly as possible.

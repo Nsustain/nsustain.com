@@ -349,7 +349,7 @@ We always appreciate your feedback,
 and we'll reply as promptly as possible.
 
 Please email security@nsustain.com
-if you find any vulnerability on Nsustain.
+if you discover any vulnerability on Nsustain.
 **[[Security Hall of Frame](./HALL_OF_FRAME.md)]**
 
 <br>

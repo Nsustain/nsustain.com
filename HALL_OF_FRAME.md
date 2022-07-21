@@ -212,6 +212,7 @@
 
 Please email security@nsustain.com
 if you find any security hole on Nsustain.
+Thank you!
 
 <br>
 <br>

@@ -58,18 +58,19 @@ a meaningful project that's really worth it
 now has one.
 
 We don't try to optimize our website
-such that users stay on our website 
+such that users stay on our website
 as long as possible.
 No, we don't want you to
 spend all of your time on Nsustain.
-Go write codes, help the environment,
+Go help the environment, write codes,
 or whatever your heart desires.
 
 The goal of our website is to help
 you find a project that really touches
-your heart, something you find worthwhile.
+your heart, something you find truly worthwhile.
 We'll try to make that process as smooth and enjoyable
-as possible, but we don't do anything sneaky.
+as possible, and for your information,
+we don't do anything sneaky.
 We don't store suspicious cookies on your computer.
 In fact, we don't even store any of your
 name, email, or any other personal information.

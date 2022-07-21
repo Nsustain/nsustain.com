@@ -30,6 +30,9 @@
   </b>
 </p>
 
+<br>
+<br>
+
 ***Who are we?***<br>
 We are a bunch of
 open-source developers
@@ -45,6 +48,8 @@ We all know that there are a lot of
 environmental problems that need solutions.
 It was just that we didn't know
 where to find them.
+
+<br>
 
 ***What do we do?***<br>
 So, we made exactly what we
@@ -75,12 +80,16 @@ We don't store suspicious cookies on your computer.
 In fact, we don't even store any of your
 name, email, or any other personal information.
 
+<br>
+
 ***What does Nsustain mean?***<br>
 An open-source community, where frontline
 environmental workers can post
 requests for open-source projects on the
 e<b><em>n</em></b>vironment &
 <b><em>sustain</em></b>ability.
+
+<br>
 
 ***How do we keep maintaining our server?***<br>
 Our website was created to be a
@@ -106,6 +115,7 @@ and the challenge was held for six months
 from May, 2022 to October, 2022.
 -->
 
+<br>
 <br>
 <br>
 

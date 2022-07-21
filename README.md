@@ -37,7 +37,9 @@
 ***Who are we?***<br>
 We are a bunch of
 open-source developers
-who were trying to find
+who wanted to help make
+the environment sustainable.
+SO, we were trying to find
 an idea we can work on,
 an idea that touches our heart,
 an idea that's worth our time and devotion,

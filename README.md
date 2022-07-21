@@ -39,7 +39,7 @@ We are a bunch of
 open-source developers
 who wanted to help make
 the environment sustainable.
-SO, we were trying to find
+So, we were trying to find
 an idea we can work on,
 an idea that touches our heart,
 an idea that's worth our time and devotion,

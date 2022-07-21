@@ -280,10 +280,10 @@ on their settings and install it in our server.
 
 **Getting a Virtual Private Server (VPS)**<br>
 Techs used:
-`DigitalOcean`
+`IBM Cloud`
 `Ubuntu Server`
 
-Get a VPS. Around $6 per month.
+Get a VPS. Free trial for ...
 
 ```bash
 # ...

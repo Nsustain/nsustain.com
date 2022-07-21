@@ -348,7 +348,7 @@ if you have any question for us.
 We'll reply as promptly as possible.
 
 Please email security@nsustain.com
-if you find any vulnerability on our website.
+if you find any vulnerability on Nsustain.
 We have [The Security Hall of Frame](./HALL_OF_FRAME.md).
 
 <br>

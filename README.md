@@ -102,7 +102,7 @@ As such, Nsustain
 will always be an open-source project,
 and we will never commercialize our website.
 We do this because we genuinly wanted
-to help make the e***n***vironment ***sustain***able 👍
+to help make the e***n***vironment ***sustain***able.
 
 <!--
 ***How did this all begin?***<br>
@@ -131,7 +131,8 @@ Here are the exact steps we took to
 make our website from ground-up,
 in case you'd like to contribute.
 This will be helpful if you'd like
-to make your own website based on Nsustain, too.
+to make your own website
+based on Nsustain, too 👍
 
 <br>
 <br>

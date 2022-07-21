@@ -88,9 +88,7 @@ e***n***vironment & ***sustain***ability.
 <br>
 
 ***What does Nsustain mean?***<br>
-An open-source community, where frontline
-environmental workers can post
-requests for open-source projects on the
+An open-source community for the
 e<b><em>n</em></b>vironment &
 <b><em>sustain</em></b>ability.
 

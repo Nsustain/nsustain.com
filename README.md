@@ -338,16 +338,16 @@ We most often ...
   <b>What next?</b>
 </p>
 
-Go to Nsustain
-and see if there's any project
-you'd love to invest your time in,
+You can go see if there's any project
+you'd love to invest your time in on Nsustain,
 or you can become a contributor
-to our website by forking this repository.
+by forking this repository.
 Email soobinrho@nsustain.com
 if you have any question for us.
+We'll reply as promptly as possible.
 
 Please email security@nsustain.com
-if you find any security hole.
+if you find any vulnerability on our website.
 Thank you for making Nsustain more secure!
 If you'd like, your name
 will be displayed at

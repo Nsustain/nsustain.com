@@ -41,6 +41,8 @@ but we couldn't. It was such a tragedy
 that - although we wanted to help -
 we couldn't find a specific problem
 on sustainability. They certainly exist.
+We all know that there are a lot of
+environmental problems that need solutions.
 It was just that we didn't know
 where to find them.
 

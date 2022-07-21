@@ -38,7 +38,8 @@
 We are a bunch of
 open-source developers
 who were trying to find
-an idea we can work on for the envrionment,
+an idea we can work on in order to
+help the envrionment,
 an idea that touches our heart,
 an idea that's worth our time and devotion,
 but we couldn't. It was such a tragedy

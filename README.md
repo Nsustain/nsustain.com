@@ -42,7 +42,9 @@ an idea we can work on in order to
 help the envrionment,
 an idea that touches our heart,
 an idea that's worth our time and devotion,
-but we couldn't. It was such a tragedy
+but we couldn't.
+
+It was such a tragedy
 that - although we wanted to help -
 we couldn't find a specific problem
 on sustainability. They certainly exist.

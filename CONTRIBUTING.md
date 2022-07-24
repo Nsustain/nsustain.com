@@ -30,7 +30,9 @@
   Thank you for making Nsustain better!<br>
   These are guidelines, not rules.
   Thus, feel free to break these guidelines
-  if you think that'd be better.
+  if you think that'd be better.<br>
+  However, they'll definitely help you
+  if you fully understand these guidelines.
 </p>
 
 <br>

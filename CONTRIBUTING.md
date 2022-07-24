@@ -108,7 +108,8 @@ Preferred method of reporting bugs
 is writing on the
 [issues tracker](https://github.com/Nsustain/nsustain.com/issues).
 However, if you don't have a GitHub
-account, email to soobinrho@nsustain.com
+account, you can email to 
+soobinrho@nsustain.com
 
 <br>
 

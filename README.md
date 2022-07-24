@@ -82,7 +82,7 @@ We don't store suspicious cookies on your computer.
 In fact, we don't even store any of your
 name, email, or any other personal information.
 Security is our top-most priority, and
-we don't track user behavior.
+we aren't interested in tracking user behavior.
 All we need is your ideas and your love for the
 e***n***vironment & ***sustain***ability.
 

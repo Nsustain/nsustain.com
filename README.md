@@ -75,14 +75,12 @@ or whatever your heart desires.
 The goal of our website is to help
 you find a project that really touches
 your heart, something that you truly find worthwhile.
-We try to make that process as smooth and enjoyable
-as possible for you, and - for your information -
-we don't do anything sneaky.
+We try to make that process as smooth
+as possible for you.
+For your information, we don't do anything sneaky.
 We don't store suspicious cookies on your computer.
-In fact, we don't even store any of your
-name, email, or any other personal information.
 Security is our top-most priority, and
-we aren't interested in tracking user behavior.
+we aren't interested in any of your personal information.
 All we need is your ideas and your love for the
 e***n***vironment & ***sustain***ability.
 

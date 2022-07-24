@@ -32,6 +32,7 @@
   Thus, feel free to break these guidelines
   if you think that'd be better.
   However, they'll definitely help you
+  and everyone
   if you fully understand these guidelines.
 </p>
 

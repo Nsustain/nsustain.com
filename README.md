@@ -352,7 +352,8 @@ We most often ...
 </p>
 
 You can go to Nsustain and see
-if there's any project that's worth it,
+if there's any project that's worth
+your ♥
 or you can become a contributor
 and get invited to become a member of
 our GitHub organization.

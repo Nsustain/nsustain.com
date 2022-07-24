@@ -321,7 +321,7 @@ Blabla ...
 <br>
 <br>
 
-## Project Layout
+## Repository Layout
 
 ```bash
 # tree

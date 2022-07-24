@@ -82,7 +82,7 @@ No, we don't want you to spend all day on Nsustain.
 Go help the environment, write codes,
 or whatever your heart desires.
 
-All we need is your ideas and your love for the
+All we need is your love for the
 e***n***vironment & ***sustain***ability.
 
 <br>

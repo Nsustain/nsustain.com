@@ -33,7 +33,7 @@
 
 <br>
 
-**2022-07-18** We're waiting for the first security contributor!<br>
+**2022-07-18** First Security Contributor<br>
 ...
 
 <br>

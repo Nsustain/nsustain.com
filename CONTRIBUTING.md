@@ -94,6 +94,12 @@ to the maintainers. We'll review
 the pull request and merge the PR
 as soon as the reviewing process is done.
 
+If the maintainers are online,
+the time it takes for a PR to be reviewed
+is expected to be around an hour.
+If the maintainers are offline,
+however, please expect around one week.
+
 <br>
 
 # 4. Reporting Bugs

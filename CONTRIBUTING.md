@@ -108,19 +108,18 @@ account, email to soobinrho@nsustain.com
 # 5. Reporting Security Vulnerability
 
 Please send an email to security@nsustain.com
+
+<br>
+<br>
+
+<p align="center">
+  <b>A Note from the Maintainers</b>
+</p>
+
 You're making a big positive change for Nsustain.
-We'll always appreciate your willingness to
-make Nsustain safer from security threats.
-Thank you again for making Nsustain better!
-
-<!---
-
-Finish Contribution Guidelines.
-Move this file to the main repository.
-For other files, just link to
-the main repo's CONTRIBUTING.md
-
--->
+It truly means a lot for us.
+We'll always appreciate your time and effort
+to make Nsustain better. Thank you again!
 
 
 <br>

@@ -73,7 +73,7 @@ and enjoyable for you.
 Plus, for your information, we don't do anything sneaky.
 Security is our top-most priority, and
 we aren't interested in any of your personal information.
-We don't store suspicious cookies on your computer.
+We don't store suspicious cookies tracking everything you do.
 We don't optimize our website such that users
 stay on our website as long as possible.
 No, we don't want you to spend all day on Nsustain.

@@ -113,7 +113,7 @@ Please send an email to security@nsustain.com
 <br>
 
 <p align="center">
-  <b>A Note from the Maintainers</b>
+  <b>A Note From the Maintainers</b>
 </p>
 
 You're making a big positive change for Nsustain.

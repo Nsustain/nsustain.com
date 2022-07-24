@@ -332,7 +332,7 @@ Blabla ...
 ├──                       # 
 ├──                       # 
 ├── LICENSE               # details on our Apache License
-├── NOTICE.md             # `@Eddy-Barraud`'s MIT License
+├── NOTICE.md             # `...`'s MIT License
 └── README.md             # file you're reading now. Documentation goes here
 ```
 

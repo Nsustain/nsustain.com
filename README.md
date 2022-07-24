@@ -127,8 +127,8 @@ from May, 2022 to October, 2022.
   <b>How we made our website</b>
 </p>
 
-We documented how Nsustain was made
-every step of the way,
+Here are the exact steps we took
+to create Nsustain
 in case you'd like to contribute.
 This will be helpful if you'd like
 to make your own website

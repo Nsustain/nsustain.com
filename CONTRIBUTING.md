@@ -27,7 +27,10 @@
   <b>
     Contribution Guidelines
   </b><br>
-  Thank you for making Nsustain better!
+  Thank you for making Nsustain better!<br>
+  These are guidelines, not rules.
+  Thus, feel free to break these guidelines
+  if you think that'd be better.
 </p>
 
 <br>

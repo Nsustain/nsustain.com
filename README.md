@@ -352,10 +352,10 @@ We most often ...
 </p>
 
 You can go to Nsustain and see
-if there's any project
-you'd love to invest your time in,
+if there's any project that's worth it,
 or you can become a contributor
-and therefore become one of us.
+and get invited to become a member of
+our GitHub organization.
 Email soobinrho@nsustain.com
 if you have any question or
 a feature request for us.

@@ -336,8 +336,6 @@ Blabla ...
 └── README.md             # file you're reading now. Documentation goes here
 ```
 
-- `...` contains ...
-
 <br>
 <br>
 

@@ -95,8 +95,7 @@ e<b><em>n</em></b>vironment &
 <br>
 
 ***How do we keep maintaining our server?***<br>
-We don't do ads. We just maintain
-server costs out of our own pocket.
+We don't do ads.
 Our website was created to be a
 place for the open-source community.
 As such, Nsustain

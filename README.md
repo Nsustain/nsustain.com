@@ -77,10 +77,10 @@ you find a project that really touches
 your heart, something that you truly find worthwhile.
 We try to make that process as smooth
 as possible for you.
-For your information, we don't do anything sneaky.
-We don't store suspicious cookies on your computer.
+Plus, for your information, we don't do anything sneaky.
 Security is our top-most priority, and
 we aren't interested in any of your personal information.
+We don't store suspicious cookies on your computer.
 All we need is your ideas and your love for the
 e***n***vironment & ***sustain***ability.
 

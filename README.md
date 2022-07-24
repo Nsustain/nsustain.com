@@ -64,23 +64,22 @@ in the world. Coders looking for
 a meaningful project that's really worth it
 now has one.
 
-We don't try to optimize our website
-such that users stay on our website
-as long as possible.
-No, we don't want you to
-spend all day on Nsustain.
-Go help the environment, write codes,
-or whatever your heart desires.
-
 The goal of our website is to help
 you find a project that really touches
 your heart, something that you truly find worthwhile.
-We try to make that process as smooth
-as possible for you.
+We will always try to make that process smooth
+and enjoyable for you.
+
 Plus, for your information, we don't do anything sneaky.
 Security is our top-most priority, and
 we aren't interested in any of your personal information.
 We don't store suspicious cookies on your computer.
+We don't optimize our website such that users
+stay on our website as long as possible.
+No, we don't want you to spend all day on Nsustain.
+Go help the environment, write codes,
+or whatever your heart desires.
+
 All we need is your ideas and your love for the
 e***n***vironment & ***sustain***ability.
 

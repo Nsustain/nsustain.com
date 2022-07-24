@@ -91,14 +91,14 @@ When you request a pull request,
 GitHub automatically sends an email
 to the maintainers. We'll review
 the pull request and merge the PR
-as promptly as possible.
+as soon as the reviewing process is done.
 
 <br>
 
 # 4. Reporting Bugs
 
 Preferred method of reporting bugs
-is writing on
+is writing on the
 [issues tracker](https://github.com/Nsustain/nsustain.com/issues).
 However, if you don't have a GitHub
 account, email to soobinrho@nsustain.com

@@ -127,7 +127,7 @@ from May, 2022 to October, 2022.
   <b>How we made our website</b>
 </p>
 
-We documented how we made Nsustain
+We documented how Nsustain was made
 every step of the way,
 in case you'd like to contribute.
 This will be helpful if you'd like

@@ -79,8 +79,8 @@ We don't store suspicious cookies tracking everything you do.
 We don't optimize our website such that you
 stay on our website as long as possible.
 No, we don't want you to spend all day on Nsustain.
-Go help the environment, write codes,
-or whatever your heart desires.
+Go help the environment. Write codes.
+Whatever your heart desires.
 
 All we need is your love for the
 e***n***vironment & ***sustain***ability.

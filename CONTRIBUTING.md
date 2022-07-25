@@ -126,7 +126,7 @@ Make pull requests to
 `develop` branch are tested
 in the maintainers'
 test environment first.
-After all tests pass, all commits
+After all tests are passed, all commits
 on `develop` will be merged to `main`.
 
 When you make a pull request,

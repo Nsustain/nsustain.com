@@ -31,9 +31,9 @@
   These are guidelines, not rules.
   Thus, feel free to break these guidelines
   if you think that'd be better.
-  However, they'll definitely help you
-  and everyone
-  if you fully understand these guidelines.
+  However, fully understanding these
+  guidelines will benefit everyone
+  including yourself.
 </p>
 
 <br>
@@ -116,7 +116,7 @@ Do not's:
 
 <br>
 
-Plus, all commits should be signed with the 
+Plus, all commits should be signed with the
 [Developer Certificate of Origin](https://github.com/apps/dco)
 in order to verify the author.
 You can do that by using `git commit -s`,
@@ -147,7 +147,7 @@ git c -am'Commit message'
 # 3. Pull Requests
 
 We have two branches:
-`nsustain.com/main` and 
+`nsustain.com/main` and
 `nsustain.com/develop`.
 Make pull requests to
 `develop`. All features on the
@@ -162,8 +162,8 @@ GitHub automatically sends an email
 to the maintainers.
 If we are online,
 we try to finish the review under a day.
-If we are offline, however, 
-please expect the reviewing process 
+If we are offline, however,
+please expect the reviewing process
 to take around one week.
 
 <br>
@@ -174,7 +174,7 @@ Preferred method of reporting bugs
 is writing on the
 [issues tracker](https://github.com/Nsustain/nsustain.com/issues).
 However, if you don't have a GitHub
-account, you can email to 
+account, you can email to
 soobinrho@nsustain.com
 
 <br>

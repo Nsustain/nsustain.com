@@ -121,7 +121,8 @@ Do not's:
 Plus, all commits should be signed with the
 [Developer Certificate of Origin](https://github.com/apps/dco)
 in order to verify the author.
-You can do that by using `git commit -s`,
+You can sign your commits by using
+`git commit -s -m 'Commit message'`,
 which appends the DCO line
 at the end of your commit message:
 

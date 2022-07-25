@@ -124,11 +124,11 @@ from May, 2022 to October, 2022.
 <br>
 
 <p align="center">
-  <b>How we made our website</b>
+  <b>How we deploy our website</b>
 </p>
 
 Here are the exact steps we took
-to create Nsustain
+to make Nsustain
 in case you'd like to contribute.
 This will be helpful if you'd like
 to make your own website

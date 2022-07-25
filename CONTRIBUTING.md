@@ -137,7 +137,7 @@ git commit -s -m 'Commit message'
 
 Some of the maintainers personally use git's alias
 command to make an alias of `git commit -s`
-so that a shorter command can be used.
+so that we can use a shorter command.
 
 ```bash
 # Setting up a git alias is optional,

@@ -57,7 +57,7 @@
 If you are new to
 open-source, GitHub's
 [Open Source Guides](https://opensource.guide/)
-is a good place to start.
+is a great place to start.
 
 ```bash
 # Go to the directory you store

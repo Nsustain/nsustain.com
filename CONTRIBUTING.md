@@ -69,7 +69,7 @@ git clone https://github.com/Nsustain/nsustain.com.git
 
 # Create a new branch and
 # commit all works here.
-git checkout -b your-feature
+git checkout -b branch-name
 ```
 
 Branch Name Do's:

@@ -192,7 +192,7 @@ Please send an email to security@nsustain.com
 <br>
 
 <p align="center">
-  <b>A Note From the Maintainers</b>
+  <b>Thank You Note From the Maintainers</b>
 </p>
 
 You're contribution means a lot for

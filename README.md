@@ -365,8 +365,7 @@ and get invited to become a member of
 our GitHub organization.
 **[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/CONTRIBUTING.md)]**
 Email soobinrho@nsustain.com
-if you have any question or
-a feature request for us.
+if you have any question for us.
 We'll reply as promptly as possible.
 We appreciate your feedback!
 

@@ -123,7 +123,7 @@ We have two branches:
 `nsustain.com/develop`.
 Make pull requests to
 `develop`. All features on the
-`develop` branch are tested
+`develop` are tested
 in the maintainers'
 test environment first.
 After all tests are passed, all commits

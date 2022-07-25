@@ -128,8 +128,8 @@ to the end of your commit message:
 
 ```bash
 # The DCO line example.
-# The name and e-mail address will
-# automatically be read from your git settings.
+# The name and e-mail address will be
+# automatically read from your git settings.
 Signed-off-by: Soobin Rho <soobinrho@nsustain.com>
 ```
 

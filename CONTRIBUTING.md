@@ -32,7 +32,8 @@
   Thus, feel free to break these guidelines
   if you think that'd be better.
   However, fully understanding these
-  guidelines will benefit everyone.
+  guidelines will benefit everyone
+  and code maintainability.
 </p>
 
 <br>

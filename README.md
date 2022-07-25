@@ -360,14 +360,13 @@ We most often ...
 You can go to Nsustain and see
 if there's any project that's worth
 your ♥
-or you can become a contributor
-and get invited to become a member of
-our GitHub organization.
+or you can become a contributor.
 **[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/CONTRIBUTING.md)]**
 Email soobinrho@nsustain.com
 if you have any question for us.
 We'll reply as promptly as possible.
-We always appreciate your feedback!
+We appreciate your feedback,
+always and forever!
 
 Please email security@nsustain.com
 if you've discovered any vulnerability on Nsustain.

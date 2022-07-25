@@ -118,7 +118,17 @@ Do not's:
 
 # 3. Pull Requests
 
-When you request a pull request,
+We have two branches:
+`nsustain.com/main` and 
+`nsustain.com/develop`.
+Make pull requests to
+`develop`. All features in the
+`develop` branch are tested
+in a test environment first.
+After all tests pass, all commits
+in `develop` will be merged to `main`.
+
+When you make a pull request,
 GitHub automatically sends an email
 to the maintainers. We'll review
 the pull request and merge the PR

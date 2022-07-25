@@ -108,8 +108,8 @@ We follow
 [Tim Pope's guidelines on commit messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 Do's:
-- [&check;] `Change wording to make documentation more concise`
-- [&check;] `Add whitespaces for readability`
+- [&check;] `Make documentation more concise`
+- [&check;] `Add whitespace for readability`
 - [&check;] `Fix notifications overflow`
 
 Do not's:

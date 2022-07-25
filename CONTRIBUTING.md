@@ -131,7 +131,7 @@ to the end of your commit message:
 git commit -s -m 'Commit message'
 
 # Now, you commit message is appended
-# by the DCO line, which is basically
+# by a DCO, which is basically
 # your name and email. Example:
 # Signed-off-by: Soobin Rho <soobinrho@nsustain.com>
 ```

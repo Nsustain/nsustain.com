@@ -62,7 +62,7 @@ is a good place to start.
 ```bash
 # Go to the directory you store
 # your projects in.
-cd projects
+cd ~/projects
 
 # Clone this repository.
 git clone https://github.com/Nsustain/nsustain.com.git

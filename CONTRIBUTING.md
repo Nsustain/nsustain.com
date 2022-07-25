@@ -124,9 +124,10 @@ We have two branches:
 Make pull requests to
 `develop`. All features on the
 `develop` branch are tested
-in a test environment first.
+in the maintainers'
+test environment first.
 After all tests pass, all commits
-in `develop` will be merged to `main`.
+on `develop` will be merged to `main`.
 
 When you make a pull request,
 GitHub automatically sends an email

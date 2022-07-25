@@ -129,12 +129,9 @@ test environment first.
 After all tests are passed, all commits
 on `develop` will be merged to `main`.
 
-When you make a pull request,
+When you make a PR,
 GitHub automatically sends an email
-to the maintainers. We'll review
-the pull request and merge the PR
-as soon as the reviewing process is done.
-
+to the maintainers.
 If the maintainers are online,
 the goal is to start the reviewing
 process under a day.

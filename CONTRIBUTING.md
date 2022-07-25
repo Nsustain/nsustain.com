@@ -67,9 +67,11 @@ cd ~/projects
 # Clone this repository.
 git clone https://github.com/Nsustain/nsustain.com.git
 
-# Create a new branch and
-# commit all works here.
+# Create a new branch.
 git checkout -b branch-name
+
+# Now, all your commits will be made
+# to this branch.
 ```
 
 Branch Name Do's:

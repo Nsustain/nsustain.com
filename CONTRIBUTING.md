@@ -162,10 +162,10 @@ Please send an email to security@nsustain.com
   <b>A Note From the Maintainers</b>
 </p>
 
-You're making a big positive change for Nsustain.
-It truly means a lot for us.
+You're contribution means a lot for
+everyone at Nsustain.
 We'll always appreciate your time and effort
-to make Nsustain better. Thank you again!
+to make Nsustain better. Thank you!
 
 
 <br>

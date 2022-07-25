@@ -54,7 +54,31 @@
 
 # 1. Coding Conventions
 
-...
+If you are new to
+open-source, GitHub's
+[Open Source Guides](https://opensource.guide/)
+is a good place to start.
+
+```bash
+# Go to the directory you store
+# your projects in.
+cd projects
+
+# Clone this repository.
+git clone https://github.com/Nsustain/nsustain.com.git
+
+# Create a new branch and
+# commit all works here.
+git checkout -b your-feature
+```
+
+Branch Name Do's:
+- [&check;] `fix-typos`
+- [&check;] `add-oauth-capability`
+
+Branch Name Do not's:
+- [&cross;] `NewBranch`
+- [&cross;] `Branch2.`
 
 ## Naming Conventions
 

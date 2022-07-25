@@ -161,7 +161,7 @@ Make pull requests to
 `develop` are tested
 in the maintainers'
 test environment first.
-After all tests are passed, all commits
+After all the tests are passed, all commits
 on `develop` will be merged to `main`.
 
 When you make a PR,

@@ -135,13 +135,13 @@ git commit -s -m 'Commit message'
 # Signed-off-by: Soobin Rho <soobinrho@nsustain.com>
 ```
 
-Some of us personally use git's alias
+Some of the maintainers personally use git's alias
 command to make an alias of `git commit -s`
-so that we don't to type all of it everytime
-we commit.
+so that a short command can be used.
 
 ```bash
-# This is optional, but could save your time.
+# Setting up a git alias is optional,
+# but this could save your time.
 # Register a git alias.
 git config --global alias.c 'commit -s'
 

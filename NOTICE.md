@@ -30,12 +30,15 @@
 <br>
 <br>
 
-Special thanks to (external libraries) ... (MIT License)
+Special thanks to Flarum, (MIT License)
+without which Nsustain
+would not have been possible.
 
 ```
-MIT License
+The MIT License (MIT)
 
-Copyright (c) ...
+Copyright (c) 2019-2021 Stichting Flarum (Flarum Foundation)
+Copyright (c) 2014-2019 Toby Zerner (toby.zerner@gmail.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

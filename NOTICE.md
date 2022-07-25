@@ -30,7 +30,7 @@
 <br>
 <br>
 
-Special thanks to Flarum, (MIT License)
+Special thanks to Flarum (MIT License)
 without which Nsustain
 would not have been possible.
 

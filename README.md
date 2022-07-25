@@ -326,10 +326,10 @@ Blabla ...
 ```bash
 # tree
 ├── CODE_OF_CONDUCT.md    # default Code of Conduct provided by GitHub
-├──                       # 
-├──                       # 
-├──                       # 
-├──                       # 
+├──                       #
+├──                       #
+├──                       #
+├──                       #
 ├── LICENSE               # details on our Apache License
 ├── NOTICE.md             # `...`'s MIT License
 └── README.md             # file you're reading now. Documentation goes here
@@ -363,6 +363,7 @@ your ♥
 or you can become a contributor
 and get invited to become a member of
 our GitHub organization.
+**[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/CONTRIBUTING.md)]**
 Email soobinrho@nsustain.com
 if you have any question or
 a feature request for us.

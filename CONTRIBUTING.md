@@ -116,6 +116,34 @@ Do not's:
 
 <br>
 
+Plus, all commits should be signed with the 
+[Developer Certificate of Origin](https://github.com/apps/dco)
+in order to verify the author.
+You can do that by using `git commit -s`,
+which appends the DCO line
+at the end of your commit message:
+
+```bash
+# DCO Line
+Signed-off-by: Name <name@domain>
+```
+
+Some of us personally use git's alias
+command to make an alias of `git commit -s`
+so that we don't to type all of it everytime
+we commit.
+
+```bash
+# This is optional, but could save your time.
+# Register a git alias.
+git config --global alias.c 'commit -s'
+
+# Now, you can commit with
+git c -am'Commit message'
+```
+
+<br>
+
 # 3. Pull Requests
 
 We have two branches:

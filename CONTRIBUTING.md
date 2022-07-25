@@ -127,8 +127,10 @@ which appends the DCO line
 to the end of your commit message:
 
 ```bash
-# DCO Line
-Signed-off-by: Name <name@domain>
+# The DCO line example.
+# The name and e-mail address will
+# automatically be read from your git settings.
+Signed-off-by: Soobin Rho <soobinrho@nsustain.com>
 ```
 
 Some of us personally use git's alias

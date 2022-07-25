@@ -80,13 +80,19 @@ Branch Name Do not's:
 - [&cross;] `NewBranch`
 - [&cross;] `Branch2.`
 
+<br>
+
 ## Naming Conventions
 
 ...
 
+<br>
+
 ## HTML & CSS
 
 ...
+
+<br>
 
 ## TypeScript
 

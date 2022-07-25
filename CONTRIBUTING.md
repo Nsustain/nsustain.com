@@ -196,7 +196,7 @@ Please send an email to security@nsustain.com
 </p>
 
 Your contribution means a lot for Nsustain.
-We'll always appreciate your time and effort
+We always appreciate your time and effort
 to make Nsustain better. Thank you!
 
 

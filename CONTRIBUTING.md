@@ -132,13 +132,11 @@ on `develop` will be merged to `main`.
 When you make a PR,
 GitHub automatically sends an email
 to the maintainers.
-If the maintainers are online,
-the goal is to start the reviewing
-process under a day.
-If the maintainers are offline,
-however, please expect the maintainers
-to take around one week to 
-finish the review.
+If we are online,
+we try to finish the review under a day.
+If we are offline, however, 
+please expect the reviewing process 
+to take around one week.
 
 <br>
 

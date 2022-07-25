@@ -123,16 +123,15 @@ Plus, all commits should be signed with the
 in order to verify the author.
 You can sign your commits by using
 `git commit -s -m 'Commit message'`,
-which appends the DCO line
+which appends the DCO
 to the end of your commit message:
 
 ```bash
-# Sign your commit with the DCO line.
+# Sign your commit with the DCO.
 git commit -s -m 'Commit message'
 
-# Now, you commit message is appended
-# by a DCO, which is basically
-# your name and email. Example:
+# Now, you commit message is signed with the DCO,
+# which is basically your name and email. Example:
 # Signed-off-by: Soobin Rho <soobinrho@nsustain.com>
 ```
 

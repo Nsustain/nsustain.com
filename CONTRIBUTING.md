@@ -124,7 +124,7 @@ in order to verify the author.
 You can sign your commits by using
 `git commit -s -m 'Commit message'`,
 which appends the DCO line
-at the end of your commit message:
+to the end of your commit message:
 
 ```bash
 # DCO Line

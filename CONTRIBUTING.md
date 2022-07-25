@@ -168,7 +168,7 @@ When you make a PR,
 GitHub automatically sends an email
 to the maintainers.
 If we are online,
-we try to finish the review under a day.
+we try to finish the review under one day.
 If we are offline, however,
 please expect the reviewing process
 to take around one week.

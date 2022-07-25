@@ -60,8 +60,7 @@ open-source, GitHub's
 is a great place to start.
 
 ```bash
-# Go to the directory you store
-# your projects in.
+# Go to the directory you store your projects in.
 cd ~/projects
 
 # Clone this repository.
@@ -70,8 +69,7 @@ git clone https://github.com/Nsustain/nsustain.com.git
 # Create a new branch.
 git checkout -b branch-name
 
-# Now, all your commits will be made
-# to this branch.
+# Now, all your commits will be made to this branch.
 ```
 
 Branch Name Do's:

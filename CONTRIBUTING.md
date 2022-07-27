@@ -41,9 +41,9 @@
 
 ## Contributing
 [1.](#1-coding-conventions) Coding Conventions<br>
-  [A.](#naming-conventions) Naming Conventions<br>
-  [B.](#html--css) HTML & CSS<br>
-  [C.](#typescript) TypeScript<br>
+&#160;&#160;&#160;&#160;[A.](#naming-conventions) Naming Conventions<br>
+&#160;&#160;&#160;&#160;[B.](#html--css) HTML & CSS<br>
+&#160;&#160;&#160;&#160;[C.](#typescript) TypeScript<br>
 [2.](#2-commit-messages) Commit Messages<br>
 [3.](#3-pull-requests) Pull Requests<br>
 [4.](#4-reporting-bugs) Reporting Bugs<br>

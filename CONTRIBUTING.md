@@ -33,7 +33,7 @@
   if you think that'd be better.
   However, fully understanding these
   guidelines will benefit everyone
-  and code maintainability.
+  with better code maintainability.
 </p>
 
 <br>

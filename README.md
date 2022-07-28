@@ -123,6 +123,22 @@ from May, 2022 to October, 2022.
 <br>
 <br>
 
+<!--
+
+# How we deploy nsustain.com
+
+```bash
+# `--recurse-submodules` option is used
+# because Nsustain uses Flarum as
+# a git submodule, which is good because ...
+# Without this option, this ... happens ...
+# and we have to manually run
+# git submodule update --init --recursive
+git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
+```
+
+--->
+
 <p align="center">
   <b>How we deploy our website</b>
 </p>

@@ -1,0 +1,4 @@
+# /assets
+
+This assets directory ...
+

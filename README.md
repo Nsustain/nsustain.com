@@ -151,6 +151,8 @@ Plus, automatic pull for submodule:
 git config --global submodule.recurse true
 ```
 
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
 --->
 
 <p align="center">

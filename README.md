@@ -127,6 +127,10 @@ from May, 2022 to October, 2022.
 
 # How we deploy nsustain.com
 
+Flarum as a git submodule because ...
+need to get updates from Flarum,
+so ... have to be kept seperate ...
+
 ```bash
 # `--recurse-submodules` option is used
 # because Nsustain uses Flarum as
@@ -135,6 +139,7 @@ from May, 2022 to October, 2022.
 # and we have to manually run
 # git submodule update --init --recursive
 git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
+
 ```
 
 --->

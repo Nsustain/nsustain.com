@@ -131,6 +131,9 @@ Flarum as a git submodule because ...
 need to get updates from Flarum,
 so ... have to be kept seperate ...
 
+No modifications to Flarum, so that
+it doesn't diverge
+
 ```bash
 # `--recurse-submodules` option is used
 # because Nsustain uses Flarum as

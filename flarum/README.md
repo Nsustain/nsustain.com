@@ -1,4 +1,0 @@
-# /flarum
-
-This flarum directory ...
-

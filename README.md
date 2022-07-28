@@ -145,6 +145,12 @@ git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
 
 ```
 
+Plus, automatic pull for submodule:
+
+```bash
+git config --global submodule.recurse true
+```
+
 --->
 
 <p align="center">

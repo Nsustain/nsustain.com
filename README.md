@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://nsustain.com">
-    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo_github.png" width="350">
+    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo-github.png" width="350">
   </a>
 </p>
 
@@ -357,7 +357,7 @@ Blabla ...
 
 ```bash
 # tree
-├── CODE_OF_CONDUCT.md    # default Code of Conduct provided by GitHub
+├── CODE-OF-CONDUCT.md    # default Code of Conduct provided by GitHub
 ├──                       #
 ├──                       #
 ├──                       #
@@ -402,7 +402,7 @@ always and forever!
 
 Please email security@nsustain.com
 if you've discovered any vulnerability on Nsustain.
-**[[Security Hall of Frame](./HALL_OF_FRAME.md)]**
+**[[Security Hall of Frame](./HALL-OF-FRAME.md)]**
 
 <br>
 <br>

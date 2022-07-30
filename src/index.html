@@ -28,16 +28,30 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-<!----------------------------------------------------------
-  Setting this page as the default page for internalization.
-  Taken from "Introducing 'x-default hreflang' for
-  international landing pages" by Google Search Central.
-  https://developers.google.com/search/blog/2013/04/\\
-  x-default-hreflang-for-international-pages
-  ----------------------------------------------------------->
+  <!----------------------------------------------------------
+    Set this page as the default page for internalization.
+
+    Taken from "Introducing 'x-default hreflang' for
+    international landing pages" by Google Search Central.
+    https://developers.google.com/search/blog/2013/04/\\
+    x-default-hreflang-for-international-pages
+    ----------------------------------------------------------->
   <link rel="alternate" href="https://nsustain.com" hreflang="x-default">
 
-  <!-- Load CSS files -->
+  <!----------------------------------------------------------
+    Load critical CSS.
+
+    Non-critical CSS, such as print and other media queries,
+    are loaded with the <link> tag, but critical CSS,
+    such as page width and height,
+    is loaded inline inside <head> tag for best performance.
+    https://web.dev/extract-critical-css/
+    ----------------------------------------------------------->
+  <style>
+
+  </style>
+
+  <!-- Load non-critical CSS. -->
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 
 </head>

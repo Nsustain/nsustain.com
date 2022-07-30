@@ -69,10 +69,10 @@ now has one.
 The goal of our website is to help
 you find a project that really touches
 your heart, something that you truly find worthwhile.
-We will always try to make that process smooth
-and enjoyable for you.
+We will always try to make that process
+as smooth and enjoyable as possible for you.
 
-Plus, for your information, we don't do anything sneaky.
+At the same time, we don't do anything sneaky.
 Security is our top-most priority, and
 we aren't interested in any of your personal information.
 We don't store suspicious cookies tracking everything you do.

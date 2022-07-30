@@ -84,7 +84,17 @@ Branch Name Do not's:
 
 ## Naming Conventions
 
-...
+Folder names and file names should be
+all underscore with hyphens (-) as
+word seperators.
+For example, we prefer `docker-images`
+to `Docker_Images`.
+Hypens (-) are preferred over
+underscores (_) because Google SEO
+treats hypens as word-seperators, but
+not underscores.
+However, this convention can be
+overriden by language-specfic conventions.
 
 <br>
 

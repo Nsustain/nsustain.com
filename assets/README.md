@@ -1,4 +1,0 @@
-# /assets
-
-This assets directory ...
-

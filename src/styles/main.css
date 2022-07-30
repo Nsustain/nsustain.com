@@ -1,0 +1,59 @@
+/*
+ * This CSS is based on Mozilla's CSS tutorial.
+ * https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+*/
+
+/*
+ * The font we're using is montserrat-regular.
+ * You can locally store Google Fonts with
+ * https://google-webfonts-helper.herokuapp.com/
+*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('assets/montserrat-v25-latin-regular.woff2') format('woff2'),
+       url('assets/montserrat-v25-latin-regular.woff') format('woff');
+}
+
+html {
+  background-color: white;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*
+ * Padding is the space around the elements,
+ * while margin is the space outside the elements.
+ * padding: 0 20px 20px 20px; is top, right, bottom, left.
+*/
+body {
+  color:black;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+p, h1 {
+  line-height: 2;
+  letter-spacing: 1px;
+  background-color: #F6F8FA;
+  width: 50vw;
+}
+
+/*
+ * p:hover is an example of pseudo-class.
+ * Pseudo-class References:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+*/
+p:hover {
+  color: green;
+  background-color: lightgrey;
+  width: 50vw;
+  height: 20vh;
+}
+
+input:hover {
+  height: 10vh;
+}

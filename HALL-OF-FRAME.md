@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://nsustain.com">
-    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo_github.png" width="350">
+    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo-github.png" width="350">
   </a>
 </p>
 
@@ -26,14 +26,14 @@
 
 <p align="center">
   <b>
-    Hall of Frame
+    Security Hall of Frame
   </b><br>
-  These people made Nsustain more secure. Thank you!
+  These people made Nsustain more secure.
 </p>
 
 <br>
 
-**2022-07-18** We're waiting for the first security contributor!<br>
+**2022-07-18** First Security Contributor<br>
 ...
 
 <br>
@@ -212,6 +212,9 @@
 
 Please email security@nsustain.com
 if you find any security hole on Nsustain.
+We can't offer you any security bounty
+since we're not a rich organization, but you'll
+have our eternal gratitude. Thank you!
 
 <br>
 <br>

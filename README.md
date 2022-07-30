@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://nsustain.com">
-    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo_github.png" width="350">
+    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo-github.png" width="350">
   </a>
 </p>
 
@@ -26,68 +26,83 @@
 
 <p align="center">
   <b>
+    About<br>
     [<a href="https://nsustain.com">Nsustain.com</a>]
   </b>
 </p>
 
+<br>
+<br>
+
 ***Who are we?***<br>
 We are a bunch of
-open-source developeres who
-were trying to ... but ... so
-we made Nsustain in the summer of 2022.
-What do we do?
-What will we do? Why?
-What we needed. How our website
-attempts to meet our need.
-Why we work hard on this website.
-Why we believe in this.
-Why we believe you might
-find this helpful, too...
-An open-source community for the frontline
-environmental workers and coders willing to
-code for the
-e<b><em>n</em></b>vironment &
-<b><em>sustain</em></b>ability.
+open-source developers
+who were trying to find
+an idea we can work on in order to
+help the envrionment,
+an idea that touches our heart,
+an idea that's worth our time and devotion,
+but we couldn't.
 
+It was such a tragedy
+that - although we wanted to help -
+we couldn't find a specific problem
+on sustainability. They certainly exist.
+We all know that there are a lot of
+environmental problems that need solutions.
+It was just that we didn't know
+where to find them.
 
-<!---
-Exaplanation on the need we had:
+<br>
 
-It's like farmers / environmentalists
-are the frontline soldiers of environmental
-problems, and coders are a regiment of
-long-range support. For artilary, for instance,
-we need spotters that tell them where
-the problem lies.
-
-Our philosophy:
-
-We're not trying to optimize our website
-so that users stay on our website as much
-as possible. No, we don't want you to
-spend all of your time on website.
-Go write codes, for example.
+***What do we do?***<br>
+So, we made exactly what we
+wanted and needed. Nsustain
+is an open-source community, where
+front-line environmental workers -
+e.g. farmers and scientists - can
+post specific problems they've noticed
+in the world. Coders looking for
+a meaningful project that's really worth it
+now has one.
 
 The goal of our website is to help
 you find a project that really touches
-your heart, something that is worth
-your devotion. We'll try to make
-that process as smooth and enjoyable
-as possible, but we don't do anything sneaky.
-We don't store suspicious cookies on your computer.
-In fact, we don't even try to know your
-name, email, or any other personal information.
+your heart, something that you truly find worthwhile.
+We will always try to make that process smooth
+and enjoyable for you.
 
--->
+Plus, for your information, we don't do anything sneaky.
+Security is our top-most priority, and
+we aren't interested in any of your personal information.
+We don't store suspicious cookies tracking everything you do.
+We don't optimize our website such that you
+stay on our website as long as possible.
+No, we don't want you to spend all day on Nsustain.
+Go help the environment. Write codes.
+Whatever your heart desires.
+
+All we need is your love for the
+e***n***vironment & ***sustain***ability.
+
+<br>
+
+***What does Nsustain mean?***<br>
+An open-source community for the
+e<b><em>n</em></b>vironment &
+<b><em>sustain</em></b>ability.
+
+<br>
 
 ***How do we keep maintaining our server?***<br>
+We don't do ads.
 Our website was created to be a
 place for the open-source community.
 As such, Nsustain
 will always be an open-source project,
 and we will never commercialize our website.
 We do this because we genuinly wanted
-to help make the e***n***vironment ***sustain***able :)
+to help make the e***n***vironment ***sustain***able.
 
 <!--
 ***How did this all begin?***<br>
@@ -106,18 +121,50 @@ from May, 2022 to October, 2022.
 
 <br>
 <br>
+<br>
+
+<!--
+
+# How we deploy nsustain.com
+
+Flarum as a git submodule because ...
+need to get updates from Flarum,
+so ... have to be kept seperate ...
+
+No modifications to Flarum, so that
+it doesn't diverge
+
+```bash
+# `--recurse-submodules` option is used
+# because Nsustain uses Flarum as
+# a git submodule, which is good because ...
+# Without this option, this ... happens ...
+# and we have to manually run
+# git submodule update --init --recursive
+git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
+
+```
+
+Plus, automatic pull for submodule:
+
+```bash
+git config --global submodule.recurse true
+```
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+--->
 
 <p align="center">
-  <b>How we made our website</b>
+  <b>How we deploy our website</b>
 </p>
 
-Here are the exact steps we took to
-make our website from ground-up,
-so that you can make your own website
-relatively easily if you'd like to.
+Here are the exact steps we took
+to make Nsustain
+in case you'd like to contribute.
 This will be helpful if you'd like
-to become a contributor and become
-one of us, too.
+to make your own website
+based on Nsustain, too 👍
 
 <br>
 <br>
@@ -126,10 +173,11 @@ one of us, too.
 By the way, the white space in front of [1.1] and [1.2]
 is the unicode em space: (  )
 -->
+
 ## Steps
 [1.](#1-web-programming) Web programming<br>
-  [A.](#back-end) Back-end<br>
-  [B.](#front-end) Front-end<br>
+&#160;&#160;&#160;&#160;[A.](#back-end) Back-end<br>
+&#160;&#160;&#160;&#160;[B.](#front-end) Front-end<br>
 [2.](#2-containerizing-the-website) Containerizing the website<br>
 [3.](#3-deploying-a-container-orchestration-system) Deploying a container orchestration system<br>
 [4.](#4-getting-a-domain-name) Getting a domain name<br>
@@ -305,6 +353,24 @@ Blabla ...
 <br>
 <br>
 
+## Repository Layout
+
+```bash
+# tree
+├── CODE-OF-CONDUCT.md    # default Code of Conduct provided by GitHub
+├──                       #
+├──                       #
+├──                       #
+├──                       #
+├── LICENSE               # details on our Apache License
+├── NOTICE.md             # `...`'s MIT License
+└── README.md             # file you're reading now. Documentation goes here
+```
+
+<br>
+<br>
+<br>
+
 <p align="center">
   <b>Server maintenance workflow</b>
 </p>
@@ -312,7 +378,7 @@ Blabla ...
 We most often ...
 
 ```bash
-# ...
+#
 ...
 ```
 
@@ -323,20 +389,20 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You could go to Nsustain
-and see if there's any project
-you'd love to invest your time in,
-or you can become a contributor
-to our website by forking this repository.
+You can go to Nsustain and see
+if there's any project that's worth
+your ♥
+or you can become a contributor.
+**[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/CONTRIBUTING.md)]**
 Email soobinrho@nsustain.com
-if you have any question.
+if you have any question for us.
+We'll reply as promptly as possible.
+We appreciate your feedback,
+always and forever!
 
 Please email security@nsustain.com
-if you find any security hole.
-Thank you for making Nsustain more secure!
-If you'd like, your name
-will be displayed at
-[the hall of frame](./HALL_OF_FRAME.md).
+if you've discovered any vulnerability on Nsustain.
+**[[Security Hall of Frame](./HALL-OF-FRAME.md)]**
 
 <br>
 <br>

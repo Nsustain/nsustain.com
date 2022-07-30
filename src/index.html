@@ -7,10 +7,10 @@
   Plus, this follows the W3Schools HTML Style Guide.
   https://www.w3schools.com/html/html5_syntax.asp
   ---------------------------------------------------->
-<html lang="en-us">
+<html lang="en" dir="auto">
 <head>
 
-  <!-- Meta Data -->
+  <!-- Meta data -->
   <title>Web Programming Template</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -23,13 +23,19 @@
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="../assets/favicon-32x32.png">
 
-  <!-- Apple Web App Meta Tags -->
+  <!-- Apple web app meta tags -->
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <!-- Microsoft Tiles -->
-  <meta name="msapplication-config" content="browserconfig.xml">
+<!----------------------------------------------------------
+  Setting this page as the default page for internalization.
+  Taken from "Introducing 'x-default hreflang' for
+  international landing pages" by Google Search Central.
+  https://developers.google.com/search/blog/2013/04/\\
+  x-default-hreflang-for-international-pages
+  ----------------------------------------------------------->
+  <link rel="alternate" href="https://nsustain.com" hreflang="x-default">
 
   <!-- Load CSS files -->
   <link rel="stylesheet" type="text/css" href="styles/styles.css">

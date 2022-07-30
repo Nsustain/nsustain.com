@@ -1,7 +1,25 @@
-h1 {
-  color: green;
+/*
+ * Selectors can point to HTML elements
+ * as well as classes.
+*/
+body {
+  color:black;
+  background-color: white;
 }
 
-p {
+p, h1 {
   background-color: lightgrey;
+  width: 50vw;
+}
+
+/*
+ * p:hover is an example of pseudo-class.
+ * Pseudo-class References:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+*/
+p:hover, input:hover {
+  color: green;
+  background-color: lightblue;
+  width: 50vw;
+  height: 30vw;
 }

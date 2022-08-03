@@ -80,10 +80,10 @@ We don't optimize our website such that you
 stay on our website as long as possible.
 No, we don't want you to spend all day on Nsustain.
 Go help the environment. Write codes.
-Whatever your heart desires.
-
-All we need is your love for the
+Whatever you think is the best for the
 e***n***vironment & ***sustain***ability.
+
+<br>
 
 <br>
 

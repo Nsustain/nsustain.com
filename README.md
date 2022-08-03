@@ -194,6 +194,10 @@ Techs used:
 Create a `GitHub` repository because
 version control ...
 
+Plus, storing API keys bast practices:
+
+[Original article by freeCodeCamp](https://www.freecodecamp.org/news/how-to-securely-store-api-keys-4ff3ea19ebda)<br>
+
 ## Back-end
 
 **Building the website's database**<br>

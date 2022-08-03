@@ -55,7 +55,7 @@ where to find them.
 
 <br>
 
-***What do we do?***<br>
+***Why do we do what we do?***<br>
 So, we made exactly what we
 wanted and needed. Nsustain
 is an open-source community, where

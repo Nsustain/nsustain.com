@@ -11,16 +11,17 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   src: local(''),
-       url('assets/montserrat-v25-latin-100.woff2') format('woff2'),
-       url('assets/montserrat-v25-latin-100.woff') format('woff');
+       url('../assets/montserrat-v25-latin-regular.woff2') format('woff2'),
+       url('../assets/montserrat-v25-latin-regular.woff') format('woff');
 }
 
 html {
   background-color: white;
-  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 /*
@@ -37,7 +38,6 @@ body {
 
 p, h1, h2 {
   line-height: 2;
-  letter-spacing: 1px;
   background-color: #F6F8FA;
   width: 70vw;
 }

@@ -22,6 +22,7 @@ ctrl + v + shift + i   |   Visual block mode
 
 ### Long Term To Do
 
+- GitHub-style email notifications
 - add explanation for the main gist
 - add tags to the `about` section on GitHub
 - turn on CloudFlare's developing mode to disable caching

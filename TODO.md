@@ -19,6 +19,9 @@ ctrl + v + shift + i   |   Visual block mode
   any user data! We use oAuth just for
   giving users the permission to post
   or edit their posts.
+- use the rem unit for fonts and
+  px for other elements. Explanation:
+  https://www.w3.org/Style/Examples/007/units.en.html#:~:text=The%20em%20is%20simply%20the,sizes%20will%20be%20in%20proportion.
 
 ### Long Term To Do
 

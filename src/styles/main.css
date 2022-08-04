@@ -35,11 +35,11 @@ body {
   border: 5px solid black;
 }
 
-p, h1 {
+p, h1, h2 {
   line-height: 2;
   letter-spacing: 1px;
   background-color: #F6F8FA;
-  width: 50vw;
+  width: 70vw;
 }
 
 /*
@@ -47,10 +47,10 @@ p, h1 {
  * Pseudo-class References:
  * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 */
-p:hover {
-  color: white;
+p:hover, h1:hover, h2:hover {
+  color: green;
   background-color: lightgrey;
-  width: 50vw;
+  width: 70vw;
   height: 20vh;
 }
 

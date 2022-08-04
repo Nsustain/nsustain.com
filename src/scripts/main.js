@@ -1,40 +1,52 @@
-// Hello world.
-const anElement = document.querySelector('h1');
-anElement.textContent = 'An h1 element with JavaScript.';
+/*
+ * This script is for me to remember
+ * the basics of JavaScript.
+ *
+ * This is based on the following tutorial:
+ * https://developer.mozilla.org/en-US/docs/Learn/\
+ * Getting_started_with_the_web/JavaScript_basics
+ */
+
+// Example of setting textContent.
+let h1 = document.querySelector('h1');
+h1.textContent = 'An h1 element with JavaScript.';
 
 // Example of event handlers.
-let myHeading = document.querySelector('h1');
-myHeading.addEventListener('click', function() {
+// Execute alert(...) when clicked.
+h1.addEventListener('click', function() {
     alert('You clicked an h1 element!');
 });
 
-// The above function is called an anonymous function
-// because it doesn't have a name. Plus, here's a shortcut
-// for anonymous functions: () = >
-myHeading.addEventListener('click', () => {
+// Example of using the API localStorage
+// to store userName.
+let userName;
+let h2 = document.querySelector('h2');
+TEXT_h2 = 'localStorage | userName: ';
+let myButton = document.querySelector('button');
+myButton.onclick = function() {
 
-  // Calling setUserName()
-  if(!localStorage.getItem('name')) {
-    setUserName();
-  } else {
-    let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Hello! ' + storedName;
+  // Calling the function setUserName,
+  // which prompts for userName and then
+  // stores it on the browser.
+  promptForUserName();
+
+};
+
+// --------------------------------------------------
+// A function for using the API local Stroage
+// to store userName.
+// --------------------------------------------------
+function promptForUserName() {
+
+  userName = prompt('Enter your user name.');
+
+  // The API localStorage stores userName in the browser.
+  localStorage.setItem('userName', userName);
+  h2.textContent = TEXT_h2 + userName;
+
+  // Example of using localStorage.getItem(...)
+  if(localStorage.getItem('userName').toLowerCase() === 'soobin rho') {
+    h2.textContent = TEXT_h2 + userName.toUpperCase();
   }
 
-});
-
-// --------------------------------------------------
-// A function for prompting for user name.
-// --------------------------------------------------
-let myButton = document.querySelector('button');
-function setUserName() {
-
-  let myName = prompt('Enter your user name.');
-
-  // The API localStorage stores myName in the browser.
-  localStorage.setItem('name', myName);
-  myHeading.textContent = 'Hello, ' + myName;
-
 }
-
-

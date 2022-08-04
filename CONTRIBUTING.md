@@ -32,8 +32,8 @@
   Thus, feel free to break these guidelines
   if you think that'd be better.
   However, fully understanding these
-  guidelines will benefit everyone
-  with better code maintainability.
+  guidelines will make maintenance easier
+  for everyone who contribute to Nsustain.
 </p>
 
 <br>

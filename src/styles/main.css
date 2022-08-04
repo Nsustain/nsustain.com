@@ -48,7 +48,7 @@ p, h1 {
  * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 */
 p:hover {
-  color: green;
+  color: white;
   background-color: lightgrey;
   width: 50vw;
   height: 20vh;

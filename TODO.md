@@ -11,6 +11,13 @@ ctrl + v + shift + i   |   Visual block mode
 
 ### Short Term To Do
 
+- Some kind of user involvement.
+  What I mean is that I want new posts
+  or top posts of the month to be displayed
+  at the header of the website alongside
+  with Nsustain logo. Being able to see
+  my own posts top of the page will make
+  me feel more engaged, I think.
 - design the backend such that the
   oAuth doesn't take any user information
   other than the authentication itself,

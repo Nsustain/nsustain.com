@@ -24,12 +24,7 @@ let h2 = document.querySelector('h2');
 TEXT_h2 = 'localStorage | userName: ';
 let myButton = document.querySelector('button');
 myButton.onclick = function() {
-
-  // Calling the function setUserName,
-  // which prompts for userName and then
-  // stores it on the browser.
   promptForUserName();
-
 };
 
 // --------------------------------------------------

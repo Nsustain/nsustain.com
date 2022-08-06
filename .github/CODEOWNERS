@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------
-# CODEOWNERS file is useful because PR's automatically
-# request review from the following user.
+# CODEOWNERS file is useful because this makes PR's to automatically
+# request review from the listed users.
 # ----------------------------------------------------------------------------
 * @soobinrho

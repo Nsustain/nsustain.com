@@ -11,6 +11,13 @@ ctrl + v + shift + i   |   Visual block mode
 
 ### Short Term To Do
 
+- Some kind of user involvement.
+  What I mean is that I want new posts
+  or top posts of the month to be displayed
+  at the header of the website alongside
+  with Nsustain logo. Being able to see
+  my own posts top of the page will make
+  me feel more engaged, I think.
 - design the backend such that the
   oAuth doesn't take any user information
   other than the authentication itself,
@@ -19,9 +26,13 @@ ctrl + v + shift + i   |   Visual block mode
   any user data! We use oAuth just for
   giving users the permission to post
   or edit their posts.
+- use the rem unit for fonts and
+  px for other elements. Explanation:
+  https://www.w3.org/Style/Examples/007/units.en.html#:~:text=The%20em%20is%20simply%20the,sizes%20will%20be%20in%20proportion.
 
 ### Long Term To Do
 
+- GitHub-style email notifications
 - add explanation for the main gist
 - add tags to the `about` section on GitHub
 - turn on CloudFlare's developing mode to disable caching

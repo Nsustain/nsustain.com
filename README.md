@@ -42,7 +42,7 @@ an idea we can work on in order to
 help the envrionment,
 an idea that touches our heart,
 an idea that's worth our time and devotion,
-but we couldn't.
+but couldn't.
 
 It was such a tragedy
 that - although we wanted to help -
@@ -55,7 +55,7 @@ where to find them.
 
 <br>
 
-***What do we do?***<br>
+***Why do we do what we do?***<br>
 So, we made exactly what we
 wanted and needed. Nsustain
 is an open-source community, where
@@ -69,10 +69,10 @@ now has one.
 The goal of our website is to help
 you find a project that really touches
 your heart, something that you truly find worthwhile.
-We will always try to make that process smooth
-and enjoyable for you.
+We will always try to make that process
+as smooth and enjoyable as possible for you.
 
-Plus, for your information, we don't do anything sneaky.
+At the same time, we don't do anything sneaky.
 Security is our top-most priority, and
 we aren't interested in any of your personal information.
 We don't store suspicious cookies tracking everything you do.
@@ -80,9 +80,7 @@ We don't optimize our website such that you
 stay on our website as long as possible.
 No, we don't want you to spend all day on Nsustain.
 Go help the environment. Write codes.
-Whatever your heart desires.
-
-All we need is your love for the
+Whatever you think is the best for the
 e***n***vironment & ***sustain***ability.
 
 <br>
@@ -195,6 +193,10 @@ Techs used:
 
 Create a `GitHub` repository because
 version control ...
+
+Plus, storing API keys bast practices:
+
+[Original article by freeCodeCamp](https://www.freecodecamp.org/news/how-to-securely-store-api-keys-4ff3ea19ebda)<br>
 
 ## Back-end
 

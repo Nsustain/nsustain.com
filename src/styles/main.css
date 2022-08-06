@@ -13,14 +13,21 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('assets/montserrat-v25-latin-regular.woff2') format('woff2'),
-       url('assets/montserrat-v25-latin-regular.woff') format('woff');
+       url('../assets/montserrat-v25-latin-regular.woff2') format('woff2'),
+       url('../assets/montserrat-v25-latin-regular.woff') format('woff');
 }
 
 html {
   background-color: white;
-  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 100;
 }
 
 /*
@@ -35,11 +42,10 @@ body {
   border: 5px solid black;
 }
 
-p, h1 {
+p, h1, h2 {
   line-height: 2;
-  letter-spacing: 1px;
   background-color: #F6F8FA;
-  width: 50vw;
+  width: 70vw;
 }
 
 /*
@@ -47,10 +53,10 @@ p, h1 {
  * Pseudo-class References:
  * https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 */
-p:hover {
+p:hover, h1:hover, h2:hover {
   color: green;
   background-color: lightgrey;
-  width: 50vw;
+  width: 70vw;
   height: 20vh;
 }
 

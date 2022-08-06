@@ -395,7 +395,7 @@ You can go to Nsustain and see
 if there's any project that's worth
 your ♥
 or you can become a contributor.
-**[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/CONTRIBUTING.md)]**
+**[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/.github/CONTRIBUTING.md)]**
 Email soobinrho@nsustain.com
 if you have any question for us.
 We'll reply as promptly as possible.

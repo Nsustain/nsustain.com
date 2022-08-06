@@ -2,4 +2,4 @@
 # CODEOWNERS file is useful because this makes PR's to automatically
 # request review from the listed users.
 # ----------------------------------------------------------------------------
-* @soobinrho
+* @nsustain/core-dev

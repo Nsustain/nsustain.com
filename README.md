@@ -359,7 +359,6 @@ Blabla ...
 
 ```bash
 # tree
-├── CODE-OF-CONDUCT.md    # default Code of Conduct provided by GitHub
 ├──                       #
 ├──                       #
 ├──                       #

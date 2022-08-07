@@ -1,5 +1,9 @@
 # ----------------------------------------------------------------------------
-# CODEOWNERS file is useful because this makes PR's to automatically
-# request review from the listed users.
+# Users and teams listed on the CODEOWNERS file
+# are automatically assigned as reviewers.
+#
+# There are more settings for automatic code review
+# assigning system on GitHub's organization page:
+# Teams → Settings → Code review
 # ----------------------------------------------------------------------------
 * @nsustain/core-dev

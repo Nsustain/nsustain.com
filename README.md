@@ -81,14 +81,14 @@ stay on our website as long as possible.
 No, we don't want you to spend all day on Nsustain.
 Go help the environment. Write codes.
 Whatever you think is the best for the
-e***n***vironment & ***sustain***ability.
+e[**n**]vironment & [***sustain***]ability.
 
 <br>
 
 ***What does Nsustain mean?***<br>
 An open-source community for the
-e[<b><em>n</em></b>]vironment &
-[<b><em>sustain</em></b>]ability.
+e[<b>n</b>]vironment &
+[<b>sustain</b>]ability.
 
 <br>
 
@@ -100,7 +100,7 @@ As such, Nsustain
 will always be an open-source project,
 and we will never commercialize our website.
 We do this because we genuinly wanted
-to help make the e[***n***]vironment [***sustain***]able.
+to help make the e[**n**]vironment [**sustain**]able.
 
 <!--
 ***How did this all begin?***<br>

@@ -73,6 +73,11 @@ Most TODO list items have been moved to
   programmers who can solve the problem.
   Help programmers who want to find a project
   that touches their heart.
+- Maybe make it look like Academic journals like
+  https://www.nature.com/ ?
+  Well, we need to think about the user demographics.
+  I think academic style forum might be better than a
+  regular community style forum.
 
 <br>
 <br>

@@ -87,8 +87,8 @@ e***n***vironment & ***sustain***ability.
 
 ***What does Nsustain mean?***<br>
 An open-source community for the
-e<b><em>n</em></b>vironment &
-<b><em>sustain</em></b>ability.
+e[<b><em>n</em></b>]vironment &
+[<b><em>sustain</em></b>]ability.
 
 <br>
 
@@ -100,7 +100,7 @@ As such, Nsustain
 will always be an open-source project,
 and we will never commercialize our website.
 We do this because we genuinly wanted
-to help make the e***n***vironment ***sustain***able.
+to help make the e[***n***]vironment [***sustain***]able.
 
 <!--
 ***How did this all begin?***<br>

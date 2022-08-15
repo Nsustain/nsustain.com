@@ -78,6 +78,9 @@ Most TODO list items have been moved to
   Well, we need to think about the user demographics.
   I think academic style forum might be better than a
   regular community style forum.
+- No downvotes. Only upvotes. Not the
+  same design as Reddit. Should be
+  suitable to be used in professional settings.
 
 <br>
 <br>

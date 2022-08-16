@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/github/contributors/Nsustain/nsustain.com">
   </a>
   <a href="https://github.com/Nsustain/nsustain.com/blob/main/LICENSE">
-    <img src="https://badgen.net/github/license/nsustain/nsustain.com">
+    <img src="https://user-images.githubusercontent.com/19341857/184765929-fec61d10-d714-488e-94c7-153e00070a2d.svg">
   </a>
 </p>
 

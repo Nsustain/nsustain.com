@@ -154,9 +154,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 ########################### SAMPLE
 **(Optional) Setting up a custom-domain email forwarding service**<br>
-[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)<br>
-Techs used:
-`ForwardEmail.net`
+[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
 #################################
 
 
@@ -249,10 +247,7 @@ is the unicode em space: (  )
 
 # 1. Web programming
 
-**Writing codes on a version-control system**<br>
-Techs used:
-`git`
-`GitHub`
+**Writing codes on a version-control system**
 
 Create a `GitHub` repository because
 version control ...
@@ -263,10 +258,7 @@ Plus, storing API keys bast practices:
 
 ## Back-end
 
-**Building the website's database**<br>
-Techs used:
-`Node.js`
-`SQLite`
+**Building the website's database**
 
 Blabla ...
 
@@ -277,12 +269,7 @@ Blabla ...
 
 ## Front-end
 
-**Building the front-end**<br>
-Techs used:
-`JavaScript`
-`TypeScript`
-`react.js`
-`next.js`
+**Building the front-end**
 
 Create the website ...
 
@@ -295,8 +282,6 @@ Create the website ...
 <br>
 
 # 2. Containerizing the website
-Techs used:
-`Docker`
 
 Make our website into a Docker image.
 Why containerize and why not else.
@@ -317,9 +302,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-d
 <br>
 
 # 3. Deploying a container orchestration system
-Techs used:
-`Kubernetes`
-`K3s`
 
 Explanation on high availability.
 Why K3s and not else, showing
@@ -352,17 +334,13 @@ goes offline thanks to Kubernetes.
 # 4. Getting a domain name
 
 **Getting a domain from a domain registrar**<br>
-Techs used:
-`Google Domains`
 
 Our domain name
 **[[Nsustain.com](nsustain.com)]**
 costs $12 per year.
 
-**(Optional) Setting up a custom-domain email forwarding service**<br>
-[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)<br>
-Techs used:
-`ForwardEmail.net`
+**(Optional) Setting up a custom-domain email forwarding service
+[[Source](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)]**<br>
 
 One way of doing this would be setting up an
 email server on the VPS we just got, but
@@ -372,10 +350,8 @@ We could just use one email account.
 All our email needs were such that just using an email
 forwarding service would solve all of them.
 
-**Setting up remote caching and DDoS protection**<br>
-[Original article by Prutser Rutger](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)<br>
-Techs used:
-`Cloudflare`
+**Setting up remote caching and DDoS protection
+[[Source](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)]**
 
 It also takes care of issuing SSL certificates.
 
@@ -391,10 +367,7 @@ on their settings and install it in our server.
 
 # 5. Getting a server
 
-**Getting a Virtual Private Server (VPS)**<br>
-Techs used:
-`IBM Cloud`
-`Ubuntu Server`
+**Getting a Virtual Private Server (VPS)**
 
 Get a VPS. Free trial for ...
 
@@ -403,10 +376,8 @@ Get a VPS. Free trial for ...
 ...
 ```
 
-**Running a VPS**<br>
-[Original article by Joe Morgan](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)<br>
-Techs used:
-`nginx`
+**Running a VPS
+[[Source](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)]**
 
 Blabla ...
 

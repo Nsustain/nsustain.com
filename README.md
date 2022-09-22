@@ -46,7 +46,7 @@ based on Nsustain.
 ## Steps
 [1.](#1-installing-the-back-end) Installing the back-end<br>
 &#160;&#160;&#160;&#160;[A.](#temp) Subsection<br>
-&#160;&#160;&#160;&#160;[B.](#temp) SUbsection<br>
+&#160;&#160;&#160;&#160;[B.](#temp) Subsection<br>
 [2.](#2-) Second step<br>
 [3.](#3-) Third step
 

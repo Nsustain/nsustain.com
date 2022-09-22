@@ -123,7 +123,7 @@ from May, 2022 to October, 2022.
 
 <!--
 
-# How we deploy nsustain.com
+# How we deploy Nsustain.com
 
 Flarum as a git submodule because ...
 need to get updates from Flarum,
@@ -151,18 +151,82 @@ git config --global submodule.recurse true
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
---->
+
+########################### SAMPLE
+**(Optional) Setting up a custom-domain email forwarding service**<br>
+[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)<br>
+Techs used:
+`ForwardEmail.net`
+#################################
+
+
+##########################################
+# To be uncommented later.
+##########################################
+
+-->
 
 <p align="center">
-  <b>How we deploy our website</b>
+  <b>How to deploy Nsustain.com for testing / development</b>
 </p>
 
-Here are the exact steps we took
-to make Nsustain
-in case you'd like to contribute.
-This will be helpful if you'd like
+Here are the exact steps we take
+to build and deploy Nsustain.com
+for testing / development.
+We wrote this section for those
+who would like to contribute.
+This will be helpful also if you'd like
 to make your own website
-based on Nsustain, too 👍
+based on Nsustain.
+
+<br>
+<br>
+
+## Steps
+[1.](#1-web-programming) Web programming<br>
+&#160;&#160;&#160;&#160;[A.](#back-end) Back-end<br>
+&#160;&#160;&#160;&#160;[B.](#front-end) Front-end<br>
+[2.](#2-containerizing-the-website) Containerizing the website<br>
+[3.](#3-deploying-a-container-orchestration-system) Deploying a container orchestration system<br>
+[4.](#4-getting-a-domain-name) Getting a domain name<br>
+[5.](#5-getting-a-server) Getting a server
+
+<br>
+<br>
+
+# 1. Installing the back-end
+
+> We use Fedora, so all installation
+> commands below are written for Fedora.
+> If you're using a different OS,
+> you'll need extra web searching to
+> figure out how it's different for your OS.
+
+**Installing Nginx**<br>
+[Source](https://fedoraproject.org/wiki/Nginx)
+
+```bash
+# Install Nginx
+dnf install -y nginx
+
+# Start Nginx automatically after booting up
+systemctl enable nginx.service
+
+# Run Nginx
+systemctl start nginx.service
+```
+
+<br>
+<br>
+<br>
+
+
+<p align="center">
+  <b>How we developed Nsustain.com</b>
+</p>
+
+We documented how we created Nsustain.com
+in case you'd like to understand how it was made 👍
 
 <br>
 <br>

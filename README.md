@@ -181,13 +181,10 @@ based on Nsustain.
 <br>
 
 ## Steps
-[1.](#1-web-programming) Web programming<br>
+[1.](#1-) programming<br>
 &#160;&#160;&#160;&#160;[A.](#back-end) Back-end<br>
 &#160;&#160;&#160;&#160;[B.](#front-end) Front-end<br>
-[2.](#2-containerizing-the-website) Containerizing the website<br>
-[3.](#3-deploying-a-container-orchestration-system) Deploying a container orchestration system<br>
-[4.](#4-getting-a-domain-name) Getting a domain name<br>
-[5.](#5-getting-a-server) Getting a server
+[2.](#2-getting-a-server) Getting a server
 
 <br>
 <br>
@@ -204,14 +201,48 @@ based on Nsustain.
 
 ```bash
 # Install Nginx
-dnf install -y nginx
+sudo dnf install -y nginx
 
-# Start Nginx automatically after booting up
-systemctl enable nginx.service
+# Start Nginx automatically at startup
+sudo systemctl enable nginx.service
 
 # Run Nginx
-systemctl start nginx.service
+sudo systemctl start nginx.service
 ```
+
+**Installing PHP [[Source](https://developer.fedoraproject.org/tech/languages/php/php-installation.html)]**
+
+```bash
+# Install PHP
+sudo dnf install -y php-cli
+```
+
+**Installing MariaDB [[Source](https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/)]**
+
+```bash
+# Install MariaDB
+sudo dnf install -y mariadb-server
+
+# Start MariaDB automatically at startup
+sudo systemctl enable mariadb
+
+# Run MariaDB
+sudo systemctl start mariadb
+```
+
+**Installing Composer [[Source](https://getcomposer.org/download/)]**
+
+```bash
+# Install Composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+# Move the Composer to PATH
+mv composer.phar /usr/local/bin/composer
+```
+
 
 <br>
 <br>

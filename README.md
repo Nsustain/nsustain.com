@@ -55,11 +55,6 @@ based on Nsustain.
 
 # 1. Installing the back-end
 
-> We use Fedora, so if
-> you're using a different OS,
-> you'll need extra web searching for
-> specific installation instructions for your OS.
-
 **Installing Nginx [[Source](https://fedoraproject.org/wiki/Nginx)]**
 
 ```bash

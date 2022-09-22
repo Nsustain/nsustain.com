@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://nsustain.com">
-    <img src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo-github.png" width="350">
+    <img alt="logo" src="https://raw.githubusercontent.com/Nsustain/.github/main/logo/logo-github.png" width="350">
   </a>
 </p>
 
@@ -11,10 +11,10 @@
 
 <p align="center">
   <a href="https://github.com/Nsustain/nsustain.com/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/Nsustain/nsustain.com">
+    <img alt="List of contributors page" src="https://img.shields.io/github/contributors/Nsustain/nsustain.com">
   </a>
   <a href="https://github.com/Nsustain/nsustain.com/blob/main/LICENSE">
-    <img src="https://user-images.githubusercontent.com/19341857/184765929-fec61d10-d714-488e-94c7-153e00070a2d.svg">
+    <img alt="Apache License 2.0" src="https://user-images.githubusercontent.com/19341857/184765929-fec61d10-d714-488e-94c7-153e00070a2d.svg">
   </a>
 </p>
 

@@ -26,146 +26,9 @@
 
 <p align="center">
   <b>
-    About<br>
-    [<a href="https://nsustain.com">Nsustain.com</a>]
+    How we deploy 
+    <a href="https://nsustain.com">Nsustain.com</a>
   </b>
-</p>
-
-<br>
-<br>
-
-***Who are we?***<br>
-We are a bunch of
-open-source developers
-who were trying to find
-an idea we can work on in order to
-help the envrionment,
-an idea that touches our heart,
-an idea that's worth our time and devotion,
-but couldn't.
-
-It was such a tragedy
-that - although we wanted to help -
-we couldn't find a specific problem
-on sustainability. They certainly exist.
-We all know that there are a lot of
-environmental problems that need solutions.
-It was just that we didn't know
-where to find them.
-
-<br>
-
-***Why do we do what we do?***<br>
-So, we made exactly what we
-wanted and needed. Nsustain
-is an open-source community, where
-front-line environmental workers -
-e.g. farmers and scientists - can
-post specific problems they've noticed
-in the world. Coders looking for
-a meaningful project that's really worth it
-now has one.
-
-The goal of our website is to help
-you find a project that really touches
-your heart, something that you truly find worthwhile.
-We will always try to make that process
-as smooth and enjoyable as possible for you.
-
-At the same time, we don't do anything sneaky.
-Security is our top-most priority, and
-we aren't interested in any of your personal information.
-We don't store suspicious cookies tracking everything you do.
-We don't optimize our website such that you
-stay on our website as long as possible.
-No, we don't want you to spend all day on Nsustain.
-Go help the environment. Write codes.
-Whatever you think is the best for the
-e[**n**]vironment & [***sustain***]ability.
-
-<br>
-
-***What does Nsustain mean?***<br>
-An open-source community for the
-e[<b>n</b>]vironment &
-[<b>sustain</b>]ability.
-
-<br>
-
-***How do we keep maintaining our server?***<br>
-We don't do ads.
-Our website was created to be a
-place for the open-source community.
-As such, Nsustain
-will always be an open-source project,
-and we will never commercialize our website.
-We do this because we genuinly wanted
-to help make the e[**n**]vironment [**sustain**]able.
-
-<!--
-***How did this all begin?***<br>
-Soobin Rho and Mariam Wisaal started
-this project for
-*2022 Call for Code Global Challenge*,
-which was an environmental initiative
-inviting "developers and problem solvers
-around the world to build and contribute
-to sustainable open source technology projects."
-Soobin and Mariam were college sophomores
-at Augustana University at that time,
-and the challenge was held for six months
-from May, 2022 to October, 2022.
--->
-
-<br>
-<br>
-<br>
-
-<!--
-
-# How we deploy Nsustain.com
-
-Flarum as a git submodule because ...
-need to get updates from Flarum,
-so ... have to be kept seperate ...
-
-No modifications to Flarum, so that
-it doesn't diverge
-
-```bash
-# `--recurse-submodules` option is used
-# because Nsustain uses Flarum as
-# a git submodule, which is good because ...
-# Without this option, this ... happens ...
-# and we have to manually run
-# git submodule update --init --recursive
-git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
-
-```
-
-Plus, automatic pull for submodule:
-
-```bash
-git config --global submodule.recurse true
-```
-
-https://git-scm.com/book/en/v2/Git-Tools-Submodules
-
-
-########################### SAMPLE
-**(Optional) Setting up a custom-domain email forwarding service**<br>
-[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
-#################################
-
-
-##########################################
-# To be uncommented later.
-##########################################
-
--->
-
-<p align="center">
-  <b>How to deploy Nsustain.com for testing / development</b>
 </p>
 
 Here are the exact steps we take
@@ -181,21 +44,21 @@ based on Nsustain.
 <br>
 
 ## Steps
-[1.](#1-) programming<br>
-&#160;&#160;&#160;&#160;[A.](#back-end) Back-end<br>
-&#160;&#160;&#160;&#160;[B.](#front-end) Front-end<br>
-[2.](#2-getting-a-server) Getting a server
+[1.](#1-installing-the-back-end) Installing the back-end<br>
+&#160;&#160;&#160;&#160;[A.](#temp) Subsection<br>
+&#160;&#160;&#160;&#160;[B.](#temp) SUbsection<br>
+[2.](#2-) Second step<br>
+[3.](#3-) Third step
 
 <br>
 <br>
 
 # 1. Installing the back-end
 
-> We use Fedora, so all installation
-> commands below are written for Fedora.
-> If you're using a different OS,
-> you'll need extra web searching to
-> figure out how it's different for your OS.
+> We use Fedora, so if
+> you're using a different OS,
+> you'll need extra web searching for
+> specific installation instructions for your OS.
 
 **Installing Nginx [[Source](https://fedoraproject.org/wiki/Nginx)]**
 
@@ -248,14 +111,58 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 ```
 
+<!--
+
+# How we deploy Nsustain.com
+
+Flarum as a git submodule because ...
+need to get updates from Flarum,
+so ... have to be kept seperate ...
+
+No modifications to Flarum, so that
+it doesn't diverge
+
+```bash
+# `--recurse-submodules` option is used
+# because Nsustain uses Flarum as
+# a git submodule, which is good because ...
+# Without this option, this ... happens ...
+# and we have to manually run
+# git submodule update --init --recursive
+git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
+
+```
+
+Plus, automatic pull for submodule:
+
+```bash
+git config --global submodule.recurse true
+```
+
+https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+
+########################### SAMPLE
+**(Optional) Setting up a custom-domain email forwarding service**<br>
+[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
+#################################
+
+
+##########################################
+# To be uncommented later.
+##########################################
+
+-->
 
 <br>
 <br>
 <br>
-
 
 <p align="center">
-  <b>How we developed Nsustain.com</b>
+  <b>
+    How we developed 
+    <a href="https://nsustain.com">Nsustain.com</a>
+  </b>
 </p>
 
 We documented how we created Nsustain.com

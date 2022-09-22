@@ -210,11 +210,16 @@ sudo systemctl enable nginx.service
 sudo systemctl start nginx.service
 ```
 
-**Installing PHP [[Source](https://developer.fedoraproject.org/tech/languages/php/php-installation.html)]**
+**Installing PHP [[Source](https://computingforgeeks.com/how-to-install-php-74-on-fedora/)]**
 
 ```bash
-# Install PHP
-sudo dnf install -y php-cli
+# Install PHP. Although the latest version is not PHP 7.4, 
+# we need this version for compatibility with Flarum.
+sudo dnf install -y https://rpms.remirepo.net/fedora/remi-release-35.rpm
+sudo dnf config-manager --set-enabled remi
+sudo dnf module reset php
+sudo dnf module install php:remi-7.4
+sudo dnf install -y php74-php-cli php74-php-fpm php74-php-curl php74-php-dom php74-php-fileinfo php74-php-gd php74-php-json php74-php-mbstring php74-php-openssl php74-php-pdo_mysql php74-php-tokenizer php74-php-zip
 ```
 
 **Installing MariaDB [[Source](https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/)]**

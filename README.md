@@ -123,7 +123,7 @@ from May, 2022 to October, 2022.
 
 <!--
 
-# How we deploy nsustain.com
+# How we deploy Nsustain.com
 
 Flarum as a git submodule because ...
 need to get updates from Flarum,
@@ -151,18 +151,115 @@ git config --global submodule.recurse true
 
 https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
---->
+
+########################### SAMPLE
+**(Optional) Setting up a custom-domain email forwarding service**<br>
+[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
+#################################
+
+
+##########################################
+# To be uncommented later.
+##########################################
+
+-->
 
 <p align="center">
-  <b>How we deploy our website</b>
+  <b>How to deploy Nsustain.com for testing / development</b>
 </p>
 
-Here are the exact steps we took
-to make Nsustain
-in case you'd like to contribute.
-This will be helpful if you'd like
+Here are the exact steps we take
+to build and deploy Nsustain.com
+for testing / development.
+We wrote this section for those
+who would like to contribute.
+This will be helpful also if you'd like
 to make your own website
-based on Nsustain, too 👍
+based on Nsustain.
+
+<br>
+<br>
+
+## Steps
+[1.](#1-) programming<br>
+&#160;&#160;&#160;&#160;[A.](#back-end) Back-end<br>
+&#160;&#160;&#160;&#160;[B.](#front-end) Front-end<br>
+[2.](#2-getting-a-server) Getting a server
+
+<br>
+<br>
+
+# 1. Installing the back-end
+
+> We use Fedora, so all installation
+> commands below are written for Fedora.
+> If you're using a different OS,
+> you'll need extra web searching to
+> figure out how it's different for your OS.
+
+**Installing Nginx [[Source](https://fedoraproject.org/wiki/Nginx)]**
+
+```bash
+# Install Nginx
+sudo dnf install -y nginx
+
+# Start Nginx automatically at startup
+sudo systemctl enable nginx.service
+
+# Run Nginx
+sudo systemctl start nginx.service
+```
+
+**Installing PHP [[Source](https://computingforgeeks.com/how-to-install-php-74-on-fedora/)]**
+
+```bash
+# Install PHP. Although the latest version is not PHP 7.4, 
+# we need this version for compatibility with Flarum.
+sudo dnf install -y https://rpms.remirepo.net/fedora/remi-release-35.rpm
+sudo dnf config-manager --set-enabled remi
+sudo dnf module reset php
+sudo dnf module install php:remi-7.4
+sudo dnf install -y php74-php-cli php74-php-fpm php74-php-curl php74-php-dom php74-php-fileinfo php74-php-gd php74-php-json php74-php-mbstring php74-php-openssl php74-php-pdo_mysql php74-php-tokenizer php74-php-zip
+```
+
+**Installing MariaDB [[Source](https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/)]**
+
+```bash
+# Install MariaDB
+sudo dnf install -y mariadb-server
+
+# Start MariaDB automatically at startup
+sudo systemctl enable mariadb
+
+# Run MariaDB
+sudo systemctl start mariadb
+```
+
+**Installing Composer [[Source](https://getcomposer.org/download/)]**
+
+```bash
+# Install Composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+# Move the Composer to PATH
+mv composer.phar /usr/local/bin/composer
+```
+
+
+<br>
+<br>
+<br>
+
+
+<p align="center">
+  <b>How we developed Nsustain.com</b>
+</p>
+
+We documented how we created Nsustain.com
+in case you'd like to understand how it was made 👍
 
 <br>
 <br>
@@ -186,10 +283,7 @@ is the unicode em space: (  )
 
 # 1. Web programming
 
-**Writing codes on a version-control system**<br>
-Techs used:
-`git`
-`GitHub`
+**Writing codes on a version-control system**
 
 Create a `GitHub` repository because
 version control ...
@@ -200,10 +294,7 @@ Plus, storing API keys bast practices:
 
 ## Back-end
 
-**Building the website's database**<br>
-Techs used:
-`Node.js`
-`SQLite`
+**Building the website's database**
 
 Blabla ...
 
@@ -214,12 +305,7 @@ Blabla ...
 
 ## Front-end
 
-**Building the front-end**<br>
-Techs used:
-`JavaScript`
-`TypeScript`
-`react.js`
-`next.js`
+**Building the front-end**
 
 Create the website ...
 
@@ -232,8 +318,6 @@ Create the website ...
 <br>
 
 # 2. Containerizing the website
-Techs used:
-`Docker`
 
 Make our website into a Docker image.
 Why containerize and why not else.
@@ -254,9 +338,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-d
 <br>
 
 # 3. Deploying a container orchestration system
-Techs used:
-`Kubernetes`
-`K3s`
 
 Explanation on high availability.
 Why K3s and not else, showing
@@ -289,17 +370,13 @@ goes offline thanks to Kubernetes.
 # 4. Getting a domain name
 
 **Getting a domain from a domain registrar**<br>
-Techs used:
-`Google Domains`
 
 Our domain name
 **[[Nsustain.com](nsustain.com)]**
 costs $12 per year.
 
-**(Optional) Setting up a custom-domain email forwarding service**<br>
-[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)<br>
-Techs used:
-`ForwardEmail.net`
+**(Optional) Setting up a custom-domain email forwarding service
+[[Source](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)]**<br>
 
 One way of doing this would be setting up an
 email server on the VPS we just got, but
@@ -309,10 +386,8 @@ We could just use one email account.
 All our email needs were such that just using an email
 forwarding service would solve all of them.
 
-**Setting up remote caching and DDoS protection**<br>
-[Original article by Prutser Rutger](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)<br>
-Techs used:
-`Cloudflare`
+**Setting up remote caching and DDoS protection
+[[Source](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)]**
 
 It also takes care of issuing SSL certificates.
 
@@ -328,10 +403,7 @@ on their settings and install it in our server.
 
 # 5. Getting a server
 
-**Getting a Virtual Private Server (VPS)**<br>
-Techs used:
-`IBM Cloud`
-`Ubuntu Server`
+**Getting a Virtual Private Server (VPS)**
 
 Get a VPS. Free trial for ...
 
@@ -340,10 +412,8 @@ Get a VPS. Free trial for ...
 ...
 ```
 
-**Running a VPS**<br>
-[Original article by Joe Morgan](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)<br>
-Techs used:
-`nginx`
+**Running a VPS
+[[Source](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)]**
 
 Blabla ...
 

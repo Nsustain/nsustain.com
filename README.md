@@ -202,8 +202,7 @@ based on Nsustain.
 > you'll need extra web searching to
 > figure out how it's different for your OS.
 
-**Installing Nginx**<br>
-[Source](https://fedoraproject.org/wiki/Nginx)
+**Installing Nginx [[Source](https://fedoraproject.org/wiki/Nginx)]**
 
 ```bash
 # Install Nginx

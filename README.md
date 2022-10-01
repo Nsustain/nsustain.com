@@ -26,7 +26,7 @@
 
 <p align="center">
   <b>
-    How we deploy 
+    How we deploy
     <a href="https://nsustain.com">Nsustain.com</a>
   </b>
 </p>
@@ -71,7 +71,7 @@ sudo systemctl start nginx.service
 **Installing PHP [[Source](https://computingforgeeks.com/how-to-install-php-74-on-fedora/)]**
 
 ```bash
-# Install PHP. Although the latest version is not PHP 7.4, 
+# Install PHP. Although the latest version is not PHP 7.4,
 # we need this version for compatibility with Flarum.
 sudo dnf install -y https://rpms.remirepo.net/fedora/remi-release-35.rpm
 sudo dnf config-manager --set-enabled remi
@@ -103,7 +103,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
 # Move the Composer to PATH
-mv composer.phar /usr/local/bin/composer
+sudo mv composer.phar /usr/local/bin/composer
 ```
 
 <!--
@@ -155,7 +155,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 <p align="center">
   <b>
-    How we developed 
+    How we developed
     <a href="https://nsustain.com">Nsustain.com</a>
   </b>
 </p>

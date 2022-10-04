@@ -105,10 +105,7 @@ php -r "unlink('composer-setup.php');"
 # Move the Composer to PATH
 sudo mv composer.phar /usr/local/bin/composer
 ```
-
 <!--
-
-# How we deploy Nsustain.com
 
 Flarum as a git submodule because ...
 need to get updates from Flarum,
@@ -141,11 +138,6 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 **(Optional) Setting up a custom-domain email forwarding service**<br>
 [Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
 #################################
-
-
-##########################################
-# To be uncommented later.
-##########################################
 
 -->
 

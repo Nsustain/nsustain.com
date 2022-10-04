@@ -175,6 +175,13 @@ is the unicode em space: (  )
 <br>
 <br>
 
+<!--
+
+This whole section is just a sample. Whole section has to
+be rewriten.
+
+-->
+
 # 1. Web programming
 
 **Writing codes on a version-control system**

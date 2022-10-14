@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# This file stores docker commands I used frequently
+# for learning purposes.
+
+# ------------------------------------------
+#	https://docs.docker.com/get-started/
+# ------------------------------------------
+
+# Run an Ubuntu
+docker run -itv hello_world:/hello_world ubuntu
+
+# Run an Ubuntu and don't exit automatically
+docker run -dv hello_world:/hello_world ubuntu bash -c "tail -f /dev/null"
+
+# Run bash inside a container
+docker exec -it <container_name> bash

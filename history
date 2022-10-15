@@ -22,3 +22,8 @@ docker exec -it <container_name> /bin/bash
 
 # Start a development server
 docker run --rm -p 8200:8200 --cap-add=IPC_LOCK -it vault
+
+# -----------------------------------------
+# Building nsustain/flarum Docker image
+# -----------------------------------------
+docker build -f Dockerfile.flarum -t nsustain/flarum:1.5 -t nsustain/flarum:latest

@@ -19,4 +19,6 @@ docker exec -it <container_name> /bin/bash
 # ------------------------------------------
 # HaashiCorp Vault
 # ------------------------------------------
-docker run --rm -it vault /bin/bash
+
+# Start a development server
+docker run --rm -p 8200:8200 --cap-add=IPC_LOCK -it vault

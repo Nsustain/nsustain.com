@@ -4,14 +4,19 @@
 # for learning purposes.
 
 # ------------------------------------------
-#	https://docs.docker.com/get-started/
+# https://docs.docker.com/get-started/
 # ------------------------------------------
 
 # Run an Ubuntu
-docker run -itv hello_world:/hello_world ubuntu
+docker run --rm -itv hello_world:/hello_world ubuntu
 
 # Run an Ubuntu and don't exit automatically
-docker run -dv hello_world:/hello_world ubuntu bash -c "tail -f /dev/null"
+docker run --rm -dv hello_world:/hello_world ubuntu /bin/bash -c "tail -f /dev/null"
 
 # Run bash inside a container
-docker exec -it <container_name> bash
+docker exec -it <container_name> /bin/bash
+
+# ------------------------------------------
+# HaashiCorp Vault
+# ------------------------------------------
+docker run --rm -it vault /bin/bash

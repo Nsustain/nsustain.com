@@ -17,6 +17,12 @@ docker run --rm -dv hello_world:/hello_world ubuntu /bin/bash -c "tail -f /dev/n
 docker exec -it <container_name> /bin/bash
 
 # ------------------------------------------
+# Open Kubernetes required ports (On Fedora)
+# https://kubernetes.io/docs/reference/ports-and-protocols/
+# ------------------------------------------
+sudo firewall-cmd --permanent --ad-port=6443/tcp
+
+# ------------------------------------------
 # HaashiCorp Vault
 # ------------------------------------------
 

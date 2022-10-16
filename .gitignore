@@ -1,7 +1,7 @@
-# Since we're using Hashicorp Vault for storing and using all secrets,
-# we're not using any .env file for handling secrets, but we've added
-# this to .gitignore in case we use .env file for debugging purposes.
+# .env files should never be indexed by git. Instead,
+# cp .envexample .env in order to use it.
 .*env*
+!.envexample
 
 # Ignore all data files for Flarum, MariaDB, and Vault.
 # FYI, when you run docker compose, all the data files will be written inside

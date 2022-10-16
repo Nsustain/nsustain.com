@@ -1,0 +1,12 @@
+services:
+
+  vault:
+    image: hashicorp/vault:latest
+    restart: always
+    ports:
+      - 8200:8200
+    volumes:
+      - ./data/vault/file:/vault/file
+      - ./data/vault/config:/vault/config
+    cap_add:
+      - IPC_LOCK

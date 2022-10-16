@@ -5,10 +5,10 @@ services:
     restart: always
     ports:
       - 8200:8200
+      - 8201:8201
     volumes:
       - ./data/vault/file:/vault/file
       - ./data/vault/config:/vault/config
     cap_add:
       - IPC_LOCK
-
- 
+        #entrypoint: "vault server -config=/vault/config/config.hcl"

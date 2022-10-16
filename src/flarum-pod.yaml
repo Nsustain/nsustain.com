@@ -9,13 +9,6 @@ spec:
   containers:
   - name: flarum
     image: "mondedie/flarum:latest"
-    resources:
-      limits:
-        cpu: 200m
-        memory: 500Mi
-      requests:
-        cpu: 100m
-        memory: 200Mi
     ports:
     - containerPort: 80
       name:  http

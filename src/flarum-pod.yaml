@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "flarum"
+  namespace: default
+  labels:
+    app: "flarum"
+spec:
+  containers:
+  - name: flarum
+    image: "mondedie/flarum:latest"
+    resources:
+      limits:
+        cpu: 200m
+        memory: 500Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    ports:
+    - containerPort: 80
+      name:  http
+    volumeMounts:
+    - name: flarum-volume
+      mountPath: /flarum
+  volumes:
+    - name: flarum-volume
+      hostPath:
+        path: data/flarum
+  restartPolicy: Always
+---
+

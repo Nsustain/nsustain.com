@@ -37,9 +37,11 @@ docker build -f Dockerfile.flarum -t nsustain/flarum:1.5 -t nsustain/flarum:late
 # -----------------------------------------
 # Deploying a test image to Kubernetes
 # -----------------------------------------
-
 # Get ibmcloud Kubernetes configs so that we can run
 # kubectl from our own computer.
 ibmcloud ks cluster config --cluster [clusterID] --admin
+
+# Run bash inside the pod
+kubectl exec -it [podName] /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"

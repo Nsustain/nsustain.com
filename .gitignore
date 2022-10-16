@@ -4,7 +4,7 @@
 .*env*
 
 # Ignore all data files for Flarum, MariaDB, and Vault.
-# FYI, when you build and run, all the data files will be written inside
+# FYI, when you run docker compose, all the data files will be written inside
 # "data" folder. Docker creates bind mounts inside the "data" folder.
 data/*
 !data/README.md

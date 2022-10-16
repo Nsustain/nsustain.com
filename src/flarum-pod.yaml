@@ -19,13 +19,6 @@ spec:
     ports:
     - containerPort: 80
       name:  http
-    volumeMounts:
-    - name: flarum-volume
-      mountPath: /flarum
-  volumes:
-    - name: flarum-volume
-      hostPath:
-        path: data/flarum
   restartPolicy: Always
 ---
 

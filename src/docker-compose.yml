@@ -10,3 +10,5 @@ services:
       - ./data/vault/config:/vault/config
     cap_add:
       - IPC_LOCK
+
+ 

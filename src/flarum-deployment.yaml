@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flarum-deployment
+  namespace: default
+  labels:
+    app: flarum
+spec:
+  selector:
+    matchLabels:
+      app: flarum
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+---
+

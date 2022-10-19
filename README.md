@@ -53,6 +53,18 @@ based on Nsustain.
 <br>
 <br>
 
+<!--
+
+We run Nsustain on Kubernetes, but
+you can slow run Nsustain on
+Docker Compose. If your host is
+a single computer, then
+Docker Compose is better suited.
+If you want to use two or more
+hosts, then run on Kubernetes.
+
+-->
+
 # 1. Installing the back-end
 
 **Installing Nginx [[Source](https://fedoraproject.org/wiki/Nginx)]**

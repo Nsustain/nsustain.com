@@ -2,9 +2,9 @@
 # Howver, we include .envExample... files such that
 # all our servers just work out of the box for development purposes.
 .*env*
-!.envExampleFlarum
-!.envExampleDB
-!.envExampleNginx
+!.envExampleflarum
+!.envExampledb
+!.envExamplenginx
 
 # Ignore all data files.
 # FYI, when you run docker compose, all the data files will be written inside

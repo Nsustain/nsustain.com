@@ -1,0 +1,13 @@
+kind: Kustomization
+
+resources:
+  - db-persistent-volume.yaml
+  - db-persistent-volume-claim.yaml
+  - db-service.yaml
+  - db-deployment.yaml
+  - flarum-persistent-volume.yaml
+  - flarum-persistent-volume-claim.yaml
+  - flarum-service.yaml
+  - flarum-deployment.yaml
+  - nginx-service.yaml
+  - nginx-deployment.yaml

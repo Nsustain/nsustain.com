@@ -1,9 +1,12 @@
-# .env files should never be indexed by git. Instead,
-# cp .envexample .env in order to use it.
+# .env files should never be indexed by git.
+# Howver, we include .envExample... files such that
+# all our servers just work out of the box for development purposes.
 .*env*
-!.envexample
+!.envExampleFlarum
+!.envExampleDB
+!.envExampleNginx
 
-# Ignore all data files for Flarum, MariaDB, and Vault.
+# Ignore all data files.
 # FYI, when you run docker compose, all the data files will be written inside
 # "data" folder. Docker creates bind mounts inside the "data" folder.
 data/*

@@ -19,6 +19,8 @@ LABEL org.opencontainers.image.authors="soobinrho@nsustain.com"
 
 
 
+EXPOSE 80/tcp
+EXPOSE 443/tcp
 
 # Unlike "RUN", which runs commands at the build time,
 # "CMD" is what the image runs when we use "docker run ..."

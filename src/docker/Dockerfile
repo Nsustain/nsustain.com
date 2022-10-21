@@ -6,4 +6,9 @@
 # Examples:
 #   docker build -t nsustain/flarum:0.1 -5 nsustain/flarum:latest
 # ---------------------------------------------------------------
-version: '3'
+FROM alpine:latest
+
+
+
+# RUN /bin/sh -c '<COMMANDS> \
+#                 <COMMANDS>'

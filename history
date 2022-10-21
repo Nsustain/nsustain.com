@@ -3,6 +3,14 @@
 # This file stores docker commands I used frequently
 # for learning purposes.
 
+# -----------------------------------------
+# Building nsustain/flarum Docker image
+# -----------------------------------------
+# --no-cache is required because, otherwise,
+# RUN apk update && apk upgrade --no-cache
+# will just use cache after the first time.
+docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest .
+
 # ------------------------------------------
 # https://docs.docker.com/get-started/
 # ------------------------------------------
@@ -28,11 +36,6 @@ sudo firewall-cmd --permanent --ad-port=6443/tcp
 
 # Start a development server
 docker run --rm -p 8200:8200 --cap-add=IPC_LOCK -it vault
-
-# -----------------------------------------
-# Building nsustain/flarum Docker image
-# -----------------------------------------
-docker build -f Dockerfile.flarum -t nsustain/flarum:1.5 -t nsustain/flarum:latest
 
 # -----------------------------------------
 # Deploying a test image to Kubernetes

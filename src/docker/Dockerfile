@@ -12,3 +12,10 @@ FROM alpine:latest
 
 # RUN /bin/sh -c '<COMMANDS> \
 #                 <COMMANDS>'
+
+
+
+
+# Unlike "RUN", which runs commands at the build time,
+# "CMD" is what the image runs when we use "docker run ..."
+# CMD [ "sh", "-c", "echo Hello World" ]

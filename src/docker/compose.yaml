@@ -4,7 +4,8 @@
 # ------------------------------------------------------------------
 services:
   flarum:
-    image: nsustain/flarum:latest
+    image: soobinrho/test:latest
+    # image: nsustain/flarum:latest
     depends_on:
       - db
     ports:
@@ -25,5 +26,5 @@ services:
 # Source:
 #   https://docs.docker.com/compose/compose-file/
 networks:
-  front-tier: {}
-  back-tier: {}
+  front-end: {}
+  back-end: {}

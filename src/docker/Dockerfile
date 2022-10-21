@@ -15,6 +15,25 @@ LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
 ENV FLARUM_VERSION="v1.5.0"
 
+# We included randomized secrets here so that you can can run
+# our image out of the box without any extra configuration.
+# This is okey for development environments, but if you are
+# in production environments, you should use your own secrets.
+ENV MYSQL_ROOT_PASSWORD=enRewyswLsdb
+ENV MYSQL_DATABASE=flarum
+ENV MYSQL_USER=flarum
+ENV MYSQL_PASSWORD=XavXRn8jZab4
+ENV DB_NAME=flarum
+ENV DB_USER=flarum
+ENV DB_PASS=XavXRn8jZab4
+ENV DB_HOST=mariadb
+ENV DB_PORT=3306
+ENV FLARUM_ADMIN_USER=Even9177
+ENV FLARUM_ADMIN_PASS=e7h7nTBtiBzs
+ENV FLARUM_ADMIN_MAIL=admin@example.com
+ENV FLARUM_TITLE="Development Envrionment"
+
+
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.
 WORKDIR /tmp
@@ -64,6 +83,8 @@ RUN apk update && \
  && composer clear-cache \
  && rm -rf /flarum/.composer /tmp/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
+
+WORKDIR /
 
 # ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
 

@@ -1,6 +1,6 @@
-# The purpose of this file is to be able to aplly or delete all files
-# listed here at once. Otherwise, we would have to
-# "kubectl apply -f ..." ten or more times.
+# The purpose of this file is to be able to aplly or delete 
+# all resources listed here at once. Otherwise, we would
+# have to "kubectl apply -f ..." ten or more times.
 # Example:
 #   kubectl apply -k k8s
 #   kubectl delete -k k8s

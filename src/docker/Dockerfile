@@ -11,13 +11,11 @@ LABEL version="0.1"
 LABEL description="Flarum image customized for Nsustain.com"
 LABEL org.opencontainers.image.authors="soobinrho@nsustain.com"
 
-
+# ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
 
 
 # RUN /bin/sh -c '<COMMANDS> \
 #                 <COMMANDS>'
-
-
 
 EXPOSE 80/tcp
 EXPOSE 443/tcp

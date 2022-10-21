@@ -1,4 +1,4 @@
-# The purpose of this file is to be able to aplly or delete 
+# The purpose of this file is to be able to aplly or delete
 # all resources listed here at once. Otherwise, we would
 # have to "kubectl apply -f ..." ten or more times.
 # Example:
@@ -15,5 +15,3 @@ resources:
   - flarum-persistent-volume-claim.yaml
   - flarum-service.yaml
   - flarum-deployment.yaml
-  - nginx-service.yaml
-  - nginx-deployment.yaml

@@ -5,13 +5,15 @@
 #
 # Most of the times, we use this file with:
 # Examples:
-#   docker build -t nsustain/flarum:0.1 -5 nsustain/flarum:latest
+#   docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest
 # ---------------------------------------------------------------
 FROM alpine:latest
 LABEL version="0.1"
-LABEL description="Flarum image customized for Nsustain.com"
+LABEL description="Nsustain.com"
 LABEL org.opencontainers.image.authors="soobinrho@nsustain.com"
 LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
+
+ENV FLARUM_VERSION="v1.5.0"
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it is a good practice to always explicitly set WORKDIR.
@@ -19,13 +21,24 @@ LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
 # WORKDIR /path/to/workdir
 
 # ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
+
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add --no-cache \
+    git
+
 # RUN /bin/sh -c '<COMMANDS> \
 #                 <COMMANDS>'
 
+# Open http/https ports
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 
 
+
+# ---------------------------------------------------------------
+# Notes for future (Uncomment to use)
+# ---------------------------------------------------------------
 
 # Why do we use volumes instead of bind mounts?
 # "While bind mounts are dependent on the directory structure and OS of
@@ -47,6 +60,15 @@ EXPOSE 443/tcp
 # CMD [ "sh", "-c", "echo Hello World" ]
 
 
+# "The best use for ENTRYPOINT is to set the image’s main command,
+# allowing that image to be run as though it was that command
+# (and then use CMD as the default flags)."
+# Example:
+#   ENTRYPOINT ["s3cmd"]
+#   CMD ["--help"]
+# Source:
+#   https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+#
 # Difference between exec form and shell form:
 # Exec form: ENTRYPOINT ["executable", "param1", "param2"]
 # Shell form: ENTRYPOINT command param1 param2

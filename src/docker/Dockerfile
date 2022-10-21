@@ -5,7 +5,7 @@
 #
 # Most of the times, we use this file with:
 # Examples:
-#   docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest
+#   docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest .
 # ---------------------------------------------------------------
 FROM alpine:latest
 LABEL version="0.1"
@@ -15,6 +15,56 @@ LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
 ENV FLARUM_VERSION="v1.5.0"
 
+# Flarum installation.
+# Source:
+#   https://github.com/mondediefr/docker-flarum/blob/master/Dockerfile
+RUN apk update && \
+    apk upgrade --no-cache && \
+    apk add --no-cache \
+    curl \
+    git \
+    icu-data-full \
+    libcap \
+    nginx \
+    php8 \
+    php8-ctype \
+    php8-curl \
+    php8-dom \
+    php8-exif \
+    php8-fileinfo \
+    php8-fpm \
+    php8-gd \
+    php8-gmp \
+    php8-iconv \
+    php8-intl \
+    php8-mbstring \
+    php8-mysqlnd \
+    php8-opcache \
+    php8-pecl-apcu \
+    php8-openssl \
+    php8-pdo \
+    php8-pdo_mysql \
+    php8-phar \
+    php8-session \
+    php8-tokenizer \
+    php8-xmlwriter \
+    php8-zip \
+    php8-zlib \
+    su-exec \
+    s6 \
+ && cd /tmp \
+ && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+ && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php8/php.ini \
+ && chmod +x /usr/local/bin/composer \
+ && mkdir -p /run/php /flarum/app \
+ && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /flarum/app \
+ && composer clear-cache \
+ && rm -rf /flarum/.composer /tmp/* \
+ && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
+
+# RUN /bin/sh -c '<COMMANDS> \
+#                 <COMMANDS>'
+
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it is a good practice to always explicitly set WORKDIR.
 #
@@ -22,19 +72,11 @@ ENV FLARUM_VERSION="v1.5.0"
 
 # ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
 
-RUN apk update && \
-    apk upgrade --no-cache && \
-    apk add --no-cache \
-    git
-
-# RUN /bin/sh -c '<COMMANDS> \
-#                 <COMMANDS>'
-
 # Open http/https ports
 EXPOSE 80/tcp
 EXPOSE 443/tcp
 
-
+ENTRYPOINT ["sh", "-c", "sh"]
 
 # ---------------------------------------------------------------
 # Notes for future (Uncomment to use)

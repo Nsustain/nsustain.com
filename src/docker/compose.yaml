@@ -12,7 +12,6 @@ services:
       - "80:80"
       - "443:443"
     networks:
-      - front-end
       - back-end
     environment:
       # We included randomized secrets here so that you can can run
@@ -23,11 +22,14 @@ services:
       - DB_USER=flarum
       - DB_PASS=XavXRn8jZab4
       - DB_HOST=mariadb
+        DB_PREF=flarum_
       - DB_PORT=3306
       - FLARUM_ADMIN_USER=Even9177
       - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
       - FLARUM_ADMIN_MAIL=admin@example.com
+      - DEBUG=false
       - FLARUM_TITLE="Development Envrionment"
+      - FORUM_URL="http://127.0.0.1"
 
   db:
     image: mariadb:latest

@@ -7,6 +7,9 @@
 #   docker build -t nsustain/flarum:0.1 -5 nsustain/flarum:latest
 # ---------------------------------------------------------------
 FROM alpine:latest
+LABEL version="0.1"
+LABEL description="Flarum image customized for Nsustain.com"
+
 
 
 

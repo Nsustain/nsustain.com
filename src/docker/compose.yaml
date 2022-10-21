@@ -1,11 +1,29 @@
+# ------------------------------------------------------------------
+# This file specifies what happens when we run
+# "docker compose up -d ..."
+# ------------------------------------------------------------------
 services:
-
   flarum:
     image: nsustain/flarum:latest
-
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - front-end
+      - back-end
 
   db:
     image: mariadb:latest
+    networks:
+      - back-end
     restart: always
-    environment:
-      
+
+
+# "The presence of these objects is sufficient to define them"
+# Source:
+#   https://docs.docker.com/compose/compose-file/
+networks:
+  front-tier: {}
+  back-tier: {}

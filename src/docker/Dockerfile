@@ -1,4 +1,4 @@
-# ---------------------------------------------------------------
+# -------------------------------------------------------------------
 # nsustain/flarum image is built using this Dockerfile.
 # Dockerhub:
 # https://hub.docker.com/repository/docker/nsustain/flarum
@@ -6,7 +6,7 @@
 # Most of the times, we use this file with:
 # Examples:
 #   docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest .
-# ---------------------------------------------------------------
+# -------------------------------------------------------------------
 FROM alpine:latest
 LABEL version="0.1"
 LABEL description="Nsustain.com"
@@ -73,9 +73,9 @@ EXPOSE 443/tcp
 
 ENTRYPOINT ["sh", "-c", "sh"]
 
-# ---------------------------------------------------------------
+# -------------------------------------------------------------------
 # Notes for future (Uncomment to use)
-# ---------------------------------------------------------------
+# -------------------------------------------------------------------
 
 # Why do we use volumes instead of bind mounts?
 # "While bind mounts are dependent on the directory structure and OS of

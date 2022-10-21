@@ -14,13 +14,35 @@ services:
     networks:
       - front-end
       - back-end
+    environment:
+      # We included randomized secrets here so that you can can run
+      # our image out of the box without any extra configuration.
+      # This is okey for development environments, but if you are
+      # in production environments, you should use your own secrets.
+      - DB_NAME=flarum
+      - DB_USER=flarum
+      - DB_PASS=XavXRn8jZab4
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - FLARUM_ADMIN_USER=Even9177
+      - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
+      - FLARUM_ADMIN_MAIL=admin@example.com
+      - FLARUM_TITLE="Development Envrionment"
 
   db:
     image: mariadb:latest
     networks:
       - back-end
     restart: always
+    environment:
 
+      # Same as above, these are randomized secrets just for
+      # development environments. In your production server,
+      # you should never use these environment variables.
+      - MYSQL_ROOT_PASSWORD=enRewyswLsdb
+      - MYSQL_DATABASE=flarum
+      - MYSQL_USER=flarum
+      - MYSQL_PASSWORD=XavXRn8jZab4
 
 # "The presence of these objects is sufficient to define them"
 # Source:

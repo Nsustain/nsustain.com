@@ -11,10 +11,14 @@ FROM alpine:latest
 LABEL version="0.1"
 LABEL description="Flarum image customized for Nsustain.com"
 LABEL org.opencontainers.image.authors="soobinrho@nsustain.com"
+LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
+# WORKDIR actually may change depending on the base image we use.
+# Therefore, it is a good practice to always explicitly set WORKDIR.
+#
 # WORKDIR /path/to/workdir
-# ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
 
+# ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
 # RUN /bin/sh -c '<COMMANDS> \
 #                 <COMMANDS>'
 

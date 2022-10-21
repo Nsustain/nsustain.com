@@ -1,0 +1,11 @@
+services:
+
+  flarum:
+    image: nsustain/flarum:latest
+
+
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      

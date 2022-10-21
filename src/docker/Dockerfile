@@ -9,6 +9,7 @@
 FROM alpine:latest
 LABEL version="0.1"
 LABEL description="Flarum image customized for Nsustain.com"
+LABEL org.opencontainers.image.authors="soobinrho@nsustain.com"
 
 
 

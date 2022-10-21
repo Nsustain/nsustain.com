@@ -1,0 +1,7 @@
+# The reason why we use .dockerignore file is because
+# "To increase the build’s performance, exclude files and
+# directories by adding a .dockerignore file to the context
+# directory."
+# https://docs.docker.com/engine/reference/builder/
+Dockerfile
+docker-compose.yml

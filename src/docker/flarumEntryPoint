@@ -17,6 +17,7 @@ sed -i "s/DB_PREF/$DB_PREF/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_ADMIN_USER/$FLARUM_ADMIN_USER/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_ADMIN_PASS/$FLARUM_ADMIN_PASS/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $INSTALL_FILE_DIR
+sed -i "s/FLARUM_TITLE/$FLARUM_TITLE/g" $INSTALL_FILE_DIR
 
 # Wait until mariadb boots up.
 # What this means is that it first waits 10 seconds

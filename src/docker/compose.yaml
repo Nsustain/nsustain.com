@@ -32,6 +32,9 @@ services:
       - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
       - FLARUM_ADMIN_MAIL=admin@example.com
       - FLARUM_TITLE="Development Envrionment"
+    volumes:
+      - ./flarumEntryPoint:/flarumEntryPoint
+      - ./flarumInstall.yaml:/flarumInstall.yaml
 
   mariadb:
     image: mariadb:latest

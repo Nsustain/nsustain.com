@@ -66,9 +66,12 @@ RUN apk update && \
  && rm -rf /flarum/.composer /tmp/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
 
-# ENTRYPOINT ["sh", "-c"]
+ADD ./flarumInstall.yaml /flarumInstall.yaml
+ADD ./flarumEntryPoint /flarumEntryPoint
+
+ENTRYPOINT ["/flarumEntryPoint"]
 # CMD ["tail", "-f", "/dev/null"]
-CMD ["sh"]
+# CMD ["sh"]
 
 # -------------------------------------------------------------------
 # Notes for future (Uncomment to use)

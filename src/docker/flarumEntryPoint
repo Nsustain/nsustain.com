@@ -18,6 +18,11 @@ sed -i "s/FLARUM_ADMIN_USER/$FLARUM_ADMIN_USER/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_ADMIN_PASS/$FLARUM_ADMIN_PASS/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $INSTALL_FILE_DIR
 
+# Wait until mariadb boots up.
+# What this means is that this statemend exits as soon as
+# mariadb is connected, but if not, waits for 10 seconds maximum.
+timeout 10 mariadb --host mariadb 2> /dev/null
+
 php flarum install -f $INSTALL_FILE_DIR
 
 # DEBUG: for do not quit

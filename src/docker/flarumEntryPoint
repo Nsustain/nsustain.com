@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# This file runs whenever we run the Docker nsustain/flarum image.
+# The purpose of this file is to set the ENTRYPOINT for Docker.
+
+sed -
+
+

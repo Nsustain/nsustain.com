@@ -17,7 +17,7 @@ ENV FLARUM_VERSION="v1.5.0"
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.
-WORKDIR /tmp
+WORKDIR /
 
 # Flarum installation.
 # Source:
@@ -56,6 +56,7 @@ RUN apk update && \
     php8-zlib \
     su-exec \
     s6 \
+ && cd /tmp \
  && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
  # && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php8/php.ini \
  && chmod +x /usr/local/bin/composer \
@@ -65,15 +66,9 @@ RUN apk update && \
  && rm -rf /flarum/.composer /tmp/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
 
-WORKDIR /
-
-# ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
-
-# Open http/https ports
-EXPOSE 80/tcp
-EXPOSE 443/tcp
-
-ENTRYPOINT ["sh", "-c", "sh"]
+# ENTRYPOINT ["sh", "-c"]
+# CMD ["tail", "-f", "/dev/null"]
+CMD ["sh"]
 
 # -------------------------------------------------------------------
 # Notes for future (Uncomment to use)
@@ -89,6 +84,8 @@ ENTRYPOINT ["sh", "-c", "sh"]
 #   https://docs.docker.com/storage/volumes/
 #
 # VOLUME ["/flarum/"]
+
+# ADD [--chown=<user>:<group>] [--checksum=<checksum>] <src>... <dest>
 
 # Unlike RUN, which runs commands at the build time,
 # CMD is what the image runs when we use "docker run ..."

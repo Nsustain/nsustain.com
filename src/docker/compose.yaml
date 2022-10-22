@@ -6,11 +6,11 @@ services:
   flarum:
     image: soobinrho/test:latest
     # image: nsustain/flarum:latest
+    container_name: flarum
     depends_on:
-      - db
+      - mariadb
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:8888
     networks:
       - back-end
     environment:
@@ -18,37 +18,44 @@ services:
       # our image out of the box without any extra configuration.
       # This is okey for development environments, but if you are
       # in production environments, you should use your own secrets.
+      - DEBUG=false
+      - FORUM_URL="http://127.0.0.1"
+      - DB_HOST=mariadb
+      - DB_PORT=3306
       - DB_NAME=flarum
       - DB_USER=flarum
-      - DB_PASS=XavXRn8jZab4
-      - DB_HOST=mariadb
-        DB_PREF=flarum_
-      - DB_PORT=3306
+      - DB_PASS=test
+      # - DB_PASS=XavXRn8jZab4
+      - DB_PREF=flarum_
       - FLARUM_ADMIN_USER=Even9177
       - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
       - FLARUM_ADMIN_MAIL=admin@example.com
-      - DEBUG=false
       - FLARUM_TITLE="Development Envrionment"
-      - FORUM_URL="http://127.0.0.1"
 
-  db:
+  mariadb:
     image: mariadb:latest
+    container_name: mariadb
     networks:
       - back-end
     restart: always
     environment:
-
       # Same as above, these are randomized secrets just for
       # development environments. In your production server,
       # you should never use these environment variables.
-      - MYSQL_ROOT_PASSWORD=enRewyswLsdb
-      - MYSQL_DATABASE=flarum
-      - MYSQL_USER=flarum
-      - MYSQL_PASSWORD=XavXRn8jZab4
+      - MARIADB_ROOT_PASSWORD=test
+      # - MARIADB_ROOT_PASSWORD=enRewyswLsdb
+      - MARIADB_DATABASE=flarum
+      - MARIADB_USER=flarum
+      - MARIADB_PASSWORD=test
+      # - MYSQL_PASSWORD=XavXRn8jZab4
+    volumes:
+      - mariadb-volume:/var/lib/mysql
+
+volumes:
+  mariadb-volume:
 
 # "The presence of these objects is sufficient to define them"
 # Source:
 #   https://docs.docker.com/compose/compose-file/
 networks:
-  front-end: {}
   back-end: {}

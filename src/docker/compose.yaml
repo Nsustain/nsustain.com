@@ -18,6 +18,7 @@ services:
       # our image out of the box without any extra configuration.
       # This is okey for development environments, but if you are
       # in production environments, you should use your own secrets.
+      - FLARUM_INSTALL_DIR=/var/www/flarum
       - DEBUG=false
       - FORUM_URL="http://127.0.0.1"
       - DB_HOST=mariadb

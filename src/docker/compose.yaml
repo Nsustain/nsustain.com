@@ -10,7 +10,7 @@ services:
     depends_on:
       - mariadb
     ports:
-      - 80:8888
+      - 80:80
     networks:
       - back-end
     environment:

@@ -27,10 +27,10 @@ sed -i "s/FLARUM_WELCOME_TITLE/$FLARUM_WELCOME_TITLE/g" $INSTALL_FILE_DIR
 # and then exits as soon as mariadb is connected, but if not,
 # it waits for 20 seconds maximum.
 sleep 10
-timeout 5 && mariadb --host mariadb 2> /dev/null
+timeout 5 && mariadb --host mariadb > /dev/null
 if [ $? -ne 0 ]
 then
- 	timeout 5 mariadb --host mariadb 2> /dev/null
+ 	timeout 5 mariadb --host mariadb > /dev/null
 fi
 
 php flarum install -f $INSTALL_FILE_DIR

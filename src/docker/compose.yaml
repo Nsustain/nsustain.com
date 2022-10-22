@@ -29,8 +29,9 @@ services:
       - DB_PASS=test
       # - DB_PASS=XavXRn8jZab4
       - DB_PREF=flarum_
-      - FLARUM_ADMIN_USER=Even9177
-      - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
+      - FLARUM_ADMIN_USER=admin9177
+      - FLARUM_ADMIN_PASS=test
+      # - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
       - FLARUM_ADMIN_MAIL=admin@example.com
       - FLARUM_DESCRIPTION="Not production yet."
       - FLARUM_TITLE="Development Envrionment"

@@ -44,6 +44,13 @@ then
 
   php flarum install -f $INSTALL_FILE_DIR
 
+  # Install extensions
+  composer require fof/oauth:"*"
+  composer require fof/nightmode:"*"
+  composer require datlechin/flarum-link-preview:"*"
+  composer require clarkwinkelmann/flarum-ext-shadow-ban:"*"
+  composer require v17development/flarum-third-party-login-only:"*"
+
   # Use IS_INSTALLED file to test if it's first time installing or not.
   # Source:
   #   https://github.com/mondediefr/docker-flarum/blob/master/rootfs/usr/local/bin/startup
@@ -76,6 +83,9 @@ else
   chown -R nginx:nginx /var/www/html/flarum
   chmod -R 755 /var/www/html/flarum
 fi
+
+echo "[INFO] Enabling all installed extensions"
+php /var/www/html/flarum/enable-installed-extensions.php
 
 # ---------------------------
 # Start serving http requests

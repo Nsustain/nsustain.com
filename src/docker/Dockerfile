@@ -61,7 +61,8 @@ RUN apk update && \
  && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /var/www/html/flarum \
  && composer clear-cache \
  && rm -rf /tmp/* \
- && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
+ && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
+ && chown -R nginx:nginx /var/www/html/flarum
 
 COPY ./flarumInstall.yaml /flarumInstall.yaml
 COPY ./flarumEntryPoint /flarumEntryPoint

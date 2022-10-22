@@ -16,4 +16,7 @@ adminUser:
   password: FLARUM_ADMIN_PASS
   email: FLARUM_ADMIN_MAIL
 settings:
+  forum_description: FLARUM_DESCRIPTION
   forum_title: FLARUM_TITLE
+  welcome_message: FLARUM_WELCOME_MESSAGE
+  welcome_title: FLARUM_WELCOME_TITLE

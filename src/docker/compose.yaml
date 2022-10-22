@@ -1,6 +1,10 @@
 # ------------------------------------------------------------------
 # This file specifies what happens when we run
 # "docker compose up -d ..."
+#
+# After running the Compose file, go to http://127.0.0.1 to access
+# your development server. Note that http://localhost is incorrect,
+# and only http://127.0.0.1 is designed to work.
 # ------------------------------------------------------------------
 services:
   flarum:

@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 # This file runs whenever we run the Docker nsustain/flarum image.
 # The purpose of this file is to set the ENTRYPOINT for Docker.
@@ -20,8 +20,12 @@ sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $INSTALL_FILE_DIR
 
 # Wait until mariadb boots up.
 # What this means is that this statemend exits as soon as
-# mariadb is connected, but if not, waits for 10 seconds maximum.
+# mariadb is connected, but if not, waits for 15 seconds maximum.
 timeout 10 mariadb --host mariadb 2> /dev/null
+if [ $? -ne 0 ]
+then
+ 	timeout 5 mariadb --host mariadb 2> /dev/null
+fi
 
 php flarum install -f $INSTALL_FILE_DIR
 

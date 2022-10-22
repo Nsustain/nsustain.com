@@ -21,6 +21,7 @@ ENV FLARUM_VERSION="v1.5.0"
 RUN apk update && \
     apk upgrade --no-cache && \
     apk add --no-cache \
+    bash \
     curl \
     git \
     icu-data-full \

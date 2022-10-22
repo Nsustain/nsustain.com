@@ -34,8 +34,8 @@ services:
       - FLARUM_ADMIN_MAIL=admin@example.com
       - FLARUM_TITLE="Development Envrionment"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:rw # DEBUG: remove rw
-      - ./www.conf:/etc/php8/php-fpm.d/www.conf:rw # DEBUG: ...
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./www.conf:/etc/php8/php-fpm.d/www.conf
 
   mariadb:
     image: mariadb:latest

@@ -51,6 +51,7 @@ RUN apk update && \
     php8-xmlwriter \
     php8-zip \
     php8-zlib \
+    mysql-client \
     mariadb-client \
     su-exec \
     s6 \

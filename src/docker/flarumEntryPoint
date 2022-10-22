@@ -3,6 +3,9 @@
 # This file runs whenever we run the Docker nsustain/flarum image.
 # The purpose of this file is to set the ENTRYPOINT for Docker.
 
+# ----------------------------------------------
+# 1. Install Flarum with the given env variables
+# ----------------------------------------------
 # $DEBUG, as well as all other env variables are set on compose.yaml
 INSTALL_FILE_DIR="/flarumInstall.yaml"
 
@@ -22,27 +25,23 @@ sed -i "s/FLARUM_TITLE/$FLARUM_TITLE/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_WELCOME_MESSAGE/$FLARUM_WELCOME_MESSAGE/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_WELCOME_TITLE/$FLARUM_WELCOME_TITLE/g" $INSTALL_FILE_DIR
 
-# Wait until mariadb boots up.
-# What this means is that it first waits 10 seconds
-# and then exits as soon as mariadb is connected, but if not,
-# it waits for 20 seconds maximum.
-sleep 10
-# timeout 5 && mariadb --host mariadb > /dev/null
-# if [ $? -ne 0 ]
-# then
-#  	timeout 5 mariadb --host mariadb > /dev/null
-# fi
+# Wait until mariadb boots up
+# Source: Stack Overflow @flamemyst
+#   https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking
+while ! mysqladmin ping -h"$DB_HOST" --silent; do
+    sleep 1
+done
 
 php flarum install -f $INSTALL_FILE_DIR
 
+# ------------------------------
+# 2. Start serving http requests
+# ------------------------------
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, nginx first receives it;
 # php-fpm8 handles php files; and then finally nginx serves.
 php-fpm8
 nginx
-
-# DEBUG: for do not quit
-# tail -f /dev/null
 
 # -------------------------------
 # Migrate everytime the image is run.

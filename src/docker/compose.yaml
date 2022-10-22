@@ -25,7 +25,7 @@ services:
       # Use these env variables just for development environments.
       # Never use these in production environments.
       - DEBUG=false
-      - FORUM_URL="http://127.0.0.1"
+      - FORUM_URL=http://127.0.0.1
       - DB_HOST=mariadb
       - DB_PORT=3306
       - DB_NAME=flarum
@@ -34,13 +34,12 @@ services:
       - DB_PREF=flarum_
       - FLARUM_ADMIN_USER=nim3594
       - FLARUM_ADMIN_PASS=369FQUv4eS
-      # - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
       - FLARUM_ADMIN_MAIL=dev@nsustain.com
-      - FLARUM_DESCRIPTION="A forum website created for\
+      - FLARUM_DESCRIPTION="A forum website created for
                             the environment and sustainability."
       - FLARUM_TITLE="Nsustain Development Server"
       - FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
-      - FLARUM_WELCOME_TITLE="Nsustain"
+      - FLARUM_WELCOME_TITLE=Nsustain
     volumes:
       # Normally, config files are added inside the container
       # directly at Dockerfile, but these three files are mounted

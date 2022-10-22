@@ -22,36 +22,39 @@ services:
     environment:
       # We included randomized secrets here so that you can can run
       # our image out of the box without any extra configuration.
-      # This is okey for development environments, but if you are
-      # in production environments, you should use your own secrets.
+      # Use these env variables just for development environments.
+      # Never use these in production environments.
       - DEBUG=false
       - FORUM_URL="http://127.0.0.1"
       - DB_HOST=mariadb
       - DB_PORT=3306
       - DB_NAME=flarum
       - DB_USER=flarum
-      - DB_PASS=test
-      # - DB_PASS=XavXRn8jZab4
+      - DB_PASS=qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9
       - DB_PREF=flarum_
-      - FLARUM_ADMIN_USER=admin9177
-      - FLARUM_ADMIN_PASS=test
+      - FLARUM_ADMIN_USER=nim3594
+      - FLARUM_ADMIN_PASS=369FQUv4eS
       # - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
-      - FLARUM_ADMIN_MAIL=admin@example.com
-      - FLARUM_DESCRIPTION="Not production yet."
-      - FLARUM_TITLE="Development Envrionment"
-      - FLARUM_WELCOME_MESSAGE="This is a welcome message!"
-      - FLARUM_WELCOME_TITLE="Hi there!"
+      - FLARUM_ADMIN_MAIL=dev@nsustain.com
+      - FLARUM_DESCRIPTION="A forum website created for\
+                            the environment and sustainability."
+      - FLARUM_TITLE="Nsustain Development Server"
+      - FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
+      - FLARUM_WELCOME_TITLE="Nsustain"
     volumes:
       # Normally, config files are added inside the container
-      # directly at Dockerfile, but these two files are mounted
+      # directly at Dockerfile, but these three files are mounted
       # as volumes at this Compose file because we sometimes have to
       # change the values of these files for testing purposes.
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./www.conf:/etc/php8/php-fpm.d/www.conf
+      - ./composer.json:/var/www/html/flarum/composer.json
 
-      # To preserve the state of Flarum each time we restart our
-      # container, we need to mount these.
+      # These preserve the state of Flarum each time we restart our Docker image.
+      # Example location of named volumes:
+      #   /var/lib/docker/volumes/docker_flarum-assets
       - flarum-assets:/var/www/html/flarum/public/assets
+      - flarum-storage:/var/www/html/flarum/storage
 
   mariadb:
     image: mariadb:latest
@@ -62,22 +65,20 @@ services:
       - back-end
     restart: always
     environment:
-      # Same as above, these are randomized secrets just for
-      # development environments. In your production server,
-      # you should never use these environment variables.
-      - MARIADB_ROOT_PASSWORD=test
-      # - MARIADB_ROOT_PASSWORD=enRewyswLsdb
+      # Again, these are randomized secrets just for
+      # development environments. In your production environments,
+      # you should never use these env variables.
+      - MARIADB_ROOT_PASSWORD=TTBXkgeu25GVyge8FQrZBPj7HYiuG9qCawRcff5ukP
       - MARIADB_DATABASE=flarum
       - MARIADB_USER=flarum
-      - MARIADB_PASSWORD=test
-      # - MYSQL_PASSWORD=XavXRn8jZab4
+      - MARIADB_PASSWORD=qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9
     volumes:
-      - mariadb-volume:/var/lib/mysql
+      - mariadb-data:/var/lib/mysql
 
 volumes:
   flarum-assets:
-  flarum-logs:
-  mariadb-volume:
+  flarum-storage:
+  mariadb-data:
 
 # "The presence of these objects is sufficient to define them"
 # Source:

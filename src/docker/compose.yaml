@@ -39,6 +39,7 @@ services:
       - FLARUM_TITLE=Nsustain Development Server
       - FLARUM_WELCOME_MESSAGE=🌳 For the environment and sustainability.
       - FLARUM_WELCOME_TITLE=Nsustain
+      - FLARUM_EXTENSIONS_ENABLED=["flarum-flags","flarum-tags","flarum-suspend","flarum-subscriptions","flarum-sticky","flarum-statistics","flarum-mentions","flarum-markdown","flarum-lock","flarum-likes","flarum-lang-english","flarum-emoji","flarum-bbcode","flarum-approval","fof/oauth","fof/nightmode","datlechin/flarum-link-preview","clarkwinkelmann/flarum-ext-shdow-ban","v17development/flarum-third-party-login-only"]
     volumes:
       # Normally, config files are added inside the container
       # directly at Dockerfile, but these three files are mounted

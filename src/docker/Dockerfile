@@ -63,7 +63,9 @@ RUN apk update && \
  && rm -rf /tmp/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
  && chown -R nginx:nginx /var/www/html/flarum \
- && chmod -R 775 /var/www/html/flarum
+ && chown -R nginx:nginx /var/lib/php8 \
+ && chmod -R 775 /var/www/html/flarum \
+ && chmod -R 775 /var/lib/php8
 
 COPY ./flarumInstall.yaml /flarumInstall.yaml
 COPY ./flarumEntryPoint /flarumEntryPoint

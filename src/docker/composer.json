@@ -21,12 +21,12 @@
         "docs": "https://docs.flarum.org/"
     },
     "require": {
-        "flarum/core": "^1.5",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
+        "flarum/core": "^1.5",
         "flarum/emoji": "*",
-        "flarum/lang-english": "*",
         "flarum/flags": "*",
+        "flarum/lang-english": "*",
         "flarum/likes": "*",
         "flarum/lock": "*",
         "flarum/markdown": "*",
@@ -37,7 +37,8 @@
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
-        "flarum/tags": "*"
+        "flarum/tags": "*",
+        "fof/oauth": "*"
     },
     "config": {
         "preferred-install": "dist",

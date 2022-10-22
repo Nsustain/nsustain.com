@@ -76,8 +76,18 @@ else
   chmod -R 755 /var/www/html/flarum
 fi
 
+# --------------------------------------------
+# 2. If data already exists, then just migrate
+# --------------------------------------------
+composer require fof/oauth:"*"
+composer require fof/nightmode:"*"
+composer require datlechin/flarum-link-preview:"*"
+composer require clarkwinkelmann/flarum-ext-shadow-ban:"*"
+composer require v17development/flarum-third-party-login-only:"*"
+
+
 # ------------------------------
-# 3. Start serving http requests
+# 4. Start serving http requests
 # ------------------------------
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, php-fpm handles php files.

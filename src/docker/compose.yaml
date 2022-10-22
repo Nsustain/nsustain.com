@@ -11,6 +11,8 @@ services:
       - mariadb
     ports:
       - 80:80
+    expose:
+      - 9000
     networks:
       - back-end
     environment:
@@ -37,6 +39,8 @@ services:
   mariadb:
     image: mariadb:latest
     container_name: mariadb
+    expose:
+      - 3306
     networks:
       - back-end
     restart: always

@@ -44,7 +44,9 @@ then
   php flarum install -f $INSTALL_FILE_DIR
 
   # Install extensions
+  composer require fof/pages:"*"
   composer require fof/oauth:"*"
+  composer require fof/links:"*"
   composer require fof/nightmode:"*"
   composer require datlechin/flarum-link-preview:"*"
   composer require clarkwinkelmann/flarum-ext-shadow-ban:"*"

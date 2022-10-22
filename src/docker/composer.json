@@ -40,8 +40,10 @@
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
         "flarum/tags": "*",
+        "fof/links": "^1.1",
         "fof/nightmode": "*",
         "fof/oauth": "*",
+        "fof/pages": "^1.0",
         "v17development/flarum-third-party-login-only": "*"
     },
     "config": {

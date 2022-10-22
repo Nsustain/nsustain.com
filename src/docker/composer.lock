@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c1c28e81a57f10765a47f268e2c9084",
+    "content-hash": "29794b67cf380b5bd83f006b9c48db95",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -2755,6 +2755,75 @@
             "time": "2021-05-21T23:38:23+00:00"
         },
         {
+            "name": "fof/links",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/links.git",
+                "reference": "7f9ecfb596cd50a32dd8bfb9b002072e8e3140b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/7f9ecfb596cd50a32dd8bfb9b002072e8e3140b7",
+                "reference": "7f9ecfb596cd50a32dd8bfb9b002072e8e3140b7",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "replace": {
+                "sijad/flarum-ext-links": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Links",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-bars",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18335"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Links\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage Flarum primary navbar menu links",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18335",
+                "issues": "https://github.com/FriendsOfFlarum/links/issues",
+                "source": "https://github.com/FriendsOfFlarum/links"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2022-08-27T21:34:57+00:00"
+        },
+        {
             "name": "fof/nightmode",
             "version": "1.5.0",
             "source": {
@@ -2933,6 +3002,80 @@
                 }
             ],
             "time": "2022-05-06T08:12:03+00:00"
+        },
+        {
+            "name": "fof/pages",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/pages.git",
+                "reference": "9ddae6bad9a219735ae3db07187061b375ae0e4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/pages/zipball/9ddae6bad9a219735ae3db07187061b375ae0e4b",
+                "reference": "9ddae6bad9a219735ae3db07187061b375ae0e4b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^1.2"
+            },
+            "replace": {
+                "sijad/flarum-ext-pages": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Pages",
+                    "category": "feature",
+                    "icon": {
+                        "name": "far fa-file-alt",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18301"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Pages\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sajjad Hashemian",
+                    "email": "wolaws@gmail.com"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create custom pages with Flarum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/18301",
+                "issues": "https://github.com/FriendsOfFlarum/pages/issues",
+                "source": "https://github.com/FriendsOfFlarum/pages"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2022-04-09T22:54:56+00:00"
         },
         {
             "name": "franzl/whoops-middleware",

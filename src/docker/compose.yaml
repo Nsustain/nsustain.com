@@ -18,7 +18,6 @@ services:
       # our image out of the box without any extra configuration.
       # This is okey for development environments, but if you are
       # in production environments, you should use your own secrets.
-      - FLARUM_INSTALL_DIR=/var/www/flarum
       - DEBUG=false
       - FORUM_URL="http://127.0.0.1"
       - DB_HOST=mariadb
@@ -32,9 +31,6 @@ services:
       - FLARUM_ADMIN_PASS=e7h7nTBtiBzs
       - FLARUM_ADMIN_MAIL=admin@example.com
       - FLARUM_TITLE="Development Envrionment"
-    volumes:
-      - ./flarumEntryPoint:/flarumEntryPoint
-      - ./flarumInstall.yaml:/flarumInstall.yaml
 
   mariadb:
     image: mariadb:latest

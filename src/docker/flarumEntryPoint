@@ -3,21 +3,22 @@
 # This file runs whenever we run the Docker nsustain/flarum image.
 # The purpose of this file is to set the ENTRYPOINT for Docker.
 
-# $FLARUM_INSTALL_DIR, as well as all other env variables,
-# are set on compose.yaml
-INSTALL_FILE_NAME="flarumInstall.yaml"
-INSTALL_FILE_DIR="$FLARUM_INSTALL_DIR/$INSTALL_FILE_NAME"
+# $DEBUG, as well as all other env variables are set on compose.yaml
+INSTALL_FILE_DIR="/flarumInstall.yaml"
 
-sed -i "s/DEBUG/$DEBUG/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/FORUM_URL/$FORUM_URL/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/DB_HOST/$DB_HOST/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/DB_PORT/$DB_PORT/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/DB_NAME/$DB_NAME/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/DB_USER/$DB_USER/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/DB_PASS/$DB_PASS/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/DB_PREF/$DB_PREF/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/FLARUM_ADMIN_USER/$FLARUM_ADMIN_USER/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/FLARUM_ADMIN_PASS/$FLARUM_ADMIN_PASS/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
-sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $FLARUM_INSTALL_DIR/flarumInstall.yaml
+sed -i "s/DEBUG/$DEBUG/g" $INSTALL_FILE_DIR
+sed -i "s|FORUM_URL|$FORUM_URL|g" $INSTALL_FILE_DIR
+sed -i "s/DB_HOST/$DB_HOST/g" $INSTALL_FILE_DIR
+sed -i "s/DB_PORT/$DB_PORT/g" $INSTALL_FILE_DIR
+sed -i "s/DB_NAME/$DB_NAME/g" $INSTALL_FILE_DIR
+sed -i "s/DB_USER/$DB_USER/g" $INSTALL_FILE_DIR
+sed -i "s/DB_PASS/$DB_PASS/g" $INSTALL_FILE_DIR
+sed -i "s/DB_PREF/$DB_PREF/g" $INSTALL_FILE_DIR
+sed -i "s/FLARUM_ADMIN_USER/$FLARUM_ADMIN_USER/g" $INSTALL_FILE_DIR
+sed -i "s/FLARUM_ADMIN_PASS/$FLARUM_ADMIN_PASS/g" $INSTALL_FILE_DIR
+sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $INSTALL_FILE_DIR
 
+php flarum install -f $INSTALL_FILE_DIR
 
+# DEBUG: for do not quit
+tail -f /dev/null

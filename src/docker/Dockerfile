@@ -15,10 +15,6 @@ LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
 ENV FLARUM_VERSION="v1.5.0"
 
-# WORKDIR actually may change depending on the base image we use.
-# Therefore, it's a good practice to always set WORKDIR explicitly.
-WORKDIR /
-
 # Flarum installation.
 # Source:
 #   https://github.com/mondediefr/docker-flarum/blob/master/Dockerfile
@@ -58,16 +54,19 @@ RUN apk update && \
     s6 \
  && cd /tmp \
  && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
- # && sed -i 's/memory_limit = .*/memory_limit = ${PHP_MEMORY_LIMIT}/' /etc/php8/php.ini \
  && chmod +x /usr/local/bin/composer \
- && mkdir -p /run/php /flarum/app \
- && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /flarum/app \
+ && mkdir -p /var/www/html/flarum \
+ && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /var/www/html/flarum \
  && composer clear-cache \
- && rm -rf /flarum/.composer /tmp/* \
+ && rm -rf /tmp/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx
 
-ADD ./flarumInstall.yaml /flarumInstall.yaml
-ADD ./flarumEntryPoint /flarumEntryPoint
+COPY ./flarumInstall.yaml /flarumInstall.yaml
+COPY ./flarumEntryPoint /flarumEntryPoint
+
+# WORKDIR actually may change depending on the base image we use.
+# Therefore, it's a good practice to always set WORKDIR explicitly.
+WORKDIR /var/www/html/flarum
 
 ENTRYPOINT ["/flarumEntryPoint"]
 # CMD ["tail", "-f", "/dev/null"]

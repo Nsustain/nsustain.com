@@ -21,6 +21,8 @@
         "docs": "https://docs.flarum.org/"
     },
     "require": {
+        "clarkwinkelmann/flarum-ext-shadow-ban": "*",
+        "datlechin/flarum-link-preview": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/core": "^1.5",
@@ -38,7 +40,9 @@
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
         "flarum/tags": "*",
-        "fof/oauth": "*"
+        "fof/nightmode": "*",
+        "fof/oauth": "*",
+        "v17development/flarum-third-party-login-only": "*"
     },
     "config": {
         "preferred-install": "dist",

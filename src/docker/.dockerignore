@@ -5,3 +5,8 @@
 # https://docs.docker.com/engine/reference/builder/
 Dockerfile
 docker-compose.yml
+
+# Plus, never commit .env files because they contain secrets.
+.*env*
+!.envExampleflarum
+!.envExampledb

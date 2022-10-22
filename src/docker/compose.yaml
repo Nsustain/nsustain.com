@@ -8,8 +8,7 @@
 # ------------------------------------------------------------------
 services:
   flarum:
-    image: soobinrho/test:latest
-    # image: nsustain/flarum:latest
+    image: nsustain/flarum:latest
     container_name: flarum
     depends_on:
       - mariadb

@@ -8,7 +8,6 @@
 # ----------------------------------------------
 # $DEBUG, as well as all other env variables are set on compose.yaml
 INSTALL_FILE_DIR="/flarumInstall.yaml"
-
 sed -i "s/DEBUG/$DEBUG/g" $INSTALL_FILE_DIR
 sed -i "s|FORUM_URL|$FORUM_URL|g" $INSTALL_FILE_DIR
 sed -i "s/DB_HOST/$DB_HOST/g" $INSTALL_FILE_DIR
@@ -25,8 +24,17 @@ sed -i "s/FLARUM_TITLE/$FLARUM_TITLE/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_WELCOME_MESSAGE/$FLARUM_WELCOME_MESSAGE/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_WELCOME_TITLE/$FLARUM_WELCOME_TITLE/g" $INSTALL_FILE_DIR
 
+CONFIG_FILE_DIR="/config.php"
+sed -i "s/DEBUG/$DEBUG/g" $CONFIG_FILE_DIR
+sed -i "s/DB_HOST/$DB_HOST/g" $CONFIG_FILE_DIR
+sed -i "s/DB_NAME/$DB_NAME/g" $CONFIG_FILE_DIR
+sed -i "s/DB_USER/$DB_USER/g" $CONFIG_FILE_DIR
+sed -i "s/DB_PASS/$DB_PASS/g" $CONFIG_FILE_DIR
+sed -i "s/DB_PREF/$DB_PREF/g" $CONFIG_FILE_DIR
+sed -i "s|FORUM_URL|$FORUM_URL|g" $CONFIG_FILE_DIR
+
 # Wait until mariadb boots up
-# Source: Stack Overflow @flamemyst
+# Source:
 #   https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking
 while ! mysqladmin ping -h"$DB_HOST" --silent; do
     sleep 1

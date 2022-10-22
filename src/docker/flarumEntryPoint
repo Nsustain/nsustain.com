@@ -19,10 +19,11 @@ sed -i "s/FLARUM_ADMIN_PASS/$FLARUM_ADMIN_PASS/g" $INSTALL_FILE_DIR
 sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $INSTALL_FILE_DIR
 
 # Wait until mariadb boots up.
-# What this means is that it first waits 5 seconds
+# What this means is that it first waits 10 seconds
 # and then exits as soon as mariadb is connected, but if not,
-# it waits for 15 seconds maximum.
-timeout 10 sleep 5 && mariadb --host mariadb 2> /dev/null
+# it waits for 20 seconds maximum.
+sleep 10
+timeout 5 && mariadb --host mariadb 2> /dev/null
 if [ $? -ne 0 ]
 then
  	timeout 5 mariadb --host mariadb 2> /dev/null

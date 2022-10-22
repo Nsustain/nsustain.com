@@ -20,4 +20,3 @@ settings:
   forum_title: FLARUM_TITLE
   welcome_message: FLARUM_WELCOME_MESSAGE
   welcome_title: FLARUM_WELCOME_TITLE
-  extensions_enabled: FLARUM_EXTENSIONS_ENABLED

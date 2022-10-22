@@ -32,7 +32,6 @@ then
   sed -i "s/FLARUM_TITLE/$FLARUM_TITLE/g" $INSTALL_FILE_DIR
   sed -i "s/FLARUM_WELCOME_MESSAGE/$FLARUM_WELCOME_MESSAGE/g" $INSTALL_FILE_DIR
   sed -i "s/FLARUM_WELCOME_TITLE/$FLARUM_WELCOME_TITLE/g" $INSTALL_FILE_DIR
-  sed -i "s|FLARUM_EXTENSIONS_ENABLED|$FLARUM_EXTENSIONS_ENABLED|g" $INSTALL_FILE_DIR
 
   # Wait until mariadb boots up
   # Source:
@@ -83,9 +82,6 @@ else
   chown -R nginx:nginx /var/www/html/flarum
   chmod -R 755 /var/www/html/flarum
 fi
-
-echo "[INFO] Enabling all installed extensions"
-php /var/www/html/flarum/enable-installed-extensions.php
 
 # ---------------------------
 # Start serving http requests

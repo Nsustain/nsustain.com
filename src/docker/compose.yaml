@@ -42,8 +42,16 @@ services:
       - FLARUM_WELCOME_MESSAGE="This is a welcome message!"
       - FLARUM_WELCOME_TITLE="Hi there!"
     volumes:
+      # Normally, config files are added inside the container
+      # directly at Dockerfile, but these two files are mounted
+      # as volumes at this Compose file because we sometimes have to
+      # change the values of these files for testing purposes.
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./www.conf:/etc/php8/php-fpm.d/www.conf
+
+      # To preserve the state of Flarum each time we restart our
+      # container, we need to mount these.
+      - flarum-assets:/var/www/html/flarum/public/assets
 
   mariadb:
     image: mariadb:latest
@@ -67,6 +75,8 @@ services:
       - mariadb-volume:/var/lib/mysql
 
 volumes:
+  flarum-assets:
+  flarum-logs:
   mariadb-volume:
 
 # "The presence of these objects is sufficient to define them"

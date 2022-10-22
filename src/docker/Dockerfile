@@ -70,8 +70,9 @@ RUN apk update && \
  && chmod -R 775 /var/www/html/flarum \
  && chmod -R 775 /var/lib/php8
 
-COPY ./flarumInstall.yaml /flarumInstall.yaml
-COPY ./flarumEntryPoint /flarumEntryPoint
+COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
+COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
+COPY ./copied-inside-container/config.php /config.php
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.

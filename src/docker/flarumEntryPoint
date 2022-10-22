@@ -38,11 +38,11 @@ php flarum install -f $INSTALL_FILE_DIR
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, nginx first receives it;
 # php-fpm8 handles php files; and then finally nginx serves.
-nginx
 php-fpm8
+nginx
 
 # DEBUG: for do not quit
-tail -f /dev/null
+# tail -f /dev/null
 
 # -------------------------------
 # Migrate everytime the image is run.

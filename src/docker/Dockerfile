@@ -54,6 +54,7 @@ RUN apk update && \
     mariadb-client \
     su-exec \
     s6 \
+    vim \
  && cd /tmp \
  && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
  && chmod +x /usr/local/bin/composer \

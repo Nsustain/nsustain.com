@@ -1,9 +1,9 @@
 # .env files should never be indexed by git.
-# Howver, we include .envExample... files such that
+# Howver, we include .exampleenv... files such that
 # all our servers just work out of the box for development purposes.
 .*env*
-!.envExampleflarum
-!.envExamplemariadb
+!.exampleenvflarum
+!.exampleenvflarum
 
 # Ignore all data files.
 # FYI, when you run docker compose, all the data files will be written inside

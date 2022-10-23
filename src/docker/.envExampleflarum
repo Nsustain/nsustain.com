@@ -1,8 +1,0 @@
-# ----------------------------------------------------------
-# All secrets in this file are examples, and are intended
-# to be used only in a testing environment.
-#
-# On your production server, .envExample... should
-# never be used because these secrets are available
-# on our GitHub publically. Instead, make .envFlarum
-# ----------------------------------------------------------

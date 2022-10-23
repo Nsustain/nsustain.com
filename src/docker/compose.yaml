@@ -32,8 +32,8 @@
 # -----------------------------------------------------------------
 # HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
 #   cd nsustain.com/src/docker
-#   cp .envExampleflarum .envflarum
-#   cp .envExamplemariadb .envmariadb
+#   cp .exampleenvflarum .envflarum
+#   cp .exampleenvmariadb .envmariadb
 #   <On this file, uncomment "env_file: - .envflarum">
 #   <On this file, uncomment "env_file: - .envmariadb">
 #

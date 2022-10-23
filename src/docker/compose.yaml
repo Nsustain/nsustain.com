@@ -24,26 +24,6 @@ services:
       - 9000
     networks:
       - back-end
-    environment:
-      # We included randomized secrets here so that you can can run
-      # our image out of the box without any extra configuration.
-      # Use these env variables just for development environments.
-      # Never use these in production environments.
-      - DEBUG=false
-      - FORUM_URL=http://127.0.0.1
-      - DB_HOST=mariadb
-      - DB_PORT=3306
-      - DB_NAME=flarum
-      - DB_USER=flarum
-      - DB_PASS=qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9
-      - DB_PREF=flarum_
-      - FLARUM_ADMIN_USER=nim3594
-      - FLARUM_ADMIN_PASS=369FQUv4eS
-      - FLARUM_ADMIN_MAIL=dev@nsustain.com
-      - FLARUM_DESCRIPTION=A forum created for the environment and sustainability.
-      - FLARUM_TITLE=Nsustain Development Server
-      - FLARUM_WELCOME_MESSAGE=🌳 For the environment and sustainability.
-      - FLARUM_WELCOME_TITLE=Nsustain
     volumes:
       # Normally, config files are added inside the container
       # directly at Dockerfile, but these three files are mounted

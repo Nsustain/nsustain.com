@@ -19,6 +19,26 @@ LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
 ENV FLARUM_VERSION="v1.5.0"
 
+# We included randomized secrets here so that you can can run
+# our image out of the box without any extra configuration.
+# Use these env variables just for development environments.
+# Never use these in production environments.
+ENV DEBUG="false"
+ENV FORUM_URL="http://127.0.0.1"
+ENV DB_HOST="mariadb"
+ENV DB_PORT="3306"
+ENV DB_NAME="flarum"
+ENV DB_USER="flarum"
+ENV DB_PASS="qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9"
+ENV DB_PREF="flarum_"
+ENV FLARUM_ADMIN_USER="nim3594"
+ENV FLARUM_ADMIN_PASS="369FQUv4eS"
+ENV FLARUM_ADMIN_MAIL="dev@nsustain.com"
+ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
+ENV FLARUM_TITLE="Nsustain Development Server"
+ENV FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
+ENV FLARUM_WELCOME_TITLE="Nsustain"
+
 # Flarum installation.
 # Source:
 #   https://github.com/mondediefr/docker-flarum/blob/master/Dockerfile

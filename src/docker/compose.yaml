@@ -79,31 +79,23 @@ services:
       - flarum-assets:/var/www/html/flarum/public/assets
       - flarum-storage:/var/www/html/flarum/storage
       - flarum-vendor:/var/www/html/flarum/vendor
-
     # Uncomment to override the default env variables with your own
     #env_file:
     #  - .envflarum
 
   mariadb:
-    image: mariadb:latest
+    image: nsustain/mariadb:latest
+    build:
+      context: ./
+      dockerfile: ./mariadb.Dockerfile
     container_name: mariadb
     restart: always
     expose:
       - 3306
     networks:
       - back-end
-    environment:
-
-      # Again, these are randomized secrets just for
-      # development environments. In your production environments,
-      # you should never use these env variables.
-      - MARIADB_ROOT_PASSWORD=TTBXkgeu25GVyge8FQrZBPj7HYiuG9qCawRcff5ukP
-      - MARIADB_DATABASE=flarum
-      - MARIADB_USER=flarum
-      - MARIADB_PASSWORD=qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9
     volumes:
       - mariadb-data:/var/lib/mysql
-
     # Uncomment to override the default env variables with your own
     #env_file:
     #  - .envmariadb

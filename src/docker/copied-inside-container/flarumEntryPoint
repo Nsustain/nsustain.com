@@ -85,7 +85,7 @@ else
   chmod -R 755 /var/www/html/flarum
 fi
 
-# Inject BASE_URL into the nginx.conf file
+# Inject FORUM_URL_BASE into the nginx.conf file
 NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
 sed -i "s/FORUM_URL_BASE/$FORUM_URL_BASE/g" $NGINX_CONFIG_DIR
 

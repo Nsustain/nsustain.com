@@ -94,8 +94,6 @@ services:
       # directly at Dockerfile, but these files are mounted here
       # because these configs tend to require changes
       # when we develop.
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./www.conf:/etc/php8/php-fpm.d/www.conf
       - ./composer.json:/var/www/html/flarum/composer.json:rw
       - ./composer.lock:/var/www/html/flarum/composer.lock:rw
 

@@ -25,6 +25,8 @@ ENV FLARUM_VERSION="v1.5.0"
 # Never use these in production environments.
 ENV DEBUG="false"
 ENV FORUM_URL="http://127.0.0.1"
+# FORUM_URL without http:// or https://
+ENV FORUM_URL_BASE="127.0.0.1"
 ENV DB_HOST="mariadb"
 ENV DB_PORT="3306"
 ENV DB_NAME="flarum"
@@ -97,6 +99,8 @@ RUN apk update && \
 COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
 COPY ./copied-inside-container/config.php /config.php
+COPY ./copied-inside-container/www.conf /etc/php8/php-fpm.d/www.conf
+COPY ./copied-inside-container/nginx.conf /etc/nginx/nginx.conf
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.

@@ -25,6 +25,8 @@ ENV FLARUM_VERSION="v1.5.0"
 # Never use these in production environments.
 ENV DEBUG="false"
 ENV FORUM_URL="http://127.0.0.1"
+# FORUM_URL without http:// or https://
+ENV BASE_URL="127.0.0.1"
 ENV DB_HOST="mariadb"
 ENV DB_PORT="3306"
 ENV DB_NAME="flarum"

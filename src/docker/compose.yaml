@@ -8,7 +8,17 @@
 
 # -----------------------------------------------------------------
 # HOW TO USE DOCKER COMPOSE
+#   # To start
 #   cd nsustain.com/src/docker
+#   docker compose up -d
+#
+#   # To stop
+#   docker compose down
+#
+#   # To reset all data and start again
+#   docker compose down
+#   alias dockervrm="docker volume ls -q | xargs docker volume rm"
+#   dockervrm
 #   docker compose up -d
 #
 # Now, docker compose is up and running based on this file.
@@ -42,6 +52,22 @@
 # To deter brute-force attacks, we recommend you to set every
 # password with lengthy, non-dictionary characters including
 # alphabets, numbers, and special characters.
+# -----------------------------------------------------------------
+
+# -----------------------------------------------------------------
+# HOW TO DEBUG
+#   # Start a shell inside the flarum container
+#   docker compose exec -it flarum sh
+#
+#   # Connect to the databse
+#   docker compose exec -it flarum sh
+#   mariadb -h $DB_HOST -u $DB_USER -p$DB_PASS
+#
+#   # Start a shell inside the mariadb container
+#   docker compose exec -it maraidb sh
+#
+#   # Check if correct environment variables were injected
+#   env
 # -----------------------------------------------------------------
 services:
   flarum:

@@ -9,7 +9,7 @@
 # ----------------------------------------------------------
 DEBUG="false"
 FORUM_URL="http://127.0.0.1"
-# FORUM_URL without http:// or https://
+# FORUM_URL (without http:// or https://) and (without www)
 FORUM_URL_BASE="127.0.0.1"
 DB_HOST="mariadb"
 DB_PORT="3306"

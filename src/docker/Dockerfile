@@ -8,10 +8,14 @@
 #   docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest .
 # -------------------------------------------------------------------
 FROM alpine:latest
-LABEL version="0.1"
-LABEL description="Nsustain.com"
-LABEL org.opencontainers.image.authors="soobinrho@nsustain.com"
-LABEL maintainer="Soobin Rho <soobinrho@nsustain.com>"
+
+# "Users SHOULD use reverse-DNS notation to prevent labels from
+# conflicting with those used by other software."
+# Source:
+#   https://docs.docker.com/compose/compose-file/#labels-1
+LABEL com.nsustain.version="0.5"
+LABEL com.nsustain.description="Nsustain.com"
+LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
 ENV FLARUM_VERSION="v1.5.0"
 

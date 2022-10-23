@@ -9,6 +9,7 @@
 services:
   flarum:
     image: nsustain/flarum:latest
+    pull_policy: missing
     container_name: flarum
     depends_on:
       - mariadb

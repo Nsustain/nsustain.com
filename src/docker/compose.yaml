@@ -79,7 +79,9 @@ services:
       - flarum-assets:/var/www/html/flarum/public/assets
       - flarum-storage:/var/www/html/flarum/storage
       - flarum-vendor:/var/www/html/flarum/vendor
-    # Uncomment to override the default env variables with your own
+    # Uncomment to override default env variables with your own.
+    # This is not required in development environments, but
+    # in production environments, this is recommeneded.
     #env_file:
     #  - .envflarum
 
@@ -96,7 +98,7 @@ services:
       - back-end
     volumes:
       - mariadb-data:/var/lib/mysql
-    # Uncomment to override the default env variables with your own
+    # Uncomment to override default env variables with your own
     #env_file:
     #  - .envmariadb
 

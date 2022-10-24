@@ -10,16 +10,17 @@
 # HOW TO USE DOCKER COMPOSE
 #   # To start
 #   cd nsustain.com/src/docker
-#   docker compose up -d
+#   docker compose up
 #
 #   # To stop
+#   <Ctrl + c>
 #   docker compose down
 #
 #   # To reset all data and start again
 #   docker compose down
 #   alias dockervrm="docker volume ls -q | xargs docker volume rm"
 #   dockervrm
-#   docker compose up -d
+#   docker compose up
 #
 # Now, docker compose is up and running based on this file.
 # Go to http://127.0.0.1 to access it.

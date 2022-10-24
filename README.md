@@ -79,6 +79,10 @@ certbot
 cd /var/www/html/flarum
 vim config.php
 <Change 'uri' => 'http://nsustain.com' to 'uri' => 'https://nsustain.com'>
+<Ctrl + d in order to log out of the docker exec session>
+cd /nsustain.com/src/docker
+vim .envflarum
+<Change FORUM_URL="http://nsustain.com" => FORUM_URL="https://nsustain.com">
 
 # Reset flarum
 php flarum cache:clear

@@ -39,7 +39,6 @@ ENV NGINX_SSL_LISTEN_LINE="# No SSL line injected"
 ENV NGINX_SSL_CERTIFICATE_LINE="# No SSL line injected"
 ENV NGINX_SSL_CERTIFICATE_KEY_LINE="# No SSL line injected"
 ENV NGINX_SSL_PROTOCOLS_LINE="# No SSL line injected"
-ENV NGINX_SSL_CIPHERS_LINE="# No SSL line injected"
 
 ENV DEBUG="false"
 ENV DB_HOST="mariadb"

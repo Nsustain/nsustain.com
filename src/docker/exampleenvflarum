@@ -30,15 +30,13 @@ FORUM_URL_BASE="127.0.0.1"
 # leave this unchanged. If, however, you'd like to set up SSL,
 # uncomment these four lines and then comment out the originals:
 #NGINX_SSL_LISTEN_LINE="listen 443 ssl;"
-#NGINX_SSL_CERTIFICATE_LINE="ssl_certificate www.example.com.crt;"
-#NGINX_SSL_CERTIFICATE_KEY_LINE="ssl_certificate_key www.example.com.key;"
-#NGINX_SSL_PROTOCOLS_LINE="ssl_protocols TLSv1.2 TLSv1.3;"
-#NGINX_SSL_CIPHERS_LINE="ssl_ciphers HIGH:!aNULL:!MD5;"
+#NGINX_SSL_CERTIFICATE_LINE="ssl_certificate /etc/letsencrypt/live/nsustain.com/fullchain.pem;"
+#NGINX_SSL_CERTIFICATE_KEY_LINE="ssl_certificate_key /etc/letsencrypt/live/nsustain.com/privkey.pem;"
+#NGINX_SSL_PROTOCOLS_LINE="ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;"
 NGINX_SSL_LISTEN_LINE="# No SSL line injected"
 NGINX_SSL_CERTIFICATE_LINE="# No SSL line injected"
 NGINX_SSL_CERTIFICATE_KEY_LINE="# No SSL line injected"
 NGINX_SSL_PROTOCOLS_LINE="# No SSL line injected"
-NGINX_SSL_CIPHERS_LINE="# No SSL line injected"
 
 # ----------------------------------------------------------
 # Env variables that you'd most-likely never change

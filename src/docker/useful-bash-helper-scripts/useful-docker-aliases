@@ -1,0 +1,15 @@
+# While developing using Docker, we found these aliases useful.
+# You can use this file by:
+#   cd nsustain.com/src/docker/useful-bash-helper-scripts
+#   source userful-docker-aliases
+
+# Remove all docker containers
+alias dockerrm="docker ps -aq | xargs docker stop | xargs docker rm"
+
+# Remove all docker volumes
+alias dockervolumerm="docker volume ls -q | xargs docker volume rm"
+
+# Remove all docker images
+alias dockerrmi="docker images -q | xargs docker rmi -f"
+
+

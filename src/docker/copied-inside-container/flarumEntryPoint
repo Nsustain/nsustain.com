@@ -38,6 +38,8 @@ then
   NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
   envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
   mv temporary_nginx.conf $NGINX_CONFIG_DIR
+  chown -R nginx:nginx /etc/nginx
+  chmod -R 755 /etc/nginx
 
   # Wait until mariadb boots up
   # Source:

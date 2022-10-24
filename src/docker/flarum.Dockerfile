@@ -102,7 +102,11 @@ RUN apk update && \
  && chown -R nginx:nginx /var/www/html/flarum \
  && chown -R nginx:nginx /var/lib/php8 \
  && chmod -R 775 /var/www/html/flarum \
- && chmod -R 775 /var/lib/php8
+ && chmod -R 775 /var/lib/php8 \
+ && apk add --update libintl \
+ && apk add --virtual build_deps gettext \
+ && cp /usr/bin/envsubst /usr/local/bin/envsubst \
+ && apk del build_deps
 
 COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint

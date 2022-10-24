@@ -100,8 +100,10 @@ sed -i "s/#NGINX_SSL_PROTOCOLS_LINE/$NGINX_SSL_PROTOCOLS_LINE/g" $NGINX_CONFIG_D
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, php-fpm handles php files.
 echo "[INFO] Starting php-fpm8..."
-php-fpm8
+# php-fpm8
 
 # Then, nginx recieves the files and then serves.
 echo "[INFO] Starting nginx..."
-nginx
+# nginx
+
+tail -f /dev/null

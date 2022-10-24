@@ -72,6 +72,13 @@
 #   # Extract a file from container
 #   docker cp <CONTAINER ID>:/path/to/file ./
 # -----------------------------------------------------------------
+
+# We use Compose Version 3.3 because it's the recommended version
+# by Kompose, which automatically converts Compose files into
+# Kubernetes objects.
+# Source:
+#   https://kompose.io/conversion/#version-table
+version: "3.3"
 services:
   flarum:
     image: nsustain/flarum:latest

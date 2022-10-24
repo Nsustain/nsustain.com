@@ -97,10 +97,8 @@ rm temporary_nginx.conf
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, php-fpm handles php files.
 echo "[INFO] Starting php-fpm8..."
-# php-fpm8
+php-fpm8
 
 # Then, nginx recieves the files and then serves.
 echo "[INFO] Starting nginx..."
-# nginx
-
-tail -f /dev/null
+nginx

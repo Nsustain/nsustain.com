@@ -4,7 +4,7 @@
 # At default, this flie is not used. However, this file
 # will be loaded by docker compose if you do the following:
 #   cd nsustain.com/src/docker
-#   cp .exampleenvmariadb .envmariadb
+#   cp exampleenvmariadb .envmariadb
 #   <On "compose.yaml", uncomment "env_file: - .envmariadb">
 # ----------------------------------------------------------
 MARIADB_ROOT_PASSWORD="TTBXkgeu25GVyge8FQrZBPj7HYiuG9qCawRcff5ukP"

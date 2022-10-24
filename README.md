@@ -84,6 +84,9 @@ vim config.php
 php flarum cache:clear
 php flarum assets:publish
 
+How to renew the certificate:
+https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
+
 
 -->
 

@@ -63,6 +63,28 @@ Docker Compose is better suited.
 If you want to use two or more
 hosts, then run on Kubernetes.
 
+
+1. docker compose method
+
+1. 2 if you're setting up SSL:
+
+
+# Run a shell inside the docker container
+docker compose exec -it flarum sh
+
+# Run certbot. It automatically generates a certificate for you
+certbot
+
+# Change flarum setting
+cd /var/www/html/flarum
+vim config.php
+<Change 'uri' => 'http://nsustain.com' to 'uri' => 'https://nsustain.com'>
+
+# Reset flarum
+php flarum cache:clear
+php flarum assets:publish
+
+
 -->
 
 # 1. Installing the back-end

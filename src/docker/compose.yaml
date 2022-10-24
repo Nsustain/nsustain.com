@@ -97,6 +97,7 @@ services:
       # when we develop.
       - ./composer.json:/var/www/html/flarum/composer.json:rw
       - ./composer.lock:/var/www/html/flarum/composer.lock:rw
+      - ./nginx.conf:/etc/nginx/nginx.conf:rw
 
       # These are the data files for the container.
       # Location of these files:

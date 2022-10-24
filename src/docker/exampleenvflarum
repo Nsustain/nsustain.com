@@ -23,20 +23,6 @@ FORUM_URL="http://127.0.0.1"
 # FORUM_URL (without http:// or https://) and (without www)
 FORUM_URL_BASE="127.0.0.1"
 
-# ----------------------------------------------------------
-# Env variables you'd want to use
-# if only if you're setting up SSL
-# ----------------------------------------------------------
-# During testing and development, you wlil most likely want to
-# leave this unchanged. If, however, you'd like to set up SSL,
-# uncomment these five lines;
-# and then replace nsustain.com with your domain name:
-#NGINX_SSL_LISTEN_LINE="listen 443 ssl;"
-#NGINX_SSL_CERTIFICATE_LINE="ssl_certificate /etc/letsencrypt/live/nsustain.com/fullchain.pem;"
-#NGINX_SSL_CERTIFICATE_KEY_LINE="ssl_certificate_key /etc/letsencrypt/live/nsustain.com/privkey.pem;"
-#NGINX_SSL_PROTOCOLS_LINE="ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;"
-#NGINX_SSL_CHALLENGE_LINE="location /.well-known/acme-challenge/ { root /var/www/certbot; }"
-
 # -----------------------------------------------------------
 # Env variable that must be the same in both this file
 # and in ".envmariadb" because they're coreferenced.

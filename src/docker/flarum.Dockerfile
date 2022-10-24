@@ -109,7 +109,6 @@ COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
 COPY ./copied-inside-container/config.php /config.php
 COPY ./copied-inside-container/www.conf /etc/php8/php-fpm.d/www.conf
-COPY ./copied-inside-container/nginx.conf /etc/nginx/nginx.conf
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.

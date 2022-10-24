@@ -29,7 +29,7 @@ FORUM_URL_BASE="127.0.0.1"
 # ----------------------------------------------------------
 # During testing and development, you wlil most likely want to
 # leave this unchanged. If, however, you'd like to set up SSL,
-# uncomment these four lines;
+# uncomment these five lines;
 # and then replace nsustain.com with your domain name:
 #NGINX_SSL_LISTEN_LINE="listen 443 ssl;"
 #NGINX_SSL_CERTIFICATE_LINE="ssl_certificate /etc/letsencrypt/live/nsustain.com/fullchain.pem;"

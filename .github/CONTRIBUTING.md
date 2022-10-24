@@ -41,9 +41,6 @@
 
 ## Contributing
 [1.](#1-coding-conventions) Coding Conventions<br>
-&#160;&#160;&#160;&#160;[A.](#naming-conventions) Naming Conventions<br>
-&#160;&#160;&#160;&#160;[B.](#html--css) HTML & CSS<br>
-&#160;&#160;&#160;&#160;[C.](#typescript) TypeScript<br>
 [2.](#2-commit-messages) Commit Messages<br>
 [3.](#3-pull-requests) Pull Requests<br>
 [4.](#4-reporting-bugs) Reporting Bugs<br>
@@ -79,34 +76,6 @@ Branch Name Do's:
 Branch Name Do not's:
 - [&cross;] `NewBranch`
 - [&cross;] `Branch2.`
-
-<br>
-
-## Naming Conventions
-
-Folder names and file names should be
-all underscore with hyphens (-) as
-word seperators.
-For example, we prefer `docker-images`
-to `Docker_Images`.
-Hypens (-) are preferred over
-underscores (_) because Google SEO
-treats hypens as word-seperators, but
-not underscores.
-However, this convention can be
-overriden by language-specfic conventions.
-
-<br>
-
-## HTML & CSS
-
-...
-
-<br>
-
-## TypeScript
-
-...
 
 <br>
 

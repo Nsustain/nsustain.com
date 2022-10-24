@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Issue an https / SSL certificate.
+# Source:
+#   https://eff-certbot.readthedocs.io/en/stable/install.html#running-with-docker
+docker run -it --rm -v /etc/letsencrypt:/etc/letsencrypt -v /var/lib/letsencrypt:/var/lib/letsencrypt certbot/certbot certonly

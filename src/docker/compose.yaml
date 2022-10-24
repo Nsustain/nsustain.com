@@ -100,7 +100,6 @@ services:
       # when we develop.
       - ./composer.json:/var/www/html/flarum/composer.json:rw
       - ./composer.lock:/var/www/html/flarum/composer.lock:rw
-      - ./nginx.conf:/etc/nginx/nginx.conf:rw
 
       # These are the data files for the container.
       # Location of these files:
@@ -108,6 +107,7 @@ services:
       - flarum-assets:/var/www/html/flarum/public/assets
       - flarum-storage:/var/www/html/flarum/storage
       - flarum-vendor:/var/www/html/flarum/vendor
+      - nginx-conf:/etc/nginx/nginx.conf
 
       # When you first run our image, these volumes will
       # be empty. Howver, if you'd like to set up https / SSL,
@@ -146,6 +146,7 @@ volumes:
   flarum-assets:
   flarum-storage:
   flarum-vendor:
+  nginx-conf:
   mariadb-data:
 
 # "The presence of these objects is sufficient to define them"

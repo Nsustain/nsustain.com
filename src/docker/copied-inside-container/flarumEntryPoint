@@ -33,6 +33,12 @@ then
   sed -i "s/FLARUM_WELCOME_MESSAGE/$FLARUM_WELCOME_MESSAGE/g" $INSTALL_FILE_DIR
   sed -i "s/FLARUM_WELCOME_TITLE/$FLARUM_WELCOME_TITLE/g" $INSTALL_FILE_DIR
 
+  # Inject env variables into the nginx.conf file
+  export DOLLAR="$"
+  NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
+  envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
+  mv temporary_nginx.conf $NGINX_CONFIG_DIR
+
   # Wait until mariadb boots up
   # Source:
   #   https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking
@@ -86,13 +92,6 @@ else
   chown -R nginx:nginx /var/www/html/flarum
   chmod -R 755 /var/www/html/flarum
 fi
-
-# Inject env variables into the nginx.conf file
-export DOLLAR="$"
-NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
-envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
-mv temporary_nginx.conf $NGINX_CONFIG_DIR
-rm temporary_nginx.conf
 
 # ---------------------------
 # Start serving http requests

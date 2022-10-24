@@ -109,7 +109,11 @@ services:
       # be empty. Howver, if you'd like to set up https / SSL,
       # these volumes will be used for storing the certificates.
       - /etc/letsencrypt:/etc/letsencrypt
-      - /var/www/certbot:/var/www/certbot
+
+      # certbot uses lock-files system for its internal functions.
+      # Source:
+      #   https://eff-certbot.readthedocs.io/en/stable/using.html#where-certs
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
 
     # Uncomment to override default env variables with your own.
     # This is not required in development environments, but

@@ -82,6 +82,17 @@ my personal explanation of this method
  - folder structure and how everything works with each other
 # ----------------
 
+1.1 ...
+### Install Docker
+Source: https://docs.docker.com/compose/install/linux/#install-using-the-repository
+
+We use Fedora Linux. If you're using any other opearting system,
+Docker installation guide for outher operating systems is at
+https://docs.docker.com/compose/install/linux/#install-using-the-repository
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager \
+         --add-repo \
+         https://download.docker.com/linux/fedora/docker-ce.repo
 
 1. 2 if you're setting up SSL:
 

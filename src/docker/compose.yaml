@@ -107,7 +107,7 @@ services:
       - flarum-assets:/var/www/html/flarum/public/assets
       - flarum-storage:/var/www/html/flarum/storage
       - flarum-vendor:/var/www/html/flarum/vendor
-      - nginx-conf:/etc/nginx/nginx.conf
+      - nginx-conf:/etc/nginx
 
       # When you first run our image, these volumes will
       # be empty. Howver, if you'd like to set up https / SSL,

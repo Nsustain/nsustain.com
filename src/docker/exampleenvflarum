@@ -12,7 +12,7 @@
 # Env variables that you'd want to change for production
 # ----------------------------------------------------------
 FLARUM_ADMIN_USER="nim3594"
-FLARUM_ADMIN_PASS="#369FQUv4eS"
+FLARUM_ADMIN_PASS="369FQUv4eS"
 FLARUM_ADMIN_MAIL="dev@nsustain.com"
 FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
 FLARUM_TITLE="Nsustain Development Server"

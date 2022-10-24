@@ -24,7 +24,7 @@ ENV FLARUM_VERSION="v1.5.0"
 # Use these env variables just for development environments.
 # Never use these in production environments.
 ENV FLARUM_ADMIN_USER="nim3594"
-ENV FLARUM_ADMIN_PASS="#369FQUv4eS"
+ENV FLARUM_ADMIN_PASS="369FQUv4eS"
 ENV FLARUM_ADMIN_MAIL="dev@nsustain.com"
 ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
 ENV FLARUM_TITLE="Nsustain Development Server"

@@ -50,8 +50,7 @@
 # Now, every env varialble you write on .envflarum and .envmariadb
 # will be used inside your server when you "docker compose up -d"
 # To deter brute-force attacks, we recommend you to set every
-# password with lengthy, non-dictionary characters including
-# alphabets, numbers, and special characters.
+# password with lengthy, non-dictionary words.
 # -----------------------------------------------------------------
 
 # -----------------------------------------------------------------

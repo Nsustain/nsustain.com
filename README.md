@@ -63,8 +63,25 @@ Docker Compose is better suited.
 If you want to use two or more
 hosts, then run on Kubernetes.
 
+# ----------------
+# October 24, 2022
+1. How to spin up a development server
+2. How to host your production server
+2.1 if you're using only one server host:
+Docker Compose Method
+General description of this method
 
-1. docker compose method
+2.2 if you're using two or more servet hosts:
+Kubernetes Method
+Describe what this method looks like and
+my personal explanation of this method
+
+3. How we deploy [Nsustain.com](https://Nsustain.com)
+*. Explanation on how it works
+ - where does it begin and where does it end
+ - folder structure and how everything works with each other
+# ----------------
+
 
 1. 2 if you're setting up SSL:
 

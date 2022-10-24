@@ -37,6 +37,17 @@ FORUM_URL_BASE="127.0.0.1"
 #NGINX_SSL_PROTOCOLS_LINE="ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;"
 #NGINX_SSL_CHALLENGE_LINE="location /.well-known/acme-challenge/ { root /var/www/certbot; }"
 
+# -----------------------------------------------------------
+# Env variable that must be the same in both this file
+# and in ".envmariadb" because they're coreferenced.
+# These should be changed in production environments.
+# In our case, we generate 42 random characters and set this
+# as our DB_PASS. We do not include special characters here.
+# -----------------------------------------------------------
+DB_NAME="flarum"
+DB_USER="flarum"
+DB_PASS="qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9"
+
 # ----------------------------------------------------------
 # Env variables that you'd most-likely never change
 # ----------------------------------------------------------
@@ -44,11 +55,3 @@ DEBUG="false"
 DB_HOST="mariadb"
 DB_PORT="3306"
 DB_PREF="flarum_"
-
-# -----------------------------------------------------------
-# Env variable that must be the same in both this file
-# and in ".envmariadb" because they're coreferenced.
-# -----------------------------------------------------------
-DB_NAME="flarum"
-DB_USER="flarum"
-DB_PASS="qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9"

@@ -68,6 +68,9 @@
 #
 #   # Check if correct environment variables were injected
 #   env
+#
+#   # Extract a file from container
+#   docker cp <CONTAINER ID>:/path/to/file ./
 # -----------------------------------------------------------------
 services:
   flarum:

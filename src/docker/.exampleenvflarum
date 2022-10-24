@@ -7,13 +7,10 @@
 #   cp .exampleenvflarum .envflarum
 #   <On "compose.yaml", uncomment "env_file: - .envflarum">
 # ----------------------------------------------------------
-DEBUG="false"
-FORUM_URL="http://127.0.0.1"
-# FORUM_URL (without http:// or https://) and (without www)
-FORUM_URL_BASE="127.0.0.1"
-DB_HOST="mariadb"
-DB_PORT="3306"
-DB_PREF="flarum_"
+
+# ----------------------------------------------------------
+# Env variables that you'd want to change for production
+# ----------------------------------------------------------
 FLARUM_ADMIN_USER="nim3594"
 FLARUM_ADMIN_PASS="#369FQUv4eS"
 FLARUM_ADMIN_MAIL="dev@nsustain.com"
@@ -21,10 +18,39 @@ FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
 FLARUM_TITLE="Nsustain Development Server"
 FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 FLARUM_WELCOME_TITLE="Nsustain"
+FORUM_URL="http://127.0.0.1"
+
+# FORUM_URL (without http:// or https://) and (without www)
+FORUM_URL_BASE="127.0.0.1"
+
+# ----------------------------------------------------------
+# Env variables you'd want to change only if https and SSL
+# ----------------------------------------------------------
+# During testing and development, you wlil most likely want to
+# leave this unchanged. If, however, you'd like to set up SSL,
+# uncomment these four lines and then comment out the originals:
+#NGINX_SSL_LISTEN_LINE="listen 443 ssl;"
+#NGINX_SSL_CERTIFICATE_LINE="ssl_certificate www.example.com.crt;"
+#NGINX_SSL_CERTIFICATE_KEY_LINE="ssl_certificate_key www.example.com.key;"
+#NGINX_SSL_PROTOCOLS_LINE="ssl_protocols TLSv1.2 TLSv1.3;"
+#NGINX_SSL_CIPHERS_LINE="ssl_ciphers HIGH:!aNULL:!MD5;"
+NGINX_SSL_LISTEN_LINE="# No SSL line injected"
+NGINX_SSL_CERTIFICATE_LINE="# No SSL line injected"
+NGINX_SSL_CERTIFICATE_KEY_LINE="# No SSL line injected"
+NGINX_SSL_PROTOCOLS_LINE="# No SSL line injected"
+NGINX_SSL_CIPHERS_LINE="# No SSL line injected"
+
+# ----------------------------------------------------------
+# Env variables that you'd most-likely never change
+# ----------------------------------------------------------
+DEBUG="false"
+DB_HOST="mariadb"
+DB_PORT="3306"
+DB_PREF="flarum_"
 
 # -----------------------------------------------------------
-# Every env variable below this line must be the same in both
-# this file and in ".envmariadb" because they're coreferenced.
+# Env variable that must be the same in both this file
+# and in ".envmariadb" because they're coreferenced.
 # -----------------------------------------------------------
 DB_NAME="flarum"
 DB_USER="flarum"

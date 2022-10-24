@@ -85,9 +85,15 @@ else
   chmod -R 755 /var/www/html/flarum
 fi
 
-# Inject FORUM_URL_BASE into the nginx.conf file
+# Inject env variables into the nginx.conf file
 NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
 sed -i "s/FORUM_URL_BASE/$FORUM_URL_BASE/g" $NGINX_CONFIG_DIR
+
+sed -i "s/#NGINX_SSL_LISTEN_LINE/$NGINX_SSL_LISTEN_LINE/g" $NGINX_CONFIG_DIR
+sed -i "s/#NGINX_SSL_CERTIFICATE_LINE/$NGINX_SSL_CERTIFICATE_LINE/g" $NGINX_CONFIG_DIR
+sed -i "s/#NGINX_SSL_CERTIFICATE_KEY_LINE/$NGINX_SSL_CERTIFICATE_KEY_LINE/g" $NGINX_CONFIG_DIR
+sed -i "s/#NGINX_SSL_PROTOCOLS_LINE/$NGINX_SSL_PROTOCOLS_LINE/g" $NGINX_CONFIG_DIR
+sed -i "s/#NGINX_SSL_CIPHERS_LINE/$NGINX_SSL_CIPHERS_LINE/g" $NGINX_CONFIG_DIR
 
 # ---------------------------
 # Start serving http requests

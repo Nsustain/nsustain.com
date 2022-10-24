@@ -24,6 +24,7 @@ ENV FLARUM_VERSION="v1.5.0"
 # Use these env variables just for development environments.
 # Never use these in production environments.
 ENV DEBUG="false"
+ENV NGINX_SSL_LISTEN_LINE=""
 ENV FORUM_URL="http://127.0.0.1"
 # FORUM_URL (without http:// or https://) and (without www)
 ENV FORUM_URL_BASE="127.0.0.1"

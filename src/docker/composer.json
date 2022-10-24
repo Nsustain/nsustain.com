@@ -44,6 +44,8 @@
         "fof/nightmode": "*",
         "fof/oauth": "*",
         "fof/pages": "*",
+        "fof/sitemap": "*",
+        "v17development/flarum-seo": "*",
         "v17development/flarum-third-party-login-only": "*"
     },
     "config": {

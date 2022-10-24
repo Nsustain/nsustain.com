@@ -13,7 +13,7 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.0"
+LABEL com.nsustain.version="1.3"
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
@@ -108,6 +108,7 @@ RUN apk update && \
 COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
 COPY ./copied-inside-container/config.php /config.php
+COPY ./copied-inside-container/nginx.conf /etc/nginx/nginx.conf
 COPY ./copied-inside-container/www.conf /etc/php8/php-fpm.d/www.conf
 
 # WORKDIR actually may change depending on the base image we use.

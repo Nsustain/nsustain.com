@@ -5,6 +5,11 @@
 # without any extra configuration.
 #
 # For how to run Nsustain, open "compose.yaml"
+#
+# We mostly build this image with:
+# Example:
+#   docker build -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest .
+#   sudo docker push nsustain/mariadb --all-tags
 # ----------------------------------------------------------------
 FROM mariadb:latest
 

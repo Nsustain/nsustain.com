@@ -3,9 +3,10 @@
 # Dockerhub:
 # https://hub.docker.com/repository/docker/nsustain/flarum
 #
-# Most of the times, we use this file with:
-# Examples:
-#   docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest .
+# Most of the times, we build this image with:
+# Example:
+#   docker build -t nsustain/flarum:1.5 -t nsustain/flarum:latest .
+#   sudo docker push nsustain/flarum --all-tags
 # -------------------------------------------------------------------
 FROM alpine:latest
 

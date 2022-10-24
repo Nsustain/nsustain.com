@@ -75,9 +75,6 @@
 services:
   flarum:
     image: nsustain/flarum:latest
-    build:
-      context: ./
-      dockerfile: ./flarum.Dockerfile
     container_name: flarum
     # Always restart the container, even after rebooting the host
     restart: always
@@ -127,9 +124,6 @@ services:
 
   mariadb:
     image: nsustain/mariadb:latest
-    build:
-      context: ./
-      dockerfile: ./mariadb.Dockerfile
     container_name: mariadb
     restart: always
     expose:

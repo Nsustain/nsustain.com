@@ -18,5 +18,3 @@ alias dockervolumerm="docker volume ls -q | xargs docker volume rm"
 
 # Remove all docker images
 alias dockerrmi="docker images -q | xargs docker rmi -f"
-
-

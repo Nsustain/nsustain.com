@@ -52,6 +52,8 @@ RUN apk update && \
     apk add --no-cache \
     bash \
     curl \
+    certbot \
+    certbot-nginx \
     git \
     icu-data-full \
     libcap \

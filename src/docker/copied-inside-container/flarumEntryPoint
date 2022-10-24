@@ -87,8 +87,8 @@ fi
 
 # Inject env variables into the nginx.conf file
 NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
-envsubst < NGINX_CONFIG_DIR > temporary_nginx.conf
-mv temporary_nginx.conf NGINX_CONFIG_DIR
+envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
+mv temporary_nginx.conf $NGINX_CONFIG_DIR
 rm temporary_nginx.conf
 
 # ---------------------------

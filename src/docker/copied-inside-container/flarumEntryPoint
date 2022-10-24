@@ -85,14 +85,12 @@ else
   chmod -R 755 /var/www/html/flarum
 fi
 
-# Uncommented because it turns out that certbot does this for you.
-# Not deleted because we wanted to remember how to use envsubst.
-# Inject env variables into the nginx.conf file
-# export DOLLAR="$"
-# NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
-# envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
-# mv temporary_nginx.conf $NGINX_CONFIG_DIR
-# rm temporary_nginx.conf
+Inject env variables into the nginx.conf file
+export DOLLAR="$"
+NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
+envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
+mv temporary_nginx.conf $NGINX_CONFIG_DIR
+rm temporary_nginx.conf
 
 # ---------------------------
 # Start serving http requests

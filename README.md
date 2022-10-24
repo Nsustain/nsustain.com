@@ -88,6 +88,10 @@ How to renew the certificate:
 https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
 
 
+1.1.2 How to add Flarum extension
+cd nsustain.com/src/docker
+docker compose exec -it flarum sh
+composer require fof/sitemap
 -->
 
 # 1. Installing the back-end

@@ -15,7 +15,12 @@ then
   # Source:
   #   https://discuss.flarum.org/d/31640-flarum-setup-with-preset-config-file-and-use-env/9
 
-  # $DEBUG, as well as all other env variables are set on compose.yaml
+  # $DEBUG, as well as all other env variables are set as the
+  # default values on flarum.Dockerfile. What this means is that
+  # we can test this image without setting any extra configuration.
+  # For production, however, you should override these default
+  # env variables with your own secure env variables.
+  # For how to use your own env variables, go to compose.yaml
   INSTALL_FILE_DIR="/flarumInstall.yaml"
   sed -i "s/DEBUG/$DEBUG/g" $INSTALL_FILE_DIR
   sed -i "s|FORUM_URL|$FORUM_URL|g" $INSTALL_FILE_DIR

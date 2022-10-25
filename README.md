@@ -24,6 +24,29 @@
 <br>
 <br>
 
+<p align="center">
+  <b>
+    Source code for
+    <a href="https://nsustain.com">Nsustain.com</a>
+  </b>
+</p>
+
+This repository shows you how to run it and
+how it works. Read the whole documetation only
+if you'd like to get an overall understanding of
+how Nsustain works. If, however, you're just trying
+to run a quick development server,
+just read the first section.
+
+
+
+
+We documented how we created Nsustain.com
+in case you'd like to understand how it was made 👍
+
+<br>
+<br>
+
 ## Getting Started
 [1.](#1-) How to spin up a development server<br>
 [2.](#2-) How to set up a production server<br>
@@ -227,39 +250,15 @@ https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 -->
 
-<br>
-<br>
-<br>
 
-<p align="center">
-  <b>
-    How we developed
-    <a href="https://nsustain.com">Nsustain.com</a>
-  </b>
-</p>
-
-We documented how we created Nsustain.com
-in case you'd like to understand how it was made 👍
-
-<br>
-<br>
 
 <!--
 By the way, the white space in front of [1.1] and [1.2]
 is the unicode em space: (  )
 -->
 
-## Steps
-[1.](#1-web-programming) Web programming<br>
-&#160;&#160;&#160;&#160;[A.](#back-end) Back-end<br>
-&#160;&#160;&#160;&#160;[B.](#front-end) Front-end<br>
-[2.](#2-containerizing-the-website) Containerizing the website<br>
-[3.](#3-deploying-a-container-orchestration-system) Deploying a container orchestration system<br>
-[4.](#4-getting-a-domain-name) Getting a domain name<br>
-[5.](#5-getting-a-server) Getting a server
 
-<br>
-<br>
+
 
 <!--
 

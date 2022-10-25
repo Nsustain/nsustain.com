@@ -24,6 +24,35 @@
 <br>
 <br>
 
+## Steps
+[1.](#1-) How to spin up a development server<br>
+[2.](#2-) How to set up a production server<br>
+&#160;&#160;&#160;&#160;[A.](#) Docker Compose way<br>
+&#160;&#160;&#160;&#160;[B.](#) Kubernetes way<br>
+[3.](#3-) How we deploy Nsustain.com
+
+<br>
+<br>
+
+<!--
+
+We run Nsustain on Kubernetes, but
+you can slow run Nsustain on
+Docker Compose. If your host is
+a single computer, then
+Docker Compose is better suited.
+If you want to use two or more
+hosts, then run on Kubernetes.
+
+# ----------------
+# October 24, 2022
+1. How to spin up a development server
+2. How to host your production server
+
+<br>
+<br>
+<br>
+
 <p align="center">
   <b>
     How we deploy
@@ -43,30 +72,6 @@ based on Nsustain.
 <br>
 <br>
 
-## Steps
-[1.](#1-installing-the-back-end) Installing the back-end<br>
-&#160;&#160;&#160;&#160;[A.](#temp) Subsection<br>
-&#160;&#160;&#160;&#160;[B.](#temp) Subsection<br>
-[2.](#2-) Second step<br>
-[3.](#3-) Third step
-
-<br>
-<br>
-
-<!--
-
-We run Nsustain on Kubernetes, but
-you can slow run Nsustain on
-Docker Compose. If your host is
-a single computer, then
-Docker Compose is better suited.
-If you want to use two or more
-hosts, then run on Kubernetes.
-
-# ----------------
-# October 24, 2022
-1. How to spin up a development server
-2. How to host your production server
 2.1 if you're using only one server host:
 Docker Compose Method
 General description of this method

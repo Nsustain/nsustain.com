@@ -24,7 +24,7 @@
 <br>
 <br>
 
-## Steps
+## Getting Started
 [1.](#1-) How to spin up a development server<br>
 [2.](#2-) How to set up a production server<br>
 &#160;&#160;&#160;&#160;[A.](#) Docker Compose way<br>
@@ -82,6 +82,14 @@ Describe what this method looks like and
 my personal explanation of this method
 
 3. How we deploy [Nsustain.com](https://Nsustain.com)
+We got the domain name nsustain.com from Google Domains.
+When we first started, we hosted on a DigitalOcean droplet:
+ - Ubuntu 22.04 (LTS) x64, 1 vCPU, 1GB RAM, 10GB SSD ($6 per month)
+ - Backups service on ($1.2 per month)
+
+Since ... We then migrated to IBM Cloud Kubernetes because ...
+ - Two worker nodes, each containing 2 vCPU, 4GB RAM, and 125GB SSD ($166 per month but first for the first month because of the $200 sign-ups credit)
+
 *. Explanation on how it works
  - where does it begin and where does it end
  - folder structure and how everything works with each other

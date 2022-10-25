@@ -14,7 +14,7 @@
 FLARUM_ADMIN_USER="nim3594"
 FLARUM_ADMIN_PASS="369FQUv4eS"
 FLARUM_ADMIN_MAIL="dev@nsustain.com"
-FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
+FLARUM_DESCRIPTION="A forum created for farmers, environmentalists, and open-source developers."
 FLARUM_TITLE="Nsustain Development Server"
 FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 FLARUM_WELCOME_TITLE="Nsustain"

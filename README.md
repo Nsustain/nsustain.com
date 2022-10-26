@@ -57,7 +57,7 @@ Assuming you're a developer trying to test out
 Nsustain's source code, we're going to
 show you how to run a development server
 in the fastest way possible so that you
-can tinker it with as soon as possible.
+can tinker it with as soon as possible ⚡
 
 <br>
 
@@ -77,25 +77,60 @@ cd nsustain.com/src/docker
 docker compose up
 ```
 
-Usually on our eight-years-old laptop,
-the build process takes around 80 seconds.
-When the build process is complete,
-it says "[INFO] Nginx running..."
+Usually, it takes our eight-years-old laptop
+around 80 seconds to complete this process.
+We know that the build process is complete
+when it prints out "[INFO] Starting nginx"
+
+Open your web browser and then type in
+`https://127.0.0.1`. That's it!
+
+[Insert screenshot]
 
 <br>
 
-***How to build and run***<br>
-Default env variables...
+***Default admin ID and password***<br>
+The default admin ID is `nim3594` and
+the password `369FQUv4eS`.
+
+The default admin ID and the password
+are baked inside our docker image.
+On one hand, this is good because
+we can spin up a development server fast 
+this way, without having to
+go through the process of
+setting up every configuration.
+
+On the other hand, this is a security hazard.
+Never use this in your production server,
+since the admin ID and password are
+publically available right here.
 
 <br>
 
-***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
-Default env variables...
+***How to stop***<br>
+```bash
+# Press <Ctrl + c> on your keyboard
+
+# Use docker compose to stop
+docker compose down
+```
+
+<br>
+
+***How to restart***<br>
+```bash
+cd nsustain.com/src/docker
+docker compose up -d
+```
 
 <br>
 <br>
 
 ## 2. How to set up a production server
+
+***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
+Default env variables...
 
 ### Docker Compose way
 

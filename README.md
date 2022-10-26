@@ -53,11 +53,10 @@ just read the first section.
 
 ## 1. How to spin up a developmental server
 
-Assuming you're a developer trying to test out
-Nsustain's source code, we're going to
+In this section, we're going to
 show you how to run a development server
 in the fastest way possible so that you
-can tinker it with as soon as possible ⚡
+can tinker with it as soon as possible ⚡
 
 <br>
 

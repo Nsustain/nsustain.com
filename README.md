@@ -223,7 +223,7 @@ would be a good starting point.
 is dedicated for those who helped us
 make Naustain a better, safer place.
 If you found a vulnerability,
-Please email security@nsustain.com
+please email security@nsustain.com
 
 <br>
 <br>

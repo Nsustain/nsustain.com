@@ -77,7 +77,7 @@ docker compose up
 ```
 
 Usually, it takes our eight-years-old laptop
-around 80 seconds to complete this process.
+around 80 seconds to complete building.
 We know that the build process is complete
 when it prints out "[INFO] Starting nginx"
 

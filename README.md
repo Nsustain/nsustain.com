@@ -63,8 +63,8 @@ can tinker it with as soon as possible ⚡
 
 ***Install***<br>
 ```bash
-# Install got
-# git clone ...
+sudo dnf install -y git
+git clone https://github.com/Nsustain/nsustain.com.git
 # Install Docker Engine and Docker Compose
 # Remove the comments, unless absolutely necessary
 ```

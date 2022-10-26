@@ -42,11 +42,30 @@ just read the first section.
 <br>
 
 ## Getting Started
-[1.](#1-) How to spin up a development server<br>
-[2.](#2-) How to set up a production server<br>
-&#160;&#160;&#160;&#160;[A.](#) Docker Compose way<br>
-&#160;&#160;&#160;&#160;[B.](#) Kubernetes way<br>
-[3.](#3-) How we deploy Nsustain.com
+[1.](#1-how-to-spin-up-a-developmental-server) How to spin up a development server<br>
+[2.](#2-how-to-set-up-a-production-server) How to set up a production server<br>
+&#160;&#160;&#160;&#160;[A.](#docker-compose-way) Docker Compose way<br>
+&#160;&#160;&#160;&#160;[B.](#kubernetes-way) Kubernetes way<br>
+[3.](#3-how-we-deploy-nsustaincom) How we deploy Nsustain.com
+
+<br>
+<br>
+
+## 1. How to spin up a developmental server
+
+<br>
+<br>
+
+## 2. How to set up a production server
+
+### Docker Compose way
+
+### Kubernetes way
+
+<br>
+<br>
+
+## 3. How we deploy Nsustain.com
 
 <br>
 <br>
@@ -133,13 +152,8 @@ docker compose exec -it flarum sh
 composer require fof/sitemap
 -->
 
-<p align="center">
-  <b>Server maintenance workflow</b>
-</p>
 
-Sample paragraph...
 
-# 4. Getting a domain name
 
 **Getting a domain from a domain registrar**<br>
 
@@ -173,10 +187,13 @@ on their settings and install it in our server.
 <br>
 <br>
 
-## Repository Layout
+<p align="center">
+  <b>Repository Folder Structure</b>
+</p>
 
 ```bash
-# tree
+# This output, by the way, can be obtained
+# with the `tree` command
 ├──                       #
 ├──                       #
 ├──                       #

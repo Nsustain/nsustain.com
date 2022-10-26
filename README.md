@@ -32,17 +32,11 @@
 </p>
 
 This repository shows you how to run it and
-how it works. Read the whole documetation only
+how it works. Read the whole documetation
 if you'd like to get an overall understanding of
 how Nsustain works. If, however, you're just trying
 to run a quick development server,
 just read the first section.
-
-
-
-
-We documented how we created Nsustain.com
-in case you'd like to understand how it was made 👍
 
 <br>
 <br>
@@ -446,20 +440,17 @@ We most often ...
   <b>What next?</b>
 </p>
 
-You can go to Nsustain and see
-if there's any project that's worth
-your ♥
-or you can become a contributor.
-**[[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/.github/CONTRIBUTING.md)]**
-Email soobinrho@nsustain.com
-if you have any question for us.
-We'll reply as promptly as possible.
-We appreciate your feedback,
-always and forever!
+If you have a question, please reach out
+to Soobin Rho &lt;soobinrho@nsustain.com&gt;.
+If you'd like to contribute,
+[Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/.github/CONTRIBUTING.md)
+would be a good starting point.
 
+[Security Hall of Frame](./HALL-OF-FRAME.md)
+is dedicated for those who helped us
+make Naustain a better, safer place.
+If you found a vulnerability,
 Please email security@nsustain.com
-if you've discovered any vulnerability on Nsustain.
-**[[Security Hall of Frame](./HALL-OF-FRAME.md)]**
 
 <br>
 <br>

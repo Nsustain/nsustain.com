@@ -35,7 +35,7 @@ This repository shows you how to run it and
 how it works. Read the whole documetation
 if you'd like to get an overall understanding of
 how Nsustain works. If, however, you're just trying
-to run a quick development server,
+to spin up a development server as easily as possible,
 just read the first section.
 
 <br>
@@ -65,29 +65,6 @@ hosts, then run on Kubernetes.
 # October 24, 2022
 1. How to spin up a development server
 2. How to host your production server
-
-<br>
-<br>
-<br>
-
-<p align="center">
-  <b>
-    How we deploy
-    <a href="https://nsustain.com">Nsustain.com</a>
-  </b>
-</p>
-
-Here are the exact steps we take
-to build and deploy Nsustain.com
-for testing / development.
-We wrote this section for those
-who would like to contribute.
-This will be helpful also if you'd like
-to make your own website
-based on Nsustain.
-
-<br>
-<br>
 
 2.1 if you're using only one server host:
 Docker Compose Method
@@ -156,196 +133,11 @@ docker compose exec -it flarum sh
 composer require fof/sitemap
 -->
 
-# 1. Installing the back-end
+<p align="center">
+  <b>Server maintenance workflow</b>
+</p>
 
-**Installing Nginx [[Source](https://fedoraproject.org/wiki/Nginx)]**
-
-```bash
-# Install Nginx
-sudo dnf install -y nginx
-
-# Start Nginx automatically at startup
-sudo systemctl enable nginx.service
-
-# Run Nginx
-sudo systemctl start nginx.service
-```
-
-**Installing PHP [[Source](https://computingforgeeks.com/how-to-install-php-74-on-fedora/)]**
-
-```bash
-# Install PHP. Although the latest version is not PHP 7.4,
-# we need this version for compatibility with Flarum.
-sudo dnf install -y https://rpms.remirepo.net/fedora/remi-release-35.rpm
-sudo dnf config-manager --set-enabled remi
-sudo dnf module reset php
-sudo dnf module install php:remi-7.4
-sudo dnf install -y php74-php-cli php74-php-fpm php74-php-curl php74-php-dom php74-php-fileinfo php74-php-gd php74-php-json php74-php-mbstring php74-php-openssl php74-php-pdo_mysql php74-php-tokenizer php74-php-zip
-```
-
-**Installing MariaDB [[Source](https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/)]**
-
-```bash
-# Install MariaDB
-sudo dnf install -y mariadb-server
-
-# Start MariaDB automatically at startup
-sudo systemctl enable mariadb
-
-# Run MariaDB
-sudo systemctl start mariadb
-```
-
-**Installing Composer [[Source](https://getcomposer.org/download/)]**
-
-```bash
-# Install Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-
-# Move the Composer to PATH
-sudo mv composer.phar /usr/local/bin/composer
-```
-<!--
-
-Flarum as a git submodule because ...
-need to get updates from Flarum,
-so ... have to be kept seperate ...
-
-No modifications to Flarum, so that
-it doesn't diverge
-
-```bash
-# `--recurse-submodules` option is used
-# because Nsustain uses Flarum as
-# a git submodule, which is good because ...
-# Without this option, this ... happens ...
-# and we have to manually run
-# git submodule update --init --recursive
-git clone --recurse-submodules https://github.com/Nsustain/nsustain.com.git
-
-```
-
-Plus, automatic pull for submodule:
-
-```bash
-git config --global submodule.recurse true
-```
-
-https://git-scm.com/book/en/v2/Git-Tools-Submodules
-
-
-########################### SAMPLE
-**(Optional) Setting up a custom-domain email forwarding service**<br>
-[Original article by Forward Email](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)
-#################################
-
--->
-
-
-
-<!--
-By the way, the white space in front of [1.1] and [1.2]
-is the unicode em space: (  )
--->
-
-
-
-
-<!--
-
-This whole section is just a sample. Whole section has to
-be rewriten.
-
--->
-
-# 1. Web programming
-
-**Writing codes on a version-control system**
-
-Create a `GitHub` repository because
-version control ...
-
-Plus, storing API keys bast practices:
-
-[Original article by freeCodeCamp](https://www.freecodecamp.org/news/how-to-securely-store-api-keys-4ff3ea19ebda)<br>
-
-## Back-end
-
-**Building the website's database**
-
-Blabla ...
-
-```bash
-# ...
-...
-```
-
-## Front-end
-
-**Building the front-end**
-
-Create the website ...
-
-```bash
-# ...
-...
-```
-
-<br>
-<br>
-
-# 2. Containerizing the website
-
-Make our website into a Docker image.
-Why containerize and why not else.
-
-```bash
-# ...
-...
-```
-
-<!--- Installing docker
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
-
-Using docker compose
-https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose
--->
-
-<br>
-<br>
-
-# 3. Deploying a container orchestration system
-
-Explanation on high availability.
-Why K3s and not else, showing
-the how and why behind
-our design & architecture choices.
-
-Install K3s.
-
-Configure the K3s to pull our website
-in the form of a Docker image.
-
-Note: The reason why we use Kubernetes.
-When our website gains more popularity,
-server capability can be upscaled by
-getting another VPS and then adding it
-on our K3s as a worker node.
-
-Even when we deploy a new node or when
-we update our website, our website never
-goes offline thanks to Kubernetes.
-
-```bash
-# ...
-...
-```
-
-<br>
-<br>
+Sample paragraph...
 
 # 4. Getting a domain name
 
@@ -381,30 +173,6 @@ on their settings and install it in our server.
 <br>
 <br>
 
-# 5. Getting a server
-
-**Getting a Virtual Private Server (VPS)**
-
-Get a VPS. Free trial for ...
-
-```bash
-# ...
-...
-```
-
-**Running a VPS
-[[Source](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-react-application-with-nginx-on-ubuntu-20-04)]**
-
-Blabla ...
-
-```bash
-# ...
-...
-```
-
-<br>
-<br>
-
 ## Repository Layout
 
 ```bash
@@ -418,21 +186,9 @@ Blabla ...
 └── README.md             # file you're reading now. Documentation goes here
 ```
 
+Explanation of every folder
+
 <br>
-<br>
-<br>
-
-<p align="center">
-  <b>Server maintenance workflow</b>
-</p>
-
-We most often ...
-
-```bash
-#
-...
-```
-
 <br>
 <br>
 

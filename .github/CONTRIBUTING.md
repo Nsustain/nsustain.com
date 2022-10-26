@@ -38,18 +38,7 @@
 
 <br>
 <br>
-
-## Contributing
-[1.](#1-coding-conventions) Coding Conventions<br>
-[2.](#2-commit-messages) Commit Messages<br>
-[3.](#3-pull-requests) Pull Requests<br>
-[4.](#4-reporting-bugs) Reporting Bugs<br>
-[5.](#5-Reporting-security-vulnerability) Reporting Security Vulnerability<br>
-
 <br>
-<br>
-
-# 1. Coding Conventions
 
 If you are new to
 open-source, GitHub's
@@ -76,6 +65,33 @@ Branch Name Do's:
 Branch Name Do not's:
 - [&cross;] `NewBranch`
 - [&cross;] `Branch2.`
+
+<br>
+<br>
+
+## Contributing
+[1.](#1-naming-conventions) Naming Conventions<br>
+[2.](#2-commit-messages) Commit Messages<br>
+[3.](#3-pull-requests) Pull Requests<br>
+[4.](#4-reporting-bugs) Reporting Bugs<br>
+[5.](#5-reporting-security-vulnerability) Reporting Security Vulnerability<br>
+#
+<br>
+<br>
+
+# 1. Naming Conventions
+
+Folder names and file names should be
+all underscore with hyphens (-) as
+word seperators.
+For example, we prefer `docker-images`
+to `Docker_Images`.
+Hypens (-) are preferred over
+underscores (_) because Google SEO
+treats hypens as word-seperators, but
+not underscores.
+However, this convention can be
+overriden by language-specfic conventions.
 
 <br>
 

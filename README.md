@@ -136,10 +136,45 @@ Default env variables...
 
 ### Kubernetes way
 
+### [come up with a new name]
+
+***How to debug***<br>
+```bash
+
+```
+
+***How to install an extension***<br>
+Flarum extensions are available at
+https://extiverse.com/ which is created by
+one of Flarum core developers.
+You can install them with
+```bash
+
+```
+
 <br>
 <br>
 
-## 3. How we deploy Nsustain.com
+## 3. How Nsustain.com was made
+
+Read this section if you'd like to get a
+general big picture of how Nsustain works.
+
+Flarum, php, Mithrill.js,
+MariaDB, PHP-FPM, Nginx, and
+Flarum extensions
+
+How we started from DigitalOcean
+Droplet with Docker Compose, but then
+decided to migrate to IBM Cloud
+Kubernetes. How we used Kompose to
+convert our 
+`nsustain.com/src/docker/compose.yaml`
+into Kubernetes objects.
+
+How we used IBM Cloud load balancer and
+Cloudflare tunnels to connect our Kubernetes
+load balancer to our domain name Nsustain.com
 
 <br>
 <br>

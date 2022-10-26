@@ -125,6 +125,22 @@ docker compose up -d
 ```
 
 <br>
+
+***How to debug***<br>
+```bash
+# ... Be simple and concise!
+```
+
+***How to install an extension***<br>
+Flarum extensions are available at
+https://extiverse.com/ which is created by
+one of Flarum core developers.
+You can install them with
+```bash
+# ...
+```
+
+<br>
 <br>
 
 ## 2. How to set up a production server
@@ -135,22 +151,6 @@ Default env variables...
 ### Docker Compose way
 
 ### Kubernetes way
-
-### [come up with a new name]
-
-***How to debug***<br>
-```bash
-
-```
-
-***How to install an extension***<br>
-Flarum extensions are available at
-https://extiverse.com/ which is created by
-one of Flarum core developers.
-You can install them with
-```bash
-
-```
 
 <br>
 <br>

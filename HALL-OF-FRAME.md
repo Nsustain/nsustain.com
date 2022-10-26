@@ -27,7 +27,8 @@
   <b>
     Security Hall of Frame
   </b><br>
-  These people made Nsustain more secure.
+  Thanks to these people, Nsustain became
+  a better, safer place.
 </p>
 
 <br>
@@ -206,15 +207,5 @@
 -->
 
 
-<br>
-<br>
-
-Please email security@nsustain.com
-if you find any security hole on Nsustain.
-We can't offer you any security bounty
-since we're not a rich organization, but you'll
-have our eternal gratitude. Thank you!
-
-<br>
 <br>
 <br>

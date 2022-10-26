@@ -53,6 +53,45 @@ just read the first section.
 
 ## 1. How to spin up a developmental server
 
+Assuming you're a developer trying to test out
+Nsustain's source code, we're going to
+show you how to run a development server
+in the fastest way possible so that you
+can tinker it with as soon as possible.
+
+<br>
+
+***Install***<br>
+```bash
+# Install got
+# git clone ...
+# Install Docker Engine and Docker Compose
+# Remove the comments, unless absolutely necessary
+```
+
+<br>
+
+***Build and run***<br>
+```bash
+cd nsustain.com/src/docker
+docker compose up
+```
+
+Usually on our eight-years-old laptop,
+the build process takes around 80 seconds.
+When the build process is complete,
+it says "[INFO] Nginx running..."
+
+<br>
+
+***How to build and run***<br>
+Default env variables...
+
+<br>
+
+***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
+Default env variables...
+
 <br>
 <br>
 

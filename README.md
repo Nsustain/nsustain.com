@@ -53,8 +53,7 @@ just read the first section.
 
 ## 1. How to spin up a developmental server
 
-In this section, we're going to
-show you how to run a development server
+This section shows you how to run a development server
 in the fastest way possible so that you
 can tinker with it as soon as possible ⚡
 

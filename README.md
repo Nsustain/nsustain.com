@@ -46,7 +46,7 @@ just read the first section.
 [2.](#2-how-to-set-up-a-production-server) How to set up a production server<br>
 &#160;&#160;&#160;&#160;[A.](#docker-compose-way) Docker Compose way<br>
 &#160;&#160;&#160;&#160;[B.](#kubernetes-way) Kubernetes way<br>
-[3.](#3-how-we-deploy-nsustaincom) How we deploy Nsustain.com
+[3.](#3-how-nsustain-works) How Nsustain works
 
 <br>
 <br>
@@ -153,7 +153,7 @@ Default env variables...
 <br>
 <br>
 
-## 3. How Nsustain.com was made
+## 3. How Nsustain works
 
 Read this section if you'd like to get a
 general big picture of how Nsustain works.

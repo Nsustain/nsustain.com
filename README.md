@@ -177,6 +177,26 @@ MariaDB root password, and database password.
 
 ## 3. How Nsustain works
 
+Nsustain is not a work of few men and women.
+Instead, it's built ontop of the shoulders
+of giants. Without the following open-source
+projects, Nsustain would not have been possible:
+
+| Project | GitHub |
+| ------- | ----------- |
+| **Flarum** | https://github.com/flarum |
+| **Laravel** | https://github.com/laravel |
+| **Mithril.js** | https://github.com/MithrilJS |
+| **Docker Compose** | https://github.com/docker/compose |
+| **Kompose** | https://github.com/kubernetes/kompose |
+| **Kubernetes** | https://github.com/kubernetes |
+
+List the reason why each stack or framework was
+chosen.
+
+
+---
+
 Read this section if you'd like to get a
 general big picture of how Nsustain works.
 

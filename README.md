@@ -345,7 +345,7 @@ on their settings and install it in our server.
 
 ```bash
 # This output, by the way, can be obtained
-# with the `tree` command
+# with Bash `tree` command
 ├──                       #
 ├──                       #
 ├──                       #

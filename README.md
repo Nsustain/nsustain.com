@@ -188,7 +188,7 @@ Nsustain possible.
 | Project | Link |
 | ------- | ----------- |
 | **Flarum** | https://github.com/flarum |
-| **Laravel** | https://github.com/laravel |
+| **PHP** | https://github.com/php |
 | **Mithril.js** | https://github.com/MithrilJS |
 | **Docker Compose** | https://github.com/docker/compose |
 | **Kompose** | https://github.com/kubernetes/kompose |

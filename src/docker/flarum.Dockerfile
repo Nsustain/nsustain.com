@@ -14,7 +14,7 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.4"
+LABEL com.nsustain.version="1.5."
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 

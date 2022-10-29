@@ -116,12 +116,12 @@ fast without having to go through the process of
 setting up configs.
 No configuration is needed for development servers.
 
-For production servers, however, we have to make
-changes the configurations so that the default
-passwords are changed to your own passwords,
-and this is what the next section
+For production servers, however, we have to change
+the configurations so that your own passwords are used
+instead of the default passwords, and
+this is exactly what the next section
 [How to set up a production server](#2-how-to-set-up-a-production-server)
-is mainly about.
+will talk about.
 
 <br>
 

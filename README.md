@@ -76,11 +76,11 @@ docker compose up
 ```
 
 Now, Docker Compose runs a development server
-by automatically pulling Docker Hub
+by pulling Docker Hub
 [nsustain/flarum](https://hub.docker.com/repository/docker/nsustain/flarum)
 image and
 [nsustain/mariadb](https://hub.docker.com/repository/docker/nsustain/mariadb)
-image. FYI, this takes our eight-years-old laptop
+image automatcially. FYI, this takes our eight-years-old laptop
 around 50 seconds to complete.
 After the first time, however,
 it takes only 3 seconds. This is because all persistent files

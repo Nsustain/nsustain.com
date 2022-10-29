@@ -121,11 +121,9 @@ COPY ./copied-inside-container/www.conf /etc/php8/php-fpm.d/www.conf
 WORKDIR /var/www/html/flarum
 
 ENTRYPOINT ["/flarumEntryPoint"]
-# CMD ["tail", "-f", "/dev/null"]
-# CMD ["sh"]
 
 # -------------------------------------------------------------------
-# Notes for future (Uncomment to use)
+# Useful Dockerfile syntax
 # -------------------------------------------------------------------
 
 # Why do we use volumes instead of bind mounts?

@@ -80,8 +80,7 @@ by pulling the image from Docker Hub
 [nsustain/flarum](https://hub.docker.com/repository/docker/nsustain/flarum)
 image and
 [nsustain/mariadb](https://hub.docker.com/repository/docker/nsustain/mariadb)
-image. FYI, this takes our laptop,
-which is eight-years old,
+image. FYI, this takes our eight-years-old laptop
 around 50 seconds to complete.
 After the first time, however,
 it takes only 3 seconds because all persistent files

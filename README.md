@@ -109,17 +109,19 @@ Likewise, the default MariaDB passwords
 are baked inside
 [`mariadb.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/mariadb.Dockerfile).
 
-On one hand, baking default configs inside
-our Docker images is good for fast testing;
-this is how we can spin up a development server
+We baked default configs inside
+our Docker images such that
+we can spin up a development server
 fast without having to go through the process of
 setting up configs.
+No configuration is needed for development servers.
 
-On the other hand, this is a security hazard
-if you expose your development sever
-to the internet, but if you just followed
-the instructions above, your development
-server is not exposed, meaning that it's safe.
+For production servers, however, we have to make
+changes the configurations so that the default
+passwords are changed to your own passwords,
+and this is what the next section
+[How to set up a production server](#2-how-to-set-up-a-production-server)
+is mainly about.
 
 <br>
 

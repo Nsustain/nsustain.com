@@ -176,11 +176,11 @@ MariaDB root password, and database password.
 
 Nsustain is not a work of few men and women.
 Instead, it's built on top of the shoulders
-of giants. We would never have been able to
-create Nsustain, were it not for these
-phenomenal open-source projects.
-We cincerely thank everyone who made
-Nsustain possible.
+of open-source giants. We'd never have been able
+to create Nsustain, were it not for these
+wonderful open-source projects.
+We sincerely thank everyone who made
+it possible for us to bring Nsustain into existence.
 
 | Project | Link |
 | ------- | ----------- |

@@ -58,8 +58,8 @@ possible, just read the first section ⚡
 sudo dnf install -y git
 git clone https://github.com/Nsustain/nsustain.com.git
 
-# Install Docker Compose
-# Source:
+# Install Docker Compose.
+# If your OS isn't Fedora, follow Docker's documentation:
 #   https://docs.docker.com/compose/install/
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo \

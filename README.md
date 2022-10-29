@@ -92,9 +92,9 @@ prints out:
 > [INFO] Starting php-fpm8<br>
 > [INFO] Starting nginx
 
-That's it! 🥳<br>
 Open your web browser and then type in
-`http://127.0.0.1`.
+`http://127.0.0.1`. <br>
+That's it! 🥳
 
 ![development-server](https://user-images.githubusercontent.com/19341857/198815641-1be1e42a-242d-4a0b-a1fd-25ce39ff0423.png)
 

@@ -23,7 +23,7 @@
 #   docker compose up
 #
 # Now, docker compose is up and running based on this file.
-# Go to http://127.0.0.1:8080 to access it.
+# Go to http://127.0.0.1 to access it.
 #
 # Plus, we included default env varialbes inside "Dockerfile" in the
 # same directory you're currently in, such that you're able to
@@ -91,14 +91,8 @@ services:
     depends_on:
       - mariadb
     ports:
-      # Container's port 80 is linked to the host's port 8080
-      # by default because we use port 8080 for development servers.
-      - 8080:80
-      # Uncomment "- 80:80" and "- 443:443" for production servers.
-      # At the same time, comment the "- 8080:80" above
-      # now that "- 80:80" is alive.
-      #- 80:80
-      #- 443:443
+      - 80:80
+      - 443:443
     expose:
       - 9000  # used by PHP-FPM
     networks:

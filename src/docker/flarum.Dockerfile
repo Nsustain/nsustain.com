@@ -14,7 +14,7 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.3"
+LABEL com.nsustain.version="1.4"
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
@@ -31,11 +31,12 @@ ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
 ENV FLARUM_TITLE="Nsustain Development Server"
 ENV FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 ENV FLARUM_WELCOME_TITLE="Nsustain"
-ENV FORUM_URL="http://127.0.0.1:8080"
 
-# This should be FORUM_URL (without http:// or https://) and
-#                          (without www) and
-#                          (without :8080 or any other port number)
+# Either http:// or https:// should exist.
+# Otherwise, forum internal links can behave unexpectedly.
+ENV FORUM_URL="http://127.0.0.1"
+
+# FORUM_URL (without http:// or https://) and (without www)
 ENV FORUM_URL_BASE="127.0.0.1"
 
 ENV DEBUG="false"

@@ -18,6 +18,9 @@ FLARUM_DESCRIPTION="A forum created for farmers, environmentalists, and open-sou
 FLARUM_TITLE="Nsustain Development Server"
 FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 FLARUM_WELCOME_TITLE="Nsustain"
+
+# Either http:// or https:// should exist.
+# Otherwise, forum internal links can behave unexpectedly.
 FORUM_URL="http://127.0.0.1"
 
 # FORUM_URL (without http:// or https://) and (without www)

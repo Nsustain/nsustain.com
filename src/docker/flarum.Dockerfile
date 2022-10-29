@@ -31,9 +31,11 @@ ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
 ENV FLARUM_TITLE="Nsustain Development Server"
 ENV FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 ENV FLARUM_WELCOME_TITLE="Nsustain"
-ENV FORUM_URL="http://127.0.0.1"
+ENV FORUM_URL="http://127.0.0.1:8080"
 
-# FORUM_URL (without http:// or https://) and (without www)
+# This should be FORUM_URL (without http:// or https://) and
+#                          (without www) and
+#                          (without :8080 or any other port number)
 ENV FORUM_URL_BASE="127.0.0.1"
 
 ENV DEBUG="false"

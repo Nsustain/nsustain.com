@@ -2913,16 +2913,16 @@
         },
         {
             "name": "fof/oauth",
-            "version": "1.2.2",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/oauth.git",
-                "reference": "b116a47bb4f53fbc77cff31366cd1a71dd074818"
+                "reference": "e764c5b2b51e7a6fce2f5c1aacb9844347cdf69d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/oauth/zipball/b116a47bb4f53fbc77cff31366cd1a71dd074818",
-                "reference": "b116a47bb4f53fbc77cff31366cd1a71dd074818",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/oauth/zipball/e764c5b2b51e7a6fce2f5c1aacb9844347cdf69d",
+                "reference": "e764c5b2b51e7a6fce2f5c1aacb9844347cdf69d",
                 "shasum": ""
             },
             "require": {
@@ -3001,7 +3001,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2022-05-06T08:12:03+00:00"
+            "time": "2022-10-28T12:39:23+00:00"
         },
         {
             "name": "fof/pages",

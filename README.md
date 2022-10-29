@@ -69,17 +69,22 @@ git clone https://github.com/Nsustain/nsustain.com.git
 
 <br>
 
-***Build and run***<br>
+***Run***<br>
 ```bash
 cd nsustain.com/src/docker
 docker compose up
 ```
 
-Usually, it takes our eight-years-old laptop
-around 80 seconds to complete building.
-We know that the build process is complete
-when it prints out "[INFO] Starting nginx"
+Now, docker compose pulls the image from Docker Hub
+and then spins up a development server.
+FYI, this takes our laptop, which is eight-years old,
+around 50 seconds to complete.
+After the first time, however,
+it takes only 3 seconds because all persistent files
+are mounted as Docker volumes and are used every time we rerun.
 
+We know that the server is ready when it
+prints out "[INFO] Starting nginx"
 Open your web browser and then type in
 `http://127.0.0.1`. That's it! 🥳
 
@@ -96,7 +101,7 @@ These are baked inside
 Likewise, the default MariaDB passwords
 are baked inside
 [`mariadb.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/mariadb.Dockerfile).
- 
+
 On one hand, baking default configs inside
 our Docker images is good for fast testing;
 this is how we can spin up a development server
@@ -211,7 +216,7 @@ How we started from DigitalOcean
 Droplet with Docker Compose, but then
 decided to migrate to IBM Cloud
 Kubernetes. How we used Kompose to
-convert our 
+convert our
 `nsustain.com/src/docker/compose.yaml`
 into Kubernetes objects.
 

@@ -8,7 +8,7 @@
 #
 # We mostly build this image with:
 # Example:
-#   docker build -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest .
+#   docker build -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest -f mariadb.Dockerfile .
 #   sudo docker push nsustain/mariadb --all-tags
 # ----------------------------------------------------------------
 FROM mariadb:latest

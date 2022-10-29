@@ -5,7 +5,7 @@
 #
 # Most of the times, we build this image with:
 # Example:
-#   docker build -t nsustain/flarum:1.5 -t nsustain/flarum:latest .
+#   docker build -t nsustain/flarum:1.5 -t nsustain/flarum:latest -f flarum.Dockerfile .
 #   sudo docker push nsustain/flarum --all-tags
 # -------------------------------------------------------------------
 FROM alpine:latest

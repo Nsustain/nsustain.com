@@ -93,8 +93,8 @@ the password `369FQUv4eS`.
 
 These are baked inside
 [`flarum.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/flarum.Dockerfile).
-Likewise, the default MariaDB root password
-and database password are baked inside
+Likewise, the default MariaDB passwords
+are baked inside
 [`mariadb.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/mariadb.Dockerfile).
  
 On one hand, baking default configs inside

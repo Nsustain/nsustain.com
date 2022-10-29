@@ -75,9 +75,13 @@ cd nsustain.com/src/docker
 docker compose up
 ```
 
-Now, docker compose pulls the image from Docker Hub
-and then spins up a development server.
-FYI, this takes our laptop, which is eight-years old,
+Now, Docker Compose runs a development server
+by pulling the image from Docker Hub
+[nsustain/flarum](https://hub.docker.com/repository/docker/nsustain/flarum)
+image and
+[nsustain/mariadb](https://hub.docker.com/repository/docker/nsustain/mariadb)
+image. FYI, this takes our laptop,
+which is eight-years old,
 around 50 seconds to complete.
 After the first time, however,
 it takes only 3 seconds because all persistent files

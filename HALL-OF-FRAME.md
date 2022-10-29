@@ -27,7 +27,7 @@
   <b>
     Security Hall of Frame
   </b><br>
-  Thanks to these people, Nsustain became
+  Thanks to these people, Nsustain is now
   a better, safer place ❤️
 </p>
 

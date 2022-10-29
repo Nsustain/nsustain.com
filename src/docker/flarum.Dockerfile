@@ -33,7 +33,7 @@ ENV FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 ENV FLARUM_WELCOME_TITLE="Nsustain"
 
 # Either http:// or https:// should exist.
-# Otherwise, forum internal links can behave unexpectedly.
+# Otherwise, all forum internal links will behave unexpectedly.
 ENV FORUM_URL="http://127.0.0.1"
 
 # FORUM_URL (without http:// or https://) and (without www)

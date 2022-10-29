@@ -222,8 +222,6 @@ it possible for us to bring Nsustain into existence.
 | Project | Link |
 | ------- | ----------- |
 | **Flarum** | https://github.com/flarum |
-| **PHP** | https://github.com/php |
-| **Mithril.js** | https://github.com/MithrilJS |
 | **Docker Compose** | https://github.com/docker/compose |
 | **Kompose** | https://github.com/kubernetes/kompose |
 | **Kubernetes** | https://github.com/kubernetes |

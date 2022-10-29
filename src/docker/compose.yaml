@@ -70,9 +70,9 @@ services:
 volumes:
   flarum-data:
   nginx-conf:
-  mariadb-data:
   letsencrypt-data:
   letsencrypt-lockfiles:
+  mariadb-data:
 
 # "The presence of these objects is sufficient to define them"
 # Source:

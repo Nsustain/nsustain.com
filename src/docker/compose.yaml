@@ -83,7 +83,7 @@ services:
   flarum:
     image: nsustain/flarum:latest
     container_name: flarum
-    # Always restart the container, even after rebooting the host
+    # Always restart the container, even after reboot
     restart: always
     # Since this container doesn't accept SIGTERM, we use
     # stop_grace_period: 0.5s to send SIGKILL after 0.5s

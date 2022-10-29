@@ -34,9 +34,9 @@
 This repository shows you how to run it and
 how it works. Read the whole documentation
 if you'd like to get an overall understanding of
-how Nsustain works. If you want
-to spin up a development server as soon as
-possible, just read the first section ⚡
+how Nsustain works. If you just want to
+spin up a development server as soon as
+possible, reading the first section is all you need ⚡
 
 <br>
 <br>

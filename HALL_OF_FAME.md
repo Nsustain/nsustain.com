@@ -25,7 +25,7 @@
 
 <p align="center">
   <b>
-    Security Hall of Frame
+    Security Hall of Fame
   </b><br>
   Thanks to these people, Nsustain is now
   a better, safer place ❤️

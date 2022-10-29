@@ -36,12 +36,12 @@
 <br>
 
 Please email security@nsustain.com
-if you've discovered a security veulnerability.
-We'll reply as soon as we read it.
-**[[Security Hall of Frame](./HALL-OF-FRAME.md)]**
+if you discover a security vulnerability.
+We'll reply as promptly as possible.
+**[[Security Hall of FAME](./HALL-OF-FAME.md)]**
 
 It means a lot for Nsustain. Thank you for
-making Nsustain more secure!
+making Nsustain a better, safer place ❤️
 
 <br>
 <br>

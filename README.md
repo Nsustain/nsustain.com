@@ -118,14 +118,6 @@ to the internet, but if you just followed
 the instructions above, your development
 server is not exposed, meaning that it's safe.
 
-We were just warning you that these instructions
-are for how to run a development server.
-To run a production server, in contrast,
-we need different instructions, and that is
-what the next section
-[How to set up a production server](#2-how-to-set-up-a-production-server)
-is for.
-
 <br>
 
 ***How to stop***<br>

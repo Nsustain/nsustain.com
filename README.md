@@ -36,7 +36,7 @@ how it works. Read the whole documentation
 if you'd like to get an overall understanding of
 how Nsustain works. If you just want to
 spin up a development server as soon as
-possible, reading the first section is all you need ⚡
+possible, just read the first section ⚡
 
 <br>
 <br>

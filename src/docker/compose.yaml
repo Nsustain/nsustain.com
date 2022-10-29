@@ -40,12 +40,12 @@ services:
       # When you first run our image, these volumes will
       # be empty. Howver, if you'd like to set up https / SSL,
       # these volumes will be used for storing the certificates.
-      - /etc/letsencrypt:/etc/letsencrypt
+      - letsencrypt-data:/etc/letsencrypt
 
       # certbot uses lock-files system for its internal functions.
       # Source:
       #   https://eff-certbot.readthedocs.io/en/stable/using.html#where-certs
-      - /var/lib/letsencrypt:/var/lib/letsencrypt
+      - letsencrypt-lockfiles:/var/lib/letsencrypt
 
     # Uncomment to override default env variables with your own.
     # This is not required in development environments, but
@@ -71,6 +71,8 @@ volumes:
   flarum-data:
   nginx-conf:
   mariadb-data:
+  letsencrypt-data:
+  letsencrypt-lockfiles:
 
 # "The presence of these objects is sufficient to define them"
 # Source:

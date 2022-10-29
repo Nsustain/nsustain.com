@@ -144,17 +144,6 @@ docker compose up -d
 ```
 
 <br>
-
-***How to install an extension***<br>
-Flarum extensions are available at
-https://extiverse.com/ which is created by
-one of Flarum core developers.
-You can install them with
-```bash
-# ...
-```
-
-<br>
 <br>
 
 ## 2. How to set up a production server
@@ -170,6 +159,8 @@ MariaDB root password, and database password.
 ```bash
 # ... Be simple and concise!
 ```
+
+<br>
 
 ### Docker Compose way
 
@@ -199,6 +190,17 @@ Nsustain possible.
 
 List the reason why each stack or framework was
 chosen.
+
+<br>
+
+***How to install an extension***<br>
+Flarum extensions are available at
+https://extiverse.com/ which is created by
+one of Flarum core developers.
+You can install them with
+```bash
+# ...
+```
 
 
 ---

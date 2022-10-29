@@ -87,9 +87,13 @@ it takes only 3 seconds because all persistent files
 are mounted as Docker volumes and are used every time we rerun.
 
 We know that the server is ready when it
-prints out "[INFO] Starting nginx"
-Open your web browser and then type in
-`http://127.0.0.1`. That's it! 🥳
+prints out
+
+> [INFO] Starting php-fpm8<br>
+> [INFO] Starting nginx
+
+That's it! 🥳 Open your web browser and then type in
+`http://127.0.0.1`.
 
 ![development-server](https://user-images.githubusercontent.com/19341857/198815641-1be1e42a-242d-4a0b-a1fd-25ce39ff0423.png)
 

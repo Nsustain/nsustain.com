@@ -55,10 +55,17 @@ possible, reading the first section is all you need ⚡
 
 ***Install***<br>
 ```bash
+# Install Docker Compose
+# Source:
+#   https://docs.docker.com/compose/install/
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo \
+  https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Then, clone this repository
 sudo dnf install -y git
 git clone https://github.com/Nsustain/nsustain.com.git
-# Install Docker Engine and Docker Compose
-# Remove the comments, unless absolutely necessary
 ```
 
 <br>

@@ -76,7 +76,7 @@ docker compose up
 ```
 
 Now, Docker Compose runs a development server
-by pulling the image from Docker Hub
+by pulling Docker Hub
 [nsustain/flarum](https://hub.docker.com/repository/docker/nsustain/flarum)
 image and
 [nsustain/mariadb](https://hub.docker.com/repository/docker/nsustain/mariadb)

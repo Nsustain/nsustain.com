@@ -143,6 +143,8 @@ docker compose up -d
 # ... Be simple and concise!
 ```
 
+<br>
+
 ***How to install an extension***<br>
 Flarum extensions are available at
 https://extiverse.com/ which is created by

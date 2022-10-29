@@ -93,8 +93,7 @@ prints out:
 > [INFO] Starting nginx
 
 Open your web browser and then type in
-`http://127.0.0.1`. <br>
-That's it! 🥳
+`http://127.0.0.1`. That's it! 🥳
 
 ![development-server](https://user-images.githubusercontent.com/19341857/198815641-1be1e42a-242d-4a0b-a1fd-25ce39ff0423.png)
 

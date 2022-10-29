@@ -416,7 +416,7 @@ If you'd like to contribute,
 [Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/.github/CONTRIBUTING.md)
 would be a good starting point.
 
-[Security Hall of Frame](./HALL-OF-FRAME.md)
+[Security Hall of Fame](./HALL-OF-FAME.md)
 is dedicated for those who helped us
 make Naustain a better, safer place ❤️
 If you discover a vulnerability,

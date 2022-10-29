@@ -103,7 +103,7 @@ Likewise, the default MariaDB passwords
 are baked inside
 [`mariadb.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/mariadb.Dockerfile).
 
-We baked default configs inside
+We bake default configs inside
 our Docker images such that
 we can spin up a development server
 fast without having to go through the process of

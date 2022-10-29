@@ -95,7 +95,7 @@ prints out:
 Open your web browser and then type in
 `http://127.0.0.1`. That's it! 🥳
 
-<img alt="Development server screenshot" src="https://user-images.githubusercontent.com/19341857/198815641-1be1e42a-242d-4a0b-a1fd-25ce39ff0423.png" width="400">
+<img alt="Development server screenshot" src="https://user-images.githubusercontent.com/19341857/198815641-1be1e42a-242d-4a0b-a1fd-25ce39ff0423.png" width="520">
 
 <br>
 

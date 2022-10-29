@@ -144,10 +144,10 @@ docker compose up -d
 ***Debugging workflows we often find useful***<br>
 ```bash
 
-# How to start a shell inside the flarum container
+# How to start a shell inside nsustain/flarum container
 docker compose exec -it flarum sh
 
-# How to start a shell inside the mariadb container
+# How to start a shell inside nsustain/mariadb container
 docker compose exec -it maraidb sh
 
 # How to check all environment variables injected

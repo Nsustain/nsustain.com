@@ -38,7 +38,7 @@
 Please email security@nsustain.com
 if you discover a security vulnerability.
 We'll reply as promptly as possible.
-**[[Security Hall of FAME](./HALL-OF-FAME.md)]**
+**[[Security Hall of Fame](https://github.com/Nsustain/nsustain.com/blob/main/HALL_OF_FAME.md)]**
 
 It means a lot for Nsustain. Thank you for
 making Nsustain a better, safer place ❤️

@@ -81,7 +81,7 @@ We know that the build process is complete
 when it prints out "[INFO] Starting nginx"
 
 Open your web browser and then type in
-`https://127.0.0.1`. That's it! 🥳
+`http://127.0.0.1`. That's it! 🥳
 
 [Insert screenshot]
 

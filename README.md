@@ -178,9 +178,12 @@ MariaDB root password, and database password.
 ## 3. How Nsustain works
 
 Nsustain is not a work of few men and women.
-Instead, it's built ontop of the shoulders
-of giants. Without the following open-source
-projects, Nsustain would not have been possible:
+Instead, it's built on top of the shoulders
+of giants. We would never have been able to
+create Nsustain, were it not for these
+phenomenal open-source projects.
+We cincerely thank everyone who made
+Nsustain possible.
 
 | Project | GitHub |
 | ------- | ----------- |

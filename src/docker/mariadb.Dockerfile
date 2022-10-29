@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------
-# WHAT IS THIS FILE FOR?
-# A mariadb image with baked-in default env variables
+# This is a mariadb image with baked-in default env variables
 # so that you can just run Nsustain with "docker compose up -d"
 # without any extra configuration.
 # Docker Hub:

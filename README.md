@@ -125,9 +125,9 @@ will talk about.
 
 ***How to stop***<br>
 ```bash
-# Press <Ctrl + c> on your keyboard
+# Press <Ctrl + c> to exit your docker compose process
 
-# Use docker compose to stop
+# Then, shut down docker compose
 docker compose down
 ```
 
@@ -141,9 +141,31 @@ docker compose up -d
 
 <br>
 
-***How to debug***<br>
+***Debugging workflows we often find useful***<br>
 ```bash
-# ... Be simple and concise!
+
+# How to start a shell inside the flarum container
+docker compose exec -it flarum sh
+
+# How to start a shell inside the mariadb container
+docker compose exec -it maraidb sh
+
+# How to check all environment variables injected
+env
+
+# How to look inside the database
+docker compose exec -it flarum sh
+mariadb -h $DB_HOST -u $DB_USER -p$DB_PASS
+
+# How to extract a file from container
+docker ps
+docker cp <CONTAINER ID>:/path/to/file ./
+
+# How to reset all data and restart with fresh volumes
+docker compose down
+alias dockervrm="docker volume ls -q | xargs docker volume rm"
+dockervrm
+docker compose up -d
 ```
 
 <br>
@@ -153,6 +175,21 @@ docker compose up -d
 
 ***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
 Default env variables...
+
+
+```bash
+# HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
+cd nsustain.com/src/docker
+cp exampleenvflarum .envflarum
+cp exampleenvmariadb .envmariadb
+#<On this file, uncomment "env_file: - .envflarum">
+#<On this file, uncomment "env_file: - .envmariadb">
+```
+
+Now, every env varialble you write on .envflarum and .envmariadb
+will be used inside your server when you "docker compose up -d"
+To deter brute-force attacks, we recommend you to set every
+password with lengthy, non-dictionary words.
 
 Never run your server without
 first changing the admin password,

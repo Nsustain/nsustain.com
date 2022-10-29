@@ -158,8 +158,8 @@ docker compose exec -it flarum sh
 mariadb -h $DB_HOST -u $DB_USER -p$DB_PASS
 
 # How to extract a file from container
-docker ps
-docker cp <CONTAINER ID>:/path/to/file ./
+docker ps  # Suppose <CONTAINER ID> is 1b332ed2d10e
+docker cp 1b332:/path/to/file ./
 
 # How to reset all data and restart with fresh volumes
 docker compose down

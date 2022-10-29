@@ -31,19 +31,10 @@ services:
     networks:
       - back-end
     volumes:
-      # Most of our config files are added inside the container
-      # directly at Dockerfile, but these files are mounted here
-      # because these configs tend to require changes
-      # when we develop.
-      - ./docker-bind-mounts/composer.json:/var/www/html/flarum/composer.json:rw
-      - ./docker-bind-mounts/composer.lock:/var/www/html/flarum/composer.lock:rw
-
       # These are the data files for the container.
       # Location of these files:
       #   /var/lib/docker/volumes/...
-      - flarum-assets:/var/www/html/flarum/public/assets
-      - flarum-storage:/var/www/html/flarum/storage
-      - flarum-vendor:/var/www/html/flarum/vendor
+      - flarum-data:/var/www/html/flarum
       - nginx-conf:/etc/nginx
 
       # When you first run our image, these volumes will
@@ -77,9 +68,7 @@ services:
     #  - .envmariadb
 
 volumes:
-  flarum-assets:
-  flarum-storage:
-  flarum-vendor:
+  flarum-data:
   nginx-conf:
   mariadb-data:
 

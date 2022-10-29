@@ -419,7 +419,7 @@ would be a good starting point.
 [Security Hall of Frame](./HALL-OF-FRAME.md)
 is dedicated for those who helped us
 make Naustain a better, safer place ❤️
-If you found a vulnerability,
+If you discover a vulnerability,
 please email security@nsustain.com
 
 <br>

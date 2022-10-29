@@ -108,8 +108,8 @@ our Docker images such that
 we can spin up a development server
 fast without any extra configuration.
 
-For production servers, however, we have to change
-the configurations so that your own passwords are used
+For production servers, however, we have to make changes
+to the configurations so that your own passwords are used
 instead of the default passwords, and
 this is exactly what the next section
 [How to set up a production server](#2-how-to-set-up-a-production-server)

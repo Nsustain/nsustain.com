@@ -3,6 +3,8 @@
 # A mariadb image with baked-in default env variables
 # so that you can just run Nsustain with "docker compose up -d"
 # without any extra configuration.
+# Docker Hub:
+#   https://hub.docker.com/repository/docker/nsustain/mariadb
 #
 # For how to run Nsustain, open "compose.yaml"
 #

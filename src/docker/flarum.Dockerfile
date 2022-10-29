@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------
 # nsustain/flarum image is built using this Dockerfile.
-# Dockerhub:
-# https://hub.docker.com/repository/docker/nsustain/flarum
+# Docker Hub:
+#   https://hub.docker.com/repository/docker/nsustain/flarum
 #
 # Most of the times, we build this image with:
 # Example:

@@ -1,37 +1,30 @@
 # ----------------------------------------------------------
-# See "compose.yaml" for how to use docker compose.
-#
-# At default, this flie is not used. However, this file
-# will be loaded by docker compose if you do the following:
-#   cd nsustain.com/src/docker
-#   cp exampleenvflarum .envflarum
-#   <On "compose.yaml", uncomment "env_file: - .envflarum">
+# Env variables that you should change in production servers
+# for security
 # ----------------------------------------------------------
-
-# ----------------------------------------------------------
-# Env variables that you'd want to change for production
-# ----------------------------------------------------------
-FLARUM_ADMIN_USER="nim3594"
-FLARUM_ADMIN_PASS="369FQUv4eS"
-FLARUM_ADMIN_MAIL="dev@nsustain.com"
-FLARUM_DESCRIPTION="A forum created for farmers, environmentalists, and open-source developers."
 FLARUM_TITLE="Nsustain Development Server"
-FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
+FLARUM_DESCRIPTION="A forum created for farmers, environmentalists, and open-source developers."
 FLARUM_WELCOME_TITLE="Nsustain"
+FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
 
-# Either http:// or https:// should exist.
-# Otherwise, forum internal links can behave unexpectedly.
+# We recommend using a password manager. In our case,
+# we generate 42 random letters without any special character
+# for each FLARUM_ADMIN_PASS, DB_PASS, and MARIADB_ROOT_PASSWORD.
+FLARUM_ADMIN_PASS="369FQUv4eS"
+FLARUM_ADMIN_USER="nim3594"
+FLARUM_ADMIN_MAIL="dev@nsustain.com"
+
+# FORUM_URL should have either http:// or https:// because
+# otherwise, all forum internal links will behave unexpectedly.
 FORUM_URL="http://127.0.0.1"
 
-# FORUM_URL (without http:// or https://) and (without www)
+# FORUM_URL_BASE is the same as FORUM_URL, but
+# (without http:// or https://) and (without www)
 FORUM_URL_BASE="127.0.0.1"
 
 # -----------------------------------------------------------
-# Env variable that must be the same in both this file
+# Env variables that must be the same in both this file
 # and in ".envmariadb" because they're coreferenced.
-# These should be changed in production environments.
-# In our case, we generate 42 random characters and set this
-# as our DB_PASS. We do not include special characters here.
 # -----------------------------------------------------------
 DB_NAME="flarum"
 DB_USER="flarum"

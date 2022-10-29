@@ -114,7 +114,7 @@ setting up configs.
 
 On the other hand, this is a security hazard
 if you expose your development sever
-on the internet, but if you just followed
+to the internet, but if you just followed
 the instructions above, your development
 server is not exposed, meaning that it's safe.
 

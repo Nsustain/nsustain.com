@@ -32,11 +32,11 @@
 </p>
 
 This repository shows you how to run it and
-how it works. Read the whole documetation
+how it works. Read the whole documentation
 if you'd like to get an overall understanding of
-how Nsustain works. If, however, you're just trying
-to spin up a development server as easily as possible,
-just read the first section ⚡
+how Nsustain works. If you want
+to spin up a development server as soon as
+possible, just read the first section ⚡
 
 <br>
 <br>

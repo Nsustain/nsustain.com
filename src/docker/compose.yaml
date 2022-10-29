@@ -94,7 +94,7 @@ services:
       - 80:80
       - 443:443
     expose:
-      - 9000
+      - 9000  # used by PHP-FPM
     networks:
       - back-end
     volumes:
@@ -134,7 +134,7 @@ services:
     container_name: mariadb
     restart: always
     expose:
-      - 3306
+      - 3306  # used by MariaDB
     networks:
       - back-end
     volumes:

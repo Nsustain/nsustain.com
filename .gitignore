@@ -4,11 +4,3 @@
 .*env*
 !exampleenvflarum
 !exampleenvmariadb
-
-# These PHP composer files are created the first time
-# we run a development server because docker compose
-# mount these files as docker volumes.
-# We don't need these to be controlled via git,
-# so we gitignore these.
-composer.json
-composer.lock

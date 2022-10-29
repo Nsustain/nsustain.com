@@ -81,7 +81,7 @@ We know that the build process is complete
 when it prints out "[INFO] Starting nginx"
 
 Open your web browser and then type in
-`https://127.0.0.1`. That's it!
+`https://127.0.0.1`. That's it! 🥳
 
 [Insert screenshot]
 
@@ -328,7 +328,7 @@ would be a good starting point.
 
 [Security Hall of Frame](./HALL-OF-FRAME.md)
 is dedicated for those who helped us
-make Naustain a better, safer place.
+make Naustain a better, safer place ❤️
 If you found a vulnerability,
 please email security@nsustain.com
 

@@ -185,7 +185,7 @@ phenomenal open-source projects.
 We cincerely thank everyone who made
 Nsustain possible.
 
-| Project | GitHub |
+| Project | Link |
 | ------- | ----------- |
 | **Flarum** | https://github.com/flarum |
 | **Laravel** | https://github.com/laravel |

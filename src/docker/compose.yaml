@@ -35,8 +35,8 @@ services:
       # directly at Dockerfile, but these files are mounted here
       # because these configs tend to require changes
       # when we develop.
-      - ./composer.json:/var/www/html/flarum/composer.json:rw
-      - ./composer.lock:/var/www/html/flarum/composer.lock:rw
+      - ./docker-bind-mounts/composer.json:/var/www/html/flarum/composer.json:rw
+      - ./docker-bind-mounts/composer.lock:/var/www/html/flarum/composer.lock:rw
 
       # These are the data files for the container.
       # Location of these files:

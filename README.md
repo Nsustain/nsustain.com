@@ -91,18 +91,31 @@ Open your web browser and then type in
 The default admin ID is `nim3594` and
 the password `369FQUv4eS`.
 
-The default admin ID and the password
-are baked inside our docker image.
-On one hand, this is good because
-we can spin up a development server fast 
-this way, without having to
-go through the process of
-setting up every configuration.
+These are baked inside
+[`flarum.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/flarum.Dockerfile).
+Likewise, the default MariaDB root password
+and database password are baked inside
+[`mariadb.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/mariadb.Dockerfile).
+ 
+On one hand, baking default configs inside
+our Docker images is good for fast testing;
+this is how we can spin up a development server
+fast without having to go through the process of
+setting up configs.
 
-On the other hand, this is a security hazard.
-Never use this in your production server,
-since the admin ID and password are
-publically available right here.
+On the other hand, this is a security hazard
+if you expose your development sever
+on the internet, but if you just followed
+the instructions above, your development
+server is not exposed, meaning that it's safe.
+
+We were just warning you that these instructions
+are for how to run a development server.
+To run a production server, in contrast,
+we need different instructions, and that is
+what the next section
+[How to set up a production server](#2-how-to-set-up-a-production-server)
+is for.
 
 <br>
 
@@ -145,6 +158,15 @@ You can install them with
 
 ***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
 Default env variables...
+
+Never run your server without
+first changing the admin password,
+MariaDB root password, and database password.
+
+***How to change the admin password, MariaDB root password, and database password***<br>
+```bash
+# ... Be simple and concise!
+```
 
 ### Docker Compose way
 

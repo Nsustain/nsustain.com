@@ -106,9 +106,7 @@ are baked inside
 We bake default configs inside
 our Docker images such that
 we can spin up a development server
-fast without having to go through the process of
-setting up configs.
-No configuration is needed for development servers.
+fast without any extra configuration.
 
 For production servers, however, we have to change
 the configurations so that your own passwords are used

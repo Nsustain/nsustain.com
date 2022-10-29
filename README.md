@@ -36,7 +36,7 @@ how it works. Read the whole documetation
 if you'd like to get an overall understanding of
 how Nsustain works. If, however, you're just trying
 to spin up a development server as easily as possible,
-just read the first section.
+just read the first section ⚡
 
 <br>
 <br>
@@ -52,12 +52,6 @@ just read the first section.
 <br>
 
 ## 1. How to spin up a developmental server
-
-This section shows you how to run a development server
-in the fastest way possible so that you
-can tinker with it as soon as possible ⚡
-
-<br>
 
 ***Install***<br>
 ```bash

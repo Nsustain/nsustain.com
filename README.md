@@ -243,8 +243,9 @@ Instead, it's built on top of the shoulders
 of open-source giants. We'd never have been able
 to create Nsustain, were it not for these
 wonderful open-source projects.
-We sincerely thank everyone who made
-it possible for us to bring Nsustain into existence.
+We sincerely thank everyone who contributed
+and supported these open-source projects
+and therefore made Nsustain possible.
 
 | Project | Link |
 | ------- | ----------- |

@@ -259,15 +259,6 @@ chosen.
 
 <br>
 
-***How to install an extension***<br>
-Flarum extensions are available at
-https://extiverse.com/ which is created by
-one of Flarum core developers.
-You can install them with
-```bash
-# ...
-```
-
 
 ---
 

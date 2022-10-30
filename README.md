@@ -204,7 +204,7 @@ MariaDB root password, and database password.
 
 ### Docker Compose way
 
-***Edit `compose.yaml`***<br>
+***Override default env variables***<br>
 ```bash
 # We use vim, but you can use any code editor
 cd nsustain.com/src/docker

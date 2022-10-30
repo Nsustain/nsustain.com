@@ -204,6 +204,33 @@ MariaDB root password, and database password.
 
 ### Docker Compose way
 
+***Edit `compose.yaml`***<br>
+```bash
+# We use vim, but you can use any code editor
+cd nsustain.com/src/docker
+vim compose.yaml
+```
+```yaml
+    # Uncomment to override env variables for flarum
+    #env_file:
+    #  -\# .envflarum
+
+    # It should look like this now:
+    env_file:
+      - .envflarum
+
+    # Uncomment to override env variables for mariadb
+    #env_file:
+    #  -\# .envmariadb
+
+    # It should look like this now:
+    env_file:
+      - .envmariadb
+```
+
+<br>
+<br>
+
 ### Kubernetes way
 
 <br>

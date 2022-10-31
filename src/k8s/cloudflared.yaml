@@ -83,9 +83,9 @@ data:
     ingress:
     - hostname: codersforearth.com
       service: http://web-service:80
-    - hostname: hello.codersforearth.com
-      service: http://web-service:80
-    - hostname: tunnel.codersforearth.com
+    #- hostname: hello.codersforearth.com
+    #  service: http://web-service:80
+    - hostname: test.codersforearth.com
       service: hello_world
-    # Catch all for the rest of the hostnames
+    # Reply 404 to hostnames that don't match with any of the above
     - service: http_status:404

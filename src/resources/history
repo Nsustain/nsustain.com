@@ -18,6 +18,9 @@ kubectl exec -it [podName] /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"
 
+# Run k9s to monitor k8s
+docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s
+
 # deployment in short = deploy
 kubectl delete --all deploy
 

@@ -18,6 +18,12 @@ kubectl exec -it [podName] /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"
 
+# deployment in short = deploy
+kubectl delete --all deploy
+
+# services in short = svc
+kubectl delete --all svc
+
 # "Create a Service before its corresponding backend workloads (Deployments or ReplicaSets), and before any workloads that need to access it."
 # Source:
 #   https://kubernetes.io/docs/concepts/configuration/overview/

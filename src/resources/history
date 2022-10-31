@@ -30,6 +30,13 @@ kubectl delete --all deploy
 # services in short = svc
 kubectl delete --all svc
 
+
+# "To decide how to handle updates, StatefulSets use an update
+# strategy defined in spec: updateStrategy. There are two
+# strategies, OnDelete and RollingUpdate"
+# Source:
+#   https://cloud.google.com/kubernetes-engine/docs/concepts/statefulset#updating_statefulsets
+
 # Rollback to the previous deployment
 kubectl rollout undo deployment/abc
 

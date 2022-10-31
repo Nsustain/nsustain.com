@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------
+# The purpose of this file is to create a Cloudflare Tunnel
+# in our K8s cluster so that Nsustain is exposed to the internet.
+# This file is from Cloudflare's official documentation.
+# Source:
+#   https://github.com/cloudflare/argo-tunnel-examples/tree/master/named-tunnel-k8s
+# ------------------------------------------------------------------
+
 ---
 apiVersion: apps/v1
 kind: Deployment

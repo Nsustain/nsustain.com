@@ -64,3 +64,13 @@ spec:
       ports:
         - containerPort: 8086
           hostPort: 8086
+
+# How to add Redis on K8s
+# Source:
+#   https://cloud.google.com/kubernetes-engine/docs/tutorials/guestbook
+
+# How to encode / decode base64 for K8s secrets
+# Source:
+#   https://www.cloudytuts.com/tutorials/kubernetes/how-to-base64-encode-kubernetes-secrets/
+echo -n 'super-secret-password' | base64
+echo -n 'c3VwZXItc2VjcmV0LXBhc3N3b3Jk' | base64 --decode

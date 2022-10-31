@@ -10,12 +10,29 @@ ibmcloud login
 ibmcloud ks cluster ls  # Suppose your cluster name is nsustain
 ibmcloud ks cluster config --cluster nsustain --admin
 
+# Get all available K8s resources with their aliases
+kubectl api-resources
+
 # Run bash inside the pod
 kubectl exec -it [podName] /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"
 
-
 # "Create a Service before its corresponding backend workloads (Deployments or ReplicaSets), and before any workloads that need to access it."
 # Source:
 #   https://kubernetes.io/docs/concepts/configuration/overview/
+
+# How to use hostPort
+# Source:
+#   https://alesnosek.com/blog/2017/02/14/accessing-kubernetes-pods-from-outside-of-the-cluster/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: influxdb
+spec:
+  containers:
+    - name: influxdb
+      image: influxdb
+      ports:
+        - containerPort: 8086
+          hostPort: 8086

@@ -1,50 +1,21 @@
 #!/bin/bash
 
-# This file stores docker commands I used frequently
-# for learning purposes.
-
 # -----------------------------------------
-# Building nsustain/flarum Docker image
+# K8s
 # -----------------------------------------
-# --no-cache is required because, otherwise,
-# RUN apk update && apk upgrade --no-cache
-# will just use cache after the first time.
-docker build --no-cache -t nsustain/flarum:0.1 -t nsustain/flarum:latest .
+ibmcloud login
 
-# ------------------------------------------
-# https://docs.docker.com/get-started/
-# ------------------------------------------
-
-# Run an Ubuntu
-docker run --rm -itv hello_world:/hello_world ubuntu
-
-# Run an Ubuntu and don't exit automatically
-docker run --rm -dv hello_world:/hello_world ubuntu /bin/bash -c "tail -f /dev/null"
-
-# Run bash inside a container
-docker exec -it <container_name> /bin/bash
-
-# ------------------------------------------
-# Open Kubernetes required ports (On Fedora)
-# https://kubernetes.io/docs/reference/ports-and-protocols/
-# ------------------------------------------
-sudo firewall-cmd --permanent --ad-port=6443/tcp
-
-# ------------------------------------------
-# HaashiCorp Vault
-# ------------------------------------------
-
-# Start a development server
-docker run --rm -p 8200:8200 --cap-add=IPC_LOCK -it vault
-
-# -----------------------------------------
-# Deploying a test image to Kubernetes
-# -----------------------------------------
 # Get ibmcloud Kubernetes configs so that we can run
 # kubectl from our own computer.
-ibmcloud ks cluster config --cluster [clusterID] --admin
+ibmcloud ks cluster ls  # Suppose your cluster name is nsustain
+ibmcloud ks cluster config --cluster nsustain --admin
 
 # Run bash inside the pod
 kubectl exec -it [podName] /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"
+
+
+# "Create a Service before its corresponding backend workloads (Deployments or ReplicaSets), and before any workloads that need to access it."
+# Source:
+#   https://kubernetes.io/docs/concepts/configuration/overview/

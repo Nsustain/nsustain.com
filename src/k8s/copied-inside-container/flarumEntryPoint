@@ -1,0 +1,113 @@
+#! /bin/bash
+
+# ----------------------------------------------------------------
+# This file runs whenever we run the Docker nsustain/flarum image.
+# This is also known as the ENTRYPOINT
+# for the Docker nsustain/flarum image.
+# ----------------------------------------------------------------
+
+IS_INSTALLED="/var/www/html/flarum/public/assets/._flarum-installed.lock"
+if [[ ! -f "$IS_INSTALLED" ]]
+then
+  # --------------------------------------------
+  # 1. If no persistent data, then fresh install
+  # --------------------------------------------
+  # Source:
+  #   https://discuss.flarum.org/d/31640-flarum-setup-with-preset-config-file-and-use-env/9
+
+  # $DEBUG, as well as all other env variables are set as the
+  # default values on flarum.Dockerfile. What this means is that
+  # we can test this image without setting any extra configuration.
+  # For production, however, you should override these default
+  # env variables with your own secure env variables.
+  # For how to use your own env variables, go to compose.yaml
+  INSTALL_FILE_DIR="/flarumInstall.yaml"
+  sed -i "s/DEBUG/$DEBUG/g" $INSTALL_FILE_DIR
+  sed -i "s|FORUM_URL|$FORUM_URL|g" $INSTALL_FILE_DIR
+  sed -i "s/DB_HOST/$DB_HOST/g" $INSTALL_FILE_DIR
+  sed -i "s/DB_PORT/$DB_PORT/g" $INSTALL_FILE_DIR
+  sed -i "s/DB_NAME/$DB_NAME/g" $INSTALL_FILE_DIR
+  sed -i "s/DB_USER/$DB_USER/g" $INSTALL_FILE_DIR
+  sed -i "s/DB_PASS/$DB_PASS/g" $INSTALL_FILE_DIR
+  sed -i "s/DB_PREF/$DB_PREF/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_ADMIN_USER/$FLARUM_ADMIN_USER/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_ADMIN_PASS/$FLARUM_ADMIN_PASS/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_ADMIN_MAIL/$FLARUM_ADMIN_MAIL/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_DESCRIPTION/$FLARUM_DESCRIPTION/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_TITLE/$FLARUM_TITLE/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_WELCOME_MESSAGE/$FLARUM_WELCOME_MESSAGE/g" $INSTALL_FILE_DIR
+  sed -i "s/FLARUM_WELCOME_TITLE/$FLARUM_WELCOME_TITLE/g" $INSTALL_FILE_DIR
+
+  # Inject env variables into the nginx.conf file
+  export DOLLAR="$"
+  NGINX_CONFIG_DIR="/etc/nginx/nginx.conf"
+  envsubst < $NGINX_CONFIG_DIR > temporary_nginx.conf
+  mv temporary_nginx.conf $NGINX_CONFIG_DIR
+  chown -R nginx:nginx /etc/nginx
+  chmod -R 755 /etc/nginx
+
+  # Wait until mariadb boots up
+  # Source:
+  #   https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking
+  while ! mysqladmin ping -h"$DB_HOST" --silent
+  do
+    sleep 1
+  done
+
+  php flarum install -f $INSTALL_FILE_DIR
+
+  # Install extensions
+  composer require fof/pages:"*"
+  composer require fof/oauth:"*"
+  composer require fof/links:"*"
+  composer require fof/sitemap:"*"
+  composer require fof/nightmode:"*"
+  composer require v17development/flarum-seo:"*"
+  composer require datlechin/flarum-link-preview:"*"
+  composer require clarkwinkelmann/flarum-ext-shadow-ban:"*"
+  composer require v17development/flarum-third-party-login-only:"*"
+
+  # Use IS_INSTALLED file to test if it's first time installing or not.
+  # Source:
+  #   https://github.com/mondediefr/docker-flarum/blob/master/rootfs/usr/local/bin/startup
+  touch $IS_INSTALLED
+
+else
+  # --------------------------------------------
+  # 2. If data already exists, then just migrate
+  # --------------------------------------------
+  CONFIG_FILE_DIR="/config.php"
+  sed -i "s/DEBUG/$DEBUG/g" $CONFIG_FILE_DIR
+  sed -i "s/DB_HOST/$DB_HOST/g" $CONFIG_FILE_DIR
+  sed -i "s/DB_PORT/$DB_PORT/g" $CONFIG_FILE_DIR
+  sed -i "s/DB_NAME/$DB_NAME/g" $CONFIG_FILE_DIR
+  sed -i "s/DB_USER/$DB_USER/g" $CONFIG_FILE_DIR
+  sed -i "s/DB_PASS/$DB_PASS/g" $CONFIG_FILE_DIR
+  sed -i "s/DB_PREF/$DB_PREF/g" $CONFIG_FILE_DIR
+  sed -i "s|FORUM_URL|$FORUM_URL|g" $CONFIG_FILE_DIR
+  mv /config.php /var/www/html/flarum/config.php
+
+  while ! mysqladmin ping -h"$DB_HOST" --silent
+  do
+    sleep 1
+  done
+
+  php flarum migrate
+  php flarum cache:clear
+  php flarum assets:publish
+
+  chown -R nginx:nginx /var/www/html/flarum
+  chmod -R 755 /var/www/html/flarum
+fi
+
+# ---------------------------
+# Start serving http requests
+# ---------------------------
+# Flarum is served by both php-fpm and nginx.
+# When http request comes in, php-fpm handles php files.
+echo "[INFO] Starting php-fpm8"
+php-fpm8
+
+# Then, nginx recieves the files and then serves.
+echo "[INFO] Starting nginx"
+nginx

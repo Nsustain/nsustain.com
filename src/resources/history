@@ -19,6 +19,9 @@ kubectl exec -it [podName] /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"
 
+# Copy files
+kubectl cp <namespace>/<pod>:<pod_filepath>/<filename> <local_filepath>/<filename>
+
 # Run k9s to monitor k8s
 docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s
 
@@ -77,6 +80,9 @@ echo -n 'super-secret-password' | base64
 echo -n 'c3VwZXItc2VjcmV0LXBhc3N3b3Jk' | base64 --decode
 
 # Journey for persistent volume
+# - WHAT IS OBJECT STORAGE?
+# Source:
+#   https://www.ibm.com/cloud/learn/object-storage?utm_medium=OSocial&utm_source=Youtube&utm_content=000016GC&utm_term=10007090&utm_id=YTDescription-101-What-is-Object-Storage-LH-Object-Storage-Complete-Guide
 # 0. OVERALL PICTURE: https://cloud.ibm.com/docs/containers?topic=containers-storage_cos_apps
 # 1. Get IBM Cloud Object Storage (COS)
 #    Create COS API key and make a K8s secret

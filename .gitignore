@@ -4,3 +4,8 @@
 .*env*
 !exampleenvflarum
 !exampleenvmariadb
+
+# Likewise, *secret*.yaml files for K8s should never be
+# indexed by git as these contain credentials for Flarum and MariaDB
+*secret*.yaml
+!examplesecret.yaml

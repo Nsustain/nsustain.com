@@ -29,3 +29,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
+
+# "Deployments are designed for stateless applications."
+# Source:
+#   https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#deployments_vs_statefulsets

@@ -50,8 +50,8 @@ services:
     # Uncomment to override default env variables with your own.
     # This is not required in development environments, but
     # in production environments, this is recommeneded.
-    #env_file:
-    #  - .envflarum
+    env_file:
+      - .envflarum
 
   mariadb:
     image: nsustain/mariadb:latest
@@ -64,8 +64,8 @@ services:
     volumes:
       - mariadb-data:/var/lib/mysql
     # Uncomment to override default env variables with your own
-    #env_file:
-    #  - .envmariadb
+    env_file:
+      - .envmariadb
 
 volumes:
   flarum-data:

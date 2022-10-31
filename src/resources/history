@@ -12,6 +12,7 @@ ibmcloud ks cluster config --cluster nsustain --admin
 
 # Get all available K8s resources with their aliases
 kubectl api-resources
+kubectl get nodes -o wide
 
 # Run bash inside the pod
 kubectl exec -it [podName] /bin/bash

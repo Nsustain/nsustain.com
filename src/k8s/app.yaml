@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: httpbin
-        image: kennethreitz/httpbin:latest
+        image: nsustain/maintenance-page:latest
         ports:
         - containerPort: 80
 ---

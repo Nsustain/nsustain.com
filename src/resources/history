@@ -21,11 +21,23 @@ kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870
 # Run k9s to monitor k8s
 docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s
 
+kubectl apply -f cloudflared.yaml
+kubectl delete -f cloudflared.yaml
+
 # deployment in short = deploy
 kubectl delete --all deploy
 
 # services in short = svc
 kubectl delete --all svc
+
+# Rollback to the previous deployment
+kubectl rollout undo deployment/abc
+
+# Check the rollout status of a daemonset
+kubectl rollout status daemonset/foo
+
+# Restart a deployment
+kubectl rollout restart deployment/abc
 
 # "Create a Service before its corresponding backend workloads (Deployments or ReplicaSets), and before any workloads that need to access it."
 # Source:

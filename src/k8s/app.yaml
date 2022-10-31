@@ -30,6 +30,11 @@ spec:
     - protocol: TCP
       port: 80
 
-# "Deployments are designed for stateless applications."
+# "Deployments are designed for stateless applications ...
+# StatefulSets are the recommended method of deploying stateful
+# applications that require a unique volume per replica. By using
+# StatefulSets with PersistentVolumeClaim templates, you can have
+# applications that can scale up automatically with unique
+# PersistentVolumesClaims associated to each replica Pod."
 # Source:
 #   https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#deployments_vs_statefulsets

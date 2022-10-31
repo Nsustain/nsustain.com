@@ -206,6 +206,13 @@ MariaDB root password, and database password.
 
 ### Kubernetes way
 
+***Expose Nsustain to the internet with Cloudflare Tunnel***<br>
+```bash
+# Source:
+#   https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
+```
+
+
 <br>
 <br>
 

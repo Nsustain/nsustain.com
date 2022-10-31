@@ -155,16 +155,14 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: datadir
+      annotations:
+        ibm.io/auto-create-bucket: "true"
+        ibm.io/auto-delete-bucket: "false"
+        ibm.io/secret-name: "cos-write-access"
+        ibm.io/quota-limit: "true"
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: local-storage
+      storageClassName: "ibmc-s3fs-standard-regional"
       resources:
         requests:
-          storage: 300M
----
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: local-storage
-provisioner: kubernetes.io/no-provisioner
-volumeBindingMode: WaitForFirstConsumer
+          storage: 15M

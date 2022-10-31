@@ -41,8 +41,8 @@ kind: Secret
 metadata:
     name: mariadb-secret
 type: Opaque
-data:
-  mariadb-root-password: c2VjcmV0 # echo -n 'secret'|base64
+stringData:
+  mariadb-root-password: secret
 
 # Headless service
 ---
@@ -87,13 +87,13 @@ spec:
         - |
           set -ex
           echo 'Starting init-mariadb';
-          # Check config map to directory that already exists 
+          # Check config map to directory that already exists
           # (but must be used as a volume for main container)
           ls /mnt/config-map
           # Statefulset has sticky identity, number should be last
           [[ `hostname` =~ -([0-9]+)$ ]] || exit 1
           ordinal=${BASH_REMATCH[1]}
-          # Copy appropriate conf.d files from config-map to 
+          # Copy appropriate conf.d files from config-map to
           # mariadb-config volume (emptyDir) depending on pod number
           if [[ $ordinal -eq 0 ]]; then
             # This file holds SQL for connecting to primary
@@ -157,6 +157,14 @@ spec:
       name: datadir
     spec:
       accessModes: [ "ReadWriteOnce" ]
+      storageClassName: local-storage
       resources:
         requests:
           storage: 300M
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-storage
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer

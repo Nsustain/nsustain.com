@@ -75,3 +75,23 @@ spec:
 #   https://www.cloudytuts.com/tutorials/kubernetes/how-to-base64-encode-kubernetes-secrets/
 echo -n 'super-secret-password' | base64
 echo -n 'c3VwZXItc2VjcmV0LXBhc3N3b3Jk' | base64 --decode
+
+# Journey for persistent volume
+# 0. OVERALL PICTURE: https://cloud.ibm.com/docs/containers?topic=containers-storage_cos_apps
+# 1. Get IBM Cloud Object Storage (COS)
+#    Create COS API key and make a K8s secret
+#    https://cloud.ibm.com/docs/containers?topic=containers-storage-cos-understand#create_cos_secret
+
+# 2. Install COS plugin
+# Source:
+#   https://cloud.ibm.com/docs/containers?topic=containers-storage_cos_install&mhsrc=ibmsearch_a&mhq=installing+cos
+
+# Create API key from https://cloud.ibm.com/objectstorage
+# and then copy "apikey"
+
+ibmcloud resource service-instances  # Suppose <Name> is COS-nsustain
+ibmcloud resource service-instance COS-nsustain  # Copy <GUID>
+kubectl create secret generic cos-write-access --type=ibm/ibmc-s3fs --from-literal=api-key=<api_key> --from-literal=service-instance-id=<service_instance_guid>
+helm ibmc install ibm-object-storage-plugin ibm-helm/ibm-object-storage-plugin --set license=true --set quotaLimit=true
+
+ibmc-s3fs-standard-regional

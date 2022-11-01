@@ -1,20 +1,66 @@
-kind: StorageClass
-apiVersion: storage.k8s.io/v1beta1
-metadata:
-    name: px-ha-sc
-provisioner: kubernetes.io/portworx-volume
-parameters:
-   repl: "3"
----
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: Service
 metadata:
-   name: px-mariadb-pvc
-   annotations:
-     volume.beta.kubernetes.io/storage-class: px-ha-sc
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mariadb
+  name: mariadb
 spec:
-   accessModes:
-     - ReadWriteOnce
-   resources:
-     requests:
-       storage: 5Gi
+  ports:
+    - name: "3306"
+      port: 3306
+      targetPort: 3306
+  selector:
+    io.kompose.service: mariadb
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mariadb
+  name: mariadb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mariadb
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/back-end: "true"
+        io.kompose.service: mariadb
+    spec:
+      containers:
+        - envFrom:
+          - secretRef:
+              name: mariadb-secret
+          image: mariadb:latest
+          name: mariadb
+          ports:
+            - containerPort: 3306
+          resources: {}
+          volumeMounts:
+            # - mountPath: /var/lib/mysql
+            - mountPath: /TEST
+              name: mariadb-data
+      restartPolicy: Always
+      volumes:
+        - name: mariadb-data
+          hostPath:
+            # directory location on host
+            path: /var/local/test
+            # this field is optional
+            type: DirectoryOrCreate

@@ -10,9 +10,9 @@ metadata:
   name: mariadb
 spec:
   ports:
-    - name: "3306"
+    - name: mariadb-port
       port: 3306
-      targetPort: 3306
+      # targetPort: 3306
   selector:
     app: mariadb
     io.kompose.service: mariadb
@@ -62,7 +62,6 @@ spec:
       volumes:
         - name: mariadb-data
           hostPath:
-            # directory location on host
+            # Directory location on host
             path: /nsustain/mariadb
-            # this field is optional
             type: DirectoryOrCreate

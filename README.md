@@ -317,7 +317,6 @@ on their settings and install it in our server.
 
 ### Kubernetes way
 
-***Expose Nsustain to the internet with Cloudflare Tunnel***<br>
 Usually, people expose their microservices in Kubernetes using
 LoadBalancer, NodePort, or Ingress, but we found it just more convinient
 to used IBM Cloud Kubernetes Service (IKS) and Cloudflare Tunnel.
@@ -343,6 +342,31 @@ to the internet. Instructions for installing Cloudflare Tunnel on a kubernetes c
 is available at
 https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 
+<br>
+
+***Run***<br>
+```bash
+cd nsustain.com/src/k8s
+vim cloudflared.yaml
+#<Edit "hostname: nsustain.com" and "service: http://nsustain.com:80"
+#   to "hostname: yourdomain.com" and "service: http://yourservicename:port">
+kubectl apply -f ../k8s
+```
+
+<br>
+
+***How to stop***<br>
+```bash
+kubectl delete -f ../k8s
+```
+
+<br>
+
+***How we usually do when we debug***<br>
+```bash
+kubectl exec -it flarum... -- sh
+kubectl exec -it mariadb... -- sh
+```
 
 <br>
 <br>

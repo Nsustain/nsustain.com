@@ -46,7 +46,7 @@ possible, just read the first section ⚡
 [2.](#2-how-to-set-up-a-production-server) How to set up a production server<br>
 &#160;&#160;&#160;&#160;[A.](#docker-compose-way) Docker Compose way<br>
 &#160;&#160;&#160;&#160;[B.](#kubernetes-way) Kubernetes way<br>
-[3.](#3-how-nsustain-works) How Nsustain works
+[3.](#3-open-source-projects-we-used) Open-source projects we used
 
 <br>
 <br>
@@ -243,7 +243,7 @@ vim compose.yaml
 <br>
 <br>
 
-## 3. How Nsustain works
+## 3. Open-source projects we used
 
 Nsustain is not a work of few men and women.
 Instead, it's built on top of the shoulders
@@ -254,6 +254,8 @@ We sincerely thank everyone who contributed
 and supported these open-source projects
 and therefore made Nsustain possible.
 
+<br>
+
 | Project | Link |
 | ------- | ----------- |
 | **Flarum** | https://github.com/flarum |
@@ -261,32 +263,32 @@ and therefore made Nsustain possible.
 | **Kompose** | https://github.com/kubernetes/kompose |
 | **Kubernetes** | https://github.com/kubernetes |
 
-List the reason why each stack or framework was
-chosen.
-
 <br>
 
-
----
-
-Read this section if you'd like to get a
-general big picture of how Nsustain works.
-
-Flarum, php, Mithrill.js,
-MariaDB, PHP-FPM, Nginx, and
-Flarum extensions
-
-How we started from DigitalOcean
-Droplet with Docker Compose, but then
-decided to migrate to IBM Cloud
-Kubernetes. How we used Kompose to
-convert our
-`nsustain.com/src/docker/compose.yaml`
-into Kubernetes objects.
-
-How we used IBM Cloud load balancer and
-Cloudflare tunnels to connect our Kubernetes
-load balancer to our domain name Nsustain.com
+ - Flarum is a web forum framework that handles both the front-end and the back-end itself.
+ What you see on [Nsustain.com](https://nsustain.com) is mainly thanks to Flarum.
+ As you can see, it's beautiful. It has cool interfaces and functionalities.
+ If you liked Nsustain, go check out Flarum's own forum-development discussion forum at https://discuss.flarum.org
+ 
+ - So, the first thing we did when we started Nsustain was to choose a web framework, and as you can see,
+ we chose Flarum, which turned out to be the best possible framework for Nsustain. The next thing we did
+ was to containerize Flarum with Docker. We also used Docker Compose to make deployment
+ as easy as possible for not only ourselves, but also for future possible contriutors 😍
+ 
+ - Next, we went just one step further. What if our server can't handle big surges of traffic?
+ We wanted to be able to serve as many people as possible. So, we used Kompose to convert
+ our `compose.yaml` file into Kubernetes resource files. `kompose convert` was 98% all we needed
+ to make the files that we have now. Kompose looks at the compose file and then
+ automatcally converts everything including container image declarations, ports, volume bindings
+ to Kubernetes `.yaml` files for us.
+ ```bash
+ # How to convert the compose file into K8s resource files
+ cd nsustain.com/src/docker
+ mkdir ../k8s
+ cp compose.yaml ../k8s/docker-compose.yaml
+ cd ../k8s
+ kompose convert
+ ```
 
 <br>
 <br>
@@ -327,7 +329,7 @@ Since ... We then migrated to IBM Cloud Kubernetes because ...
 *. Explanation on how it works
  - where does it begin and where does it end
  - folder structure and how everything works with each other
-# ----------------
+
 
 1.1 ...
 ### Install Docker
@@ -367,14 +369,6 @@ How to renew the certificate:
 https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
 
 
-1.1.2 How to add Flarum extension
-cd nsustain.com/src/docker
-docker compose exec -it flarum sh
-composer require fof/sitemap
--->
-
-
-
 
 **Getting a domain from a domain registrar**<br>
 
@@ -404,29 +398,8 @@ between Cloudflare and our server needs one
 extra step to be SSL encrypted -- i.e.
 download the "Cloudflare-issued SSL certificate"
 on their settings and install it in our server.
+-->
 
-<br>
-<br>
-
-<p align="center">
-  <b>Repository Folder Structure</b>
-</p>
-
-```bash
-# This output, by the way, can be obtained
-# with Bash `tree` command
-├──                       #
-├──                       #
-├──                       #
-├──                       #
-├── LICENSE               # details on our Apache License
-├── NOTICE.md             # `...`'s MIT License
-└── README.md             # file you're reading now. Documentation goes here
-```
-
-Explanation of every folder
-
-<br>
 <br>
 <br>
 
@@ -449,14 +422,3 @@ please email security@nsustain.com
 <br>
 <br>
 <br>
-
-<!-- Summary example
-<details>
-<summary>lsp finder</summary>
-
-<div align='center'>
-<img
-src="https://user-images.githubusercontent.com/41671631/181253960-cef49f9d-db8b-4b04-92d8-cb6322749414.png" />
-</div>
-</details>
--->

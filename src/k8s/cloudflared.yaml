@@ -1,12 +1,13 @@
 # ------------------------------------------------------------------
-# In order to expose our K8s deployments to the internet,
+# In order to expose our K8s microservices to the internet,
 # we use Cloudflare Tunnel, and this cloudflared.yaml is how
-# we deploy Cloudflare Tunnel inside our cluseter.
-# This is from Cloudflare's official example repository.
+# we deploy Cloudflare Tunnel inside our cluseter and therefore
+# expose Nsustain.com
+#
+# This file is taken from Cloudflare Examples official repository.
 # Source:
 #   https://github.com/cloudflare/argo-tunnel-examples/tree/master/named-tunnel-k8s
 # ------------------------------------------------------------------
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -82,7 +83,7 @@ data:
     #   https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/local-management/ingress/
     ingress:
     - hostname: codersforearth.com
-      service: http://web-service:80
+      service: http://flarum:80
     #- hostname: hello.codersforearth.com
     #  service: http://web-service:80
     - hostname: test.codersforearth.com

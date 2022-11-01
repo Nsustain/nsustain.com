@@ -175,7 +175,7 @@ docker compose up -d
 
 We have two ways of setting up a production server:
 (a) Docker Compose way and (b) Kubernetes way.
-You can use either way if you have a preference over one over the other,
+You can use either way if you have a preference of one over the other,
 but we generally recommend to use Docker Compose.
 
 If you want your website to be highly available and
@@ -186,9 +186,12 @@ then we personally like Docker Compose because it just
 feels faster tp deploy, easier to maintain.
 Docker Compose tends to have less configs to take care of.
 
+<br>
+
+### Docker Compose way
+
 ***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
 Default env variables...
-
 
 ```bash
 # HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
@@ -212,10 +215,6 @@ MariaDB root password, and database password.
 ```bash
 # ... Be simple and concise!
 ```
-
-<br>
-
-### Docker Compose way
 
 ***Override default env variables***<br>
 ```bash

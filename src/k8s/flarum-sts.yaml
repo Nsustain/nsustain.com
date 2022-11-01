@@ -55,7 +55,7 @@ spec:
       containers:
         - envFrom:
           - secretRef:
-              name: flarum-secret
+              name: flarum-secrets
           image: nsustain/flarum:latest
           name: flarum
           ports:

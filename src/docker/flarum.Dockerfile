@@ -108,12 +108,20 @@ RUN apk update && \
  && apk add --update libintl \
  && apk add --virtual build_deps gettext \
  && cp /usr/bin/envsubst /usr/local/bin/envsubst \
- && apk del build_deps
+ && apk del build_deps \
+ # It works well in Docker Compose up to this point.
+ # However, it turns out that this code needs modification
+ # when it's deployed to K8s. What happens is that when K8s volume
+ # mounts with the hostPath mechanism, container's target location
+ # is overwritten by the host's origin location.
+ # Thus, this is the reason why we copy to slightly different directories here.
+ && mv /var/www/html/flarum /var/www/html/flarum.backup \
+ && mv /etc/nginx /etc/nginx.backup
 
 COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
 COPY ./copied-inside-container/config.php /config.php
-COPY ./copied-inside-container/nginx.conf /etc/nginx/nginx.conf
+COPY ./copied-inside-container/nginx.conf /etc/nginx.backup/nginx.conf
 COPY ./copied-inside-container/www.conf /etc/php8/php-fpm.d/www.conf
 
 # WORKDIR actually may change depending on the base image we use.

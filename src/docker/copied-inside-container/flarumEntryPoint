@@ -6,6 +6,14 @@
 # for the Docker nsustain/flarum image.
 # ----------------------------------------------------------------
 
+# TWO POSSIBILITIES
+# 1. The host is running this image for the first time.
+#    In this case, we use `php flarum install -f $INSTALL_FILE_DIR`
+#    in order to initialize flarum and mariadb.
+#    This also means that all the volumes are empty.
+# 2. The host is not running this for the first time.
+#    Volumes are already filled with flarum and mariadb data.
+#    We just make sure migrations go right and clear the cache.
 IS_INSTALLED="/var/www/html/flarum/public/assets/._flarum-installed.lock"
 if [[ ! -f "$IS_INSTALLED" ]]
 then

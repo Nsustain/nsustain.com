@@ -14,22 +14,24 @@ spec:
       port: 3306
       targetPort: 3306
   selector:
+    app: mariadb
     io.kompose.service: mariadb
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: mariadb
   annotations:
     kompose.cmd: kompose convert
     kompose.version: 1.26.1 (a9d05d509)
   creationTimestamp: null
   labels:
     io.kompose.service: mariadb
-  name: mariadb
 spec:
   replicas: 1
   selector:
     matchLabels:
+      app: mariadb
       io.kompose.service: mariadb
   strategy:
     type: Recreate
@@ -40,6 +42,7 @@ spec:
         kompose.version: 1.26.1 (a9d05d509)
       creationTimestamp: null
       labels:
+        app: mariadb
         io.kompose.network/back-end: "true"
         io.kompose.service: mariadb
     spec:
@@ -53,14 +56,13 @@ spec:
             - containerPort: 3306
           resources: {}
           volumeMounts:
-            # - mountPath: /var/lib/mysql
-            - mountPath: /TEST
+            - mountPath: /var/lib/mysql
               name: mariadb-data
       restartPolicy: Always
       volumes:
         - name: mariadb-data
           hostPath:
             # directory location on host
-            path: /var/local/test
+            path: /nsustain/mariadb
             # this field is optional
             type: DirectoryOrCreate

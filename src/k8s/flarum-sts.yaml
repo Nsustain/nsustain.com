@@ -49,7 +49,6 @@ spec:
       creationTimestamp: null
       labels:
         app: flarum
-        io.kompose.network/back-end: "true"
         io.kompose.service: flarum
     spec:
       containers:
@@ -82,8 +81,8 @@ spec:
             type: DirectoryOrCreate
         - name: nginx-conf
           hostPath:
-            path: /nsustain/flarum
-            type: FileOrCreate
+            path: /nsustain/nginx
+            type: DirectoryOrCreate
         - name: letsencrypt-data
           hostPath:
             path: /nsustain/letsencrypt-data

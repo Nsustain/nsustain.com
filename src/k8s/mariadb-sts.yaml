@@ -43,7 +43,6 @@ spec:
       creationTimestamp: null
       labels:
         app: mariadb
-        io.kompose.network/back-end: "true"
         io.kompose.service: mariadb
     spec:
       containers:

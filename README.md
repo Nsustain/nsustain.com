@@ -173,6 +173,19 @@ docker compose up -d
 
 ## 2. How to set up a production server
 
+We have two ways of setting up a production server:
+(a) Docker Compose way and (b) Kubernetes way.
+You can use either way if you have a preference over one over the other,
+but we generally recommend to use Docker Compose.
+
+If you want your website to be highly available and
+therefore are willing to provision two or more servers
+to host it, then Kubernetes would be perfect for you.
+If you're trying to run your website on a single host,
+then we personally like Docker Compose because it just
+feels faster tp deploy, easier to maintain.
+Docker Compose tends to have less configs to take care of.
+
 ***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
 Default env variables...
 
@@ -230,6 +243,96 @@ vim compose.yaml
 
 <br>
 <br>
+
+<!--
+
+We run Nsustain on Kubernetes, but
+you can slow run Nsustain on
+Docker Compose. If your host is
+a single computer, then
+Docker Compose is better suited.
+If you want to use two or more
+hosts, then run on Kubernetes.
+
+# ----------------
+# October 24, 2022
+1. How to spin up a development server
+2. How to host your production server
+
+2.1 if you're using only one server host:
+Docker Compose Method
+General description of this method
+
+2.2 if you're using two or more servet hosts:
+Kubernetes Method
+Describe what this method looks like and
+my personal explanation of this method
+
+3. How we deploy [Nsustain.com](https://Nsustain.com)
+We got the domain name nsustain.com from Google Domains.
+When we first started, we hosted on a DigitalOcean droplet:
+ - Ubuntu 22.04 (LTS) x64, 1 vCPU, 1GB RAM, 10GB SSD ($6 per month)
+ - Backups service on ($1.2 per month)
+
+Since ... We then migrated to IBM Cloud Kubernetes because ...
+ - Two worker nodes, each containing 2 vCPU, 4GB RAM, and 125GB SSD ($166 per month but first for the first month because of the $200 sign-ups credit)
+
+
+HOW TO SET UP SSL CERTIFICATE
+# Run a shell inside the docker container
+docker compose exec -it flarum sh
+
+# Run certbot. It automatically generates a certificate for you
+certbot
+
+# Change flarum setting
+cd /var/www/html/flarum
+vim config.php
+<Change 'uri' => 'http://nsustain.com' to 'uri' => 'https://nsustain.com'>
+<Ctrl + d in order to log out of the docker exec session>
+cd /nsustain.com/src/docker
+vim .envflarum
+<Change FORUM_URL="http://nsustain.com" => FORUM_URL="https://nsustain.com">
+
+# Reset flarum
+php flarum cache:clear
+php flarum assets:publish
+
+How to renew the certificate:
+https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
+
+
+
+**Getting a domain from a domain registrar**<br>
+
+Our domain name
+**[[Nsustain.com](nsustain.com)]**
+costs $12 per year.
+
+**(Optional) Setting up a custom-domain email forwarding service
+[[Source](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)]**<br>
+
+One way of doing this would be setting up an
+email server on the VPS we just got, but
+we didn't need such complexity. We didn't
+need to have multiple email accounts.
+We could just use one email account.
+All our email needs were such that just using an email
+forwarding service would solve all of them.
+
+**Setting up remote caching and DDoS protection
+[[Source](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)]**
+
+It also takes care of issuing SSL certificates.
+
+The traffic between the user and Cloudflare
+is automatically SSL encrypted, but the traffic
+between Cloudflare and our server needs one
+extra step to be SSL encrypted -- i.e.
+download the "Cloudflare-issued SSL certificate"
+on their settings and install it in our server.
+-->
+
 
 ### Kubernetes way
 
@@ -292,114 +395,6 @@ and therefore made Nsustain possible.
 
 <br>
 <br>
-
-<!--
-
-We run Nsustain on Kubernetes, but
-you can slow run Nsustain on
-Docker Compose. If your host is
-a single computer, then
-Docker Compose is better suited.
-If you want to use two or more
-hosts, then run on Kubernetes.
-
-# ----------------
-# October 24, 2022
-1. How to spin up a development server
-2. How to host your production server
-
-2.1 if you're using only one server host:
-Docker Compose Method
-General description of this method
-
-2.2 if you're using two or more servet hosts:
-Kubernetes Method
-Describe what this method looks like and
-my personal explanation of this method
-
-3. How we deploy [Nsustain.com](https://Nsustain.com)
-We got the domain name nsustain.com from Google Domains.
-When we first started, we hosted on a DigitalOcean droplet:
- - Ubuntu 22.04 (LTS) x64, 1 vCPU, 1GB RAM, 10GB SSD ($6 per month)
- - Backups service on ($1.2 per month)
-
-Since ... We then migrated to IBM Cloud Kubernetes because ...
- - Two worker nodes, each containing 2 vCPU, 4GB RAM, and 125GB SSD ($166 per month but first for the first month because of the $200 sign-ups credit)
-
-*. Explanation on how it works
- - where does it begin and where does it end
- - folder structure and how everything works with each other
-
-
-1.1 ...
-### Install Docker
-Source: https://docs.docker.com/compose/install/linux/#install-using-the-repository
-
-We use Fedora Linux. If you're using any other opearting system,
-Docker installation guide for outher operating systems is at
-https://docs.docker.com/compose/install/linux/#install-using-the-repository
-sudo dnf -y install dnf-plugins-core
-sudo dnf config-manager \
-         --add-repo \
-         https://download.docker.com/linux/fedora/docker-ce.repo
-
-1. 2 if you're setting up SSL:
-
-
-# Run a shell inside the docker container
-docker compose exec -it flarum sh
-
-# Run certbot. It automatically generates a certificate for you
-certbot
-
-# Change flarum setting
-cd /var/www/html/flarum
-vim config.php
-<Change 'uri' => 'http://nsustain.com' to 'uri' => 'https://nsustain.com'>
-<Ctrl + d in order to log out of the docker exec session>
-cd /nsustain.com/src/docker
-vim .envflarum
-<Change FORUM_URL="http://nsustain.com" => FORUM_URL="https://nsustain.com">
-
-# Reset flarum
-php flarum cache:clear
-php flarum assets:publish
-
-How to renew the certificate:
-https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
-
-
-
-**Getting a domain from a domain registrar**<br>
-
-Our domain name
-**[[Nsustain.com](nsustain.com)]**
-costs $12 per year.
-
-**(Optional) Setting up a custom-domain email forwarding service
-[[Source](https://forwardemail.net/en/faq#how-do-i-get-started-and-set-up-email-forwarding)]**<br>
-
-One way of doing this would be setting up an
-email server on the VPS we just got, but
-we didn't need such complexity. We didn't
-need to have multiple email accounts.
-We could just use one email account.
-All our email needs were such that just using an email
-forwarding service would solve all of them.
-
-**Setting up remote caching and DDoS protection
-[[Source](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/)]**
-
-It also takes care of issuing SSL certificates.
-
-The traffic between the user and Cloudflare
-is automatically SSL encrypted, but the traffic
-between Cloudflare and our server needs one
-extra step to be SSL encrypted -- i.e.
-download the "Cloudflare-issued SSL certificate"
-on their settings and install it in our server.
--->
-
 <br>
 <br>
 

@@ -190,36 +190,30 @@ Docker Compose tends to have less configs to take care of.
 
 ### Docker Compose way
 
-***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
-Default env variables...
+First, we have to override the default environmental variables.
+Otherwise, your website's admin credentials will be using
+the same ones as ID: `nim3594` and PW: `369FQUv4eS`
+because these env variables are being used by default.
 
+<br>
+
+***Override the default env variables at `.envflarum` and `.envmariadb`***<br>
 ```bash
 # HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
 cd nsustain.com/src/docker
 cp exampleenvflarum .envflarum
+vim .envflarum
+#<Edit the values of the env variables>
+
 cp exampleenvmariadb .envmariadb
-#<On this file, uncomment "env_file: - .envflarum">
-#<On this file, uncomment "env_file: - .envmariadb">
+vim .envmariadb
+#<Edit the values of the env variables>
 ```
 
-Now, every env varialble you write on .envflarum and .envmariadb
-will be used inside your server when you "docker compose up -d"
-To deter brute-force attacks, we recommend you to set every
-password with lengthy, non-dictionary words.
+<br>
 
-Never run your server without
-first changing the admin password,
-MariaDB root password, and database password.
-
-***How to change the admin password, MariaDB root password, and database password***<br>
+***Override default env variables at `compose.yaml`***<br>
 ```bash
-# ... Be simple and concise!
-```
-
-***Override default env variables***<br>
-```bash
-# We use vim, but you can use any code editor
-cd nsustain.com/src/docker
 vim compose.yaml
 ```
 ```yaml
@@ -240,34 +234,25 @@ vim compose.yaml
       - .envmariadb
 ```
 
+Now, every env varialble you write on .envflarum and .envmariadb
+will be used inside your server.
+We recommend you to set every password with lengthy, non-dictionary words.
+If you can use a password manager and completely randomize the passwords,
+that'd be even better. Never run your server without
+first changing the admin password,
+MariaDB root password, and database password.
+
 <br>
+
+***Run***<br>
+```bash
+docker compose up -d
+```
+
 <br>
 
 <!--
 
-We run Nsustain on Kubernetes, but
-you can slow run Nsustain on
-Docker Compose. If your host is
-a single computer, then
-Docker Compose is better suited.
-If you want to use two or more
-hosts, then run on Kubernetes.
-
-# ----------------
-# October 24, 2022
-1. How to spin up a development server
-2. How to host your production server
-
-2.1 if you're using only one server host:
-Docker Compose Method
-General description of this method
-
-2.2 if you're using two or more servet hosts:
-Kubernetes Method
-Describe what this method looks like and
-my personal explanation of this method
-
-3. How we deploy [Nsustain.com](https://Nsustain.com)
 We got the domain name nsustain.com from Google Domains.
 When we first started, we hosted on a DigitalOcean droplet:
  - Ubuntu 22.04 (LTS) x64, 1 vCPU, 1GB RAM, 10GB SSD ($6 per month)
@@ -300,8 +285,6 @@ php flarum assets:publish
 How to renew the certificate:
 https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
 
-
-
 **Getting a domain from a domain registrar**<br>
 
 Our domain name
@@ -331,7 +314,6 @@ extra step to be SSL encrypted -- i.e.
 download the "Cloudflare-issued SSL certificate"
 on their settings and install it in our server.
 -->
-
 
 ### Kubernetes way
 

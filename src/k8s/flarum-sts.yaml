@@ -1,0 +1,104 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: flarum
+  name: flarum
+spec:
+  ports:
+    - name: nginx-http-port
+      port: 80
+      targetPort: 80
+    - name: nginx-https-port
+      port: 443
+      targetPort: 443
+    - name: php-fpm-port
+      port: 9000
+      targetPort: 9000
+  selector:
+    app: flarum
+    io.kompose.service: flarum
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flarum
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: flarum
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flarum
+      io.kompose.service: flarum
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        app: flarum
+        io.kompose.service: flarum
+    spec:
+      containers:
+        - envFrom:
+          - secretRef:
+              name: flarum-secrets
+          image: nsustain/flarum:latest
+          # command: [ "/bin/bash", "-c", "--" ]
+          # args: [ "while true; do sleep 30; done;" ]
+          name: flarum
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+            - containerPort: 9000
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/www/html/flarum
+              name: flarum-data
+            - mountPath: /etc/nginx
+              name: nginx-conf
+            - mountPath: /etc/letsencrypt
+              name: letsencrypt-data
+            - mountPath: /var/lib/letsencrypt
+              name: letsencrypt-lockfiles
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 0
+      volumes:
+        - name: flarum-data
+          hostPath:
+            # Directory location on host
+            path: /nsustain/flarum
+            type: DirectoryOrCreate
+        - name: nginx-conf
+          hostPath:
+            path: /nsustain/nginx
+            type: DirectoryOrCreate
+        - name: letsencrypt-data
+          hostPath:
+            path: /nsustain/letsencrypt-data
+            type: DirectoryOrCreate
+        - name: letsencrypt-lockfiles
+          hostPath:
+            path: /nsustain/letsencrypt-lockfiles
+            type: DirectoryOrCreate
+
+# "Deployments are designed for stateless applications ...
+# StatefulSets are the recommended method of deploying stateful
+# applications that require a unique volume per replica. By using
+# StatefulSets with PersistentVolumeClaim templates, you can have
+# applications that can scale up automatically with unique
+# PersistentVolumesClaims associated to each replica Pod."
+# Source:
+#   https://cloud.google.com/kubernetes-engine/docs/concepts/persistent-volumes#deployments_vs_statefulsets

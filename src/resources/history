@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# These are docker and kubectl commands we found useful.
+# You can ignore this file.
+
 # -----------------------------------------
 # K8s
 # -----------------------------------------

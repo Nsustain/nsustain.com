@@ -1,3 +1,8 @@
+# ----------------------------------------------------------
+# HOW WE DEPLOY TO K8S
+#   cd nsustain.com/src/k8s
+#   kubectl apply -f ../k8s
+# ----------------------------------------------------------
 apiVersion: v1
 kind: Service
 metadata:

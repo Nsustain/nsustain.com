@@ -82,11 +82,7 @@ data:
     # Source:
     #   https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/local-management/ingress/
     ingress:
-    - hostname: codersforearth.com
-      service: http://flarum:80
-    #- hostname: hello.codersforearth.com
-    #  service: http://web-service:80
-    - hostname: test.codersforearth.com
-      service: hello_world
+    - hostname: nsustain.com
+      service: http://nsustain.com:80
     # Reply 404 to hostnames that don't match with any of the above
     - service: http_status:404

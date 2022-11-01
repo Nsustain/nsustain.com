@@ -12,13 +12,13 @@ spec:
   ports:
     - name: nginx-http-port
       port: 80
-      # targetPort: 80
+      targetPort: 80
     - name: nginx-https-port
       port: 443
-      # targetPort: 443
+      targetPort: 443
     - name: php-fpm-port
       port: 9000
-      # targetPort: 9000
+      targetPort: 9000
   selector:
     app: flarum
     io.kompose.service: flarum
@@ -56,6 +56,8 @@ spec:
           - secretRef:
               name: flarum-secrets
           image: nsustain/flarum:latest
+          # command: [ "/bin/bash", "-c", "--" ]
+          # args: [ "while true; do sleep 30; done;" ]
           name: flarum
           ports:
             - containerPort: 80

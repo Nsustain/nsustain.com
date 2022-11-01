@@ -14,7 +14,7 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.5."
+LABEL com.nsustain.version="1.5"
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
@@ -115,8 +115,10 @@ RUN apk update && \
  # mounts with the hostPath mechanism, container's target location
  # is overwritten by the host's origin location.
  # Thus, this is the reason why we copy to slightly different directories here.
- && mv /var/www/html/flarum /var/www/html/flarum.backup \
- && mv /etc/nginx /etc/nginx.backup
+ && mkdir -p /var/www/html/flarum.backup \
+ && mkdir -p /etc/nginx.backup \
+ && \cp -r /var/www/html/flarum/. /var/www/html/flarum.backup \
+ && \cp -r /etc/nginx/. /etc/nginx.backup
 
 COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint

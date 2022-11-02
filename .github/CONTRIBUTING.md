@@ -81,9 +81,8 @@ Branch Name Do not's:
 
 # 1. Naming Conventions
 
-Folder names and file names should be
-all underscore with hyphens (-) as
-word seperators.
+Folder names and file names should
+use hyphens (-) as word seperators.
 For example, we prefer `docker-images`
 to `Docker_Images`.
 Hypens (-) are preferred over

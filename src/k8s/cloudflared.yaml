@@ -70,7 +70,10 @@ metadata:
   name: cloudflared
 data:
   config.yaml: |
-    tunnel: tunnel-nsustain
+    # CHANGE TO YOUR TUNNEL NAME.
+    # Other than the tunnel name and the ingress rules at the bottom,
+    # you don't have to change any other config.
+    tunnel: nsustain
     credentials-file: /etc/cloudflared/creds/credentials.json
     # Serves the metrics server under /metrics and the readiness server under /ready
     metrics: 0.0.0.0:2000
@@ -82,11 +85,11 @@ data:
     # Source:
     #   https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/local-management/ingress/
     ingress:
-    - hostname: codersforearth.com
+    - hostname: nsustain.com
       service: http://flarum:80
     #- hostname: hello.codersforearth.com
     #  service: http://web-service:80
-    - hostname: test.codersforearth.com
+    - hostname: test.nsustain.com
       service: hello_world
     # Reply 404 to hostnames that don't match with any of the above
     - service: http_status:404

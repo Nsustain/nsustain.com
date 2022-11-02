@@ -12,7 +12,7 @@ spec:
   ports:
     - name: mariadb-port
       port: 3306
-      # targetPort: 3306
+      targetPort: 3306
   selector:
     app: mariadb
     io.kompose.service: mariadb

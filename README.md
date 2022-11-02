@@ -183,7 +183,7 @@ therefore are willing to provision two or more servers
 to host it, then Kubernetes would be perfect for you.
 If you're trying to run your website on a single host,
 then we personally like Docker Compose because it just
-feels faster tp deploy, easier to maintain.
+feels faster to deploy, easier to maintain.
 Docker Compose tends to have less configs to take care of.
 
 <br>
@@ -318,8 +318,9 @@ on their settings and install it in our server.
 ### Kubernetes way
 
 Usually, people expose their microservices in Kubernetes using
-LoadBalancer, NodePort, or Ingress, but we found it just more convinient
-to used IBM Cloud Kubernetes Service (IKS) and Cloudflare Tunnel.
+LoadBalancer, NodePort, or Ingress, but we found it just more
+convinient to use IBM Cloud Kubernetes Service (IKS)
+and Cloudflare Tunnel.
 
 What we did was to first download IBM Cloud CLI from
 https://cloud.ibm.com/docs/cli?topic=cli-getting-started
@@ -362,7 +363,7 @@ kubectl delete -f ../k8s
 
 <br>
 
-***How we usually do when we debug***<br>
+***Debugging workflows we usually use***<br>
 ```bash
 kubectl exec -it flarum... -- sh
 kubectl exec -it mariadb... -- sh
@@ -395,12 +396,12 @@ and therefore made Nsustain possible.
  What you see on [Nsustain.com](https://nsustain.com) is mainly thanks to Flarum.
  As you can see, it's beautiful. It has cool interfaces and functionalities.
  If you liked Nsustain, go check out Flarum's own forum-development discussion forum at https://discuss.flarum.org
- 
+
  - So, the first thing we did when we started Nsustain was to choose a web framework, and as you can see,
  we chose Flarum, which turned out to be the best possible framework for Nsustain. The next thing we did
  was to containerize Flarum with Docker. We also used Docker Compose to make deployment
  as easy as possible for not only ourselves, but also for future possible contriutors 😍
- 
+
  - Next, we went just one step further. What if our server can't handle big surges of traffic?
  We wanted to be able to serve as many people as possible. So, we used Kompose to convert
  our `compose.yaml` file into Kubernetes resource files. `kompose convert` was 98% all we needed

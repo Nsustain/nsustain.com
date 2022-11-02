@@ -46,7 +46,7 @@ possible, just read the first section ⚡
 [2.](#2-how-to-set-up-a-production-server) How to set up a production server<br>
 &#160;&#160;&#160;&#160;[A.](#docker-compose-way) Docker Compose way<br>
 &#160;&#160;&#160;&#160;[B.](#kubernetes-way) Kubernetes way<br>
-[3.](#3-how-nsustain-works) How Nsustain works
+[3.](#3-open-source-projects-we-used) Open-source projects we used
 
 <br>
 <br>
@@ -173,130 +173,86 @@ docker compose up -d
 
 ## 2. How to set up a production server
 
-***Difference between the development server and [Nsustain.com](https://nsustain.com)***<br>
-Default env variables...
+We have two ways of setting up a production server:
+(a) Docker Compose way and (b) Kubernetes way.
+You can use either way if you have a preference of one over the other,
+but we generally recommend to use Docker Compose.
 
-
-```bash
-# HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
-cd nsustain.com/src/docker
-cp exampleenvflarum .envflarum
-cp exampleenvmariadb .envmariadb
-#<On this file, uncomment "env_file: - .envflarum">
-#<On this file, uncomment "env_file: - .envmariadb">
-```
-
-Now, every env varialble you write on .envflarum and .envmariadb
-will be used inside your server when you "docker compose up -d"
-To deter brute-force attacks, we recommend you to set every
-password with lengthy, non-dictionary words.
-
-Never run your server without
-first changing the admin password,
-MariaDB root password, and database password.
-
-***How to change the admin password, MariaDB root password, and database password***<br>
-```bash
-# ... Be simple and concise!
-```
+If you want your website to be highly available and
+therefore are willing to provision two or more servers
+to host it, then Kubernetes would be perfect for you.
+If you're trying to run your website on a single host,
+then we personally like Docker Compose because it just
+feels faster tp deploy, easier to maintain.
+Docker Compose tends to have less configs to take care of.
 
 <br>
 
 ### Docker Compose way
 
-### Kubernetes way
+First, we have to override the default environmental variables.
+Otherwise, your website's admin credentials will be using
+the same ones as ID: `nim3594` and PW: `369FQUv4eS`
+because these env variables are being used by default.
 
-***Expose Nsustain to the internet with Cloudflare Tunnel***<br>
+<br>
+
+***Override the default env variables at `.envflarum` and `.envmariadb`***<br>
 ```bash
-# Source:
-#   https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
+# HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
+cd nsustain.com/src/docker
+cp exampleenvflarum .envflarum
+vim .envflarum
+#<Edit the values of the env variables>
+
+cp exampleenvmariadb .envmariadb
+vim .envmariadb
+#<Edit the values of the env variables>
 ```
 
-
-<br>
 <br>
 
-## 3. How Nsustain works
-
-Nsustain is not a work of few men and women.
-Instead, it's built on top of the shoulders
-of open-source giants. We'd never have been able
-to create Nsustain, were it not for these
-wonderful open-source projects.
-We sincerely thank everyone who made
-it possible for us to bring Nsustain into existence.
-
-| Project | Link |
-| ------- | ----------- |
-| **Flarum** | https://github.com/flarum |
-| **Docker Compose** | https://github.com/docker/compose |
-| **Kompose** | https://github.com/kubernetes/kompose |
-| **Kubernetes** | https://github.com/kubernetes |
-
-List the reason why each stack or framework was
-chosen.
-
-<br>
-
-***How to install an extension***<br>
-Flarum extensions are available at
-https://extiverse.com/ which is created by
-one of Flarum core developers.
-You can install them with
+***Override default env variables at `compose.yaml`***<br>
 ```bash
-# ...
+vim compose.yaml
+```
+```yaml
+    # Uncomment to override env variables for flarum
+    #env_file:
+    #  -\# .envflarum
+
+    # It should look like this now:
+    env_file:
+      - .envflarum
+
+    # Uncomment to override env variables for mariadb
+    #env_file:
+    #  -\# .envmariadb
+
+    # It should look like this now:
+    env_file:
+      - .envmariadb
 ```
 
-
----
-
-Read this section if you'd like to get a
-general big picture of how Nsustain works.
-
-Flarum, php, Mithrill.js,
-MariaDB, PHP-FPM, Nginx, and
-Flarum extensions
-
-How we started from DigitalOcean
-Droplet with Docker Compose, but then
-decided to migrate to IBM Cloud
-Kubernetes. How we used Kompose to
-convert our
-`nsustain.com/src/docker/compose.yaml`
-into Kubernetes objects.
-
-How we used IBM Cloud load balancer and
-Cloudflare tunnels to connect our Kubernetes
-load balancer to our domain name Nsustain.com
+Now, every env varialble you write on .envflarum and .envmariadb
+will be used inside your server.
+We recommend you to set every password with lengthy, non-dictionary words.
+If you can use a password manager and completely randomize the passwords,
+that'd be even better. Never run your server without
+first changing the admin password,
+MariaDB root password, and database password.
 
 <br>
+
+***Run***<br>
+```bash
+docker compose up -d
+```
+
 <br>
 
 <!--
 
-We run Nsustain on Kubernetes, but
-you can slow run Nsustain on
-Docker Compose. If your host is
-a single computer, then
-Docker Compose is better suited.
-If you want to use two or more
-hosts, then run on Kubernetes.
-
-# ----------------
-# October 24, 2022
-1. How to spin up a development server
-2. How to host your production server
-
-2.1 if you're using only one server host:
-Docker Compose Method
-General description of this method
-
-2.2 if you're using two or more servet hosts:
-Kubernetes Method
-Describe what this method looks like and
-my personal explanation of this method
-
-3. How we deploy [Nsustain.com](https://Nsustain.com)
 We got the domain name nsustain.com from Google Domains.
 When we first started, we hosted on a DigitalOcean droplet:
  - Ubuntu 22.04 (LTS) x64, 1 vCPU, 1GB RAM, 10GB SSD ($6 per month)
@@ -305,26 +261,8 @@ When we first started, we hosted on a DigitalOcean droplet:
 Since ... We then migrated to IBM Cloud Kubernetes because ...
  - Two worker nodes, each containing 2 vCPU, 4GB RAM, and 125GB SSD ($166 per month but first for the first month because of the $200 sign-ups credit)
 
-*. Explanation on how it works
- - where does it begin and where does it end
- - folder structure and how everything works with each other
-# ----------------
 
-1.1 ...
-### Install Docker
-Source: https://docs.docker.com/compose/install/linux/#install-using-the-repository
-
-We use Fedora Linux. If you're using any other opearting system,
-Docker installation guide for outher operating systems is at
-https://docs.docker.com/compose/install/linux/#install-using-the-repository
-sudo dnf -y install dnf-plugins-core
-sudo dnf config-manager \
-         --add-repo \
-         https://download.docker.com/linux/fedora/docker-ce.repo
-
-1. 2 if you're setting up SSL:
-
-
+HOW TO SET UP SSL CERTIFICATE
 # Run a shell inside the docker container
 docker compose exec -it flarum sh
 
@@ -346,16 +284,6 @@ php flarum assets:publish
 
 How to renew the certificate:
 https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
-
-
-1.1.2 How to add Flarum extension
-cd nsustain.com/src/docker
-docker compose exec -it flarum sh
-composer require fof/sitemap
--->
-
-
-
 
 **Getting a domain from a domain registrar**<br>
 
@@ -385,28 +313,68 @@ between Cloudflare and our server needs one
 extra step to be SSL encrypted -- i.e.
 download the "Cloudflare-issued SSL certificate"
 on their settings and install it in our server.
+-->
 
-<br>
-<br>
+### Kubernetes way
 
-<p align="center">
-  <b>Repository Folder Structure</b>
-</p>
-
+***Expose Nsustain to the internet with Cloudflare Tunnel***<br>
 ```bash
-# This output, by the way, can be obtained
-# with Bash `tree` command
-├──                       #
-├──                       #
-├──                       #
-├──                       #
-├── LICENSE               # details on our Apache License
-├── NOTICE.md             # `...`'s MIT License
-└── README.md             # file you're reading now. Documentation goes here
+# Source:
+#   https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 ```
 
-Explanation of every folder
 
+<br>
+<br>
+
+## 3. Open-source projects we used
+
+Nsustain is not a work of few men and women.
+Instead, it's built on top of the shoulders
+of open-source giants. We'd never have been able
+to create Nsustain, were it not for these
+wonderful open-source projects.
+We sincerely thank everyone who contributed
+and supported these open-source projects
+and therefore made Nsustain possible.
+
+<br>
+
+| Project | Link |
+| ------- | ----------- |
+| **Flarum** | https://github.com/flarum |
+| **Docker Compose** | https://github.com/docker/compose |
+| **Kompose** | https://github.com/kubernetes/kompose |
+| **Kubernetes** | https://github.com/kubernetes |
+
+<br>
+
+ - Flarum is a web forum framework that handles both the front-end and the back-end itself.
+ What you see on [Nsustain.com](https://nsustain.com) is mainly thanks to Flarum.
+ As you can see, it's beautiful. It has cool interfaces and functionalities.
+ If you liked Nsustain, go check out Flarum's own forum-development discussion forum at https://discuss.flarum.org
+ 
+ - So, the first thing we did when we started Nsustain was to choose a web framework, and as you can see,
+ we chose Flarum, which turned out to be the best possible framework for Nsustain. The next thing we did
+ was to containerize Flarum with Docker. We also used Docker Compose to make deployment
+ as easy as possible for not only ourselves, but also for future possible contriutors 😍
+ 
+ - Next, we went just one step further. What if our server can't handle big surges of traffic?
+ We wanted to be able to serve as many people as possible. So, we used Kompose to convert
+ our `compose.yaml` file into Kubernetes resource files. `kompose convert` was 98% all we needed
+ to make the files that we have now. Kompose looks at the compose file and then
+ automatcally converts everything including container image declarations, ports, volume bindings
+ to Kubernetes `.yaml` files for us.
+ ```bash
+ # How to convert the compose file into K8s resource files
+ cd nsustain.com/src/docker
+ mkdir ../k8s
+ cp compose.yaml ../k8s/docker-compose.yaml
+ cd ../k8s
+ kompose convert
+ ```
+
+<br>
 <br>
 <br>
 <br>
@@ -430,14 +398,3 @@ please email security@nsustain.com
 <br>
 <br>
 <br>
-
-<!-- Summary example
-<details>
-<summary>lsp finder</summary>
-
-<div align='center'>
-<img
-src="https://user-images.githubusercontent.com/41671631/181253960-cef49f9d-db8b-4b04-92d8-cb6322749414.png" />
-</div>
-</details>
--->

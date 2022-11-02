@@ -317,12 +317,56 @@ on their settings and install it in our server.
 
 ### Kubernetes way
 
-***Expose Nsustain to the internet with Cloudflare Tunnel***<br>
+Usually, people expose their microservices in Kubernetes using
+LoadBalancer, NodePort, or Ingress, but we found it just more convinient
+to used IBM Cloud Kubernetes Service (IKS) and Cloudflare Tunnel.
+
+What we did was to first download IBM Cloud CLI from
+https://cloud.ibm.com/docs/cli?topic=cli-getting-started
+and then
+
 ```bash
-# Source:
-#   https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
+ibmcloud login
+
+# Get ibmcloud Kubernetes configs so that we can run
+# kubectl from our own computer.
+ibmcloud ks cluster ls  # Suppose your cluster name is nsustain
+ibmcloud ks cluster config --cluster nsustain --admin
 ```
 
+After that, we were able to expose [Nsustain.com](https://nsustain.com)
+to the internet - without having to configure LoadBalancer, NodePort, or Ingress -
+by installing Cloudflare Tunnel to proxy everything for us,
+which by the way they say is more secure than directly exposing our microservices
+to the internet. Instructions for installing Cloudflare Tunnel on a kubernetes cluster
+is available at
+https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
+
+<br>
+
+***Run***<br>
+```bash
+cd nsustain.com/src/k8s
+vim cloudflared.yaml
+#<Edit "hostname: nsustain.com" and "service: http://nsustain.com:80"
+#   to "hostname: yourdomain.com" and "service: http://yourservicename:port">
+kubectl apply -f ../k8s
+```
+
+<br>
+
+***How to stop***<br>
+```bash
+kubectl delete -f ../k8s
+```
+
+<br>
+
+***How we usually do when we debug***<br>
+```bash
+kubectl exec -it flarum... -- sh
+kubectl exec -it mariadb... -- sh
+```
 
 <br>
 <br>
@@ -346,8 +390,6 @@ and therefore made Nsustain possible.
 | **Docker Compose** | https://github.com/docker/compose |
 | **Kompose** | https://github.com/kubernetes/kompose |
 | **Kubernetes** | https://github.com/kubernetes |
-
-<br>
 
  - Flarum is a web forum framework that handles both the front-end and the back-end itself.
  What you see on [Nsustain.com](https://nsustain.com) is mainly thanks to Flarum.

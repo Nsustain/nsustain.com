@@ -234,7 +234,7 @@ vim compose.yaml
       - .envmariadb
 ```
 
-Now, every env varialble you write on .envflarum and .envmariadb
+Now, every env varialble you write on `.envflarum` and `.envmariadb`
 will be used inside your server.
 We recommend you to set every password with lengthy, non-dictionary words.
 If you can use a password manager and completely randomize the passwords,
@@ -337,9 +337,10 @@ ibmcloud ks cluster config --cluster nsustain --admin
 
 After that, we were able to expose [Nsustain.com](https://nsustain.com)
 to the internet - without having to configure LoadBalancer, NodePort, or Ingress -
-by installing Cloudflare Tunnel to proxy everything for us,
-which by the way they say is more secure than directly exposing our microservices
-to the internet. Instructions for installing Cloudflare Tunnel on a kubernetes cluster
+by installing Cloudflare Tunnel to proxy everything for us.
+This, according to Cloudflare, is more secure than directly exposing our microservices
+to the internet because the server is now protected and hidden behind
+the Cloudflare Tunnel. Instructions for installing Cloudflare Tunnel
 is available at
 https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 

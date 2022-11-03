@@ -409,7 +409,8 @@ and therefore made Nsustain possible.
  automatcally converts everything including container image declarations, ports, volume bindings
  to Kubernetes `.yaml` files for us.
  ```bash
- # How to convert the compose file into K8s resource files
+ # This is how we used Kompose in order to
+ # convert `compose.yaml` into K8s resource files.
  cd nsustain.com/src/docker
  mkdir ../k8s
  cp compose.yaml ../k8s/docker-compose.yaml

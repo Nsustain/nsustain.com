@@ -1,11 +1,10 @@
 # .env files should never be indexed by git.
-# Howver, we include .exampleenv... files such that
+# However, we include .exampleenv... files such that
 # all our servers just work out of the box for development purposes.
 .*env*
 !exampleenvflarum
 !exampleenvmariadb
 
-# Likewise, *secret* files for K8s should never be
-# indexed by git as these contain credentials for Flarum and MariaDB
+# Likewise, *secret* files for K8s should never be indexed by git.
 *secret*
 !secret.yaml.example

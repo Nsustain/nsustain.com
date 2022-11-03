@@ -234,7 +234,7 @@ vim compose.yaml
       - .envmariadb
 ```
 
-Now, every env varialble you write on `.envflarum` and `.envmariadb`
+Now, every env variable you write on `.envflarum` and `.envmariadb`
 will be used inside your server.
 We recommend you to set every password with lengthy, non-dictionary words.
 If you can use a password manager and completely randomize the passwords,

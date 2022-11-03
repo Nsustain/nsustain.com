@@ -238,7 +238,7 @@ Now, every env varialble you write on `.envflarum` and `.envmariadb`
 will be used inside your server.
 We recommend you to set every password with lengthy, non-dictionary words.
 If you can use a password manager and completely randomize the passwords,
-that'd be even better. Never run your server without
+that'd be even better. Never run your production server without
 first changing the admin password,
 MariaDB root password, and database password.
 

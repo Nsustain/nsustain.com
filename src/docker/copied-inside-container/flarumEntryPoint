@@ -73,6 +73,7 @@ then
   composer require fof/links:"*"
   composer require fof/sitemap:"*"
   composer require fof/nightmode:"*"
+  composer require fof/subscribed:"*"
   composer require v17development/flarum-seo:"*"
   composer require datlechin/flarum-link-preview:"*"
   composer require clarkwinkelmann/flarum-ext-shadow-ban:"*"

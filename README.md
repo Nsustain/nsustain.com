@@ -199,7 +199,6 @@ because these env variables are used by default.
 
 ***Override the default env variables at `.envflarum` and `.envmariadb`***<br>
 ```bash
-# HOW TO OVERRIDE THE ENV VARIABLES WITH YOUR OWN
 cd nsustain.com/src/docker
 cp exampleenvflarum .envflarum
 vim .envflarum

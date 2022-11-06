@@ -86,6 +86,13 @@ data:
     #   https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/local-management/ingress/
     ingress:
     - hostname: nsustain.com
-      service: http://nsustain.com:80
+      service: http://flarum:80
+    # Uncomment to enable Cloudflare Tunnel debugging feature.
+    # If you enable this, http://test.nsustain.com will direct
+    # you to Cloudflare Tunnel's built-in hello-world image.
+    # We used to use this feature for testing if our K8s
+    # is connected to Cloudflare Tunnel or not.
+    #- hostname: test.nsustain.com
+    #  service: hello_world
     # Reply 404 to hostnames that don't match with any of the above
     - service: http_status:404

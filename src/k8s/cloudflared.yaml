@@ -87,6 +87,7 @@ data:
     ingress:
     - hostname: nsustain.com
       service: http://flarum:80
+
     # Uncomment to enable Cloudflare Tunnel debugging feature.
     # If you enable this, http://test.nsustain.com will direct
     # you to Cloudflare Tunnel's built-in hello-world image.
@@ -94,5 +95,6 @@ data:
     # is connected to Cloudflare Tunnel or not.
     #- hostname: test.nsustain.com
     #  service: hello_world
+
     # Reply 404 to hostnames that don't match with any of the above
     - service: http_status:404

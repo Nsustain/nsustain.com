@@ -211,7 +211,7 @@ vim .envmariadb
 
 <br>
 
-***Override default env variables at `compose.yaml`***<br>
+***Enable `.envflarum` and `.envmariadb`***<br>
 ```bash
 vim compose.yaml
 ```

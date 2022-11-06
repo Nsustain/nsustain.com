@@ -350,8 +350,7 @@ https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 cd nsustain.com/src/k8s
 vim cloudflared.yaml
 #<1. Edit `tunnel: nsustain` to `tunnel: [Your Cloudflare Tunnel name]`>
-#<2. Edit `hostname: nsustain.com` and `service: http://nsustain.com:80`
-#      to `hostname: yourdomain.com` and `service: http://yourservicename:port`>
+#<2. Edit `hostname: nsustain.com` to `hostname: yourdomain.com`>
 kubectl apply -f ../k8s
 ```
 

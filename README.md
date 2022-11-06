@@ -218,7 +218,7 @@ vim compose.yaml
 ```yaml
     # Uncomment to override env variables for flarum
     #env_file:
-    #  -\# .envflarum
+    #  - .envflarum
 
     # It should look like this now:
     env_file:
@@ -226,7 +226,7 @@ vim compose.yaml
 
     # Uncomment to override env variables for mariadb
     #env_file:
-    #  -\# .envmariadb
+    #  - .envmariadb
 
     # It should look like this now:
     env_file:

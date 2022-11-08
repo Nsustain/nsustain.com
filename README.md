@@ -192,8 +192,8 @@ Docker Compose tends to have less configs to take care of.
 
 First, we have to override the default environmental variables.
 Otherwise, your website's admin credentials will be using
-the same ones as ID: `nim3594` and PW: `369FQUv4eS`
-because these env variables are used by default.
+ID: `nim3594` and PW: `369FQUv4eS`
+because these are baked inside as default env variables.
 
 <br>
 
@@ -321,7 +321,7 @@ LoadBalancer, NodePort, or Ingress, but we found it just more
 convinient to use IBM Cloud Kubernetes Service (IKS)
 and Cloudflare Tunnel.
 
-What we did was to first download IBM Cloud CLI from
+What we did was to first get IBM Cloud CLI from
 https://cloud.ibm.com/docs/cli?topic=cli-getting-started
 and then
 
@@ -339,7 +339,7 @@ to the internet - without having to configure LoadBalancer, NodePort, or Ingress
 by installing Cloudflare Tunnel to proxy everything for us.
 This, according to Cloudflare, is more secure than directly exposing our microservices
 to the internet because the server is now protected and hidden behind
-the Cloudflare Tunnel. We followed the installation guide at
+Cloudflare Tunnel. We followed the installation guide at
 https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 
 <br>

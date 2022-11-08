@@ -7,4 +7,4 @@
 
 # Likewise, *secret* files for K8s should never be indexed by git.
 *secret*
-!examplesecret.yaml
+!secret.yaml.example

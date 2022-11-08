@@ -339,7 +339,7 @@ to the internet - without having to configure LoadBalancer, NodePort, or Ingress
 by installing Cloudflare Tunnel to proxy everything for us.
 This, according to Cloudflare, is more secure than directly exposing our microservices
 to the internet because the server is now protected and hidden behind
-the Cloudflare Tunnel. We followed the installation guide at
+Cloudflare Tunnel. We followed the installation guide at
 https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 
 <br>

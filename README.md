@@ -321,7 +321,7 @@ LoadBalancer, NodePort, or Ingress, but we found it just more
 convinient to use IBM Cloud Kubernetes Service (IKS)
 and Cloudflare Tunnel.
 
-What we did was to first download IBM Cloud CLI from
+What we did was to first get IBM Cloud CLI from
 https://cloud.ibm.com/docs/cli?topic=cli-getting-started
 and then
 

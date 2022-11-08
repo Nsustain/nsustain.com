@@ -27,9 +27,8 @@ spec:
         image: cloudflare/cloudflared:latest
         args:
         - tunnel
-        # Points cloudflared to the config file, which configures what
-        # cloudflared will actually do. This file is created by a ConfigMap
-        # below.
+        # Points cloudflared to the config file, which configures what cloudflared
+        # will actually do. This file is created by a ConfigMap below.
         - --config
         - /etc/cloudflared/config/config.yaml
         - run
@@ -74,24 +73,27 @@ data:
     # Other than the tunnel name and the ingress rules at the bottom,
     # you don't have to change any other config.
     tunnel: nsustain
-    credentials-file: /etc/cloudflared/creds/credentials.json
+
     # Serves the metrics server under /metrics and the readiness server under /ready
     metrics: 0.0.0.0:2000
+    credentials-file: /etc/cloudflared/creds/credentials.json
+    
     # Autoupdates applied in a k8s pod will be lost when the pod is removed or restarted, so
     # autoupdate doesn't make sense in Kubernetes. However, outside of Kubernetes, we strongly
     # recommend using autoupdate.
     no-autoupdate: false
 
+    # Cloudflare Tunnel ingress rules
     # Source:
     #   https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/local/local-management/ingress/
     ingress:
     - hostname: nsustain.com
       service: http://flarum:80
 
-    # Uncomment to enable Cloudflare Tunnel debugging feature.
+    # Uncomment to enable Cloudflare Tunnel's debugging feature.
     # If you enable this, http://test.nsustain.com will direct
     # you to Cloudflare Tunnel's built-in hello-world image.
-    # We used to use this feature for testing if our K8s
+    # We can, for example, use this feature for testing if our K8s
     # is connected to Cloudflare Tunnel or not.
     #- hostname: test.nsustain.com
     #  service: hello_world

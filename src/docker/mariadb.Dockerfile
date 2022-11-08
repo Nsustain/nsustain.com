@@ -14,7 +14,7 @@ FROM mariadb:latest
 
 # Again, these are randomized secrets just for
 # development environments. In your production environments,
-# you should never use these env variables.
+# you should never use these passwords.
 ENV MARIADB_ROOT_PASSWORD="TTBXkgeu25GVyge8FQrZBPj7HYiuG9qCawRcff5ukP"
 ENV MARIADB_DATABASE="flarum"
 ENV MARIADB_USER="flarum"

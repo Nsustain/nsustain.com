@@ -192,8 +192,8 @@ Docker Compose tends to have less configs to take care of.
 
 First, we have to override the default environmental variables.
 Otherwise, your website's admin credentials will be using
-the same ones as ID: `nim3594` and PW: `369FQUv4eS`
-because these env variables are used by default.
+ID: `nim3594` and PW: `369FQUv4eS`
+because these are baked inside as default env variables.
 
 <br>
 

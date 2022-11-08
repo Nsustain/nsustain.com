@@ -23,7 +23,7 @@ ENV FLARUM_VERSION="v1.5.0"
 # We included randomized secrets here so that you can can run
 # our image out of the box without any extra configuration.
 # Use these env variables just for development environments.
-# Never use these in production environments.
+# Never use these passwords in production environments.
 ENV FLARUM_TITLE="Nsustain Development Server"
 ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
 ENV FLARUM_WELCOME_TITLE="Nsustain"

@@ -77,9 +77,9 @@ docker compose up
 
 Now, Docker Compose runs a development server
 by pulling Docker Hub
-[nsustain/flarum](https://hub.docker.com/repository/docker/nsustain/flarum)
+[nsustain/flarum](https://hub.docker.com/r/nsustain/flarum)
 and
-[nsustain/mariadb](https://hub.docker.com/repository/docker/nsustain/mariadb)
+[nsustain/mariadb](https://hub.docker.com/r/nsustain/mariadb)
 images automatcially. FYI, this takes our eight-years-old laptop
 around 50 seconds to complete.
 After the first time, however,

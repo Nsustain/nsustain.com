@@ -9,6 +9,10 @@
 # Example:
 #   docker build -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest -f mariadb.Dockerfile .
 #   sudo docker push nsustain/mariadb --all-tags
+#
+# Plus, we use Docker's vulnerability scanning with:
+# Example:
+#   docker scan nsustain/mariadb:1.0 -f ./mariadb.Dockerfile --exclude-base
 # ----------------------------------------------------------------
 FROM mariadb:latest
 

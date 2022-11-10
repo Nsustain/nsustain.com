@@ -408,7 +408,7 @@ and therefore made Nsustain possible.
  As you can see, it's beautiful. It has smooth UI's and cool functionalities.
  If you liked Nsustain, go check out Flarum's own forum-development discussion forum at https://discuss.flarum.org
 
- - So, the first thing we did when we started Nsustain was to choose a web framework, and as you can see,
+ - The first thing we did when we started Nsustain was to choose a web framework, and as you can see,
  we chose Flarum, which turned out to be the best possible framework for Nsustain. The next thing we did
  was to containerize Flarum with Docker. We also used Docker Compose to make deployment
  as easy and fast as possible for Nsustain's future contributors 😍

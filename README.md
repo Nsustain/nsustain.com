@@ -411,7 +411,7 @@ and therefore made Nsustain possible.
  - The first thing we did when we started Nsustain was to choose a web framework, and as you can see,
  we chose Flarum, which turned out to be the best possible framework for us. The next thing we did
  was to containerize Flarum with Docker. We also used Docker Compose to make deployment
- as smooth as possible for Nsustain's future contributors 😍
+ as nice as possible for Nsustain's future contributors 😍
 
  - Next, we went just one step further. What if our server can't handle big surges of traffic?
  We wanted to be able to serve as many people as possible. So, we used Kompose to convert

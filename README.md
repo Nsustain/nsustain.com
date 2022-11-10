@@ -418,7 +418,7 @@ and therefore made Nsustain possible.
  our `compose.yaml` file into Kubernetes resource files.
 Kompose looks at the compose file and then automatically
 converts the compose file into Kubernetes `.yaml` resource files,
-including the definitions for the container images, volume bindings,
+including the definitions of the container image, volume bindings,
 and exposed ports.
  ```bash
  # FYI, this is how we used Kompose in order to

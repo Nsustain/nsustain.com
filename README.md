@@ -405,7 +405,7 @@ and therefore made Nsustain possible.
 
  - Flarum is a web forum framework that consists of both the front-end and the back-end itself.
  What you see on [Nsustain.com](https://nsustain.com) is largely thanks to Flarum.
- As you can see, it's beautiful. It has cool interfaces and functionalities.
+ As you can see, it's beautiful. It has smooth UI's and cool functionalities.
  If you liked Nsustain, go check out Flarum's own forum-development discussion forum at https://discuss.flarum.org
 
  - So, the first thing we did when we started Nsustain was to choose a web framework, and as you can see,

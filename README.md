@@ -364,8 +364,20 @@ kubectl delete -f ../k8s
 
 ***Debugging workflows we usually use***<br>
 ```bash
-kubectl exec -it flarum... -- sh
-kubectl exec -it mariadb... -- sh
+# How to find the name of all pods running
+kubectl get pods  # Suppose the name is flarum-84b6484cd-vj6gl
+
+# How to get all available information of a pod
+kubectl describe pods fla
+
+# How to run a shell inside the flarum container
+kubectl exec -it flarum-84b6484cd-vj6gl -- sh
+
+# Likewise, how to run a shel linside the mariadb container
+kubectl exec -it mariadb-8658c4675b-9f82m -- sh
+
+# How to extract a file from a container
+kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./
 ```
 
 <br>

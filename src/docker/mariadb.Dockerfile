@@ -9,7 +9,9 @@
 # Example:
 #   docker build --no-cache -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest -f mariadb.Dockerfile .
 #   docker scan nsustain/mariadb:1.0 -f ./mariadb.Dockerfile
-#   sudo docker push nsustain/mariadb --all-tags
+#   docker scan nsustain/mariadb:latest -f ./mariadb.Dockerfile
+#   sudo docker push nsustain/mariadb:1.0
+#   sudo docker push nsustain/mariadb:latest
 # ----------------------------------------------------------------
 FROM mariadb:latest
 

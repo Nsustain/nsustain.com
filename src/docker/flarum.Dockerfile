@@ -7,8 +7,9 @@
 # Example:
 #   docker build --no-cache -t nsustain/flarum:1.5 -t nsustain/flarum:latest -f flarum.Dockerfile .
 #   docker scan nsustain/flarum:1.5 -f ./flarum.Dockerfile
-#   sudo docker push nsustain/flarum --all-tags
-#
+#   docker scan nsustain/flarum:latest -f ./flarum.Dockerfile
+#   sudo docker push nsustain/flarum:1.5
+#   sudo docker push nsustain/flarum:latest
 # -------------------------------------------------------------------
 FROM alpine:latest
 

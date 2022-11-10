@@ -365,7 +365,7 @@ kubectl delete -f ../k8s
 ***Debugging workflows we usually use***<br>
 ```bash
 # How to find the name of all pods running
-kubectl get pods  # Suppose the name is flarum-84b6484cd-vj6gl
+kubectl get pods  # Suppose you want flarum-84b6484cd-vj6gl
 
 # How to get all available information of a pod
 kubectl describe pods fla

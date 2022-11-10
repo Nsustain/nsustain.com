@@ -433,7 +433,6 @@ and exposed ports.
 <br>
 <br>
 <br>
-<br>
 
 <p align="center">
   <b>What next?</b>

@@ -5,12 +5,10 @@
 #
 # Most of the times, we build this image with:
 # Example:
-#   docker build -t nsustain/flarum:1.5 -t nsustain/flarum:latest -f flarum.Dockerfile .
+#   docker build --no-cache -t nsustain/flarum:1.5 -t nsustain/flarum:latest -f flarum.Dockerfile .
+#   docker scan nsustain/flarum:1.5 -f ./flarum.Dockerfile --exclude-base
 #   sudo docker push nsustain/flarum --all-tags
 #
-# Plus, we use Docker's vulnerability scanning with:
-# Example:
-#   docker scan nsustain/flarum:1.5 -f ./flarum.Dockerfile --exclude-base
 # -------------------------------------------------------------------
 FROM alpine:latest
 

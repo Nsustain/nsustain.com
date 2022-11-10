@@ -7,12 +7,9 @@
 #
 # We mostly build this image with:
 # Example:
-#   docker build -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest -f mariadb.Dockerfile .
-#   sudo docker push nsustain/mariadb --all-tags
-#
-# Plus, we use Docker's vulnerability scanning with:
-# Example:
+#   docker build --no-cache -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest -f mariadb.Dockerfile .
 #   docker scan nsustain/mariadb:1.0 -f ./mariadb.Dockerfile --exclude-base
+#   sudo docker push nsustain/mariadb --all-tags
 # ----------------------------------------------------------------
 FROM mariadb:latest
 

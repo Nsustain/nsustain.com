@@ -415,12 +415,13 @@ and therefore made Nsustain possible.
 
  - Next, we went just one step further. What if our server can't handle big surges of traffic?
  We wanted to be able to serve as many people as possible. So, we used Kompose to convert
- our `compose.yaml` file into Kubernetes resource files. `kompose convert` was 98% all we needed
- to make the files that we have now. Kompose looks at the compose file and then
- automatcally converts everything including container image declarations, ports, volume bindings
- to Kubernetes `.yaml` files for us.
+ our `compose.yaml` file into Kubernetes resource files.
+Kompose looks at the compose file and then automatically
+converts the compose file into Kubernetes `.yaml` resource files,
+including the definitions for the container images, volume bindings,
+and exposed ports.
  ```bash
- # This is how we used Kompose in order to
+ # FYI, this is how we used Kompose in order to
  # convert `compose.yaml` into K8s resource files.
  cd nsustain.com/src/docker
  mkdir ../k8s

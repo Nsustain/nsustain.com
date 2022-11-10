@@ -6,7 +6,7 @@
 # Most of the times, we build this image with:
 # Example:
 #   docker build --no-cache -t nsustain/flarum:1.5 -t nsustain/flarum:latest -f flarum.Dockerfile .
-#   docker scan nsustain/flarum:1.5 -f ./flarum.Dockerfile --exclude-base
+#   docker scan nsustain/flarum:1.5 -f ./flarum.Dockerfile
 #   sudo docker push nsustain/flarum --all-tags
 #
 # -------------------------------------------------------------------

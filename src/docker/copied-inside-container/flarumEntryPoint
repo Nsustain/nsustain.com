@@ -74,6 +74,7 @@ then
   composer require fof/sitemap:"*"
   composer require fof/nightmode:"*"
   composer require v17development/flarum-seo:"*"
+  composer require fof/forum-statistics-widget:"*"
   composer require datlechin/flarum-link-preview:"*"
   composer require clarkwinkelmann/flarum-ext-shadow-ban:"*"
   composer require v17development/flarum-third-party-login-only:"*"

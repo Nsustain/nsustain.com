@@ -46,7 +46,7 @@ possible, just read the first section ⚡
 [2.](#2-how-to-set-up-a-production-server) How to set up a production server<br>
 &#160;&#160;&#160;&#160;[A.](#docker-compose-way) Docker Compose way<br>
 &#160;&#160;&#160;&#160;[B.](#kubernetes-way) Kubernetes way<br>
-[3.](#3-open-source-projects-we-used) Open-source projects we used
+[3.](#3-open-source-projects-we-rely-on) Open-source projects we rely on
 
 <br>
 <br>
@@ -383,7 +383,7 @@ kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./
 <br>
 <br>
 
-## 3. Open-source projects we used
+## 3. Open-source projects we rely on
 
 Nsustain is not a work of few men and women.
 Instead, it's built on top of the shoulders

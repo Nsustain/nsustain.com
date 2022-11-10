@@ -403,8 +403,8 @@ and therefore made Nsustain possible.
 | **Kompose** | https://github.com/kubernetes/kompose |
 | **Kubernetes** | https://github.com/kubernetes |
 
- - Flarum is a web forum framework that handles both the front-end and the back-end itself.
- What you see on [Nsustain.com](https://nsustain.com) is mainly thanks to Flarum.
+ - Flarum is a web forum framework consisting of both the front-end and the back-end itself.
+ What you see on [Nsustain.com](https://nsustain.com) is largely thanks to Flarum.
  As you can see, it's beautiful. It has cool interfaces and functionalities.
  If you liked Nsustain, go check out Flarum's own forum-development discussion forum at https://discuss.flarum.org
 

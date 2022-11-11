@@ -92,8 +92,8 @@ prints out:
 > [INFO] Starting php-fpm8<br>
 > [INFO] Starting nginx
 
-Open your web browser and then type in
-`http://127.0.0.1`. That's it! 🥳
+That's it! 🥳 Open
+[http://127.0.0.1](http://127.0.0.1)
 
 <img alt="Development server screenshot" src="https://user-images.githubusercontent.com/19341857/198815641-1be1e42a-242d-4a0b-a1fd-25ce39ff0423.png" width="520">
 

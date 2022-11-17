@@ -125,7 +125,7 @@ will talk about.
 
 ***How to stop***<br>
 ```bash
-# Press <Ctrl + c> to exit your docker compose process
+# Press <Ctrl + c> to exit from your Docker Compose process
 
 # Then, shut down docker compose
 docker compose down
@@ -176,14 +176,14 @@ docker compose up -d
 We have two ways of setting up a production server:
 (a) Docker Compose way and (b) Kubernetes way.
 You can use either way if you have a preference of one over the other,
-but we generally recommend to use Docker Compose.
+but we generally recommend Docker Compose.
 
 If you want your website to be highly available and
 therefore are willing to provision two or more servers
 to host it, then Kubernetes would be perfect for you.
 If you're trying to run your website on a single host,
 then we personally like Docker Compose because it just
-feels faster to deploy, easier to maintain.
+feels faster to deploy and easier to maintain.
 Docker Compose tends to have less configs to take care of.
 
 <br>

@@ -349,8 +349,21 @@ https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 ```bash
 cd nsustain.com/src/k8s
 vim cloudflared.yaml
-#<1. Edit `tunnel: nsustain` to `tunnel: [Your Cloudflare Tunnel name]`>
-#<2. Edit `hostname: nsustain.com` to `hostname: yourdomain.com`>
+```
+```yaml
+    # CHANGE TO YOUR TUNNEL NAME.
+    # Other than the tunnel name and the ingress rules at the bottom,
+    # you don't have to change any other config.
+    tunnel: nsustain
+
+    # CHANGE TO YOUR DOMAIN NAME.
+    # You don't need to change http://flarum:80 to your domain name
+    # because it refers to Kubernetes service name, not your domain name.
+    ingress:
+    - hostname: nsustain.com
+      service: http://flarum:80
+```
+```bash
 kubectl apply -f ../k8s
 ```
 

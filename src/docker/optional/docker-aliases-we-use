@@ -6,11 +6,11 @@
 # You can choose to use them, if you'd like.
 #
 # HOW TO USE THESE ALIASES FOR JUST ONE SESSION
-#   cd nsustain.com/src/docker/useful-bash-helper-scripts
+#   cd nsustain.com/src/docker/optional
 #   source userful-docker-aliases
 #
 # HOW TO PERMANENTLY ADD THESE ALIASES TO YOUR DOTFILE
-#   cd nsustain.com/src/docker/useful-bash-helper-scripts
+#   cd nsustain.com/src/docker/optional
 #   cat userful-docker-aliases >> ~/.bashrc
 # -----------------------------------------------------------------
 

@@ -183,8 +183,9 @@ therefore are willing to provision two or more servers
 to host it, then Kubernetes would be perfect for you.
 If you're trying to run your website on a single host,
 then we personally like Docker Compose because it just
-feels faster to deploy and easier to maintain.
-Docker Compose tends to have less configs to take care of.
+feels faster to deploy and easier to maintain because
+Docker Compose tends to have less configs to take care of
+compared to Kubernetes.
 
 <br>
 

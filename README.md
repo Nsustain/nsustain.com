@@ -408,7 +408,7 @@ and therefore made Nsustain possible.
 <br>
 
 | Project | Link |
-| ------- | ----------- |
+| ------- | ---- |
 | **Flarum** | https://github.com/flarum |
 | **Docker Compose** | https://github.com/docker/compose |
 | **Kompose** | https://github.com/kubernetes/kompose |

@@ -4,8 +4,8 @@
 # ----------------------------------------------------------
 FLARUM_TITLE="Nsustain Development Server"
 FLARUM_DESCRIPTION="A forum created for farmers and open-source developers."
-FLARUM_WELCOME_TITLE="Nsustain"
-FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
+FLARUM_WELCOME_TITLE="🌳 For the environment and sustainability"
+FLARUM_WELCOME_MESSAGE="Helping open-source developers communicate with farmers and scientists around the world."
 
 # We recommend using a password manager. In our case,
 # we generate 42 random letters without any special character

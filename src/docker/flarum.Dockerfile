@@ -29,8 +29,8 @@ ENV FLARUM_VERSION="v1.5.0"
 # Never use these passwords in production environments.
 ENV FLARUM_TITLE="Nsustain Development Server"
 ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
-ENV FLARUM_WELCOME_TITLE="Nsustain"
-ENV FLARUM_WELCOME_MESSAGE="🌳 For the environment and sustainability."
+ENV FLARUM_WELCOME_TITLE="🌳 For the environment and sustainability"
+ENV FLARUM_WELCOME_MESSAGE="Helping open-source developers communicate with farmers and scientists around the world."
 
 ENV FLARUM_ADMIN_PASS="369FQUv4eS"
 ENV FLARUM_ADMIN_USER="nim3594"

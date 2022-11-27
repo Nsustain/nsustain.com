@@ -1,0 +1,45 @@
+# ----------------------------------------------------------
+# WHAT IS THIS FILE FOR?
+# We use this for backing up hostpath persistent volumes.
+#   cd nsustain.com/src/k8s/optional
+#   kubectl apply -f backup-data.yaml
+#   kubectl get pods  # Suppose backup-data-638
+#   kubectl exec -it backup-data-638 -- bash
+#   cd /backups
+#   tar czf $(date +'%Y%m%d').tar.gz --directory=nsustain .
+#   <Ctrl + D to exit from your container process>
+#   kubectl cp backup-data-638:/backups/$(date +'%Y%m%d').tar.gz ./$(date +'%Y%m%d').tar.gz --retries=10
+#
+#   kubectl delete -f backup-data.yaml
+# ----------------------------------------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backup-data
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backup-data
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: backup-data
+    spec:
+      containers:
+      - name: backup-data
+        image: ubuntu
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
+        resources: {}
+        volumeMounts:
+          - mountPath: /backups/nsustain
+            name: backups
+      volumes:
+        - name: backups
+          hostPath:
+            # Directory location on host
+            path: /nsustain
+            type: Directory

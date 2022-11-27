@@ -18,7 +18,7 @@ kubectl api-resources
 kubectl get nodes -o wide
 
 # Run bash inside the pod
-kubectl exec -it [podName] /bin/bash
+kubectl exec -it [podName] -- /bin/bash
 
 kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870"
 

@@ -1,6 +1,6 @@
 # ----------------------------------------------------------
 # WHAT IS THIS FILE FOR?
-# We use this for backing up hostpath persistent volumes.
+# We use this for backing up all persistent volumes.
 #
 # HOW TO BACKUP EVERY PERSISTENT VOLUME INTO A COMPRESSED FILE
 #   cd nsustain.com/src/k8s/optional

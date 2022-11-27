@@ -23,6 +23,12 @@
 #   tar xf 20221127.tar.gz --directory=nsustain
 #   <Ctrl + D to exit from your container process>
 #   kubectl delete -f backup-data.yaml
+#
+# HOW TO ENCRYPT BACKUP FILES
+# Source:
+#   https://linuxconfig.org/how-to-create-compressed-encrypted-archives-with-tar-and-gpg
+#
+#   TODO: encrypt with a lengthy, nob dictionary passphrase
 # ----------------------------------------------------------
 apiVersion: apps/v1
 kind: Deployment

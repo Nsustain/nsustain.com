@@ -388,7 +388,7 @@ kubectl describe pods flarum-84b6484cd-vj6gl
 kubectl exec -it flarum-84b6484cd-vj6gl -- sh
 
 # How to extract a file from a container
-kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./
+kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./file
 ```
 
 <br>

@@ -1,6 +1,8 @@
 # ----------------------------------------------------------
 # WHAT IS THIS FILE FOR?
 # We use this for backing up hostpath persistent volumes.
+#
+# HOW TO BACKUP EVERY PERSISTENT VOLUME INTO A COMPRESSED FILE
 #   cd nsustain.com/src/k8s/optional
 #   kubectl apply -f backup-data.yaml
 #   kubectl get pods  # Suppose backup-data-638
@@ -9,7 +11,17 @@
 #   tar czf $(date +'%Y%m%d').tar.gz --directory=nsustain .
 #   <Ctrl + D to exit from your container process>
 #   kubectl cp backup-data-638:/backups/$(date +'%Y%m%d').tar.gz ./$(date +'%Y%m%d').tar.gz --retries=10
+#   kubectl delete -f backup-data.yaml
 #
+# HOW TO RESTORE USING A BACKUP FILE
+#   cd nsustain.com/src/k8s/optional
+#   kubectl apply -f backup-data.yaml
+#   kubectl get pods # Suppose backup-data-638
+#   kubectl cp ./20221127.tar.gz backup-data-638:/backups/20221127.tar.gz
+#   kubectl exec -it backup-data-638 -- bash
+#   cd /backups/nsustain
+#   tar xf 20221127.tar.gz --directory=nsustain
+#   <Ctrl + D to exit from your container process>
 #   kubectl delete -f backup-data.yaml
 # ----------------------------------------------------------
 apiVersion: apps/v1
@@ -42,4 +54,4 @@ spec:
           hostPath:
             # Directory location on host
             path: /nsustain
-            type: Directory
+            type: DirectoryOrCreate

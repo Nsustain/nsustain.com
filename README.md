@@ -336,9 +336,10 @@ ibmcloud ks cluster config --cluster nsustain --admin
 ```
 
 After that, we were able to expose [Nsustain.com](https://nsustain.com)
-to the internet - without having to configure LoadBalancer, NodePort, or Ingress -
+to the internet - without having to configure LoadBalancer, NodePort, or Ingress
+ourselves -
 by installing Cloudflare Tunnel to proxy everything for us.
-This, according to Cloudflare, is more secure than directly exposing our microservices
+This tends to be more secure than directly exposing our microservices
 to the internet because the server is now protected and hidden behind
 Cloudflare Tunnel. We followed the installation guide at
 https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/

@@ -13,7 +13,7 @@
     <img alt="nsustain.com" src="https://user-images.githubusercontent.com/19341857/184772201-ff14bc28-b7a7-4bec-bef5-52625acd0544.svg">
   </a>
   <a href="https://github.com/Nsustain/nsustain.com/blob/main/LICENSE">
-    <img alt="Apache License 2.0" src="https://user-images.githubusercontent.com/19341857/184765929-fec61d10-d714-488e-94c7-153e00070a2d.svg">
+    <img alt="MIT License" src="https://user-images.githubusercontent.com/19341857/206869035-bccdfab1-a825-4ec1-b598-78bf668b7917.svg">
   </a>
 </p>
 

@@ -13,7 +13,7 @@
     <img alt="nsustain.com" src="https://img.shields.io/badge/GitHub-nsustain.com-brightgreen">
   </a>
   <a href="https://github.com/Nsustain/nsustain.com/blob/main/LICENSE">
-    <img src="https://badgen.net/github/license/Nsustain/.github">
+    <img alt="MIT License" src="https://user-images.githubusercontent.com/19341857/206869035-bccdfab1-a825-4ec1-b598-78bf668b7917.svg">
   </a>
 </p>
 

@@ -5,10 +5,10 @@
 #
 # Most of the times, we build this image with:
 # Example:
-#   docker build --no-cache -t nsustain/flarum:1.5 -t nsustain/flarum:latest -f flarum.Dockerfile .
-#   docker scan nsustain/flarum:1.5 -f ./flarum.Dockerfile
+#   docker build --no-cache -t nsustain/flarum:1.6 -t nsustain/flarum:latest -f flarum.Dockerfile .
+#   docker scan nsustain/flarum:1.6 -f ./flarum.Dockerfile
 #   docker scan nsustain/flarum:latest -f ./flarum.Dockerfile
-#   sudo docker push nsustain/flarum:1.5
+#   sudo docker push nsustain/flarum:1.6
 #   sudo docker push nsustain/flarum:latest
 # -------------------------------------------------------------------
 FROM alpine:latest
@@ -17,11 +17,11 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.5"
+LABEL com.nsustain.version="1.6"
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
-ENV FLARUM_VERSION="v1.5.0"
+ENV FLARUM_VERSION="v1.6.0"
 
 # We included randomized secrets here so that you can can run
 # our image out of the box without any extra configuration.

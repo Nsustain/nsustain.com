@@ -104,3 +104,9 @@ kubectl create secret generic cos-write-access --type=ibm/ibmc-s3fs --from-liter
 helm ibmc install ibm-object-storage-plugin ibm-helm/ibm-object-storage-plugin --set license=true --set quotaLimit=true
 
 ibmc-s3fs-standard-regional
+
+# -----------------------------------------
+# Local Files Location
+# -----------------------------------------
+flarum/vendor/flarum/core/locale/core.yml
+flarum/vendor/fof/nightmode/resources/locale/en.yml

@@ -173,19 +173,23 @@ docker compose up -d
 
 ## 2. How to set up a production server
 
-We have two ways of setting up a production server:
-(a) Docker Compose way and (b) Kubernetes way.
-You can use either way if you have a preference of one over the other,
-but we generally recommend Docker Compose.
+There are two options for setting up a
+production server: (a) the Docker Compose
+method and (b) the Kubernetes method.
+You can choose either one depending
+on your preference, but we generally
+recommend Docker Compose.
 
-If you want your website to be highly available and
-therefore are willing to provision two or more servers
-to host it, then Kubernetes would be perfect for you.
-If you're trying to run your website on a single host,
-then we personally like Docker Compose because it just
-feels faster to deploy and easier to maintain because
-Docker Compose tends to have less configs to take care of
-compared to Kubernetes.
+If you want your website to be highly
+available and are willing to set up
+multiple servers to host it, Kubernetes
+would be a good choice. On the other hand,
+if you only need to run your website on a
+single host, Docker Compose may be a better
+option because it is typically faster to
+deploy and easier to maintain due to fewer
+configuration requirements compared to
+Kubernetes.
 
 <br>
 
@@ -234,13 +238,20 @@ vim compose.yaml
       - .envmariadb
 ```
 
-Now, every env variable you write on `.envflarum` and `.envmariadb`
-will be used inside your server.
-We recommend you to set every password with lengthy, non-dictionary words.
-If you can use a password manager and completely randomize the passwords,
-that'd be even better. Never run your production server without
-first changing the admin password,
-MariaDB root password, and database password.
+Any environment variables defined in the
+`.envflarum` and `.envmariadb` files will be
+used within the server. It is important
+to set strong, unique passwords for
+all sensitive information, such as the
+admin password, MariaDB root password,
+and database password. We recommend using
+a password manager to generate completely
+random passwords, or using long,
+non-dictionary words if a password
+manager is not available. It is crucial
+to change these passwords before
+deploying the server in a
+production environment.
 
 <br>
 
@@ -339,9 +350,11 @@ After that, we were able to expose [Nsustain.com](https://nsustain.com)
 to the internet - without having to configure LoadBalancer, NodePort, or Ingress
 ourselves -
 by installing Cloudflare Tunnel to proxy everything for us.
-This tends to be more secure than directly exposing our microservices
-to the internet because the server is now protected and hidden behind
-Cloudflare Tunnel. We followed the installation guide at
+This is generally more secure than directly
+exposing our microservices to the internet
+because the server is hidden behind
+Cloudflare Tunnel.
+We followed the installation guide at
 https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
 
 <br>
@@ -400,12 +413,14 @@ kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./file
 
 Nsustain is not a work of few men and women.
 Instead, it's built on top of the shoulders
-of open-source giants. We'd never have been able
-to create Nsustain, were it not for these
-wonderful open-source projects.
-We sincerely thank everyone who contributed
-and supported these open-source projects
-and therefore made Nsustain possible.
+of open-source giants.
+Without the contributions and support
+of these wonderful open-source projects,
+Nsustain would not have been possible.
+We are deeply grateful to everyone who
+has contributed to and supported
+these projects, as their efforts have
+allowed Nsustain to exist.
 
 <br>
 
@@ -451,17 +466,21 @@ and exposed ports.
   <b>What next?</b>
 </p>
 
-If you have a question, please reach out
-to Soobin Rho &lt;soobinrho@nsustain.com&gt;.
-If you'd like to contribute,
+If you have any questions, don't hesitate
+to contact Soobin Rho
+&lt;soobinrho@nsustain.com&gt;.
+If you're interested in contributing,
 [Contribution Guidelines](https://github.com/Nsustain/nsustain.com/blob/main/.github/CONTRIBUTING.md)
 would be a good starting point.
 
-[Security Hall of Fame](./HALL_OF_FAME.md)
-is dedicated for those who helped us
-make Naustain a better, safer place ❤️
-If you discover a vulnerability,
-please email security@nsustain.com
+The [Security Hall of Fame](./HALL_OF_FAME.md)
+recognizes individuals who have helped improve
+the security of Naustain.
+If you've discovered a vulnerability,
+please report it to security@nsustain.com.
+Your contribution is greatly appreciated
+and will help make Naustain a safer place
+for everyone ❤️
 
 <br>
 <br>

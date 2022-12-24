@@ -27,13 +27,16 @@
   <b>
     Contribution Guidelines
   </b><br>
-  Thank you for making Nsustain better!
-  These are guidelines, not rules.
-  Thus, feel free to break these guidelines
-  if you think that'd be better.
-  However, fully understanding these
-  guidelines will make maintenance easier
-  for everyone who contribute to Nsustain.
+  We appreciate your efforts in improving
+  Nsustain! While these guidelines are not
+  strict rules, we recommend following them
+  to make maintenance easier for everyone
+  who contributes to Nsustain. However, if
+  you think breaking these guidelines will
+  lead to better results, feel free to do so.
+  Ultimately, the goal is to make Nsustain
+  the best it can be. Thank you for your
+  contributions!
 </p>
 
 <br>
@@ -81,16 +84,14 @@ Branch Name Do not's:
 
 # 1. Naming Conventions
 
-Folder names and file names should
-use hyphens (-) as word seperators.
-For example, we prefer `docker-images`
-to `Docker_Images`.
-Hypens (-) are preferred over
-underscores (_) because Google SEO
-treats hypens as word-seperators, but
-not underscores.
-However, this convention can be
-overriden by language-specfic conventions.
+It is recommended to use hyphens (-) as word
+separators in folder names and file names,
+rather than underscores (_). For example,
+we prefer using "docker-images" rather than
+"Docker_Images." This is because Google SEO
+treats hyphens as word separators, but not
+underscores. However, this convention may
+be overridden by language-specific conventions.
 
 <br>
 
@@ -145,42 +146,37 @@ git c -am'Commit message'
 
 # 3. Pull Requests
 
-We have two branches:
-`nsustain.com/main` and
-`nsustain.com/develop`.
-Make pull requests to
-`develop`. All features on the
-`develop` are tested
-in the maintainers'
-test environment first.
-After all the tests are passed, all commits
-on `develop` will be merged to `main`.
+There are two branches in the Nsustain
+repository: `nsustain.com/main` and
+`nsustain.com/develop`. We ask that all
+pull requests be made to the develop branch.
+All new features on the develop branch are
+tested in the maintainers' test environment
+before being merged into the main branch.
 
-When you make a PR,
-GitHub automatically sends an email
-to the maintainers.
-If we are online,
-we try to finish the review under one day.
-If we are offline, however,
-please expect the reviewing process
-to take around one week.
+When you submit a pull request, GitHub will
+automatically notify the maintainers via email.
+We will try to review and respond to pull
+requests within one day if we are online.
+If we are offline, please allow for a review
+period of up to one week.
 
 <br>
 
 # 4. Reporting Bugs
 
-Preferred method of reporting bugs
-is writing on the
-[issues tracker](https://github.com/Nsustain/nsustain.com/issues).
-However, if you don't have a GitHub
-account, you can email to
-soobinrho@nsustain.com
+The preferred method for reporting bugs
+is to use the
+[issues tracker](https://github.com/Nsustain/nsustain.com/issues)
+on GitHub.
+If you do not have a GitHub account, you can also email soobinrho@nsustain.com to report any issues you encounter.
 
 <br>
 
 # 5. Reporting Security Vulnerability
 
-Please send an email to security@nsustain.com
+If you discover a security vulnerability,
+please send an email to security@nsustain.com
 
 <br>
 <br>
@@ -189,10 +185,11 @@ Please send an email to security@nsustain.com
   <b>Thank You Note From the Maintainers</b>
 </p>
 
-Your contribution means a lot for Nsustain.
-We always appreciate your time and effort
-to make Nsustain better. Thank you!
-
+We are grateful for your contributions
+to Nsustain and appreciate the time and
+effort you have dedicated to improving it.
+Your contributions are greatly valued and
+make a significant difference. Thank you!
 
 <br>
 <br>

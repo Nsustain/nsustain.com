@@ -27,8 +27,12 @@
   <b>
     Security Hall of Fame
   </b><br>
-  Thanks to these people, Nsustain is now
-  a better, safer place ❤️
+  We would like to express our gratitude
+  to the individuals who have helped make
+  Nsustain a better and safer place ❤️
+  Their contributions are greatly appreciated
+  and have had a significant impact on the
+  development of Nsustain.
 </p>
 
 <br>

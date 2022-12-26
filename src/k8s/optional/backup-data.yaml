@@ -19,7 +19,7 @@
 #   kubectl get pods # Suppose backup-data-638
 #   kubectl cp ./20221127.tar.gz backup-data-638:/backups/20221127.tar.gz
 #   kubectl exec -it backup-data-638 -- bash
-#   cd /backups/nsustain
+#   cd /backups
 #   tar xf 20221127.tar.gz --directory=nsustain
 #   <Ctrl + D to exit from your container process>
 #   kubectl delete -f backup-data.yaml

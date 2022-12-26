@@ -13,6 +13,11 @@
 #   kubectl cp backup-data-638:/backups/$(date +'%Y%m%d').tar.gz ./$(date +'%Y%m%d').tar.gz --retries=10
 #   kubectl delete -f backup-data.yaml
 #
+# HOW TO ENCRYPT/DECRYPT THE BACKUP ARCHIVES
+#   gpg -e 20221225.tar.gz
+#   gpg 20221225.tar.gz.gpg
+#
+#
 # HOW TO RESTORE USING A BACKUP FILE
 #   cd nsustain.com/src/k8s/optional
 #   kubectl apply -f backup-data.yaml

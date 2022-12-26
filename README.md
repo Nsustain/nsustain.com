@@ -478,11 +478,11 @@ would be a good starting point.
 
 The [Security Hall of Fame](./HALL_OF_FAME.md)
 recognizes individuals who have helped improve
-the security of Naustain.
+the security of Nsustain.
 If you've discovered a vulnerability,
 please report it to security@nsustain.com.
 Your contribution is greatly appreciated
-and will help make Naustain a safer place
+and will help make Nsustain a safer place
 for everyone ❤️
 
 <br>

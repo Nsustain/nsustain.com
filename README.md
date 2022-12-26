@@ -399,6 +399,9 @@ kubectl get pods  # Suppose you want flarum-84b6484cd-vj6gl
 # How to get all available information of a pod
 kubectl describe pods flarum-84b6484cd-vj6gl
 
+# How to read logs
+kubectl logs -f flarum-84b6484cd-vj6gl
+
 # How to run a shell inside the flarum container
 kubectl exec -it flarum-84b6484cd-vj6gl -- sh
 

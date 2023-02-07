@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # These are docker and kubectl commands we found useful.
-# You can ignore this file.
+
+# -----------------------------------------
+# Docker
+# -----------------------------------------
+docker run --rm -it alpine /bin/sh --login
 
 # -----------------------------------------
 # K8s
@@ -24,9 +28,6 @@ kubectl run test --image=soobinrho/test:0.1 --port=30870 --env="NGINX_PORT=30870
 
 # Copy files
 kubectl cp <namespace>/<pod>:<pod_filepath>/<filename> <local_filepath>/<filename>
-
-# Run k9s to monitor k8s
-docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s
 
 kubectl apply -f cloudflared.yaml
 kubectl delete -f cloudflared.yaml

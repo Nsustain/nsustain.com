@@ -5,10 +5,10 @@
 #
 # Most of the times, we build this image with:
 # Example:
-#   docker build --no-cache -t nsustain/flarum:1.6 -t nsustain/flarum:latest -f flarum.Dockerfile .
-#   docker scan nsustain/flarum:1.6 -f ./flarum.Dockerfile
+#   docker build --no-cache -t nsustain/flarum:1.6.3 -t nsustain/flarum:latest -f flarum.Dockerfile .
+#   docker scan nsustain/flarum:1.6.3 -f ./flarum.Dockerfile
 #   docker scan nsustain/flarum:latest -f ./flarum.Dockerfile
-#   sudo docker push nsustain/flarum:1.6
+#   sudo docker push nsustain/flarum:1.6.3
 #   sudo docker push nsustain/flarum:latest
 # -------------------------------------------------------------------
 FROM alpine:latest
@@ -17,11 +17,11 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.6"
+LABEL com.nsustain.version="1.6.3"
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
-ENV FLARUM_VERSION="v1.6.0"
+ENV FLARUM_VERSION="v1.6.3"
 
 # We included randomized secrets here so that you can can run
 # our image out of the box without any extra configuration.
@@ -54,70 +54,72 @@ ENV DB_PREF="flarum_"
 # Flarum installation.
 # Source:
 #   https://github.com/mondediefr/docker-flarum/blob/master/Dockerfile
-RUN apk update && \
-    apk upgrade --no-cache && \
-    apk add --no-cache \
+RUN apk update \
+ && apk upgrade --no-cache \
+ && apk add --no-cache \
     bash \
     curl \
     certbot \
     certbot-nginx \
     git \
+    nginx \
     icu-data-full \
     libcap \
-    nginx \
-    php8 \
-    php8-ctype \
-    php8-curl \
-    php8-dom \
-    php8-exif \
-    php8-fileinfo \
-    php8-fpm \
-    php8-gd \
-    php8-gmp \
-    php8-iconv \
-    php8-intl \
-    php8-mbstring \
-    php8-mysqlnd \
-    php8-opcache \
-    php8-pecl-apcu \
-    php8-openssl \
-    php8-pdo \
-    php8-pdo_mysql \
-    php8-phar \
-    php8-session \
-    php8-tokenizer \
-    php8-xmlwriter \
-    php8-zip \
-    php8-zlib \
-    mysql-client \
-    mariadb-client \
     su-exec \
     s6 \
     vim \
+    php81 \
+    php81-ctype \
+    php81-curl \
+    php81-dom \
+    php81-exif \
+    php81-fileinfo \
+    php81-fpm \
+    php81-gd \
+    php81-gmp \
+    php81-iconv \
+    php81-intl \
+    php81-mbstring \
+    php81-mysqlnd \
+    php81-opcache \
+    php81-pecl-apcu \
+    php81-openssl \
+    php81-pdo \
+    php81-pdo_mysql \
+    php81-phar \
+    php81-session \
+    php81-tokenizer \
+    php81-xmlwriter \
+    php81-zip \
+    php81-zlib \
+    mysql-client \
+    mariadb-client \
  && cd /tmp \
  && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
  && chmod +x /usr/local/bin/composer \
  && mkdir -p /var/www/html/flarum \
- && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /var/www/html/flarum \
- && composer clear-cache \
+ && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /var/www/html/flarum
+
+RUN composer clear-cache \
  && rm -rf /tmp/* \
  && rm /etc/nginx/http.d/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
  && chown -R nginx:nginx /var/www/html/flarum \
- && chown -R nginx:nginx /var/lib/php8 \
+ && chown -R nginx:nginx /var/lib/php81 \
  && chmod -R 775 /var/www/html/flarum \
- && chmod -R 775 /var/lib/php8 \
+ && chmod -R 775 /var/lib/php81 \
  && apk add --update libintl \
  && apk add --virtual build_deps gettext \
  && cp /usr/bin/envsubst /usr/local/bin/envsubst \
- && apk del build_deps \
+ && apk del build_deps
+
  # It works well in Docker Compose up to this point.
  # However, it turns out that this code needs modification
  # when it's deployed to K8s. What happens is that when K8s volume
  # mounts with the hostPath mechanism, container's target location
  # is overwritten by the host's origin location.
  # Thus, this is the reason why we copy to slightly different directories here.
- && mkdir -p /var/www/html/flarum.backup \
+RUN mkdir -p /var/www/html/flarum.backup \
  && mkdir -p /etc/nginx.backup \
  && \cp -r /var/www/html/flarum/. /var/www/html/flarum.backup \
  && \cp -r /etc/nginx/. /etc/nginx.backup

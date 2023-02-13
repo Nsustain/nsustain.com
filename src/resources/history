@@ -9,6 +9,9 @@
 docker run --rm -it ubuntu /bin/bash
 docker run --rm -it alpine /bin/sh --login
 
+# Remove all build cache
+docker system prune
+
 # -----------------------------------------
 # K8s
 # -----------------------------------------

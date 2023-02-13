@@ -60,7 +60,7 @@ then
   # Wait until mariadb boots up
   # Source:
   #   https://stackoverflow.com/questions/25503412/how-do-i-know-when-my-docker-mysql-container-is-up-and-mysql-is-ready-for-taking
-  while ! mysqladmin ping -h"$DB_HOST" --silent
+  while ! mysqladmin ping -h$DB_HOST -u$DB_USER -p$DB_PASS --silent
   do
     sleep 1
   done
@@ -102,7 +102,7 @@ else
   sed -i "s|FORUM_URL|$FORUM_URL|g" $CONFIG_FILE_DIR
   mv /config.php /var/www/html/flarum/config.php
 
-  while ! mysqladmin ping -h"$DB_HOST" --silent
+  while ! mysqladmin ping -h$DB_HOST -u$DB_USER -p$DB_PASS --silent
   do
     sleep 1
   done
@@ -112,17 +112,18 @@ else
   php flarum cache:clear
   php flarum assets:publish
 
-  chown -R nginx:nginx /var/www/html/flarum
-  chmod -R 755 /var/www/html/flarum
 fi
+
+chown -R nginx:nginx /var/www/html/flarum
+chmod -R 755 /var/www/html/flarum
 
 # ---------------------------
 # Start serving http requests
 # ---------------------------
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, php-fpm handles php files.
-echo "[INFO] Starting php-fpm8"
-php-fpm8
+echo "[INFO] Starting php-fpm81"
+php-fpm81
 
 # Then, nginx recieves the files and then serves.
 echo "[INFO] Starting nginx"

@@ -14,7 +14,7 @@
 version: "3.3"
 services:
   flarum:
-    image: nsustain/flarum:latest
+    image: nsustain/flarum:1.6.3
     container_name: flarum
     # Always restart the container, even after reboot
     restart: always

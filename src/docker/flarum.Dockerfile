@@ -124,6 +124,8 @@ RUN mkdir -p /var/www/html/flarum.backup \
  && \cp -r /var/www/html/flarum/. /var/www/html/flarum.backup \
  && \cp -r /etc/nginx/. /etc/nginx.backup
 
+HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping || exit 1
+
 COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
 COPY ./copied-inside-container/config.php /config.php

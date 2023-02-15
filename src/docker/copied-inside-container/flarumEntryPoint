@@ -127,4 +127,4 @@ php-fpm81
 
 # Then, nginx recieves the files and then serves.
 echo "[INFO] Starting nginx"
-nginx
+exec nginx

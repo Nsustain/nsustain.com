@@ -49,7 +49,7 @@ core:
       slug_driver_text: Select a driver to be used for slugging this model.
       title: Basics
       welcome_banner_heading: Welcome Banner
-      welcome_banner_text: Configure the text that displays in the banner on the All Discussions page. Use this to welcome guests to your forum.
+      welcome_banner_text: Configure the text that displays in the banner on the All Requests page. Use this to welcome guests to your forum.
 
     # These translations are used in the Dashboard page.
     dashboard:
@@ -304,9 +304,9 @@ core:
     composer_discussion:
       body_placeholder: Write a Request...
       discard_confirmation: "You have not posted your discussion. Do you wish to discard it?"
-      submit_button: Post Discussion
+      submit_button: Post Request
       title: => core.ref.start_a_discussion
-      title_placeholder: Discussion Title
+      title_placeholder: Request Title
 
     # These translations are used by the composer when editing a post.
     composer_edit:
@@ -359,7 +359,7 @@ core:
     # These translations are used in the header and session dropdown menu.
     header:
       admin_button: Administration
-      back_to_index_tooltip: Back to Discussion List
+      back_to_index_tooltip: Back to Requests List
       locale_dropdown_accessible_label: Change forum locale
       log_in_link: => core.ref.log_in
       log_out_button: => core.ref.log_out
@@ -374,7 +374,7 @@ core:
     # These translations are used on the index page, peripheral to the discussion list.
     index:
       all_discussions_link: => core.ref.all_discussions
-      cannot_start_discussion_button: Can't Start Discussion
+      cannot_start_discussion_button: Can't Start Request
       mark_all_as_read_confirmation: "Are you sure you want to mark all discussions as read?"
       mark_all_as_read_tooltip: => core.ref.mark_all_as_read
       meta_title_text: => core.ref.all_discussions
@@ -452,7 +452,7 @@ core:
 
     # These translations are used by the search results dropdown list.
     search:
-      all_discussions_button: 'Search all discussions for "{query}"'
+      all_discussions_button: 'Search all requests for "{query}"'
       discussions_heading: => core.ref.discussions
       users_heading: => core.ref.users
 
@@ -465,7 +465,7 @@ core:
       notifications_heading: => core.ref.notifications
       notify_by_email_heading: => core.ref.email
       notify_by_web_heading: Web
-      notify_discussion_renamed_label: Someone renames a discussion I started
+      notify_discussion_renamed_label: Someone renames a request I started
       privacy_disclose_online_label: Allow others to see when I am online
       privacy_heading: Privacy
       title: => core.ref.settings

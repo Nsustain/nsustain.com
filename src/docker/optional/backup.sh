@@ -49,9 +49,9 @@ sudo docker compose cp mariadb:/backups/mariadb.tar.gz ./mariadb.tar.gz
 #
 BACKUP_DATE=$(date +'%Y%m%d')
 tar czf ${BACKUP_DATE}.tar.gz ./flarum.tar.gz ./mariadb.tar.gz
-
 #
 # Encrypt.
 #
-gpg --encrypt --recipient $(whoami) ./${BACKUP_DATE}
+gpg --encrypt --recipient $(whoami) ./${BACKUP_DATE}.tar.gz
 sudo shred --remove ${BACKUP_DATE}.tar.gz ./flarum.tar.gz ./mariadb.tar.gz
+ls -l ${BACKUP_DATE}.tar.gz.gpg

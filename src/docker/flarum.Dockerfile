@@ -17,11 +17,11 @@ FROM alpine:latest
 # conflicting with those used by other software."
 # Source:
 #   https://docs.docker.com/compose/compose-file/#labels-1
-LABEL com.nsustain.version="1.6.3"
+LABEL com.nsustain.version="1.8.0"
 LABEL com.nsustain.description="Nsustain.com"
 LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
-ENV FLARUM_VERSION="v1.6.3"
+ENV FLARUM_VERSION="v1.8.0"
 
 # We included randomized secrets here so that you can can run
 # our image out of the box without any extra configuration.
@@ -65,35 +65,34 @@ RUN apk update \
     nginx \
     icu-data-full \
     libcap \
-    su-exec \
-    s6 \
     vim \
-    php81 \
-    php81-ctype \
-    php81-curl \
-    php81-dom \
-    php81-exif \
-    php81-fileinfo \
-    php81-fpm \
-    php81-gd \
-    php81-gmp \
-    php81-iconv \
-    php81-intl \
-    php81-mbstring \
-    php81-mysqlnd \
-    php81-opcache \
-    php81-pecl-apcu \
-    php81-openssl \
-    php81-pdo \
-    php81-pdo_mysql \
-    php81-phar \
-    php81-session \
-    php81-tokenizer \
-    php81-xmlwriter \
-    php81-zip \
-    php81-zlib \
+    php82 \
+    php82-ctype \
+    php82-curl \
+    php82-dom \
+    php82-exif \
+    php82-fileinfo \
+    php82-fpm \
+    php82-gd \
+    php82-gmp \
+    php82-iconv \
+    php82-intl \
+    php82-mbstring \
+    php82-mysqlnd \
+    php82-opcache \
+    php82-pecl-apcu \
+    php82-openssl \
+    php82-pdo \
+    php82-pdo_mysql \
+    php82-phar \
+    php82-session \
+    php82-tokenizer \
+    php82-xmlwriter \
+    php82-zip \
+    php82-zlib \
     mysql-client \
     mariadb-client \
+ && ln -s /usr/bin/php82 /usr/bin/php \
  && cd /tmp \
  && curl --progress-bar http://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
  && chmod +x /usr/local/bin/composer \
@@ -102,12 +101,12 @@ RUN apk update \
 
 RUN composer clear-cache \
  && rm -rf /tmp/* \
- && rm /etc/nginx/http.d/* \
+ && rm -rf /etc/nginx/http.d/* \
  && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
  && chown -R nginx:nginx /var/www/html/flarum \
- && chown -R nginx:nginx /var/lib/php81 \
+ && chown -R nginx:nginx /usr/lib/php82 \
  && chmod -R 775 /var/www/html/flarum \
- && chmod -R 775 /var/lib/php81 \
+ && chmod -R 775 /usr/lib/php82 \
  && apk add --update libintl \
  && apk add --virtual build_deps gettext \
  && cp /usr/bin/envsubst /usr/local/bin/envsubst \
@@ -130,7 +129,7 @@ COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
 COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
 COPY ./copied-inside-container/config.php /config.php
 COPY ./copied-inside-container/nginx.conf /etc/nginx.backup/nginx.conf
-COPY ./copied-inside-container/www.conf /etc/php81/php-fpm.d/www.conf
+COPY ./copied-inside-container/www.conf /etc/php82/php-fpm.d/www.conf
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.

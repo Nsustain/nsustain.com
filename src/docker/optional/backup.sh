@@ -3,9 +3,6 @@
 # ---------------------------------------------------------------------
 # This is a script we use for backing up the website.
 #
-# PREREQUISITES
-#   sudo gpg --full-generate-key
-#
 # HOW TO USE THIS SCRIPT
 #   cd nsustain.com/src/docker/optional
 #   sudo ./backup.sh
@@ -45,5 +42,5 @@ sudo docker compose cp mariadb:/backups/mariadb.tar.gz ./mariadb.tar.gz
 #
 BACKUP_DATE=$(date +'%Y%m%d')
 tar czf ${BACKUP_DATE}.tar.gz ./flarum.tar.gz ./mariadb.tar.gz
-sudo shred --remove ./flarum.tar.gz ./mariadb.tar.gz
+sudo rm -f ./flarum.tar.gz ./mariadb.tar.gz
 ls -lh ${BACKUP_DATE}.tar.gz

@@ -8,7 +8,7 @@
 #
 # HOW TO USE THIS SCRIPT
 #   cd nsustain.com/src/docker/optional
-#   ./backup.sh
+#   sudo ./backup.sh
 # ---------------------------------------------------------------------
 
 mkdir -p ./backups
@@ -24,7 +24,7 @@ sudo docker compose exec flarum bash -c "mkdir -p /backups && \
     /etc/nginx \
     /etc/letsencrypt \
     /var/lib/letsencrypt && \
-    ls -l"
+    ls -lh"
 cd ./optional/backups
 sudo docker compose cp flarum:/backups/flarum.tar.gz ./flarum.tar.gz
 
@@ -36,7 +36,7 @@ sudo docker compose exec mariadb bash -c "mkdir -p /backups && \
     cd /backups && \
     tar czf mariadb.tar.gz \
     /var/lib/mysql && \
-    ls -l"
+    ls -lh"
 cd ./optional/backups
 sudo docker compose cp mariadb:/backups/mariadb.tar.gz ./mariadb.tar.gz
 
@@ -45,9 +45,10 @@ sudo docker compose cp mariadb:/backups/mariadb.tar.gz ./mariadb.tar.gz
 #
 BACKUP_DATE=$(date +'%Y%m%d')
 tar czf ${BACKUP_DATE}.tar.gz ./flarum.tar.gz ./mariadb.tar.gz
+
 #
 # Encrypt.
 #
 gpg --encrypt --recipient $(whoami) ./${BACKUP_DATE}.tar.gz
 sudo shred --remove ${BACKUP_DATE}.tar.gz ./flarum.tar.gz ./mariadb.tar.gz
-ls -l ${BACKUP_DATE}.tar.gz.gpg
+ls -lh ${BACKUP_DATE}.tar.gz.gpg

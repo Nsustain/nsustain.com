@@ -5,11 +5,11 @@
 #
 # Most of the times, we build this image with:
 # Example:
-  docker build --no-cache -t nsustain/flarum:1.8.0 -t nsustain/flarum:latest -f flarum.Dockerfile .
-  docker scan nsustain/flarum:1.8.0 -f ./flarum.Dockerfile
-  docker scan nsustain/flarum:latest -f ./flarum.Dockerfile
-  sudo docker push nsustain/flarum:1.8.0
-  sudo docker push nsustain/flarum:latest
+#   docker build --no-cache -t nsustain/flarum:1.8.0 -t nsustain/flarum:latest -f flarum.Dockerfile .
+#   docker scan nsustain/flarum:1.8.0 -f ./flarum.Dockerfile
+#   docker scan nsustain/flarum:latest -f ./flarum.Dockerfile
+#   sudo docker push nsustain/flarum:1.8.0
+#   sudo docker push nsustain/flarum:latest
 # -------------------------------------------------------------------
 FROM alpine:latest
 

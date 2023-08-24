@@ -20,13 +20,14 @@ if ! [ -f ${NSUSTAIN_BACKUP_LOCATION} ]; then
     exit 1
 fi
 
-cd ./backups
-tar xvf ${NSUSTAIN_BACKUP_LOCATION}
+tar xvf ${NSUSTAIN_BACKUP_LOCATION} --directory=./backups
 
-cd ../../
+cd ../
+sudo docker compose exec flarum bash -c "mkdir -p /backups"
 sudo docker compose cp ./optional/backups/flarum.tar.gz flarum:/backups/flarum.tar.gz
 sudo docker compose exec flarum bash -c "tar xvf /backups/flarum.tar.gz -C /"
 
+sudo docker compose exec mariadb bash -c "mkdir -p /backups"
 sudo docker compose cp ./optional/backups/mariadb.tar.gz mariadb:/backups/mariadb.tar.gz
 sudo docker compose exec mariadb bash -c "tar xvf /backups/mariadb.tar.gz -C /"
 

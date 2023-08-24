@@ -5,7 +5,7 @@
 #
 # HOW TO USE THIS SCRIPT
 #   cd nsustain.com/src/docker/optional
-#   ./restore_backup.sh
+#   sudo ./restore_backup.sh
 # ---------------------------------------------------------------------
 
 NSUSTAIN_BACKUP_LOCATION=$1
@@ -24,7 +24,8 @@ fi
 # Decrypt.
 #
 gpg ${NSUSTAIN_BACKUP_LOCATION}
-#
+
+
 # tar xvf flarum.tar.gz -C /
 #
 # mkdir -p ./backups

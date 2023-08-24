@@ -7,15 +7,11 @@
 #   gpg --full-generate-key
 #
 # HOW TO USE THIS SCRIPT
-#   ssh <name>@<server IP>
-#   mkdir -p ~/backups/20230823
-#   cd ~/backups/20230823
-#   tar xvf ./20230823.tar.gz
-#   cp ~/git/nsustain.com/src/docker/optional/backup.sh
+#   cd nsustain.com/src/docker/optional
 #   ./backup.sh
 # ---------------------------------------------------------------------
 
-mkdir -p ./optional/backups
+mkdir -p ./backups
 
 #
 # Create a backup of the flarum image.

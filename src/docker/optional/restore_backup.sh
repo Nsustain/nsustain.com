@@ -20,9 +20,10 @@ if ! [ -f ${NSUSTAIN_BACKUP_LOCATION} ]; then
     exit 1
 fi
 
+cd ./backups
 tar xvf ${NSUSTAIN_BACKUP_LOCATION}
 
-cd ../
+cd ../../
 sudo docker compose cp ./optional/backups/flarum.tar.gz flarum:/backups/flarum.tar.gz
 sudo docker compose exec flarum bash -c "tar xvf /backups/flarum.tar.gz -C /"
 

@@ -31,7 +31,7 @@ sudo docker compose cp flarum:/backups/flarum.tar.gz ./flarum.tar.gz
 #
 # Create a backup of the mariadb image.
 #
-cd ../
+cd ../../
 sudo docker compose exec mariadb bash -c "mkdir -p /backups && \
     cd /backups && \
     tar czf mariadb.tar.gz \

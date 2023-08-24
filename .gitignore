@@ -8,3 +8,6 @@
 # Likewise, *secret* files for K8s should never be indexed by git.
 *secret*
 !secret.yaml.example
+
+# Ignore backup files
+*.backup

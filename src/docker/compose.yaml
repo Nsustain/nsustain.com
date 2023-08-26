@@ -48,11 +48,8 @@ services:
       #   https://eff-certbot.readthedocs.io/en/stable/using.html#where-certs
       - letsencrypt-lockfiles:/var/lib/letsencrypt
 
-    # Uncomment to override default env variables with your own.
-    # This is not required in development environments, but
-    # in production environments, this is recommeneded.
-    #env_file:
-    #  - .envflarum
+    env_file:
+     - exampleenvflarum
 
   mariadb:
     image: nsustain/mariadb:latest
@@ -65,9 +62,8 @@ services:
       - back-end
     volumes:
       - mariadb-data:/var/lib/mysql
-    # Uncomment to override default env variables with your own
-    #env_file:
-    #  - .envmariadb
+    env_file:
+     - exampleenvmariadb
 
 volumes:
   flarum-data:

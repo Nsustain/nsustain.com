@@ -27,7 +27,7 @@
 #   php flarum cache:clear
 #
 #   # Also, make sure the url in the config is pointing to your
-#   # server address. For instance, 'url' => 'http://nsustain.com'
+#   # server address. For instance, 'url' => 'https://nsustain.com'
 #   vim /var/www/html/flarum/config.php
 # ---------------------------------------------------------------------
 

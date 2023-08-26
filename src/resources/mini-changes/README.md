@@ -14,13 +14,18 @@ kubectl get pods
 kubectl cp ./backup_core.yml <Pod Name>:/var/www/html/flarum/vendor/flarum/core/locale/backup_core.yml
 kubectl exec -it <Pod Name> -- sh
 cd vendor/flarum/core/locale
+```
 
+```bash
 # ---------------------------------------------------------------------
 # If you're using Docker Compose
 # ---------------------------------------------------------------------
-docker ps
-docker compose cp <Container Name>:/var/www/html/flarum/vendor/flarum/core/locale/backup_core.yml
-docker compose exec -it <Container Name> sh
+cd nsustain.com/src/resources/mini-changes
+docker cp ./backup_core.yml flarum:/var/www/html/flarum/vendor/flarum/core/locale/backup_core.yml
+docker cp ./backup_en.yml flarum:/var/www/html/flarum/vendor/fof/nightmode/resources/locale/backup_en.yml
+
+cd ../../docker
+docker compose exec -it flarum sh
 cd vendor/flarum/core/locale
 
 # ---------------------------------------------------------------------
@@ -33,14 +38,9 @@ diff backup_core.yml core.yml
 # Apply the file.
 mv backup_core.yml core.yml
 
-# Refresh Flarum.
-cd -
-php flarum assets:publish
-php flraum cache:clear
-```
-
-***Remove misaligned nightmode button for mobile***<br>
-```bash
+# ---------------------------------------------------------------------
+# Remove misaligned nightmode button for mobile
+# ---------------------------------------------------------------------
 cd /var/www/html/flarum/vendor/fof/nightmode/resources/locale
 
 # Check if there's any conflict. If there's any conflict,
@@ -49,4 +49,9 @@ diff backup_en.yml en.yml
 
 # Apply the file.
 mv backup_en.yml en.yml
+
+# Refresh Flarum.
+cd /var/www/html/flarum
+php flarum assets:publish
+php flraum cache:clear
 ```

@@ -25,6 +25,10 @@
 #   composer update --prefer-dist --no-plugins --no-dev -a --with-all-dependencies
 #   php flarum migrate
 #   php flarum cache:clear
+#
+#   # Also, make sure the url in the config is pointing to your
+#   # server address. For instance, 'url' => 'http://nsustain.com'
+#   vim /var/www/html/flarum/config.php
 # ---------------------------------------------------------------------
 
 NSUSTAIN_BACKUP_LOCATION=$1

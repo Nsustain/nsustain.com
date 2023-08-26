@@ -18,6 +18,7 @@ core:
       custom_footer_text: => core.ref.custom_footer_text
       custom_header_heading: Custom Header
       custom_header_text: => core.ref.custom_header_text
+      custom_styles_cannot_use_less_features: "The @import and data-uri features are not allowed in custom LESS."
       custom_styles_heading: Custom Styles
       custom_styles_text: Customize your forum's appearance by adding your own Less/CSS code to be applied on top of Flarum's default styles.
       dark_mode_label: Dark Mode
@@ -51,15 +52,35 @@ core:
       welcome_banner_heading: Welcome Banner
       welcome_banner_text: Configure the text that displays in the banner on the All Requests page. Use this to welcome guests to your forum.
 
+    # These translations are used in the Create User modal.
+    create_user:
+      email_placeholder: => core.ref.email
+      email_confirmed_label: Require user to confirm this email
+      password_placeholder: => core.ref.password
+      submit_and_create_another_button: Create and add another
+      submit_button: Create user
+      title: Create new user
+      use_random_password: Generate random password
+      username_placeholder: => core.ref.username
+
     # These translations are used in the Dashboard page.
     dashboard:
       clear_cache_button: Clear Cache
       description: Your forum at a glance.
       io_error_message: "Could not write to filesystem. Check your filesystem permissions and try again. Or try running from the command line."
+      status:
+        headers:
+          scheduler-status: Scheduler
+          queue-driver: Queue Driver
+          session-driver: Session Driver
+        scheduler:
+          active: Active
+          inactive: Inactive
+          never-run: Never run
       title: Dashboard
       tools_button: Tools
 
-    # These translations are usin in the debug warning widget.
+    # These translations are used in the debug warning widget.
     debug-warning:
       detail: |
         When <code>debug</code> mode is active, Flarum will rebuild its <code>JavaScript</code> and <code>CSS</code> assets on every request, and could also potentially leak other information, such as database secrets, environment variables, etc.
@@ -184,8 +205,10 @@ core:
 
     # These translations are used in the Permissions page of the admin interface.
     permissions:
+      allow_hide_own_posts_label: Allow deleting own posts
       allow_post_editing_label: Allow post editing
       allow_renaming_label: Allow renaming
+      create_access_token_label: Create access token
       create_heading: Create
       delete_discussions_forever_label: Delete requests forever
       delete_discussions_label: Delete requests
@@ -198,13 +221,14 @@ core:
       edit_users_groups_label: Edit user groups
       global_heading: Global
       moderate_heading: Moderate
+      moderate_access_tokens_label: Moderate Access Tokens
       new_group_button: New Group
       participate_heading: Participate
       post_without_throttle_label: Reply multiple times without waiting
       read_heading: Read
       rename_discussions_label: Rename requests
       reply_to_discussions_label: Reply to requests
-      search_users_label: Search users
+      search_users_label: => core.ref.search_users
       sign_up_label: Sign up
       start_discussions_label: Start requests
       title: Permissions
@@ -216,6 +240,7 @@ core:
     # These translations are used in the dropdown menus on the Permissions page.
     permissions_controls:
       allow_indefinitely_button: Indefinitely
+      allow_never_button: => core.ref.never
       allow_some_minutes_button: "{count, plural, one {For # minute} other {For # minutes}}"
       allow_ten_minutes_button: For 10 minutes
       allow_until_reply_button: Until next reply
@@ -236,10 +261,14 @@ core:
 
     # These translations are used for the users list on the admin dashboard.
     users:
+      create_user_button: New User
       description: A paginated list of all users on your forum.
 
       grid:
         columns:
+          display_name:
+            title: Display name
+
           edit_user:
             button: => core.ref.edit
             title: => core.ref.edit_user
@@ -268,9 +297,13 @@ core:
 
       pagination:
         back_button: Previous page
+        first_button: Go to first page
+        go_to_page_textbox_a11y_label: Go directly to page number
+        last_button: Go to last page
         next_button: Next page
         page_counter: Page {current} of {total}
 
+      search_placeholder: => core.ref.search_users
       title: => core.ref.users
       total_users: "Total users: {count}"
 
@@ -359,14 +392,14 @@ core:
     # These translations are used in the header and session dropdown menu.
     header:
       admin_button: Administration
-      back_to_index_tooltip: Back to Requests List
+      back_to_index_tooltip: Back to Request List
       locale_dropdown_accessible_label: Change forum locale
       log_in_link: => core.ref.log_in
       log_out_button: => core.ref.log_out
       profile_button: Profile
       search_clear_button_accessible_label: Clear search query
-      search_placeholder: Search Forum
-      search_role_label: Search Forum
+      search_placeholder: Search Requests
+      search_role_label: Search Requests
       session_dropdown_accessible_label: Toggle session options dropdown menu
       settings_button: => core.ref.settings
       sign_up_link: => core.ref.sign_up
@@ -388,7 +421,7 @@ core:
       newest_button: Newest
       oldest_button: Oldest
       relevance_button: Relevance
-      toggle_dropdown_accessible_label: Change discussion list sorting
+      toggle_dropdown_accessible_label: Change request list sorting
       top_button: Top
 
     # These translations are used in the Log In modal dialog.
@@ -440,7 +473,7 @@ core:
     # These translations are displayed between posts in the post stream.
     post_stream:
       discussion_renamed_old_tooltip: 'The old title was: "{old}"'
-      discussion_renamed_text: "{username} changed the title to {new}."
+      discussion_renamed_text: "{username} changed the title to {new} {time}."
       load_more_button: => core.ref.load_more
       reply_placeholder: => core.ref.write_a_reply
       time_lapsed_text: "{period} later"
@@ -455,6 +488,40 @@ core:
       all_discussions_button: 'Search all requests for "{query}"'
       discussions_heading: => core.ref.discussions
       users_heading: => core.ref.users
+
+    # These translations are used in the Security page.
+    security:
+      browser_on_operating_system: "{browser} on {os}"
+      cannot_terminate_current_session: Cannot terminate the current active session. Log out instead.
+      created: Created
+      current_active_session: Current Active Session
+      developer_tokens_heading: Developer Tokens
+      empty_text: It looks like there is nothing to see here.
+      global_logout:
+        heading: Global Logout
+        help_text: "Clears current cookie session, terminates all sessions, revokes developer tokens, and invalidates any email confirmation or password reset emails."
+        log_out_button: => core.ref.log_out
+      hide_access_token: Hide Token
+      last_activity: Last activity
+      never: => core.ref.never
+      new_access_token_button: => core.ref.new_token
+      new_access_token_modal:
+        submit_button: Create Token
+        title: => core.ref.new_token
+        title_placeholder: Title
+      revoke_access_token: Revoke
+      revoke_access_token_confirmation: => core.ref.generic_confirmation_message
+      sessions_heading: Active Sessions
+      session_terminated: "{count, plural, one {Session terminated} other {# Sessions terminated}}."
+      session_termination_failed: "An error occurred while terminating your sessions."
+      show_access_token: View Token
+      terminate_all_other_sessions: Terminate all other sessions
+      terminate_all_other_sessions_confirmation: => core.ref.generic_confirmation_message
+      terminate_session: Terminate
+      title: => core.ref.security
+      token_revoked: Token revoked.
+      token_item_title: "{title} - {token}"
+      token_title_placeholder: "/"
 
     # These translations are used in the Settings page.
     settings:
@@ -490,9 +557,10 @@ core:
       in_discussion_text: "In {discussion}"
       joined_date_text: "Joined {ago}"
       online_text: Online
-      posts_empty_text: Post anything you need help with.
+      posts_empty_text: It looks like there are no posts here.
       posts_link: => core.ref.posts
       posts_load_more_button: => core.ref.load_more
+      security_link: => core.ref.security
       settings_link: => core.ref.settings
 
     # These translations are found on the user profile page (admin function).
@@ -530,6 +598,10 @@ core:
     dropdown:
       toggle_dropdown_accessible_label: Toggle dropdown menu
 
+    # These translations are used in the data segment component.
+    data_segment:
+      label: "{label}:"
+
     # These translations are used in the Edit User modal dialog (admin function).
     edit_user:
       activate_button: Activate User
@@ -547,9 +619,11 @@ core:
 
     # These translations are displayed as error messages.
     error:
+      circular_dependencies_message: "Circular dependencies detected: {extensions}. Aborting. Please disable one of the extensions and try again."
       dependent_extensions_message: "Cannot disable {extension} until the following dependent extensions are disabled: {extensions}"
       extension_initialiation_failed_message: "{extension} failed to initialize, check the browser console for further information."
       generic_message: "Oops! Something went wrong. Please reload the page and try again."
+      generic_cross_origin_message: "Oops! Something went wrong during a cross-origin request. Please reload the page and try again."
       missing_dependencies_message: "Cannot enable {extension} until the following dependencies are enabled: {extensions}"
       not_found_message: The requested resource was not found.
       payload_too_large_message: The request payload was too large.
@@ -655,6 +729,10 @@ core:
   # Translations in this namespace are used in messages output by the API.
   api:
     invalid_username_message: "The username may only contain letters, numbers, and dashes."
+    invalid_filter_type:
+      must_be_numeric_message: "The {filter} filter must be numeric."
+      must_not_be_array_message: "The {filter} filter must not be an array."
+      must_not_be_multidimensional_array_message: "The {filter} filter must not be a multidimensional array."
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
@@ -719,7 +797,7 @@ core:
     all_discussions: All Requests
     change_email: Change Email
     change_password: Change Password
-    color: Color                                 # Referenced by flarum-tags.yml
+    color: Color # Referenced by flarum-tags.yml
     confirm_password: Confirm Password
     confirm_email: Confirm Email
     confirmation_email_sent: "We've sent a confirmation email to {email}. If it doesn't arrive soon, check your spam folder."
@@ -729,11 +807,12 @@ core:
     custom_header_title: Edit Custom Header
     delete: Delete
     delete_forever: Delete Forever
-    discussions: Requests                     # Referenced by flarum-statistics.yml
+    discussions: Requests # Referenced by flarum-statistics.yml
     edit: Edit
     edit_user: Edit User
     email: Email
     extensions: Extensions
+    generic_confirmation_message: "Are you sure you want to proceed? This action cannot be undone."
     icon: Icon
     icon_text: "Enter the name of any <a>FontAwesome</a> icon class, <em>including</em> the <code>fas fa-</code> prefix."
     load_more: Load More
@@ -741,27 +820,31 @@ core:
     log_in: Log In
     log_out: Log Out
     mark_all_as_read: Mark All as Read
+    never: Never
+    new_token: New Token
     next_page: Next Page
     notifications: Notifications
-    okay: OK                                     # Referenced by flarum-tags.yml
+    okay: OK # Referenced by flarum-tags.yml
     password: Password
-    posts: Posts                                 # Referenced by flarum-statistics.yml
+    posts: Posts # Referenced by flarum-statistics.yml
     previous_page: Previous Page
     remove: Remove
     rename: Rename
-    reply: Reply                                 # Referenced by flarum-mentions.yml
+    reply: Reply # Referenced by flarum-mentions.yml
     reset_your_password: Reset Your Password
     restore: Restore
-    save_changes: Save Changes                   # Referenced by flarum-suspend.yml, flarum-tags.yml
+    save_changes: Save Changes
+    search_users: Search users # Referenced by flarum-suspend.yml, flarum-tags.yml
+    security: Security
     settings: Settings
     sign_up: Sign Up
-    some_others: "{count, plural, one {# other} other {# others}}"  # Referenced by flarum-likes.yml, flarum-mentions.yml
+    some_others: "{count, plural, one {# other} other {# others}}" # Referenced by flarum-likes.yml, flarum-mentions.yml
     start_a_discussion: Start a Request
     username: Username
-    users: Users                                 # Referenced by flarum-statistics.yml
+    users: Users # Referenced by flarum-statistics.yml
     view: View
     write_a_reply: Write a Reply...
-    you: You                                     # Referenced by flarum-likes.yml, flarum-mentions.yml
+    you: You # Referenced by flarum-likes.yml, flarum-mentions.yml
 
   ##
   # GROUP NAMES - These keys are translated at the back end.

@@ -12,8 +12,19 @@
 #   # Exit when initialization is complete.
 #   docker compose up
 #
-#   cd nsustain.com/src/docker/backup-scripts
-#   sudo ./restore-backup.sh ./backups/<filename>.tar.gz
+#   cd ./backup-scripts
+#   ./restore-backup.sh ./backups/<filename>.tar.gz
+#
+#   # Run a shell inside the flarum container.
+#   cd ../
+#   docker compose exec -it flarum /bin/sh
+#
+#   # Upgrade flarum to the latest version.
+#   # Source:
+#   #   https://docs.flarum.org/update/#general-steps
+#   composer update --prefer-dist --no-plugins --no-dev -a --with-all-dependencies
+#   php flarum migrate
+#   php flarum cache:clear
 # ---------------------------------------------------------------------
 
 NSUSTAIN_BACKUP_LOCATION=$1

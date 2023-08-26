@@ -4,8 +4,16 @@
 # This is a script we use for restoring a backup.
 #
 # HOW TO USE THIS SCRIPT
+#   docker ps -aq | xargs docker stop | xargs docker rm
+#   docker volume ls -q | xargs docker volume rm
+#   cd nsustain.com/src/docker
+#
+#   # Initialize the volumes with a clean plate.
+#   # Exit when initialization is complete.
+#   docker compose up
+#
 #   cd nsustain.com/src/docker/backup-scripts
-#   sudo ./restore-backup.sh
+#   sudo ./restore-backup.sh ./backups/<filename>.tar.gz
 # ---------------------------------------------------------------------
 
 NSUSTAIN_BACKUP_LOCATION=$1

@@ -17,7 +17,7 @@ services:
     image: nsustain/flarum:latest
     container_name: flarum
     # Always restart the container, even after reboot
-    restart: always
+    restart: unless-stopped
     pull_policy: always
     # Since this container doesn't accept SIGTERM, we use
     # stop_grace_period: 0.5s to send SIGKILL after 0.5s
@@ -54,7 +54,7 @@ services:
   mariadb:
     image: nsustain/mariadb:latest
     container_name: mariadb
-    restart: always
+    restart: unless-stopped
     pull_policy: always
     expose:
       - 3306  # used by MariaDB
@@ -67,10 +67,15 @@ services:
 
 volumes:
   flarum-data:
+    name: flarum-data
   nginx-conf:
+    name: nginx-conf
   letsencrypt-data:
+    name: letsencrypt-data
   letsencrypt-lockfiles:
+    name: letsencrypt-lockfiles
   mariadb-data:
+    name: mariadb-data
 
 # "The presence of these objects is sufficient to define them"
 # Source:

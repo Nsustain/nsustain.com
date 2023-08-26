@@ -1,0 +1,24 @@
+#! /bin/sh
+
+BACKUP_DATE="UTC$(date +'%Y%m%d_%H:%M')"
+BACKUP_FILENAME="${BACKUP_DATE}.tar.gz"
+
+#
+# Print all sh commands whenever they run.
+#
+set -x
+
+#
+# Create a backup as a compressed file.
+#
+echo "[INFO] Creating a backup image..."
+tar czf ${BACKUP_FILENAME} \
+  /var/www/html/flarum \
+  /etc/nginx \
+  /etc/letsencrypt \
+  /var/lib/letsencrypt \
+  /var/lib/mysql
+
+mv ${BACKUP_FILENAME} /host-backups/
+echo "[INFO] Backup complete."
+ls -lh /host-backups/${BACKUP_FILENAME}

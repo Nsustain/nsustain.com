@@ -11,4 +11,6 @@
 
 # Ignore backup files
 *.backup
+*.tar
+*.gz
 *.gpg

@@ -1,0 +1,44 @@
+version: "3.3"
+services:
+  nsustain-backup:
+    container_name: nsustain-backup
+    restart: "no"
+    build:
+      context: .
+      dockerfile: backup.Dockerfile
+    profiles:
+      - nsustain-backup
+    volumes:
+      - flarum-data:/var/www/html/flarum
+      - nginx-conf:/etc/nginx
+      - letsencrypt-data:/etc/letsencrypt
+      - letsencrypt-lockfiles:/var/lib/letsencrypt
+      - mariadb-data:/var/lib/mysql
+      - ./backups:/host-backups
+
+  nsustain-restore-backup:
+    container_name: nsustain-restore-backup
+    restart: "no"
+    image: alpine:latest
+    profiles:
+      - nsustain-restore-backup
+    command: tail -f /dev/null
+    stop_grace_period: 0.1s
+    volumes:
+      - flarum-data:/var/www/html/flarum
+      - nginx-conf:/etc/nginx
+      - letsencrypt-data:/etc/letsencrypt
+      - letsencrypt-lockfiles:/var/lib/letsencrypt
+      - mariadb-data:/var/lib/mysql
+
+volumes:
+  flarum-data:
+    name: flarum-data
+  nginx-conf:
+    name: nginx-conf
+  letsencrypt-data:
+    name: letsencrypt-data
+  letsencrypt-lockfiles:
+    name: letsencrypt-lockfiles
+  mariadb-data:
+    name: mariadb-data

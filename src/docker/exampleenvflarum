@@ -16,6 +16,8 @@ FLARUM_ADMIN_MAIL="dev@nsustain.com"
 
 # FORUM_URL should have either http:// or https:// because
 # otherwise, all forum internal links will behave unexpectedly.
+# Also, if you're running this from a remote server and not
+# localhost, then this should be changed to your server IP address.
 FORUM_URL="http://127.0.0.1"
 
 # FORUM_URL_BASE is the same as FORUM_URL, but

@@ -141,7 +141,7 @@ docker compose up -d
 
 <br>
 
-***Debugging workflows we often find useful***<br>
+***Workflows we use***<br>
 ```bash
 
 # How to start a shell inside nsustain/flarum container
@@ -166,6 +166,10 @@ docker compose down
 alias dockervrm="docker volume ls -q | xargs docker volume rm"
 dockervrm
 docker compose up -d
+
+# How to renew letsencrypt certificate
+docker compose exec -it flarum sh
+certbot renew
 ```
 
 <br>
@@ -391,7 +395,7 @@ kubectl delete -f ../k8s
 
 <br>
 
-***Debugging workflows we usually use***<br>
+***Workflows we use***<br>
 ```bash
 # How to find the name of all pods running
 kubectl get pods  # Suppose you want flarum-84b6484cd-vj6gl

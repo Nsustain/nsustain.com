@@ -44,8 +44,6 @@ possible, just read the first section ⚡
 ## Getting Started
 [1.](#1-how-to-spin-up-a-developmental-server) How to spin up a development server<br>
 [2.](#2-how-to-set-up-a-production-server) How to set up a production server<br>
-&#160;&#160;&#160;&#160;[A.](#docker-compose-way) Docker Compose way<br>
-&#160;&#160;&#160;&#160;[B.](#kubernetes-way) Kubernetes way<br>
 [3.](#3-open-source-projects-we-rely-on) Open-source projects we rely on
 
 <br>
@@ -177,6 +175,7 @@ certbot renew
 
 ## 2. How to set up a production server
 
+<!--
 There are two options for setting up a
 production server: (a) the Docker Compose
 method and (b) the Kubernetes method.
@@ -196,8 +195,7 @@ configuration requirements compared to
 Kubernetes.
 
 <br>
-
-### Docker Compose way
+-->
 
 First, we have to override the default environmental variables.
 Otherwise, your website's admin credentials will be using
@@ -330,6 +328,8 @@ download the "Cloudflare-issued SSL certificate"
 on their settings and install it in our server.
 -->
 
+<!--
+
 ### Kubernetes way
 
 Usually, people expose their microservices in Kubernetes using
@@ -413,6 +413,8 @@ kubectl exec -it flarum-84b6484cd-vj6gl -- sh
 kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./file
 ```
 
+-->
+
 <br>
 <br>
 
@@ -448,22 +450,6 @@ allowed Nsustain to exist.
  was to containerize Flarum with Docker. We also used Docker Compose to make deployment
  as nice as possible for Nsustain's future contributors 😍
 
- - Next, we went just one step further. What if our server can't handle big surges of traffic?
- We wanted to be able to serve as many people as possible. So, we used Kompose to convert
- our `compose.yaml` file into Kubernetes resource files.
-Kompose looks at the compose file and then automatically
-converts the compose file into Kubernetes `.yaml` resource files,
-including the definitions of the container image, volume bindings,
-and exposed ports.
- ```bash
- # FYI, this is how we used Kompose in order to
- # convert `compose.yaml` into K8s resource files.
- cd nsustain.com/src/docker
- mkdir ../k8s
- cp compose.yaml ../k8s/docker-compose.yaml
- cd ../k8s
- kompose convert
- ```
 
 <br>
 <br>

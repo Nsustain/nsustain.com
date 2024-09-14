@@ -1,17 +1,7 @@
 # ----------------------------------------------------------------
-# This is a mariadb image with baked-in default env variables
-# so that you can just run Nsustain with "docker compose up -d"
-# without any extra configuration.
-# Docker Hub:
-#   https://hub.docker.com/repository/docker/nsustain/mariadb
-#
 # We mostly build this image with:
 # Example:
 #   docker build --no-cache -t nsustain/mariadb:1.0 -t nsustain/mariadb:latest -f mariadb.Dockerfile .
-#   docker scan nsustain/mariadb:1.0 -f ./mariadb.Dockerfile
-#   docker scan nsustain/mariadb:latest -f ./mariadb.Dockerfile
-#   sudo docker push nsustain/mariadb:1.0
-#   sudo docker push nsustain/mariadb:latest
 # ----------------------------------------------------------------
 FROM mariadb:latest
 

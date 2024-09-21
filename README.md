@@ -70,6 +70,7 @@ sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ***Run***<br>
 ```bash
 cd nsustain.com/src/docker
+docker compose build
 docker compose up
 ```
 

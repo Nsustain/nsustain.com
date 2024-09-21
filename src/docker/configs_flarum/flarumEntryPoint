@@ -118,10 +118,4 @@ fi
 # chown -R nginx:nginx /var/www/html/flarum
 chmod -R 755 /var/www/html/flarum
 
-# ---------------------------
-# Start serving http requests
-# ---------------------------
-# Flarum is served by both php-fpm and nginx.
-# When http request comes in, php-fpm handles php files.
-# echo "[INFO] Starting php-fpm"
-# exec php-fpm82
+exec "$@"

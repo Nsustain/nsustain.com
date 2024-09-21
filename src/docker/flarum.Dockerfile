@@ -51,10 +51,7 @@ RUN apk update \
  && apk add --no-cache \
     bash \
     curl \
-    # certbot \
-    # certbot-nginx \
     git \
-    nginx \
     icu-data-full \
     libcap \
     vim \
@@ -93,28 +90,24 @@ RUN apk update \
 
 RUN composer clear-cache \
  && rm -rf /tmp/* \
- # && rm -rf /etc/nginx/http.d/* \
- # && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
  # && chown -R nginx:nginx /var/www/html/flarum \
  # && chown -R nginx:nginx /usr/lib/php82 \
  && chmod -R 775 /var/www/html/flarum \
  && chmod -R 775 /usr/lib/php82 \
  && apk add --update libintl \
  && apk add --virtual build_deps gettext \
- # && cp /usr/bin/envsubst /usr/local/bin/envsubst \
  && apk del build_deps
-
-HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping || exit 1
 
 COPY ./configs_flarum/flarumInstall.yaml /flarumInstall.yaml
 COPY ./configs_flarum/flarumEntryPoint /flarumEntryPoint
 COPY ./configs_flarum/config.php /config.php
-# COPY ./configs_flarum/nginx.conf /etc/nginx.backup/nginx.conf
 COPY ./configs_flarum/www.conf /etc/php82/php-fpm.d/www.conf
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.
 WORKDIR /var/www/html/flarum
+
+HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping || exit 1
 
 ENTRYPOINT ["/flarumEntryPoint"]
 

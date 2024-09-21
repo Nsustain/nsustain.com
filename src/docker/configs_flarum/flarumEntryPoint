@@ -101,7 +101,7 @@ else
   sed -i "s/DB_PASS/$DB_PASS/g" $CONFIG_FILE_DIR
   sed -i "s/DB_PREF/$DB_PREF/g" $CONFIG_FILE_DIR
   sed -i "s|FORUM_URL|$FORUM_URL|g" $CONFIG_FILE_DIR
-  mv /config.php /var/www/html/flarum/config.php
+  cp /config.php /var/www/html/flarum/config.php
 
   while ! mysqladmin ping -h$DB_HOST -u$DB_USER -p$DB_PASS --silent
   do
@@ -125,7 +125,3 @@ chmod -R 755 /var/www/html/flarum
 # When http request comes in, php-fpm handles php files.
 echo "[INFO] Starting php-fpm"
 exec php-fpm82
-
-# Then, nginx recieves the files and then serves.
-# echo "[INFO] Starting nginx"
-# exec nginx

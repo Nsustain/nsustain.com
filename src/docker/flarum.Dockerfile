@@ -110,6 +110,7 @@ WORKDIR /var/www/html/flarum
 HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping || exit 1
 
 ENTRYPOINT ["/flarumEntryPoint"]
+CMD ["php-fpm82"]
 
 # -------------------------------------------------------------------
 # Useful Dockerfile syntax

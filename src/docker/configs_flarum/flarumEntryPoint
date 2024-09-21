@@ -123,5 +123,5 @@ chmod -R 755 /var/www/html/flarum
 # ---------------------------
 # Flarum is served by both php-fpm and nginx.
 # When http request comes in, php-fpm handles php files.
-echo "[INFO] Starting php-fpm"
-exec php-fpm82
+# echo "[INFO] Starting php-fpm"
+# exec php-fpm82

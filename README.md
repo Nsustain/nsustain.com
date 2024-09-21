@@ -61,6 +61,7 @@ git clone https://github.com/Nsustain/nsustain.com.git
 cd nsustain.com/src/docker
 cp .env_flarum.example .env_flarum
 cp .env_mariadb.example .env_mariadb
+cp configs_nginx/nginx.conf.example configs_nginx/.nginx.conf
 
 # Run.
 docker compose build

@@ -125,8 +125,7 @@ http {
 
         keepalive_timeout   70;
 
-        # FORUM_URL_BASE will be changed to the env variable
-        # $FORUM_URL_BASE, which we define in .envflarum
+        # Change to your own domain name if you have one.
         server_name nsustain.com www.nsustain.com;
 
         root /var/www/html/flarum/public;

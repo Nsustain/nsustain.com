@@ -51,9 +51,6 @@ services:
     volumes:
       - flarum-data:/var/www/html/flarum
       - ./configs_nginx/nginx.conf:/etc/nginx/nginx.conf
-  nginx-www-conf:
-    name: nginx-www-conf
-
 
       # When you first run our image, these volumes will
       # be empty. However, if you'd like to set up https / SSL,

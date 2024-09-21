@@ -51,8 +51,8 @@ RUN apk update \
  && apk add --no-cache \
     bash \
     curl \
-    certbot \
-    certbot-nginx \
+    # certbot \
+    # certbot-nginx \
     git \
     nginx \
     icu-data-full \
@@ -93,35 +93,24 @@ RUN apk update \
 
 RUN composer clear-cache \
  && rm -rf /tmp/* \
- && rm -rf /etc/nginx/http.d/* \
- && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
- && chown -R nginx:nginx /var/www/html/flarum \
- && chown -R nginx:nginx /usr/lib/php82 \
+ # && rm -rf /etc/nginx/http.d/* \
+ # && setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/nginx \
+ # && chown -R nginx:nginx /var/www/html/flarum \
+ # && chown -R nginx:nginx /usr/lib/php82 \
  && chmod -R 775 /var/www/html/flarum \
  && chmod -R 775 /usr/lib/php82 \
  && apk add --update libintl \
  && apk add --virtual build_deps gettext \
- && cp /usr/bin/envsubst /usr/local/bin/envsubst \
+ # && cp /usr/bin/envsubst /usr/local/bin/envsubst \
  && apk del build_deps
-
- # It works well in Docker Compose up to this point.
- # However, it turns out that this code needs modification
- # when it's deployed to K8s. What happens is that when K8s volume
- # mounts with the hostPath mechanism, container's target location
- # is overwritten by the host's origin location.
- # Thus, this is the reason why we copy to slightly different directories here.
-RUN mkdir -p /var/www/html/flarum.backup \
- && mkdir -p /etc/nginx.backup \
- && \cp -r /var/www/html/flarum/. /var/www/html/flarum.backup \
- && \cp -r /etc/nginx/. /etc/nginx.backup
 
 HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping || exit 1
 
-COPY ./copied-inside-container/flarumInstall.yaml /flarumInstall.yaml
-COPY ./copied-inside-container/flarumEntryPoint /flarumEntryPoint
-COPY ./copied-inside-container/config.php /config.php
-COPY ./copied-inside-container/nginx.conf /etc/nginx.backup/nginx.conf
-COPY ./copied-inside-container/www.conf /etc/php82/php-fpm.d/www.conf
+COPY ./configs_flarum/flarumInstall.yaml /flarumInstall.yaml
+COPY ./configs_flarum/flarumEntryPoint /flarumEntryPoint
+COPY ./configs_flarum/config.php /config.php
+# COPY ./configs_flarum/nginx.conf /etc/nginx.backup/nginx.conf
+COPY ./configs_flarum/www.conf /etc/php82/php-fpm.d/www.conf
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.

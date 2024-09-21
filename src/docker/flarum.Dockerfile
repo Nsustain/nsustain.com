@@ -15,33 +15,10 @@ LABEL com.nsustain.maintainer="Soobin Rho <soobinrho@nsustain.com>"
 
 ENV FLARUM_VERSION="v1.8.0"
 
-# We included randomized secrets here so that you can can run
-# our image out of the box without any extra configuration.
-# Use these env variables just for development environments.
-# Never use these passwords in production environments.
-ENV FLARUM_TITLE="Nsustain Development Server"
-ENV FLARUM_DESCRIPTION="A forum created for the environment and sustainability."
-ENV FLARUM_WELCOME_TITLE="🌳 For the environment and sustainability"
-ENV FLARUM_WELCOME_MESSAGE="We are a group of dedicated volunteers who are committed to helping find solutions to problems related to environmental sustainability. With our skills and expertise, we are ready to assist and support any efforts to make a positive impact on the planet."
-ENV FLARUM_ADMIN_PASS="369FQUv4eS"
-ENV FLARUM_ADMIN_USER="nim3594"
-ENV FLARUM_ADMIN_MAIL="dev@nsustain.com"
-
-# Either http:// or https:// should exist.
-# Otherwise, all forum internal links will behave unexpectedly.
-ENV FORUM_URL="http://127.0.0.1"
-
-# FORUM_URL (without http:// or https://) and (without www)
-ENV FORUM_URL_BASE="127.0.0.1"
-
-ENV DB_NAME="flarum"
-ENV DB_USER="flarum"
-ENV DB_PASS="qdKiSiEPxVuFggmN3s5B9ubno4h3QUy5f3S6EAZ9o9"
-
-ENV DEBUG="false"
-ENV DB_HOST="mariadb"
-ENV DB_PORT="3306"
-ENV DB_PREF="flarum_"
+# Fixes php-fpm uid not found error.
+# Source:
+#   https://stackoverflow.com/a/70022208
+RUN adduser -S www-data -u 1000
 
 # Flarum installation.
 # Source:

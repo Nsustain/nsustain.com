@@ -153,11 +153,11 @@ because these are baked inside as default env variables.
 ***Override the default env variables at `.env_flarum` and `.env_mariadb`***<br>
 ```bash
 cd nsustain.com/src/docker
-cp .env_flarum_example .env_flarum
+cp .env_flarum.example .env_flarum
 vim .env_flarum
 #<Edit the values of the env variables>
 
-cp .env_mariadb_example .env_mariadb
+cp .env_mariadb.example .env_mariadb
 vim .env_mariadb
 #<Edit the values of the env variables>
 ```
@@ -170,14 +170,14 @@ vim compose.yaml
 ```
 ```yaml
     env_file:
-      - .env_flarum_example
+      - .env_flarum.example
 
     # It should look like this now:
     env_file:
       - .env_flarum
 
     env_file:
-      - .env_mariadb_example
+      - .env_mariadb.example
 
     # It should look like this now:
     env_file:

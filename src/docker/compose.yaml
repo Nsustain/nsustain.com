@@ -36,7 +36,7 @@ services:
       #   /var/lib/docker/volumes/...
       - flarum-data:/var/www/html/flarum
     env_file:
-     - .env_flarum
+     - .env_flarum.example
 
   nginx:
     image: nginx:latest
@@ -77,7 +77,7 @@ services:
     volumes:
       - mariadb-data:/var/lib/mysql
     env_file:
-     - .env_mariadb
+     - .env_mariadb.example
 
 volumes:
   flarum-data:

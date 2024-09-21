@@ -89,16 +89,16 @@ http {
 
 
     # Helper variable for proxying websockets.
-    map ${DOLLAR}http_upgrade ${DOLLAR}connection_upgrade {
+    map $http_upgrade $connection_upgrade {
         default upgrade;
         '' close;
     }
 
 
     # Specifies the main log format.
-    log_format main '${DOLLAR}remote_addr - ${DOLLAR}remote_user [${DOLLAR}time_local] "${DOLLAR}request" '
-            '${DOLLAR}status ${DOLLAR}body_bytes_sent "${DOLLAR}http_referer" '
-            '"${DOLLAR}http_user_agent" "${DOLLAR}http_x_forwarded_for"';
+    log_format main '$remote_addr - $remote_user [$time_local] "$request" '
+            '$status $body_bytes_sent "$http_referer" '
+            '"$http_user_agent" "$http_x_forwarded_for"';
 
     # Sets the path, format, and configuration for a buffered log write.
     access_log /var/log/nginx/access.log main;
@@ -126,8 +126,8 @@ http {
         keepalive_timeout   70;
 
         # FORUM_URL_BASE will be changed to the env variable
-        # ${DOLLAR}FORUM_URL_BASE, which we define in .envflarum
-        server_name ${FORUM_URL_BASE} www.${FORUM_URL_BASE};
+        # $FORUM_URL_BASE, which we define in .envflarum
+        server_name nsustain.com www.nsustain.com;
 
         root /var/www/html/flarum/public;
         index index.php index.html index.htm;
@@ -150,15 +150,15 @@ http {
                 return 404;
         }
 
-        location ~ \.php${DOLLAR} {
-            try_files ${DOLLAR}uri =404;
+        location ~ \.php$ {
+            try_files $uri =404;
             fastcgi_pass 127.0.0.1:9000;
             fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME ${DOLLAR}document_root${DOLLAR}fastcgi_script_name;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include /etc/nginx/fastcgi_params;
         }
 
-        location ~* \.html${DOLLAR} {
+        location ~* \.html$ {
             expires -1;
         }
 
@@ -166,7 +166,7 @@ http {
         # Source:
         #   https://discuss.flarum.org/d/14941-fof-sitemap
         location = /sitemap.xml {
-            try_files ${DOLLAR}uri ${DOLLAR}uri/ /index.php?${DOLLAR}query_string;
+            try_files $uri $uri/ /index.php?$query_string;
         }
 
         # "The = (equals sign) modifier defines an exact match of
@@ -179,8 +179,8 @@ http {
         # location = / {
             # root /var/www/html/flarum/public;
             # fastcgi_pass localhost:9000;
-            # fastcgi_param SCRIPT_FILENAME ${DOLLAR}document_root${DOLLAR}fastcgi_script_name;
-            # fastcgi_param QUERY_STRING ${DOLLAR}query_string;
+            # fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            # fastcgi_param QUERY_STRING $query_string;
         # }
         # location ~ \.php {
             # fastcgi_pass 127.0.0.1:9000;

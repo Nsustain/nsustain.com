@@ -67,8 +67,8 @@ RUN apk update \
 
 RUN composer clear-cache \
  && rm -rf /tmp/* \
- # && chown -R nginx:nginx /var/www/html/flarum \
- # && chown -R nginx:nginx /usr/lib/php82 \
+ && chown -R www-data:www-data /var/www/html/flarum \
+ && chown -R www-data:www-data /usr/lib/php82 \
  && chmod -R 775 /var/www/html/flarum \
  && chmod -R 775 /usr/lib/php82 \
  && apk add --update libintl \

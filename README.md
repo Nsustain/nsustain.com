@@ -55,14 +55,11 @@ possible, just read the first section ⚡
 sudo dnf install -y git
 git clone https://github.com/Nsustain/nsustain.com.git
 
-# Install Docker Compose.
-# If your OS isn't Fedora, follow Docker's documentation:
-#   https://docs.docker.com/compose/install/
-sudo dnf -y install dnf-plugins-core
-sudo dnf config-manager --add-repo \
-  https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+
+> [!IMPORTANT]
+> Install Docker Compose:
+>   https://docs.docker.com/compose/install/
 
 <br>
 
@@ -75,8 +72,7 @@ docker compose up
 
 We know that the server is ready when it prints out:
 
-> [INFO] Starting php-fpm...<br>
-> [INFO] Starting nginx
+> [INFO] Starting php-fpm...
 
 That's it! 🥳 Open
 [http://127.0.0.1](http://127.0.0.1)
@@ -147,28 +143,6 @@ certbot renew
 
 ## 2. How to set up a production server
 
-<!--
-There are two options for setting up a
-production server: (a) the Docker Compose
-method and (b) the Kubernetes method.
-You can choose either one depending
-on your preference, but we generally
-recommend Docker Compose.
-
-If you want your website to be highly
-available and are willing to set up
-multiple servers to host it, Kubernetes
-would be a good choice. On the other hand,
-if you only need to run your website on a
-single host, Docker Compose may be a better
-option because it is typically faster to
-deploy and easier to maintain due to fewer
-configuration requirements compared to
-Kubernetes.
-
-<br>
--->
-
 First, we have to override the default environmental variables.
 Otherwise, your website's admin credentials will be using
 ID: `nim3594` and PW: `369FQUv4eS`
@@ -176,43 +150,41 @@ because these are baked inside as default env variables.
 
 <br>
 
-***Override the default env variables at `.envflarum` and `.envmariadb`***<br>
+***Override the default env variables at `.env_flarum` and `.env_mariadb`***<br>
 ```bash
 cd nsustain.com/src/docker
-cp exampleenvflarum .envflarum
-vim .envflarum
+cp .env_flarum_example .env_flarum
+vim .env_flarum
 #<Edit the values of the env variables>
 
-cp exampleenvmariadb .envmariadb
-vim .envmariadb
+cp .env_mariadb_example .env_mariadb
+vim .env_mariadb
 #<Edit the values of the env variables>
 ```
 
 <br>
 
-***Enable `.envflarum` and `.envmariadb`***<br>
+***Enable `.env_flarum` and `.env_mariadb`***<br>
 ```bash
 vim compose.yaml
 ```
 ```yaml
-    # Uncomment to override env variables for flarum
-    #env_file:
-    #  - .envflarum
+    env_file:
+      - .env_flarum_example
 
     # It should look like this now:
     env_file:
-      - .envflarum
+      - .env_flarum
 
-    # Uncomment to override env variables for mariadb
-    #env_file:
-    #  - .envmariadb
+    env_file:
+      - .env_mariadb_example
 
     # It should look like this now:
     env_file:
-      - .envmariadb
+      - .env_mariadb
 ```
 
-Any environment variables defined in the `.envflarum` and `.envmariadb`
+Any environment variables defined in the `.env_flarum` and `.env_mariadb`
 files will be used within the server. It is important to set secure
 passwords for the admin password, MariaDB root password, and database
 password. We recommend using.
@@ -240,7 +212,7 @@ vim config.php
 <Change 'uri' => 'http://nsustain.com' to 'uri' => 'https://nsustain.com'>
 <Ctrl + d in order to log out of the docker exec session>
 cd /nsustain.com/src/docker
-vim .envflarum
+vim .env_flarum
 <Change FORUM_URL="http://nsustain.com" => FORUM_URL="https://nsustain.com">
 
 # Reset flarum
@@ -249,43 +221,6 @@ php flarum assets:publish
 
 How to renew the certificate:
 https://eff-certbot.readthedocs.io/en/stable/using.html#renewing-certificates
--->
-
-<!--
-
-Cloudflare Tunnel
-https://developers.cloudflare.com/cloudflare-one/tutorials/many-cfd-one-tunnel/
-
-```bash
-cd nsustain.com/src/k8s
-vim cloudflared.yaml
-```
-```yaml
-    # CHANGE TO YOUR TUNNEL NAME.
-    # Other than the tunnel name and the ingress rules at the bottom,
-    # you don't have to change any other config.
-    tunnel: nsustain
-
-    # CHANGE TO YOUR DOMAIN NAME.
-    # Don't change http://flarum:80 to your domain name
-    # because it refers to Kubernetes service name, not your domain name.
-    # Only change hostname: nsustain.com
-    ingress:
-    - hostname: nsustain.com
-      service: http://flarum:80
-```
-```bash
-kubectl apply -f ../k8s
-```
-
-<br>
-
-***How to stop***<br>
-```bash
-kubectl delete -f ../k8s
-```
-
-<br>
 
 ***Workflows we use***<br>
 ```bash
@@ -304,7 +239,6 @@ kubectl exec -it flarum-84b6484cd-vj6gl -- sh
 # How to extract a file from a container
 kubectl cp flarum-84b6484cd-vj6gl:/path/to/file ./file
 ```
-
 -->
 
 <br>

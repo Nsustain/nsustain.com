@@ -41,7 +41,7 @@ services:
   nginx:
     image: nginx:latest
     container_name: nginx
-    restart: unless-stoped
+    restart: unless-stopped
     pull_policy: always
     ports:
       - 80:80

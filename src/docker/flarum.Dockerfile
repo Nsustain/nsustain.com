@@ -86,8 +86,12 @@ WORKDIR /var/www/html/flarum
 
 HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping || exit 1
 
+# Proper way of executing php-fpm82.
+# Source:
+#   https://stackoverflow.com/a/57704441
+USER www-data
 ENTRYPOINT ["/flarumEntryPoint"]
-CMD ["php-fpm82"]
+CMD ["/flarumEntryPoint","php-fpm82","-F"]
 
 # -------------------------------------------------------------------
 # Useful Dockerfile syntax

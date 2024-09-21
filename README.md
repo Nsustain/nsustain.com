@@ -50,22 +50,19 @@ possible, just read the first section ⚡
 
 ## 1. How to spin up a developmental server
 
-***Install***<br>
-```bash
-sudo dnf install -y git
-git clone https://github.com/Nsustain/nsustain.com.git
-
-```
-
 > [!IMPORTANT]
 > Install Docker Compose:
 >   https://docs.docker.com/compose/install/
 
-<br>
 
-***Run***<br>
 ```bash
+# Download the repository.
+git clone https://github.com/Nsustain/nsustain.com.git
 cd nsustain.com/src/docker
+cp .env_flarum.example .env_flarum
+cp .env_mariadb.example .env_mariadb
+
+# Run.
 docker compose build
 docker compose up
 ```
@@ -143,51 +140,17 @@ certbot renew
 
 ## 2. How to set up a production server
 
-First, we have to override the default environmental variables.
-Otherwise, your website's admin credentials will be using
-ID: `nim3594` and PW: `369FQUv4eS`
-because these are baked inside as default env variables.
-
-<br>
+Ensure that you set secure passwords.
 
 ***Override the default env variables at `.env_flarum` and `.env_mariadb`***<br>
 ```bash
 cd nsustain.com/src/docker
-cp .env_flarum.example .env_flarum
 vim .env_flarum
-#<Edit the values of the env variables>
+#<Change the default passwords>
 
-cp .env_mariadb.example .env_mariadb
 vim .env_mariadb
-#<Edit the values of the env variables>
+#<Change the default passwords>
 ```
-
-<br>
-
-***Enable `.env_flarum` and `.env_mariadb`***<br>
-```bash
-vim compose.yaml
-```
-```yaml
-    env_file:
-      - .env_flarum.example
-
-    # It should look like this now:
-    env_file:
-      - .env_flarum
-
-    env_file:
-      - .env_mariadb.example
-
-    # It should look like this now:
-    env_file:
-      - .env_mariadb
-```
-
-Any environment variables defined in the `.env_flarum` and `.env_mariadb`
-files will be used within the server. It is important to set secure
-passwords for the admin password, MariaDB root password, and database
-password. We recommend using.
 
 <br>
 

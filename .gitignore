@@ -2,12 +2,10 @@
 # However, we include .exampleenv... files such that
 # all our servers just work out of the box for development purposes.
 .*env*
-!exampleenvflarum
-!exampleenvmariadb
+!*.example
 
 # Likewise, *secret* files for K8s should never be indexed by git.
 *secret*
-!secret.yaml.example
 
 # Ignore backup files
 *.backup

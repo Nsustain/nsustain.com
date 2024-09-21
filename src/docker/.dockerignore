@@ -8,5 +8,5 @@ docker-compose.yml
 
 # Plus, never commit .env files because they contain secrets.
 .*env*
-!.env_flarum_example
-!.env_mariadb_example
+!.env_flarum.example
+!.env_mariadb.example

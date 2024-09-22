@@ -65,20 +65,26 @@ RUN apk update \
  && mkdir -p /var/www/html/flarum \
  && COMPOSER_CACHE_DIR="/tmp" composer create-project flarum/flarum:$VERSION /var/www/html/flarum
 
+COPY ./configs_flarum/flarumInstall.yaml /home/www-data/flarumInstall.yaml
+COPY ./configs_flarum/flarumEntryPoint /home/www-data/flarumEntryPoint
+COPY ./configs_flarum/config.php /home/www-data/config.php
+COPY ./configs_flarum/www.conf /etc/php82/php-fpm.d/www.conf
+
 RUN composer clear-cache \
  && rm -rf /tmp/* \
+ && mkdir -p /usr/log/php82 \
+ && chown -R www-data:www-data /usr/log/php82 \
+ && chown -R www-data:www-data /etc/php82 \
  && chown -R www-data:www-data /var/www/html/flarum \
  && chown -R www-data:www-data /usr/lib/php82 \
+ && chown -R www-data:www-data /home/www-data/flarumInstall.yaml \
+ && chown -R www-data:www-data /home/www-data/flarumEntryPoint \
+ && chown -R www-data:www-data /home/www-data/config.php \
  && chmod -R 775 /var/www/html/flarum \
  && chmod -R 775 /usr/lib/php82 \
  && apk add --update libintl \
  && apk add --virtual build_deps gettext \
  && apk del build_deps
-
-COPY ./configs_flarum/flarumInstall.yaml /flarumInstall.yaml
-COPY ./configs_flarum/flarumEntryPoint /flarumEntryPoint
-COPY ./configs_flarum/config.php /config.php
-COPY ./configs_flarum/www.conf /etc/php82/php-fpm.d/www.conf
 
 # WORKDIR actually may change depending on the base image we use.
 # Therefore, it's a good practice to always set WORKDIR explicitly.
@@ -89,9 +95,8 @@ HEALTHCHECK --interval=2m --timeout=2m CMD curl -f http://127.0.0.1/php-fpm-ping
 # Proper way of executing php-fpm82.
 # Source:
 #   https://stackoverflow.com/a/57704441
-USER www-data
-ENTRYPOINT ["/flarumEntryPoint"]
-CMD ["/flarumEntryPoint","php-fpm82","-F"]
+ENTRYPOINT ["/home/www-data/flarumEntryPoint"]
+CMD ["/home/www-data/flarumEntryPoint","php-fpm82","--nodaemonize","--allow-to-run-as-root"]
 
 # -------------------------------------------------------------------
 # Useful Dockerfile syntax

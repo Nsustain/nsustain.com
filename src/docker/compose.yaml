@@ -21,11 +21,9 @@ services:
     pull_policy: never
     build:
       dockerfile: ./flarum.Dockerfile
-    # Since this container doesn't accept SIGTERM, we use
-    # stop_grace_period: 0.5s to send SIGKILL after 0.5s
-    stop_grace_period: 0.5s
     depends_on:
       - mariadb
+      - nginx
     expose:
       - 9000  # used by PHP-FPM
     networks:

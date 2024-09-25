@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
     pull_policy: never
     build:
-      dockerfile: ./flarum.Dockerfile
+      dockerfile: ./Dockerfile.flarum
     depends_on:
       - mariadb
       - nginx

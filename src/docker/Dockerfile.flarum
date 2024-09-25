@@ -1,7 +1,7 @@
 # -------------------------------------------------------------------
 # Most of the times, we build this image with:
 # Example:
-#   docker build --no-cache -t nsustain/flarum:1.8.0 -t nsustain/flarum:latest -f flarum.Dockerfile .
+#   docker build --no-cache -t nsustain/flarum:1.8.0 -t nsustain/flarum:latest -f Dockerfile.flarum .
 # -------------------------------------------------------------------
 FROM alpine:latest
 

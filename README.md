@@ -81,8 +81,7 @@ That's it! 🥳 Open
 
 > [!IMPORTANT]  
 > The default admin ID is `nim3594`, and the password is `369FQUv4eS`.
-> These are baked inside [`flarum.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/flarum.Dockerfile).
-> and [`mariadb.Dockerfile`](https://github.com/Nsustain/nsustain.com/blob/main/src/docker/mariadb.Dockerfile).
+> These are baked inside `.env.flarum` and `.env.mariadb`.
 > For production, ensure that these default passwords are changed.
 
 <br>

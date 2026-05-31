@@ -24,6 +24,14 @@
 <br>
 <br>
 
+> [!IMPORTANT]
+> Nsustain has migrated to [Reddit](https://www.reddit.com/r/nsustain/).
+> We are archiving this repository since we're using Reddit instead.
+
+<br>
+<br>
+<br>
+
 <p align="center">
   <b>
     Source code for
